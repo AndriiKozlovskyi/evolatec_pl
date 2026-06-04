@@ -1,0 +1,106 @@
+{
+  "slug": "index",
+  "page_title": "Tworzenie Stron Internetowych dla Firm | EvolaTec",
+  "meta_description": "Profesjonalne strony internetowe dla firm: landing page od 2 100 zł, strona firmowa od 6 300 zł. Lighthouse 95–100, realizacja od 3 dni. Stała cena, wycena bezpłatna.",
+  "h1": "Tworzymy strony internetowe, które pracują na Twój biznes",
+  "h2_sections": [
+    {
+      "heading": "Co dostajesz w każdym projekcie — bez dopłat",
+      "intent": "Eliminate purchase anxiety by listing concrete deliverables. Buyer's first objection after seeing the headline: 'What exactly am I getting?' Answer it with verifiable specifics before they ask.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "profesjonalne strony internetowe",
+        "strony internetowe profesjonalnie",
+        "profesjonalne tworzenie stron internetowych",
+        "tworzenie profesjonalnych stron internetowych"
+      ]
+    },
+    {
+      "heading": "Jaki typ strony potrzebujesz?",
+      "intent": "Help the buyer self-qualify: landing page vs strona firmowa vs sklep internetowy. Reduces indecision and pre-filters for the right service page. Answers 'Jaka jest różnica między landing page a stroną firmową?'",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "strona dla firmy",
+        "strony internetowe na zamówienie",
+        "strona internetowa na zamówienie",
+        "tworzenie strony internetowej dla firmy"
+      ]
+    },
+    {
+      "heading": "Tworzenie stron internetowych — ceny i terminy realizacji",
+      "intent": "Answer the #1 commercial question directly. Buyers who see no price leave. Concrete PLN figures and delivery days — not 'price on request'.",
+      "content_type": "list",
+      "keywords_covered": [
+        "tworzenie stron internetowych cena",
+        "profesjonalna strona internetowa cena",
+        "tworzenie stron www dla firm",
+        "tworzenie stron dla firm"
+      ]
+    },
+    {
+      "heading": "Dlaczego Nuxt.js — nie WordPress",
+      "intent": "Overcome the dominant incumbent. Most Polish SMB buyers default to WordPress because that's all they've heard of. One factual performance comparison (load time, Lighthouse, security) shifts the frame without badmouthing competitors.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "profesjonalne projektowanie stron internetowych",
+        "profesjonalne projektowanie stron",
+        "tworzenie stron internetowych dla firm"
+      ]
+    },
+    {
+      "heading": "Jak wygląda tworzenie strony internetowej — 4 etapy",
+      "intent": "Reduce process uncertainty — the second-biggest buyer fear after price. A numbered list with realistic timelines converts skeptics who worry about vague agencies.",
+      "content_type": "list",
+      "keywords_covered": [
+        "tworzenie stron internetowych dla firm",
+        "tworzenie stron www dla firm",
+        "profesjonalne strony www"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o tworzenie stron www dla firm",
+      "intent": "Capture long-tail queries, earn FAQPage rich result, and provide AI-citable Q&A pairs for GEO. Covers pricing, process, technology, and trust questions that live deeper in the funnel.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "tworzenie stron www dla firm",
+        "profesjonalne strony",
+        "strony internetowe profesjonalnie",
+        "tworzenie strony internetowej dla firmy"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "WebSite",
+    "WebPage",
+    "Service",
+    "LocalBusiness",
+    "BreadcrumbList",
+    "FAQPage",
+    "ItemList"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "PriceSpecification",
+    "speakable"
+  ],
+  "question_targets": [
+    "Ile kosztuje strona internetowa dla firmy w Polsce?",
+    "Jaka jest różnica między landing page a stroną firmową?",
+    "WordPress czy własne rozwiązanie — co wybrać dla firmy?",
+    "Jak wygląda proces tworzenia strony internetowej?",
+    "Jak wybrać agencję webową w Polsce?"
+  ],
+  "ai_citation_hooks": [
+    "Strona firmowa kosztuje od 6 300 zł netto, realizacja trwa od 7 dni roboczych.",
+    "Strony osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights.",
+    "GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu."
+  ],
+  "comparison_angle": "Agencja webowa z własnym stackiem vs freelancer WordPress — kto stworzy lepszą stronę dla polskiej firmy?",
+  "internal_links": [
+    "/strona-internetowa",
+    "/kalkulator-kosztow",
+    "/seo"
+  ],
+  "user_intent": "commercial"
+}

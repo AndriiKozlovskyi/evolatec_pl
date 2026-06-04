@@ -1,0 +1,135 @@
+{
+  "currency_primary": "PLN",
+  "currency_secondary": "EUR",
+  "exchange_rate_note": "EUR prices from evolatec.de, PLN converted at 4.20 PLN/EUR",
+  "vat_note": "All prices net (+ 23% VAT for Polish B2B clients)",
+  "pricing_model": "fixed_price",
+  "fixed_price_note": "Every project begins with a transparent fixed-price quote. No scope creep, no hidden costs.",
+
+  "packages": [
+    {
+      "id": "landing-page",
+      "name": "Landing page",
+      "price_pln": 2100,
+      "price_eur": 500,
+      "delivery": "od 3 dni roboczych",
+      "highlight": false
+    },
+    {
+      "id": "firmowa",
+      "name": "Strona firmowa",
+      "price_pln": 6300,
+      "price_eur": 1500,
+      "delivery": "od 7 dni roboczych",
+      "highlight": true,
+      "badge": "Najpopularniejszy"
+    },
+    {
+      "id": "sklep",
+      "name": "Sklep internetowy",
+      "price_pln": 12600,
+      "price_eur": 3000,
+      "delivery": "od 14 dni roboczych",
+      "highlight": false
+    },
+    {
+      "id": "premium-ecommerce",
+      "name": "Premium e-commerce",
+      "price_pln": 25200,
+      "price_eur": 6000,
+      "delivery": "od 30 dni roboczych",
+      "highlight": false
+    },
+    {
+      "id": "aplikacja-mobilna-mvp",
+      "name": "Aplikacja mobilna — MVP",
+      "price_pln": 21000,
+      "price_eur": 5000,
+      "delivery": "od 45 dni roboczych",
+      "highlight": false
+    },
+    {
+      "id": "aplikacja-mobilna-business",
+      "name": "Aplikacja mobilna — Business",
+      "price_pln": 42000,
+      "price_eur": 10000,
+      "delivery": "od 90 dni roboczych",
+      "highlight": false
+    }
+  ],
+
+  "recurring": [
+    {
+      "id": "seo-local",
+      "name": "SEO / Local SEO",
+      "price_pln_monthly": 1260,
+      "price_eur_monthly": 300,
+      "billing": "monthly"
+    },
+    {
+      "id": "seo-linkbuilding",
+      "name": "SEO + Linkbuilding",
+      "price_pln_monthly": 2100,
+      "price_eur_monthly": 500,
+      "billing": "monthly"
+    },
+    {
+      "id": "google-ads",
+      "name": "Google Ads",
+      "price_pln_monthly": 1680,
+      "price_eur_monthly": 400,
+      "billing": "monthly",
+      "note": "Budżet reklamowy Google rozliczany oddzielnie"
+    },
+    {
+      "id": "social-media",
+      "name": "Social Media Marketing",
+      "price_pln_monthly": 1260,
+      "price_eur_monthly": 300,
+      "billing": "monthly"
+    }
+  ],
+
+  "one_time_extras": [
+    {
+      "id": "seo-audit",
+      "name": "SEO Audit",
+      "price_pln": 840,
+      "price_eur": 200
+    },
+    {
+      "id": "branding",
+      "name": "Branding & Corporate Design",
+      "price_pln": null,
+      "note": "Wycena indywidualna"
+    },
+    {
+      "id": "copywriting",
+      "name": "Copywriting / Teksty SEO",
+      "price_pln": null,
+      "note": "Wycena indywidualna"
+    }
+  ],
+
+  "included_free_in_every_project": [
+    "GEO optimization (Schema.org, JSON-LD) — widoczność w ChatGPT, Gemini, Perplexity",
+    "Responsive design (mobile-first)",
+    "SEO basic setup (meta tags, semantic structure)",
+    "SSL setup",
+    "Contact form",
+    "Lighthouse score 95–100/100"
+  ],
+
+  "comparison_wordpress_vs_custom": {
+    "note": "Used for the comparison table on the homepage and service pages",
+    "metrics": [
+      { "label": "Czas ładowania", "wordpress": "3–8 sekund", "custom": "< 1 sekunda" },
+      { "label": "Wynik Lighthouse", "wordpress": "40–70 / 100", "custom": "95–100 / 100" },
+      { "label": "Core Web Vitals", "wordpress": "Często niezaliczone", "custom": "Bardzo dobre" },
+      { "label": "Bezpieczeństwo", "wordpress": "Podatności przez wtyczki", "custom": "Brak CMS, brak powierzchni ataku" },
+      { "label": "Baza SEO", "wordpress": "Zależna od wtyczek", "custom": "Zoptymalizowana w kodzie" },
+      { "label": "Nakład na utrzymanie", "wordpress": "Wysoki (wtyczki, aktualizacje)", "custom": "Minimalny" },
+      { "label": "Skalowalność", "wordpress": "Ograniczona", "custom": "Nieograniczona" }
+    ]
+  }
+}

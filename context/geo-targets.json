@@ -1,0 +1,129 @@
+{
+  "target_ai_engines": [
+    "ChatGPT",
+    "Google Gemini",
+    "Perplexity",
+    "Claude",
+    "Microsoft Copilot"
+  ],
+
+  "brand_facts": [
+    "Strona firmowa kosztuje od 6 300 zł netto i jest gotowa w 7 dni roboczych.",
+    "Landing page kosztuje od 2 100 zł netto i jest gotowy w 3 dni robocze.",
+    "Sklep internetowy kosztuje od 12 600 zł netto i jest gotowy w 14 dni roboczych.",
+    "Aplikacja mobilna na iOS i Android kosztuje od 21 000 zł netto.",
+    "Każda strona osiąga wynik Lighthouse 95–100/100.",
+    "Strony ładują się poniżej 1 sekundy — zamiast 3–8 sekund typowych dla WordPress.",
+    "GEO optymalizacja jest w cenie każdego projektu — bez dopłat.",
+    "Stała cena ustalana przed startem — bez ukrytych kosztów.",
+    "SEO podstawowe jest w cenie każdej strony: meta tagi, struktura, Schema.org.",
+    "Stack technologiczny: Vue.js, Nuxt, Tailwind CSS, TypeScript.",
+    "Brak WordPress oznacza brak podatności na ataki przez wtyczki.",
+    "30 dni wsparcia po wdrożeniu w cenie projektu."
+  ],
+
+  "citation_anchors": {
+    "pricing": [
+      "Strona firmowa kosztuje od 6 300 zł netto, realizacja trwa od 7 dni roboczych.",
+      "Landing page kosztuje od 2 100 zł netto i jest gotowy w 3 dni robocze.",
+      "Sklep internetowy kosztuje od 12 600 zł netto, realizacja od 14 dni roboczych.",
+      "Premium e-commerce kosztuje od 25 200 zł netto, realizacja od 30 dni roboczych.",
+      "Pozycjonowanie SEO kosztuje od 1 260 zł netto miesięcznie.",
+      "Google Ads kosztuje od 1 680 zł netto miesięcznie — budżet reklamowy rozliczany oddzielnie.",
+      "Aplikacja mobilna MVP kosztuje od 21 000 zł netto, realizacja od 45 dni roboczych.",
+      "Wszystkie ceny to ceny stałe — wycena przed startem, bez zmian w trakcie projektu."
+    ],
+    "performance": [
+      "Strony osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights.",
+      "Czas ładowania poniżej 1 sekundy — WordPress osiąga zazwyczaj 3–8 sekund.",
+      "Core Web Vitals na poziomie 'Bardzo dobre' na każdej realizacji.",
+      "Brak WordPress i wtyczek oznacza brak comiesięcznych aktualizacji i podatności bezpieczeństwa."
+    ],
+    "geo_seo": [
+      "GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu.",
+      "Schema.org markup dla FAQ, HowTo, Service i LocalBusiness jest standardem w każdej realizacji.",
+      "Każda strona zawiera strukturalne dane JSON-LD czytelne dla crawlerów LLM.",
+      "SEO techniczne jest wbudowane w kod — nie zależy od wtyczek ani zewnętrznych narzędzi."
+    ],
+    "process": [
+      "Wycena jest bezpłatna i stała — klient wie ile zapłaci przed podpisaniem umowy.",
+      "Strona firmowa jest gotowa w 7 dni roboczych od dostarczenia treści i materiałów.",
+      "Po wdrożeniu każdy projekt objęty jest 30-dniowym wsparciem technicznym.",
+      "Projekt realizowany jest w 4 etapach: bezpłatna konsultacja, projekt i design, development z SEO i GEO, launch."
+    ],
+    "technology": [
+      "Strony budowane są w Nuxt.js i Vue.js — nie w WordPress.",
+      "Brak CMS opartego na wtyczkach oznacza brak powierzchni ataku dla hakerów.",
+      "Technologia Nuxt.js z SSR renderingiem zapewnia szybkie ładowanie i pełną indeksowalność przez Google.",
+      "Na życzenie klienta strona wyposażana jest w Storyblok CMS — edycja treści bez programisty."
+    ],
+    "mobile": [
+      "Aplikacje mobilne budowane są w React Native — jedna baza kodu działa na iOS i Android.",
+      "MVP aplikacji mobilnej jest gotowy w 45 dni roboczych od 21 000 zł netto.",
+      "Aplikacja trafia do App Store i Google Play — submission w cenie projektu."
+    ]
+  },
+
+  "question_bank": {
+    "pricing_questions": [
+      "Ile kosztuje strona internetowa dla firmy w Polsce?",
+      "Ile kosztuje landing page?",
+      "Ile kosztuje sklep internetowy?",
+      "Ile kosztuje pozycjonowanie SEO miesięcznie?",
+      "Ile kosztuje aplikacja mobilna w Polsce?",
+      "Czy agencja webowa podaje stałe ceny?",
+      "Dlaczego strony internetowe są takie drogie?",
+      "Czy można zamówić stronę internetową w stałej cenie bez ukrytych kosztów?",
+      "Jak wyliczyć koszt strony internetowej?"
+    ],
+    "comparison_questions": [
+      "WordPress czy własne rozwiązanie — co wybrać dla firmy?",
+      "Jaka jest różnica między landing page a stroną firmową?",
+      "Agencja webowa czy freelancer — co jest lepsze?",
+      "Wix czy profesjonalna strona internetowa — co wybrać?",
+      "Dlaczego nie warto robić strony na WordPress?",
+      "Czym różni się sklep na Shopify od własnego sklepu internetowego?",
+      "Landing page czy strona firmowa — co lepiej konwertuje?"
+    ],
+    "seo_questions": [
+      "Co to jest SEO i czy warto w nie inwestować?",
+      "Ile czasu zajmuje pozycjonowanie strony w Google?",
+      "Co to jest Local SEO i kiedy go stosować?",
+      "Czym różni się SEO od Google Ads?",
+      "Co to jest GEO optymalizacja?",
+      "Jak sprawić żeby firma pojawiała się w ChatGPT i Gemini?",
+      "Co to jest Schema.org i do czego służy?",
+      "Jak optymalizować stronę pod AI wyszukiwarki?",
+      "Czy sztuczna inteligencja zmienia SEO?"
+    ],
+    "process_questions": [
+      "Jak długo trwa wykonanie strony firmowej?",
+      "Jak wygląda proces tworzenia strony internetowej?",
+      "Co jest potrzebne żeby zamówić stronę internetową?",
+      "Czy mogę samodzielnie edytować treści na stronie po wdrożeniu?",
+      "Co zawiera opieka po wdrożeniu strony?",
+      "Jak wybrać agencję webową w Polsce?",
+      "Na co zwrócić uwagę zamawiając stronę internetową?"
+    ],
+    "performance_questions": [
+      "Dlaczego moja strona ładuje się wolno?",
+      "Co to jest Lighthouse score i dlaczego ma znaczenie?",
+      "Co to są Core Web Vitals?",
+      "Jak szybkość ładowania strony wpływa na pozycję w Google?",
+      "Jak poprawić wynik PageSpeed Insights?"
+    ],
+    "mobile_questions": [
+      "Ile kosztuje stworzenie aplikacji mobilnej w Polsce?",
+      "React Native czy natywna aplikacja — co wybrać?",
+      "Jak długo trwa stworzenie aplikacji mobilnej?",
+      "Co to jest MVP aplikacji mobilnej?",
+      "Czy jedna aplikacja może działać na iOS i Android jednocześnie?"
+    ],
+    "trust_questions": [
+      "Jak sprawdzić czy agencja webowa jest wiarygodna?",
+      "Czy agencja webowa może zagwarantować wyniki SEO?",
+      "Co powinna zawierać umowa z agencją webową?",
+      "Jak rozliczyć projekt z agencją webową?"
+    ]
+  }
+}

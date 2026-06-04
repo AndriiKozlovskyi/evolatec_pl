@@ -1,0 +1,233 @@
+[
+  {
+    "slug": "landing-page",
+    "name": "Landing page",
+    "price_from_pln": 2100,
+    "price_from_eur": 500,
+    "delivery_days": 3,
+    "category": "website",
+    "includes": [
+      "Responsive design (mobile-first)",
+      "SEO basic setup (meta, structure)",
+      "GEO optimization (Schema.org, JSON-LD)",
+      "SSL & hosting setup",
+      "Contact form",
+      "Lighthouse score 95–100"
+    ],
+    "excludes": ["CMS access", "Blog", "Multiple subpages"],
+    "best_for": "Google Ads campaigns, product launches, lead generation",
+    "tech_stack": ["Nuxt", "Vue.js", "Tailwind CSS", "TypeScript"]
+  },
+  {
+    "slug": "firmowa",
+    "name": "Strona firmowa",
+    "price_from_pln": 6300,
+    "price_from_eur": 1500,
+    "delivery_days": 7,
+    "category": "website",
+    "includes": [
+      "Responsive design (mobile-first)",
+      "Multiple subpages (Home, Services, About, Contact)",
+      "Blog / News section",
+      "CMS access (self-managed content)",
+      "SEO basic setup (meta, structure)",
+      "GEO optimization (Schema.org, JSON-LD)",
+      "SSL & hosting setup",
+      "Contact form",
+      "Lighthouse score 95–100"
+    ],
+    "excludes": ["Product catalog", "Payment processing"],
+    "best_for": "Local businesses, service providers, startups, professional firms",
+    "tech_stack": ["Nuxt", "Vue.js", "Tailwind CSS", "TypeScript", "Storyblok CMS"]
+  },
+  {
+    "slug": "sklep-internetowy",
+    "name": "Sklep internetowy",
+    "price_from_pln": 12600,
+    "price_from_eur": 3000,
+    "delivery_days": 14,
+    "category": "ecommerce",
+    "includes": [
+      "Responsive design (mobile-first)",
+      "Product catalog & variants",
+      "Secure payment processing",
+      "CMS / product management",
+      "SEO basic setup",
+      "GEO optimization",
+      "SSL & hosting setup",
+      "Order management"
+    ],
+    "excludes": [],
+    "best_for": "Businesses selling products or services online",
+    "tech_stack": ["Nuxt", "Vue.js", "Tailwind CSS", "TypeScript", "Shopify or custom"]
+  },
+  {
+    "slug": "premium-ecommerce",
+    "name": "Premium e-commerce",
+    "price_from_pln": 25200,
+    "price_from_eur": 6000,
+    "delivery_days": 30,
+    "category": "ecommerce",
+    "includes": [
+      "Custom design system",
+      "Advanced product catalog",
+      "Custom checkout & payment flows",
+      "Integrations (ERP, CRM, logistics APIs)",
+      "Advanced SEO & GEO optimization",
+      "Performance architecture",
+      "Post-launch support phase"
+    ],
+    "excludes": [],
+    "best_for": "High-volume stores, SaaS platforms, complex B2B/B2C digital products",
+    "tech_stack": ["Nuxt", "Vue.js", "Tailwind CSS", "TypeScript", "Custom backend"]
+  },
+  {
+    "slug": "seo",
+    "name": "SEO optymalizacja",
+    "price_from_pln": 1260,
+    "price_from_eur": 300,
+    "delivery_days": null,
+    "billing": "monthly",
+    "category": "seo",
+    "includes": [
+      "Keyword research & semantic mapping",
+      "On-page optimization",
+      "Technical SEO audit",
+      "Local SEO (Google Business Profile)",
+      "Linkbuilding",
+      "Monthly reporting"
+    ],
+    "variants": [
+      { "name": "SEO Audit", "price_from_pln": 840, "price_from_eur": 200, "one_time": true },
+      { "name": "Local SEO", "price_from_pln": 1260, "price_from_eur": 300, "billing": "monthly" },
+      { "name": "SEO + Linkbuilding", "price_from_pln": 2100, "price_from_eur": 500, "billing": "monthly" }
+    ],
+    "best_for": "Businesses wanting sustainable organic traffic growth"
+  },
+  {
+    "slug": "geo-ai-optimization",
+    "name": "GEO / AI optymalizacja",
+    "price_from_pln": 0,
+    "price_from_eur": 0,
+    "billing": "included",
+    "category": "seo",
+    "includes": [
+      "Schema.org structured data (FAQPage, HowTo, Service, LocalBusiness)",
+      "JSON-LD markup for AI crawlers",
+      "Clear information architecture for LLMs",
+      "Authoritative content structure",
+      "Comparison content for purchase-decision queries"
+    ],
+    "note": "Included in every website project at no extra cost",
+    "best_for": "Visibility in ChatGPT, Google Gemini, Perplexity, Claude, Copilot"
+  },
+  {
+    "slug": "google-ads",
+    "name": "Google Ads",
+    "price_from_pln": 1680,
+    "price_from_eur": 400,
+    "delivery_days": null,
+    "billing": "monthly",
+    "category": "marketing",
+    "includes": [
+      "Campaign strategy & setup",
+      "Keyword targeting",
+      "Ad copy creation",
+      "Conversion tracking",
+      "Monthly optimization & reporting"
+    ],
+    "note": "Ad budget billed separately by Google",
+    "best_for": "Businesses needing immediate qualified traffic"
+  },
+  {
+    "slug": "social-media",
+    "name": "Social Media Marketing",
+    "price_from_pln": 1260,
+    "price_from_eur": 300,
+    "delivery_days": null,
+    "billing": "monthly",
+    "category": "marketing",
+    "includes": [
+      "Content calendar",
+      "Post creation & scheduling",
+      "Community management",
+      "Paid social campaigns (Meta Ads)",
+      "Monthly performance report"
+    ],
+    "best_for": "Brand awareness, community building, B2C businesses"
+  },
+  {
+    "slug": "branding",
+    "name": "Branding & Corporate Design",
+    "price_from_pln": null,
+    "price_from_eur": null,
+    "billing": "on_request",
+    "category": "design",
+    "includes": [
+      "Logo design",
+      "Brand identity system",
+      "Color palette & typography",
+      "UI/UX design",
+      "Brand guidelines document"
+    ],
+    "best_for": "New businesses or rebrands needing full visual identity"
+  },
+  {
+    "slug": "copywriting",
+    "name": "Content & Copywriting",
+    "price_from_pln": null,
+    "price_from_eur": null,
+    "billing": "on_request",
+    "category": "design",
+    "includes": [
+      "SEO-optimized page copy",
+      "Blog articles",
+      "Product descriptions",
+      "Conversion-focused landing page text"
+    ],
+    "best_for": "Businesses that need professional web copy in Polish"
+  },
+  {
+    "slug": "aplikacja-mobilna",
+    "name": "Aplikacja mobilna",
+    "price_from_pln": 21000,
+    "price_from_eur": 5000,
+    "delivery_days": 45,
+    "category": "mobile",
+    "includes": [
+      "iOS & Android (single codebase)",
+      "Custom UI/UX design",
+      "Backend API integration",
+      "Push notifications",
+      "App Store & Google Play submission",
+      "Performance optimization",
+      "Post-launch support phase"
+    ],
+    "variants": [
+      {
+        "name": "MVP / Prototype",
+        "price_from_pln": 21000,
+        "price_from_eur": 5000,
+        "delivery_days": 45,
+        "best_for": "Startups validating an idea with core features only"
+      },
+      {
+        "name": "Business App",
+        "price_from_pln": 42000,
+        "price_from_eur": 10000,
+        "delivery_days": 90,
+        "best_for": "Full-featured apps for internal tools, client-facing platforms"
+      },
+      {
+        "name": "Custom Platform",
+        "price_from_pln": null,
+        "billing": "on_request",
+        "delivery_days": null,
+        "best_for": "Complex apps with custom backend, integrations, or marketplaces"
+      }
+    ],
+    "tech_stack": ["React Native", "Expo", "TypeScript", "REST / GraphQL API"],
+    "note": "Cross-platform by default. Native iOS/Android available on request.",
+    "best_for": "Businesses extending their web presence to mobile, or launching a standalone app product"
+  }
+]
