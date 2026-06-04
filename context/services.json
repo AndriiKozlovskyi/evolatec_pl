@@ -1,233 +1,430 @@
 [
   {
-    "slug": "landing-page",
-    "name": "Landing page",
-    "price_from_pln": 2100,
-    "price_from_eur": 500,
-    "delivery_days": 3,
+    "slug": "index",
+    "name": "Tworzenie stron internetowych",
+    "page_role": "homepage",
     "category": "website",
-    "includes": [
-      "Responsive design (mobile-first)",
-      "SEO basic setup (meta, structure)",
-      "GEO optimization (Schema.org, JSON-LD)",
-      "SSL & hosting setup",
-      "Contact form",
-      "Lighthouse score 95–100"
+    "summary": "Projektujemy i budujemy strony internetowe dla firm w Polsce — landing page, strony firmowe, sklepy. Stack: Nuxt, Vue.js, Tailwind CSS, TypeScript.",
+    "price_from_pln": 2100,
+    "delivery_days_from": 3,
+    "highlights": [
+      "Lighthouse 95–100/100 na każdym projekcie",
+      "Czas ładowania poniżej 1 sekundy",
+      "GEO optymalizacja w cenie — widoczność w ChatGPT, Gemini, Perplexity",
+      "Stała cena ustalana przed startem",
+      "30 dni wsparcia po wdrożeniu"
     ],
-    "excludes": ["CMS access", "Blog", "Multiple subpages"],
-    "best_for": "Google Ads campaigns, product launches, lead generation",
     "tech_stack": ["Nuxt", "Vue.js", "Tailwind CSS", "TypeScript"]
   },
   {
-    "slug": "firmowa",
-    "name": "Strona firmowa",
-    "price_from_pln": 6300,
-    "price_from_eur": 1500,
-    "delivery_days": 7,
+    "slug": "strona-internetowa",
+    "name": "Strona internetowa dla firmy",
+    "page_role": "service",
     "category": "website",
+    "summary": "Profesjonalna strona www dla firm i usługodawców. Obejmuje projekt, development, SEO i GEO optymalizację.",
+    "price_from_pln": 6300,
+    "delivery_days_from": 7,
+    "billing": "one_time",
     "includes": [
       "Responsive design (mobile-first)",
-      "Multiple subpages (Home, Services, About, Contact)",
-      "Blog / News section",
-      "CMS access (self-managed content)",
-      "SEO basic setup (meta, structure)",
-      "GEO optimization (Schema.org, JSON-LD)",
-      "SSL & hosting setup",
-      "Contact form",
-      "Lighthouse score 95–100"
+      "Wiele podstron (Home, Usługi, O nas, Kontakt)",
+      "Sekcja Blog / Aktualności",
+      "CMS — edycja treści bez programisty (Storyblok)",
+      "SEO podstawowe (meta, struktura, semantyczny HTML)",
+      "GEO optymalizacja (Schema.org, JSON-LD)",
+      "Konfiguracja SSL i hostingu",
+      "Formularz kontaktowy",
+      "Lighthouse 95–100/100",
+      "30 dni wsparcia po wdrożeniu"
     ],
-    "excludes": ["Product catalog", "Payment processing"],
-    "best_for": "Local businesses, service providers, startups, professional firms",
+    "excludes": ["Katalog produktów", "Płatności online"],
+    "best_for": "Firmy lokalne, usługodawcy, startupy, kancelarie, gabinety",
     "tech_stack": ["Nuxt", "Vue.js", "Tailwind CSS", "TypeScript", "Storyblok CMS"]
+  },
+  {
+    "slug": "stworz-strone-firmowa",
+    "name": "Stwórz stronę firmową",
+    "page_role": "service_transactional",
+    "category": "website",
+    "summary": "Strona firmowa tworzona pod konkretne cele biznesowe — nie szablon, lecz indywidualny projekt. Cena stała, termin w umowie.",
+    "price_from_pln": 6300,
+    "delivery_days_from": 7,
+    "billing": "one_time",
+    "includes": [
+      "Indywidualny projekt graficzny",
+      "Responsive design (mobile-first)",
+      "Wiele podstron",
+      "CMS (Storyblok) — edycja bez programisty",
+      "SEO podstawowe",
+      "GEO optymalizacja",
+      "Formularz kontaktowy",
+      "Lighthouse 95–100/100",
+      "30 dni wsparcia po wdrożeniu"
+    ],
+    "best_for": "Firmy zamawiające stronę po raz pierwszy lub zamieniające stary WordPress",
+    "note": "Stała cena — wycena bezpłatna przed podpisaniem umowy",
+    "tech_stack": ["Nuxt", "Vue.js", "Tailwind CSS", "TypeScript", "Storyblok CMS"]
+  },
+  {
+    "slug": "landing-page",
+    "name": "Landing page",
+    "page_role": "service",
+    "category": "website",
+    "summary": "Jednostronna strona konwersyjna pod kampanie Google Ads, Meta Ads lub product launch.",
+    "price_from_pln": 2100,
+    "delivery_days_from": 3,
+    "billing": "one_time",
+    "includes": [
+      "Responsive design (mobile-first)",
+      "SEO podstawowe (meta, struktura)",
+      "GEO optymalizacja (Schema.org, JSON-LD)",
+      "Konfiguracja SSL i hostingu",
+      "Formularz kontaktowy / CTA",
+      "Lighthouse 95–100/100"
+    ],
+    "excludes": ["CMS", "Blog", "Wiele podstron"],
+    "best_for": "Kampanie Google Ads i Meta Ads, launche produktów, zbieranie leadów",
+    "tech_stack": ["Nuxt", "Vue.js", "Tailwind CSS", "TypeScript"]
   },
   {
     "slug": "sklep-internetowy",
     "name": "Sklep internetowy",
-    "price_from_pln": 12600,
-    "price_from_eur": 3000,
-    "delivery_days": 14,
+    "page_role": "service",
     "category": "ecommerce",
+    "summary": "Sklep internetowy budowany od podstaw lub na Shopify — z pełną obsługą produktów, płatności i zamówień.",
+    "price_from_pln": 12600,
+    "delivery_days_from": 14,
+    "billing": "one_time",
     "includes": [
       "Responsive design (mobile-first)",
-      "Product catalog & variants",
-      "Secure payment processing",
-      "CMS / product management",
-      "SEO basic setup",
-      "GEO optimization",
-      "SSL & hosting setup",
-      "Order management"
+      "Katalog produktów i warianty",
+      "Bezpieczne płatności online",
+      "Panel zarządzania produktami",
+      "SEO podstawowe",
+      "GEO optymalizacja",
+      "Konfiguracja SSL i hostingu",
+      "Zarządzanie zamówieniami"
     ],
-    "excludes": [],
-    "best_for": "Businesses selling products or services online",
-    "tech_stack": ["Nuxt", "Vue.js", "Tailwind CSS", "TypeScript", "Shopify or custom"]
+    "variants": [
+      {
+        "name": "Shopify",
+        "price_from_pln": 12600,
+        "delivery_days": 14,
+        "best_for": "Szybki start, sprawdzona platforma, łatwa obsługa"
+      },
+      {
+        "name": "Custom (Nuxt + backend)",
+        "price_from_pln": 25200,
+        "delivery_days": 30,
+        "best_for": "Sklepy wymagające niestandardowych integracji lub dużej skali"
+      }
+    ],
+    "note": "Możliwość prowadzenia sklepu bez rejestracji działalności (na osobę fizyczną)",
+    "best_for": "Firmy sprzedające produkty lub usługi online",
+    "tech_stack": ["Nuxt", "Vue.js", "Tailwind CSS", "TypeScript", "Shopify lub custom backend"]
   },
   {
-    "slug": "premium-ecommerce",
-    "name": "Premium e-commerce",
-    "price_from_pln": 25200,
-    "price_from_eur": 6000,
-    "delivery_days": 30,
-    "category": "ecommerce",
-    "includes": [
-      "Custom design system",
-      "Advanced product catalog",
-      "Custom checkout & payment flows",
-      "Integrations (ERP, CRM, logistics APIs)",
-      "Advanced SEO & GEO optimization",
-      "Performance architecture",
-      "Post-launch support phase"
-    ],
-    "excludes": [],
-    "best_for": "High-volume stores, SaaS platforms, complex B2B/B2C digital products",
-    "tech_stack": ["Nuxt", "Vue.js", "Tailwind CSS", "TypeScript", "Custom backend"]
+    "slug": "kalkulator-kosztow",
+    "name": "Kalkulator kosztów strony",
+    "page_role": "tool",
+    "category": "website",
+    "summary": "Interaktywna wycena online — użytkownik wybiera typ strony, funkcjonalności i otrzymuje szacunkową cenę bez rozmowy z handlowcem.",
+    "price_ranges": {
+      "landing_page": { "from": 2100, "currency": "PLN" },
+      "strona_firmowa": { "from": 6300, "currency": "PLN" },
+      "sklep_internetowy": { "from": 12600, "currency": "PLN" },
+      "premium_ecommerce": { "from": 25200, "currency": "PLN" },
+      "aplikacja_mobilna_mvp": { "from": 21000, "currency": "PLN" }
+    },
+    "note": "Każda wycena to cena stała — po akceptacji nie zmienia się w trakcie projektu"
   },
   {
     "slug": "seo",
-    "name": "SEO optymalizacja",
-    "price_from_pln": 1260,
-    "price_from_eur": 300,
-    "delivery_days": null,
-    "billing": "monthly",
+    "name": "Pozycjonowanie SEO",
+    "page_role": "service_hub",
     "category": "seo",
-    "includes": [
-      "Keyword research & semantic mapping",
-      "On-page optimization",
-      "Technical SEO audit",
-      "Local SEO (Google Business Profile)",
-      "Linkbuilding",
-      "Monthly reporting"
-    ],
+    "summary": "Pozycjonowanie stron internetowych w Google — pakiety miesięczne obejmujące audyt, optymalizację on-page, local SEO i linkbuilding.",
+    "price_from_pln": 1260,
+    "billing": "monthly",
     "variants": [
-      { "name": "SEO Audit", "price_from_pln": 840, "price_from_eur": 200, "one_time": true },
-      { "name": "Local SEO", "price_from_pln": 1260, "price_from_eur": 300, "billing": "monthly" },
-      { "name": "SEO + Linkbuilding", "price_from_pln": 2100, "price_from_eur": 500, "billing": "monthly" }
+      {
+        "name": "Local SEO",
+        "price_from_pln": 1260,
+        "billing": "monthly",
+        "best_for": "Firmy lokalne chcące pojawiać się w Google Maps i lokalnych wynikach"
+      },
+      {
+        "name": "SEO + Linkbuilding",
+        "price_from_pln": 2100,
+        "billing": "monthly",
+        "best_for": "Firmy chcące budować autorytet domeny i rosnąć organicznie"
+      },
+      {
+        "name": "SEO dla sklepu",
+        "price_from_pln": 2100,
+        "billing": "monthly",
+        "best_for": "Sklepy internetowe — pozycjonowanie kategorii i kart produktów"
+      }
     ],
-    "best_for": "Businesses wanting sustainable organic traffic growth"
+    "includes_in_every_plan": [
+      "Raportowanie miesięczne",
+      "Optymalizacja on-page",
+      "Monitoring pozycji fraz"
+    ],
+    "best_for": "Firmy szukające trwałego wzrostu organicznego ruchu z Google"
   },
   {
-    "slug": "geo-ai-optimization",
-    "name": "GEO / AI optymalizacja",
-    "price_from_pln": 0,
-    "price_from_eur": 0,
-    "billing": "included",
+    "slug": "audyt-seo",
+    "name": "Audyt SEO",
+    "page_role": "service",
     "category": "seo",
+    "summary": "Jednorazowy audyt techniczny i treściowy strony internetowej — raport z listą problemów i priorytetyzowanym planem naprawy.",
+    "price_from_pln": 840,
+    "billing": "one_time",
     "includes": [
-      "Schema.org structured data (FAQPage, HowTo, Service, LocalBusiness)",
-      "JSON-LD markup for AI crawlers",
-      "Clear information architecture for LLMs",
-      "Authoritative content structure",
-      "Comparison content for purchase-decision queries"
+      "Audyt techniczny (Core Web Vitals, indeksowanie, crawlability)",
+      "Analiza struktury URL i architektury informacji",
+      "Audyt meta tagów i nagłówków",
+      "Analiza treści pod kątem SEO",
+      "Analiza słów kluczowych i luk w widoczności",
+      "Raport z priorytetyzowaną listą zmian",
+      "Konsultacja omawiająca wyniki"
     ],
-    "note": "Included in every website project at no extra cost",
-    "best_for": "Visibility in ChatGPT, Google Gemini, Perplexity, Claude, Copilot"
+    "deliverable": "Raport PDF + arkusz zadań z priorytetami",
+    "best_for": "Strony, które nie pojawiają się w Google mimo istnienia od dłuższego czasu"
+  },
+  {
+    "slug": "optymalizacja-seo",
+    "name": "Optymalizacja SEO",
+    "page_role": "service",
+    "category": "seo",
+    "summary": "Wdrożenie zmian SEO na istniejącej stronie — optymalizacja on-page, techniczne SEO i poprawa Core Web Vitals.",
+    "price_from_pln": 1260,
+    "billing": "monthly",
+    "includes": [
+      "Optymalizacja meta tagów i nagłówków",
+      "Poprawa struktury URL",
+      "Techniczne SEO (szybkość, mobile, crawl budget)",
+      "Optymalizacja Core Web Vitals",
+      "Wdrożenie Schema.org",
+      "Optymalizacja treści pod frazy kluczowe"
+    ],
+    "best_for": "Strony z istniejącym ruchem, które chcą poprawić pozycje bez zmiany struktury"
+  },
+  {
+    "slug": "lokalne-seo",
+    "name": "Lokalne SEO",
+    "page_role": "service",
+    "category": "seo",
+    "summary": "Pozycjonowanie lokalne dla firm działających na określonym obszarze — widoczność w Google Maps i lokalnych wynikach wyszukiwania.",
+    "price_from_pln": 1260,
+    "billing": "monthly",
+    "includes": [
+      "Optymalizacja i zarządzanie wizytówką Google Business Profile",
+      "Lokalne cytowania (NAP consistency)",
+      "Optymalizacja strony pod frazy lokalne",
+      "Budowanie lokalnych linków",
+      "Monitoring pozycji lokalnych",
+      "Raportowanie miesięczne"
+    ],
+    "best_for": "Restauracje, gabinety, sklepy, warsztaty, kancelarie — firmy obsługujące klientów lokalnie"
+  },
+  {
+    "slug": "link-building",
+    "name": "Link Building",
+    "page_role": "service",
+    "category": "seo",
+    "summary": "Pozyskiwanie wartościowych linków zewnętrznych — white hat linkbuilding podnoszący autorytet domeny w Google.",
+    "price_from_pln": 840,
+    "billing": "monthly",
+    "includes": [
+      "Analiza profilu linków konkurencji",
+      "Strategia pozyskiwania linków",
+      "Outreach do tematycznych serwisów",
+      "Publikacje gościnne (guest posts)",
+      "Raport zdobytych linków miesięcznie"
+    ],
+    "note": "Tylko white hat — żadnych farm linków, PBN ani spamu katalogowego",
+    "best_for": "Strony chcące zbudować autorytet w swojej branży i przegonić konkurencję w Google"
+  },
+  {
+    "slug": "optymalizacja-ai",
+    "name": "GEO / Optymalizacja AI",
+    "page_role": "service",
+    "category": "seo",
+    "summary": "Optymalizacja strony pod AI wyszukiwarki — ChatGPT, Gemini, Perplexity, Claude. Strukturalne dane, cytowalne treści, architektura czytelna dla LLM.",
+    "price_from_pln": 0,
+    "billing": "included",
+    "includes": [
+      "Schema.org markup (FAQPage, HowTo, Service, LocalBusiness, PriceSpecification)",
+      "JSON-LD dla crawlerów LLM",
+      "Speakable schema",
+      "Architektura informacji czytelna dla modeli językowych",
+      "Treści z kompletnymi, cytowalnymi odpowiedziami",
+      "Comparison content pod zapytania zakupowe"
+    ],
+    "note": "Wliczone w każdy projekt strony bez dopłat. Jako oddzielna usługa wyceniana indywidualnie.",
+    "best_for": "Firmy chcące pojawiać się jako źródło cytowane przez ChatGPT, Gemini i Perplexity"
+  },
+  {
+    "slug": "marketing-online",
+    "name": "Marketing internetowy",
+    "page_role": "service_hub",
+    "category": "marketing",
+    "summary": "Kompleksowy marketing online dla firm — Google Ads, Social Media, reklama display. Wszystko rozliczane miesięcznie z przejrzystym raportowaniem.",
+    "price_from_pln": 1260,
+    "billing": "monthly",
+    "services_in_hub": ["google-ads", "social-media"],
+    "best_for": "Firmy szukające jednego partnera do prowadzenia całego marketingu online"
   },
   {
     "slug": "google-ads",
     "name": "Google Ads",
-    "price_from_pln": 1680,
-    "price_from_eur": 400,
-    "delivery_days": null,
-    "billing": "monthly",
+    "page_role": "service",
     "category": "marketing",
+    "summary": "Prowadzenie kampanii Google Ads — search, display, remarketing. Budżet reklamowy rozliczany bezpośrednio z Google, oddzielnie od fee za obsługę.",
+    "price_from_pln": 1680,
+    "billing": "monthly",
     "includes": [
-      "Campaign strategy & setup",
-      "Keyword targeting",
-      "Ad copy creation",
-      "Conversion tracking",
-      "Monthly optimization & reporting"
+      "Strategia i setup kampanii",
+      "Dobór słów kluczowych",
+      "Tworzenie tekstów reklamowych",
+      "Śledzenie konwersji",
+      "Miesięczna optymalizacja i raportowanie",
+      "Audyt istniejących kampanii (przy przejęciu)"
     ],
-    "note": "Ad budget billed separately by Google",
-    "best_for": "Businesses needing immediate qualified traffic"
+    "note": "Budżet reklamowy Google rozliczany oddzielnie — minimum 1 000 zł/mies. budżetu rekomendowane",
+    "best_for": "Firmy potrzebujące natychmiastowego ruchu i zapytań od pierwszego dnia"
   },
   {
     "slug": "social-media",
     "name": "Social Media Marketing",
-    "price_from_pln": 1260,
-    "price_from_eur": 300,
-    "delivery_days": null,
-    "billing": "monthly",
+    "page_role": "service",
     "category": "marketing",
+    "summary": "Prowadzenie social media i kampanii płatnych na Facebooku i Instagramie — organika i Meta Ads.",
+    "price_from_pln": 1260,
+    "billing": "monthly",
     "includes": [
-      "Content calendar",
-      "Post creation & scheduling",
+      "Kalendarz treści miesięczny",
+      "Tworzenie i publikacja postów",
       "Community management",
-      "Paid social campaigns (Meta Ads)",
-      "Monthly performance report"
+      "Kampanie Meta Ads (Facebook + Instagram)",
+      "Raport miesięczny z wynikami"
     ],
-    "best_for": "Brand awareness, community building, B2C businesses"
+    "note": "Budżet reklamowy Meta rozliczany oddzielnie",
+    "best_for": "Firmy B2C, marki lokalne, e-commerce budujący społeczność i zasięg"
   },
   {
-    "slug": "branding",
-    "name": "Branding & Corporate Design",
-    "price_from_pln": null,
-    "price_from_eur": null,
-    "billing": "on_request",
+    "slug": "projektowanie-stron",
+    "name": "Projektowanie stron internetowych",
+    "page_role": "service",
     "category": "design",
+    "summary": "Projektowanie UI stron internetowych — wireframy, projekt graficzny, responsive layout. Bez szablonów.",
+    "price_from_pln": null,
+    "billing": "on_request",
     "includes": [
-      "Logo design",
-      "Brand identity system",
-      "Color palette & typography",
-      "UI/UX design",
-      "Brand guidelines document"
+      "Wireframy i architektura informacji",
+      "Projekt graficzny (desktop + mobile)",
+      "Design system (kolory, typografia, komponenty)",
+      "Przekazanie do developerów lub wdrożenie przez nasz team"
     ],
-    "best_for": "New businesses or rebrands needing full visual identity"
+    "note": "Może być zamówione jako część projektu strony lub jako oddzielna usługa",
+    "best_for": "Firmy mające własnych developerów i szukające wyłącznie projektu graficznego"
   },
   {
     "slug": "copywriting",
-    "name": "Content & Copywriting",
-    "price_from_pln": null,
-    "price_from_eur": null,
-    "billing": "on_request",
+    "name": "Teksty na stronę www",
+    "page_role": "service",
     "category": "design",
+    "summary": "Copywriting SEO dla stron internetowych w języku polskim — teksty konwertujące, zoptymalizowane pod frazy i pod AI wyszukiwarki.",
+    "price_from_pln": null,
+    "billing": "on_request",
     "includes": [
-      "SEO-optimized page copy",
-      "Blog articles",
-      "Product descriptions",
-      "Conversion-focused landing page text"
+      "Teksty na podstrony usług",
+      "Teksty na stronę główną",
+      "Opisy produktów",
+      "Artykuły blogowe zoptymalizowane pod SEO",
+      "Teksty landing page"
     ],
-    "best_for": "Businesses that need professional web copy in Polish"
+    "note": "Wycena per projekt lub per strona — podaj liczbę podstron przy zapytaniu",
+    "best_for": "Firmy bez własnego copywritera lub zamawiające stronę i potrzebujące gotowych treści"
+  },
+  {
+    "slug": "branding",
+    "name": "Branding i identyfikacja wizualna",
+    "page_role": "service",
+    "category": "design",
+    "summary": "Projektowanie logo, identyfikacji wizualnej i księgi znaku dla firm.",
+    "price_from_pln": null,
+    "billing": "on_request",
+    "includes": [
+      "Projekt logo (3 koncepcje)",
+      "System identyfikacji wizualnej",
+      "Paleta kolorów i typografia",
+      "Księga znaku / księga identyfikacji wizualnej",
+      "Pliki w formatach do druku i web (AI, SVG, PNG, PDF)"
+    ],
+    "best_for": "Nowe firmy lub biznesy zmieniające markę"
+  },
+  {
+    "slug": "ui-ux-design",
+    "name": "UI/UX Design",
+    "page_role": "service",
+    "category": "design",
+    "summary": "Projektowanie interfejsów użytkownika i doświadczeń — audyt UX, wireframy, prototypy, testy użyteczności.",
+    "price_from_pln": null,
+    "billing": "on_request",
+    "includes": [
+      "Audyt UX istniejącej strony lub aplikacji",
+      "Mapa ścieżek użytkownika (user flows)",
+      "Wireframy (lo-fi i hi-fi)",
+      "Prototyp interaktywny (Figma)",
+      "Projekt graficzny interfejsu",
+      "Specyfikacja dla developerów"
+    ],
+    "best_for": "Aplikacje webowe, SaaS, sklepy i serwisy z dużym ruchem, gdzie UX ma bezpośredni wpływ na konwersję"
   },
   {
     "slug": "aplikacja-mobilna",
     "name": "Aplikacja mobilna",
-    "price_from_pln": 21000,
-    "price_from_eur": 5000,
-    "delivery_days": 45,
+    "page_role": "service",
     "category": "mobile",
+    "summary": "Aplikacje mobilne iOS i Android w jednej bazie kodu — React Native. Od MVP po złożone platformy.",
+    "price_from_pln": 21000,
+    "delivery_days_from": 45,
+    "billing": "one_time",
     "includes": [
-      "iOS & Android (single codebase)",
-      "Custom UI/UX design",
-      "Backend API integration",
+      "iOS i Android (jedna baza kodu React Native)",
+      "Projekt UI/UX",
+      "Integracja z API backendu",
       "Push notifications",
-      "App Store & Google Play submission",
-      "Performance optimization",
-      "Post-launch support phase"
+      "Publikacja w App Store i Google Play",
+      "Optymalizacja wydajności",
+      "Wsparcie po wdrożeniu"
     ],
     "variants": [
       {
-        "name": "MVP / Prototype",
+        "name": "MVP",
         "price_from_pln": 21000,
-        "price_from_eur": 5000,
         "delivery_days": 45,
-        "best_for": "Startups validating an idea with core features only"
+        "best_for": "Startupy weryfikujące pomysł — tylko core features"
       },
       {
         "name": "Business App",
         "price_from_pln": 42000,
-        "price_from_eur": 10000,
         "delivery_days": 90,
-        "best_for": "Full-featured apps for internal tools, client-facing platforms"
+        "best_for": "Pełnofunkcjonalne aplikacje dla klientów lub pracowników"
       },
       {
         "name": "Custom Platform",
         "price_from_pln": null,
         "billing": "on_request",
         "delivery_days": null,
-        "best_for": "Complex apps with custom backend, integrations, or marketplaces"
+        "best_for": "Złożone platformy z własnym backendem, marketplace lub integracjami zewnętrznymi"
       }
     ],
     "tech_stack": ["React Native", "Expo", "TypeScript", "REST / GraphQL API"],
-    "note": "Cross-platform by default. Native iOS/Android available on request.",
-    "best_for": "Businesses extending their web presence to mobile, or launching a standalone app product"
+    "note": "Cross-platform domyślnie. Natywny iOS lub Android dostępny na zapytanie.",
+    "best_for": "Firmy rozszerzające obecność webową na mobile lub tworzące samodzielny produkt aplikacyjny"
   }
 ]
