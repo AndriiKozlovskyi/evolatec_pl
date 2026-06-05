@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     [
       '@storyblok/nuxt',
       {
-        accessToken: 'E7rdEGgQsrlZER730dumgQtt',
+        accessToken: '6KUOFHPF7VHQtU2nvaMSYgtt',
         apiOptions: {
           region: 'eu',
         },

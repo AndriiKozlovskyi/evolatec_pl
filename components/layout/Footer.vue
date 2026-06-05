@@ -149,6 +149,7 @@ const serviceGroups = [
 ];
 
 const companyLinks = [
+  { label: 'Blog',              href: '/blog' },
   { label: 'Kontakt',           href: '/kontakt' },
   { label: 'Kalkulator kosztów', href: '/kalkulator-kosztow' },
 ];

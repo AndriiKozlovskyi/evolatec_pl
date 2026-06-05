@@ -39,7 +39,7 @@
       <!-- Read more -->
       <div class="mt-4 pt-4 border-t border-outline-variant/20 flex items-center justify-between">
         <span class="text-xs font-semibold text-primary flex items-center gap-1">
-          {{ isEnglish ? 'Read more' : 'Weiterlesen' }}
+          Czytaj więcej
           <span class="material-symbols-outlined text-[16px] leading-none transition-transform duration-200 group-hover:translate-x-1">arrow_forward</span>
         </span>
         <span v-if="formattedDate" class="flex items-center gap-1 text-xs text-on-surface-variant/60">
@@ -53,13 +53,11 @@
 </template>
 
 <script setup>
-const { isEnglish: routeIsEnglish } = useLanguageSwitcher()
-const props = defineProps({ article: Object, slug: String, lang: String, date: String })
-const isEnglish = computed(() => props.lang ? props.lang === 'en' : routeIsEnglish.value)
+const props = defineProps({ article: Object, slug: String, date: String })
 
 const formattedDate = computed(() => {
   if (!props.date) return ''
-  return new Intl.DateTimeFormat(isEnglish.value ? 'en-GB' : 'de-DE', {
+  return new Intl.DateTimeFormat('pl-PL', {
     day: 'numeric',
     month: 'short',
     year: 'numeric',
