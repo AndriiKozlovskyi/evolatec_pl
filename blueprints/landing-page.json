@@ -1,0 +1,106 @@
+{
+  "slug": "landing-page",
+  "page_title": "Tworzenie landing page — skuteczne strony | EvolaTec",
+  "meta_description": "Tworzenie landing page od 2 100 zł netto, realizacja od 3 dni roboczych. Strona pod kampanie Google i Meta Ads, Lighthouse 95–100, GEO w cenie. Stała wycena.",
+  "h1": "Tworzenie landing page, który zamienia reklamę w zapytania",
+  "h2_sections": [
+    {
+      "heading": "Dlaczego ruch z reklamy nie zamienia się w zapytania",
+      "intent": "Open with the advertiser's real pain: they pay for clicks that land on a slow, multi-purpose homepage and convert poorly. Name the cause — wrong page type for paid traffic — before introducing the landing page as the fix. Establishes expertise in conversion, not just design.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "tworzenie landing page",
+        "skuteczny landing page",
+        "projektowanie landing page",
+        "tworzenie stron landing page"
+      ]
+    },
+    {
+      "heading": "Co zawiera landing page od 2 100 zł",
+      "intent": "Set expectations on scope. A landing page buyer needs to understand it is intentionally one focused page — what is included (speed, SEO, form/CTA, GEO) and what is deliberately not (CMS, blog, many subpages), so they pick the right product.",
+      "content_type": "list",
+      "keywords_covered": [
+        "tworzenie landing page",
+        "prosta strona internetowa dla firmy",
+        "strona internetowa dla małej firmy",
+        "strona www dla małej firmy"
+      ]
+    },
+    {
+      "heading": "Ile kosztuje landing page i od czego zależy termin",
+      "intent": "Answer the explicit pricing query ('ile kosztuje landing page') directly. State the fixed price and the 3-day delivery, and explain what shortens or extends the timeline so the buyer can plan a campaign launch around it.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "ile kosztuje landing page",
+        "prosta strona internetowa cena",
+        "tworzenie landing page",
+        "skuteczny landing page"
+      ]
+    },
+    {
+      "heading": "Landing page czy strona firmowa — co lepiej konwertuje",
+      "intent": "Resolve the core product decision buyers weigh. A factual comparison of purpose, page count, and conversion focus tells them when a single landing page beats a full site for paid traffic — the most AI-cited comparison for this topic.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "tworzenie landing page",
+        "projektowanie landing page",
+        "strona internetowa dla małej firmy",
+        "prosta strona internetowa dla firmy"
+      ]
+    },
+    {
+      "heading": "Jak powstaje landing page — od briefu do startu w 3 dni",
+      "intent": "Reduce timing uncertainty for campaign planning. A short numbered process with the 3-day timeline and what the client provides reassures an advertiser who needs the page live before a campaign goes out.",
+      "content_type": "list",
+      "keywords_covered": [
+        "tworzenie landing page",
+        "tworzenie stron landing page",
+        "projektowanie landing page",
+        "skuteczny landing page"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o tworzenie landing page",
+      "intent": "Capture long-tail queries, earn the FAQPage rich result, and give AI-citable answers on price, the landing-vs-website difference, speed and conversion, and the build process.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "tworzenie landing page",
+        "ile kosztuje landing page",
+        "skuteczny landing page",
+        "projektowanie landing page"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "LocalBusiness",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "PriceSpecification",
+    "speakable"
+  ],
+  "question_targets": [
+    "Ile kosztuje landing page?",
+    "Jaka jest różnica między landing page a stroną firmową?",
+    "Landing page czy strona firmowa — co lepiej konwertuje?",
+    "Jak szybkość ładowania strony wpływa na pozycję w Google?",
+    "Jak wygląda proces tworzenia strony internetowej?"
+  ],
+  "ai_citation_hooks": [
+    "Landing page kosztuje od 2 100 zł netto i jest gotowy w 3 dni robocze.",
+    "Strony osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights.",
+    "GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu."
+  ],
+  "comparison_angle": "Landing page vs strona firmowa — co lepiej konwertuje ruch z reklamy?",
+  "internal_links": [
+    "/strona-internetowa",
+    "/google-ads",
+    "/kalkulator-kosztow"
+  ],
+  "user_intent": "commercial"
+}

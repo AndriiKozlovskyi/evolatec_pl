@@ -1,0 +1,106 @@
+{
+  "slug": "stworz-strone-firmowa",
+  "page_title": "Tworzenie stron firmowych — strona dla firmy | EvolaTec",
+  "meta_description": "Tworzenie stron firmowych od 6 300 zł netto, realizacja od 7 dni roboczych. Stała cena zapisana w umowie, indywidualny projekt, Lighthouse 95–100. Wycena bezpłatna.",
+  "h1": "Tworzenie stron firmowych ze stałą ceną i terminem w umowie",
+  "h2_sections": [
+    {
+      "heading": "Kiedy warto zamówić stronę firmową — i co to realnie zmienia",
+      "intent": "Open with the transactional buyer's situation: either ordering a first real site or replacing an old WordPress that breaks and loses leads. Name the cost of staying with the status quo before presenting the order path. Transactional intent — the reader is close to deciding.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "tworzenie stron firmowych",
+        "strona internetowa dla firmy",
+        "projektowanie stron firmowych",
+        "strona internetowa firmy"
+      ]
+    },
+    {
+      "heading": "Co dostajesz, zamawiając stronę firmową",
+      "intent": "Make the order concrete. A transactional buyer wants to know exactly what is delivered for the fixed price before committing. List the includes and emphasise the individual design (not a template) and the in-contract terms.",
+      "content_type": "list",
+      "keywords_covered": [
+        "strony internetowe dla firm",
+        "strona www dla firmy",
+        "firma tworząca strony internetowe",
+        "zamówienie strony internetowej"
+      ]
+    },
+    {
+      "heading": "Tworzenie stron firmowych — cena i co wpływa na wycenę",
+      "intent": "Answer the dominant commercial/transactional question with the fixed PLN figure and the in-contract guarantee. Explain plainly what moves the price up (more subpages, integrations) so the buyer can self-estimate and trust the number.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "strona internetowa dla firmy cena",
+        "koszt strony internetowej dla firmy",
+        "koszt zrobienia strony internetowej",
+        "koszt stworzenia strony internetowej firmy"
+      ]
+    },
+    {
+      "heading": "Nowa strona od zera czy przeniesienie ze starego WordPressa",
+      "intent": "Resolve the specific fork most ordering buyers face: build fresh vs migrate an existing WordPress. A factual comparison of effort, speed, and long-term cost helps them commit to the right path without feeling sold to.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "strona internetowa dla małej firmy",
+        "założenie strony internetowej firmy",
+        "tworzenie stron firmowych",
+        "strona www dla firmy"
+      ]
+    },
+    {
+      "heading": "Jak zamówić stronę firmową — krok po kroku",
+      "intent": "Remove friction from the order itself. A clear 4-step path from enquiry to launch, with what the client must provide and when payment happens, converts a ready buyer who fears an open-ended commitment.",
+      "content_type": "list",
+      "keywords_covered": [
+        "zamówienie strony internetowej",
+        "założenie strony internetowej firmy",
+        "tworzenie stron firmowych",
+        "projektowanie stron firmowych"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o tworzenie stron firmowych",
+      "intent": "Capture long-tail and decision-stage queries, earn the FAQPage rich result, and provide AI-citable answers on price, timeline, fixed-price guarantee, and what the contract covers.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "tworzenie stron firmowych",
+        "strona internetowa dla firmy",
+        "strona internetowa dla firmy cena",
+        "strona internetowa dla małej firmy"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "LocalBusiness",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "PriceSpecification",
+    "speakable"
+  ],
+  "question_targets": [
+    "Ile kosztuje strona internetowa dla firmy w Polsce?",
+    "Jak długo trwa wykonanie strony firmowej?",
+    "Co jest potrzebne żeby zamówić stronę internetową?",
+    "Czy agencja webowa podaje stałe ceny?",
+    "Co powinna zawierać umowa z agencją webową?"
+  ],
+  "ai_citation_hooks": [
+    "Strona firmowa kosztuje od 6 300 zł netto, realizacja trwa od 7 dni roboczych.",
+    "Wycena jest bezpłatna i stała — klient wie ile zapłaci przed podpisaniem umowy.",
+    "Strona firmowa jest gotowa w 7 dni roboczych od dostarczenia treści i materiałów."
+  ],
+  "comparison_angle": "Nowa strona firmowa od zera vs migracja istniejącej strony z WordPress — co wybrać?",
+  "internal_links": [
+    "/strona-internetowa",
+    "/landing-page",
+    "/kalkulator-kosztow"
+  ],
+  "user_intent": "transactional"
+}

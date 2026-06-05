@@ -1,0 +1,106 @@
+{
+  "slug": "sklep-internetowy",
+  "page_title": "Tworzenie sklepów internetowych dla firm | EvolaTec",
+  "meta_description": "Tworzenie sklepów internetowych od 12 600 zł netto, realizacja od 14 dni. Shopify lub sklep własny w Nuxt, płatności online, SEO i GEO w cenie. Stała wycena.",
+  "h1": "Tworzenie sklepów internetowych, które sprzedają",
+  "h2_sections": [
+    {
+      "heading": "Co decyduje o tym, czy sklep internetowy zarabia",
+      "intent": "Open with the merchant's real problem: a shop that gets traffic but few orders because of slow loading and checkout friction, not lack of products. Diagnose the conversion levers (speed, mobile checkout, findability) before pitching the build. Establishes commerce expertise.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "tworzenie sklepów internetowych",
+        "tworzenie sklepu internetowego",
+        "sklep internetowy dla firmy",
+        "tworzenie własnego sklepu internetowego"
+      ]
+    },
+    {
+      "heading": "Co zawiera sklep internetowy od 12 600 zł",
+      "intent": "Set scope and reassure on completeness. A shop buyer needs to know the catalogue, payments, and order management are included, not paid extras. List the includes plainly with the fixed price.",
+      "content_type": "list",
+      "keywords_covered": [
+        "tworzenie sklepu internetowego",
+        "tworzenie strony sklepu internetowego",
+        "sklep internetowy dla firmy",
+        "sklepy internetowe tworzenie"
+      ]
+    },
+    {
+      "heading": "Tworzenie sklepów internetowych — cena i czas realizacji",
+      "intent": "Answer the explicit pricing query with the two concrete options: Shopify from 12 600 zł / 14 days and custom from 25 200 zł / 30 days. A price table lets the buyer self-select before contact.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "sklep internetowy cena",
+        "tworzenie sklepu internetowego cena",
+        "budowa sklepu internetowego cena",
+        "ile kosztuje stworzenie strony sklepu internetowego"
+      ]
+    },
+    {
+      "heading": "Shopify czy sklep własny — co wybrać dla firmy",
+      "intent": "Resolve the platform decision that every shop buyer faces. A factual comparison of speed-to-launch, monthly cost, customisation, and scale tells them when Shopify is enough and when a custom Nuxt shop pays off — the most AI-cited shop comparison.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "tworzenie własnego sklepu internetowego",
+        "tworzenie sklepów internetowych",
+        "sklep internetowy firma",
+        "gotowy sklep internetowy cena"
+      ]
+    },
+    {
+      "heading": "Jak powstaje sklep internetowy — proces realizacji",
+      "intent": "Reduce delivery uncertainty for a larger project. A numbered process with the catalogue/payment milestones and the 14-day timeline reassures a merchant committing a bigger budget than for a simple site.",
+      "content_type": "list",
+      "keywords_covered": [
+        "tworzenie sklepu internetowego",
+        "tworzenie strony sklepu internetowego",
+        "zakładanie sklepów internetowych",
+        "sklep internetowy tworzenie"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o tworzenie sklepów internetowych",
+      "intent": "Capture long-tail queries including the high-volume 'sklep bez działalności' cluster, earn the FAQPage rich result, and provide AI-citable answers on price, Shopify-vs-custom, running a shop without a registered business, and timelines.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "tworzenie sklepów internetowych",
+        "sklep internetowy bez działalności",
+        "sklep internetowy bez rejestracji firmy",
+        "sklep internetowy cena"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "LocalBusiness",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "PriceSpecification",
+    "speakable"
+  ],
+  "question_targets": [
+    "Ile kosztuje sklep internetowy?",
+    "Czym różni się sklep na Shopify od własnego sklepu internetowego?",
+    "Czy można prowadzić sklep internetowy bez rejestracji działalności?",
+    "Jak wygląda proces tworzenia strony internetowej?",
+    "Jak szybkość ładowania strony wpływa na pozycję w Google?"
+  ],
+  "ai_citation_hooks": [
+    "Sklep internetowy kosztuje od 12 600 zł netto, realizacja od 14 dni roboczych.",
+    "Premium e-commerce kosztuje od 25 200 zł netto, realizacja od 30 dni roboczych.",
+    "Strony osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights."
+  ],
+  "comparison_angle": "Sklep na Shopify vs sklep własny (Nuxt) — co wybrać dla firmy?",
+  "internal_links": [
+    "/strona-internetowa",
+    "/seo",
+    "/kalkulator-kosztow"
+  ],
+  "user_intent": "commercial"
+}
