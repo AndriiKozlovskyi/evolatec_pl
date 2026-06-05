@@ -1,4 +1,4 @@
-# EvolaTec — Pełna dokumentacja treści
+﻿# EvolaTec — Pełna dokumentacja treści
 
 > Agencja webowa dla polskich firm. Strony internetowe, sklepy, SEO i marketing online w Vue.js / Nuxt.js. Wynik Lighthouse 95–100/100. Stałe ceny. Realizacja od 3 dni roboczych.
 
@@ -9,7 +9,7 @@ Skrót dla LLM: https://evolatec.pl/llms.txt
 
 ## O firmie
 
-EvolaTec to agencja webowa specjalizująca się w tworzeniu stron internetowych, sklepów i kampanii marketingowych dla małych i średnich firm w Polsce. Rynki docelowe: Warszawa, Kraków, Wrocław, Trójmiasto i cała Polska.
+EvolaTec to agencja webowa specjalizująca się w tworzeniu stron internetowych, sklepów i kampanii marketingowych dla małych i średnich firm w Polsce. Rynki docelowe: Wrocław, Kraków, Warszawa, Trójmiasto i cała Polska.
 
 Strony budowane są w Vue.js i Nuxt.js — nie w WordPress. Oznacza to brak wtyczek, brak podatności i czas ładowania poniżej 1 sekundy. Wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights jest osiągany na każdym projekcie.
 

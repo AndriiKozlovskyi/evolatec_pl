@@ -56,13 +56,13 @@ const mainSchema = {
       description: 'Agencja webowa tworząca strony internetowe, sklepy online i rozwiązania SEO dla polskich firm. Realizacja od 3 dni roboczych, Lighthouse 95–100, stała cena.',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Warszawa',
+        addressLocality: 'Wrocław',
         addressCountry: 'PL',
       },
-      email: 'kontakt@evolatec.pl',
+      email: 'team@evolatec.pl',
       areaServed: [
         { '@type': 'Country', name: 'Poland' },
-        { '@type': 'City', name: 'Warszawa' },
+        { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Kraków' },
         { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Gdańsk' },
@@ -70,7 +70,7 @@ const mainSchema = {
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'sales',
-        email: 'kontakt@evolatec.pl',
+        email: 'team@evolatec.pl',
       },
       sameAs: [
         'https://g.page/evolatec-pl',

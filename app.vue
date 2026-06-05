@@ -7,5 +7,6 @@
     </main>
     <Footer />
     <CookieBanner />
+    <FloatingContact />
   </div>
 </template>

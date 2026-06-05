@@ -50,10 +50,10 @@ const mainSchema = {
       },
       image: { '@id': 'https://evolatec.pl/#logo' },
       description: 'Agencja webowa tworząca strony internetowe, sklepy online i rozwiązania SEO dla polskich firm.',
-      address: { '@type': 'PostalAddress', addressLocality: 'Warszawa', addressCountry: 'PL' },
-      email: 'kontakt@evolatec.pl',
+      address: { '@type': 'PostalAddress', addressLocality: 'Wrocław', addressCountry: 'PL' },
+      email: 'team@evolatec.pl',
       areaServed: [
-        { '@type': 'City', name: 'Warszawa' },
+        { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Kraków' },
         { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Gdańsk' },
@@ -145,7 +145,7 @@ const heroStats = [
 
 const introParagraphs = [
   'Lokalne SEO to zestaw działań, które sprawiają, że firma pojawia się w wynikach Google wtedy, gdy ktoś szuka usługi lub produktu w określonym mieście lub regionie. Chodzi o widoczność w trzech miejscach jednocześnie: w organicznych wynikach wyszukiwania, w Mapach Google i — coraz częściej — w odpowiedziach AI asystentów, takich jak ChatGPT i Gemini.',
-  'Lokalne SEO ma sens wtedy, gdy klientów pozyskujesz z określonego obszaru geograficznego. Firma budowlana działająca w Warszawie nie potrzebuje widoczności w Gdańsku — potrzebuje być pierwsza w wynikach dla zapytań z dopiskiem „Warszawa", „Mokotów" czy „Ursynów". Podobnie klinika stomatologiczna, salon urody, kancelaria prawna czy serwis samochodowy — każdy z tych biznesów ma swój promień działania i właśnie w tym promieniu musi być widoczny.',
+  'Lokalne SEO ma sens wtedy, gdy klientów pozyskujesz z określonego obszaru geograficznego. Firma budowlana działająca w Warszawie nie potrzebuje widoczności w Gdańsku — potrzebuje być pierwsza w wynikach dla zapytań z dopiskiem „Wrocław", „Mokotów" czy „Ursynów". Podobnie klinika stomatologiczna, salon urody, kancelaria prawna czy serwis samochodowy — każdy z tych biznesów ma swój promień działania i właśnie w tym promieniu musi być widoczny.',
   'Bez lokalnego SEO wiele firm pojawia się w Google dopiero na drugiej lub trzeciej stronie wyników — w miejscu, gdzie użytkownicy już nie zaglądają. Wizytówka Google Business Profile bez optymalizacji jest niewidoczna w Map Pack, choć to właśnie Map Pack pojawia się jako pierwsze przy lokalnych zapytaniach.',
 ]
 

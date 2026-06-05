@@ -81,8 +81,8 @@ const mainSchema = {
       },
       image: { '@id': 'https://evolatec.pl/#logo' },
       description: 'Agencja webowa tworząca strony internetowe, sklepy online i rozwiązania SEO dla polskich firm.',
-      address: { '@type': 'PostalAddress', addressLocality: 'Warszawa', addressCountry: 'PL' },
-      email: 'kontakt@evolatec.pl',
+      address: { '@type': 'PostalAddress', addressLocality: 'Wrocław', addressCountry: 'PL' },
+      email: 'team@evolatec.pl',
       areaServed: { '@type': 'Country', name: 'Poland' },
       sameAs: [
         'https://g.page/evolatec-pl',
@@ -274,7 +274,7 @@ const schemaTypes = [
   },
   {
     title: 'LocalBusiness',
-    description: 'Identyfikuje firmę jako podmiot działający w konkretnej lokalizacji. Używany przy zapytaniach lokalnych — „firma SEO Warszawa" — zarówno przez Google Maps, jak i przez AI asystentów.',
+    description: 'Identyfikuje firmę jako podmiot działający w konkretnej lokalizacji. Używany przy zapytaniach lokalnych — „firma SEO Wrocław" — zarówno przez Google Maps, jak i przez AI asystentów.',
     icon: 'store',
   },
   {

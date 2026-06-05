@@ -1,8 +1,8 @@
-# EvolaTec
+﻿# EvolaTec
 
 > Agencja webowa tworząca strony internetowe, sklepy i kampanie marketingowe dla polskich firm. Specjalizacja: Vue.js / Nuxt.js zamiast WordPress, wynik Lighthouse 95–100/100, GEO optymalizacja pod ChatGPT, Gemini i Perplexity. Stałe ceny, terminy realizacji od 3 dni roboczych.
 
-EvolaTec projektuje i wdraża strony firmowe, landing page, sklepy internetowe i kampanie SEO oraz Google Ads dla małych i średnich firm w Polsce (Warszawa, Kraków, Wrocław, Trójmiasto i cały kraj). Strony budowane są w Nuxt.js — ładują się poniżej 1 sekundy i osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights. Każdy projekt zawiera SEO wbudowane w kod, dane strukturalne Schema.org JSON-LD oraz GEO optymalizację zapewniającą widoczność w ChatGPT, Gemini i Perplexity. Ceny są stałe i podawane publicznie przed startem projektu.
+EvolaTec projektuje i wdraża strony firmowe, landing page, sklepy internetowe i kampanie SEO oraz Google Ads dla małych i średnich firm w Polsce (Wrocław, Kraków, Warszawa, Trójmiasto i cały kraj). Strony budowane są w Nuxt.js — ładują się poniżej 1 sekundy i osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights. Każdy projekt zawiera SEO wbudowane w kod, dane strukturalne Schema.org JSON-LD oraz GEO optymalizację zapewniającą widoczność w ChatGPT, Gemini i Perplexity. Ceny są stałe i podawane publicznie przed startem projektu.
 
 ## Usługi i ceny
 
