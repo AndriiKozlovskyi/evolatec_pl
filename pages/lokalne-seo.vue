@@ -152,31 +152,43 @@ const introParagraphs = [
 const deliverables = [
   {
     icon: 'location_on',
+    iconBg: 'bg-sky-50',
+    iconColor: 'text-sky-600',
     title: 'Optymalizacja Google Business Profile',
     description: 'Uzupełnienie i weryfikacja wizytówki, dobór kategorii podstawowej i dodatkowych, opis z frazami kluczowymi, harmonogram postów GBP i odpowiedzi na recenzje. Wizytówka jest pierwszym wynikiem, który widzi użytkownik przy lokalnych zapytaniach.',
   },
   {
     icon: 'corporate_fare',
+    iconBg: 'bg-violet-50',
+    iconColor: 'text-violet-600',
     title: 'NAP consistency — spójność danych w internecie',
     description: 'Weryfikacja i ujednolicenie nazwy firmy, adresu i numeru telefonu we wszystkich katalogach, agregatorach i wzmiankach w internecie. Niespójne dane NAP obniżają ranking w Map Pack — Google nie wie, który wpis jest aktualny.',
   },
   {
     icon: 'hub',
+    iconBg: 'bg-emerald-50',
+    iconColor: 'text-emerald-600',
     title: 'Lokalne cytowania i katalogi branżowe',
     description: 'Zgłoszenie firmy do katalogów tematycznych i lokalnych portali miejskich z linkiem zwrotnym do strony i wizytówki. Każde cytowanie wzmacnia sygnał lokalności dla algorytmu Google.',
   },
   {
     icon: 'schema',
+    iconBg: 'bg-amber-50',
+    iconColor: 'text-amber-600',
     title: 'Dane strukturalne LocalBusiness Schema.org',
     description: 'Implementacja JSON-LD z adresem, obszarem obsługi i godzinami otwarcia. Schema.org markup dla FAQ, HowTo, Service i LocalBusiness jest standardem w każdej realizacji — czytelny dla Google i dla AI wyszukiwarek.',
   },
   {
     icon: 'article',
+    iconBg: 'bg-rose-50',
+    iconColor: 'text-rose-600',
     title: 'Optymalizacja strony pod frazy lokalne',
     description: 'Dedykowane podstrony dla obsługiwanych dzielnic lub miast, treści odpowiadające na lokalne zapytania i wewnętrzna struktura linków. Frazy z geolokalizacją konwertują wyżej niż ogólne — użytkownik, który szuka „elektryk Mokotów", jest gotowy do zamówienia.',
   },
   {
     icon: 'analytics',
+    iconBg: 'bg-indigo-50',
+    iconColor: 'text-indigo-600',
     title: 'Raport miesięczny z metrykami',
     description: 'Pozycje fraz lokalnych, liczba wyświetleń wizytówki, zapytania w Map Pack, zmiany w Call Clicks i Direction Requests. Każdy raport zawiera porównanie z poprzednim miesiącem i listę działań zrealizowanych w danym okresie.',
   },
@@ -344,7 +356,7 @@ const relatedServices = [
 
     <!-- ── Hero ──────────────────────────────────────────────────────────── -->
     <HeroSection
-      background-image="/images/hero-lokalne-seo.webp"
+      background-image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1600&h=900&fit=crop&auto=format&q=80"
       badge="Lokalne SEO — pozycjonowanie regionalne"
       title="Lokalne SEO – bądź widoczny tam, gdzie szukają Twoi klienci"
       description="Widoczność w Google Maps, Map Pack i AI wyszukiwarkach dla firm działających lokalnie. Optymalizacja Google Business Profile, lokalne cytowania i Schema.org LocalBusiness — od 1 260 zł netto miesięcznie."
@@ -371,8 +383,8 @@ const relatedServices = [
         <IntroSection
           heading="Co to jest lokalne SEO i kiedy warto je stosować"
           :paragraphs="introParagraphs"
-          image="/images/lokalne-seo-intro.webp"
-          image-alt="Wyniki Map Pack Google dla lokalnego zapytania o usługę w mieście"
+          image="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=640&h=420&fit=crop&auto=format&q=80"
+          image-alt="Widok centrum polskiego miasta z lotu ptaka — lokalne firmy widoczne na mapie Google Maps"
         />
 
         <!-- ── Section 2: Co obejmuje usługa ─────────────────────────────── -->
@@ -404,7 +416,7 @@ const relatedServices = [
         <FeaturesSection
           title="Trzy obszary, w których lokalne SEO przewyższa ogólne pozycjonowanie"
           :features="featuresItems"
-          image-url="/images/lokalne-seo-features.webp"
+          image-url="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=560&h=420&fit=crop&auto=format&q=80"
         />
 
         <!-- ── Section 7: Lokalne vs ogólnopolskie — tabela ──────────────── -->

@@ -147,21 +147,29 @@ const introParagraphs = [
 const acquisitionMethods = [
   {
     icon: 'campaign',
+    iconBg: 'bg-violet-50',
+    iconColor: 'text-violet-600',
     title: 'Digital PR i content outreach',
     description: 'Tworzymy materiały — dane, zestawienia, ekspertyzy — które mają wartość redakcyjną dla mediów branżowych i portali informacyjnych. Linki zdobyte tą metodą mają najwyższy autorytet i są najtrudniejsze do skopiowania przez konkurencję.',
   },
   {
     icon: 'edit_note',
+    iconBg: 'bg-sky-50',
+    iconColor: 'text-sky-600',
     title: 'Guest posting na niszowych serwisach',
     description: 'Publikujemy artykuły eksperckie na serwisach tematycznie powiązanych z Twoją działalnością. Każdy artykuł jest oryginalny — nie powielamy treści między różnymi domenami.',
   },
   {
     icon: 'hub',
+    iconBg: 'bg-emerald-50',
+    iconColor: 'text-emerald-600',
     title: 'Resource link building',
     description: 'Identyfikujemy strony zbierające zasoby w Twojej branży — poradniki, katalogi narzędzi, zestawienia dostawców — i proponujemy Twoją stronę jako uzupełnienie ich listy.',
   },
   {
     icon: 'link_off',
+    iconBg: 'bg-amber-50',
+    iconColor: 'text-amber-600',
     title: 'Broken link reclamation',
     description: 'Szukamy linków prowadzących do nieistniejących już stron, których tematyka pokrywa się z Twoją ofertą, i proponujemy właścicielom zamianę uszkodzonego linku na link do Twojej strony.',
   },
@@ -330,7 +338,7 @@ const relatedServices = [
 
     <!-- ── Hero ──────────────────────────────────────────────────────────── -->
     <HeroSection
-      background-image="/images/hero-link-building.webp"
+      background-image="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1600&h=900&fit=crop&auto=format&q=80"
       badge="Link Building — white hat"
       title="Link building – budujemy wartościowe linki, które podnoszą pozycję w Google"
       description="Pozyskiwanie linków zewnętrznych z tematycznie powiązanych, wysokoautorytatywnych domen — bez PBN-ów, bez ryzyka kary Google. Od 2 100 zł netto miesięcznie, miesięczny raport z każdym pozyskanym linkiem."
@@ -357,8 +365,8 @@ const relatedServices = [
         <IntroSection
           heading="Czym jest link building i dlaczego Google wciąż go ceni"
           :paragraphs="introParagraphs"
-          image="/images/link-building-intro.webp"
-          image-alt="Schemat profilu linków zewnętrznych prowadzących do strony firmowej"
+          image="https://images.unsplash.com/photo-1562577309-2592ab84b1bc?w=640&h=420&fit=crop&auto=format&q=80"
+          image-alt="Sieć połączeń między domenami internetowymi symbolizująca profil linków zewnętrznych SEO"
         />
 
         <!-- ── Section 2: Metody akwizycji ───────────────────────────────── -->
@@ -390,7 +398,7 @@ const relatedServices = [
         <FeaturesSection
           title="Trzy typy linków z najwyższą wartością dla pozycji"
           :features="featuresItems"
-          image-url="/images/link-building-features.webp"
+          image-url="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=560&h=420&fit=crop&auto=format&q=80"
         />
 
         <!-- ── Section 7: Agencja vs samodzielnie — tabela porównawcza ───── -->

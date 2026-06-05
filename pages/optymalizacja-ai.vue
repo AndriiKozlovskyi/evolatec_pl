@@ -178,31 +178,43 @@ const introParagraphs = [
 const geoSignals = [
   {
     icon: 'schema',
+    iconBg: 'bg-violet-50',
+    iconColor: 'text-violet-600',
     title: 'Dane strukturalne JSON-LD',
     description: 'Schema.org markup w formacie JSON-LD pozwala LLM-om identyfikować typ treści, podmiot, który ją tworzy, i fakty zawarte w odpowiedzi. Service, LocalBusiness, FAQPage i HowTo to typy o najwyższej wartości dla GEO.',
   },
   {
     icon: 'format_quote',
+    iconBg: 'bg-sky-50',
+    iconColor: 'text-sky-600',
     title: 'Kompletne zdania-cytaty z faktami',
     description: 'Każda sekcja powinna zawierać przynajmniej jedno zdanie, które stanowi pełną odpowiedź bez potrzeby czytania kontekstu. Zdania z liczbami, nazwami własnymi i weryfikowalnymi faktami są cytowane częściej.',
   },
   {
     icon: 'quiz',
+    iconBg: 'bg-emerald-50',
+    iconColor: 'text-emerald-600',
     title: 'FAQ z pełnymi odpowiedziami',
     description: 'Pytania i odpowiedzi w formacie FAQPage są bezpośrednio parsowane przez silniki AI. Odpowiedź musi być kompletna w 1–3 zdaniach — LLM nie skraca długich akapitów, pomija je.',
   },
   {
     icon: 'verified',
+    iconBg: 'bg-amber-50',
+    iconColor: 'text-amber-600',
     title: 'Autorytet domeny',
     description: 'Wysoki Domain Rating i mocny profil linków zewnętrznych to sygnał wiarygodności czytelny zarówno dla Google, jak i dla LLM-ów korzystających z jego indeksu.',
   },
   {
     icon: 'update',
+    iconBg: 'bg-rose-50',
+    iconColor: 'text-rose-600',
     title: 'Aktualność treści',
     description: 'Modele preferują strony z treściami datowanymi i aktualizowanymi. Data ostatniej modyfikacji w metadanych zwiększa szansę na cytowanie przy pytaniach o stan aktualny.',
   },
   {
     icon: 'record_voice_over',
+    iconBg: 'bg-indigo-50',
+    iconColor: 'text-indigo-600',
     title: 'Speakable markup',
     description: 'Znacznik speakable wskazuje LLM-om, które fragmenty strony nadają się do bezpośredniego przytoczenia jako odpowiedź głosowa lub tekstowa. Stosujemy go na H1 i pierwszych akapitach kluczowych sekcji.',
   },
@@ -382,7 +394,7 @@ const relatedServices = [
 
     <!-- ── Hero ──────────────────────────────────────────────────────────── -->
     <HeroSection
-      background-image="/images/hero-optymalizacja-ai.webp"
+      background-image="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1600&h=900&fit=crop&auto=format&q=80"
       badge="AI SEO — GEO optymalizacja"
       title="AI SEO – wykorzystaj sztuczną inteligencję, żeby wyprzedzić konkurencję w Google"
       description="Pojawiaj się w odpowiedziach ChatGPT, Gemini i Perplexity — nie tylko w rankingach Google. Schema.org, JSON-LD i strukturowane dane czytelne dla LLM wdrożone standardowo w każdym projekcie EvolaTec."
@@ -409,8 +421,8 @@ const relatedServices = [
         <IntroSection
           heading="Czym jest AI SEO i jak zmienia widoczność firmy w internecie"
           :paragraphs="introParagraphs"
-          image="/images/ai-seo-intro.webp"
-          image-alt="Schemat pokazujący cytowanie firmy w odpowiedzi ChatGPT na podstawie danych JSON-LD ze strony"
+          image="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=640&h=420&fit=crop&auto=format&q=80"
+          image-alt="Interfejs asystenta AI odpowiadającego na pytanie użytkownika z cytatem ze strony firmowej"
         />
 
         <!-- ── Section 2: 6 sygnałów GEO ─────────────────────────────────── -->
@@ -436,7 +448,7 @@ const relatedServices = [
         <FeaturesSection
           title="5 typów Schema.org o najwyższej wartości dla AI wyszukiwarek"
           :features="schemaTypes"
-          image-url="/images/schema-org-types.webp"
+          image-url="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=560&h=420&fit=crop&auto=format&q=80"
         />
 
         <!-- ── Section 6: Co LLM pobiera / czego nie ─────────────────────── -->
