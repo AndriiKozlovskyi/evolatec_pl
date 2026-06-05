@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  extends: ['../evolatec.de/packages/ui'],
+  extends: ['./packages/ui'],
 
   compatibilityDate: '2025-07-15',
 
@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     [
       '@storyblok/nuxt',
       {
-        accessToken: '',
+        accessToken: 'E7rdEGgQsrlZER730dumgQtt',
         apiOptions: {
           region: 'eu',
         },
@@ -48,7 +48,7 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     cssPath: '~/assets/css/main.css',
-    configPath: '../evolatec.de/packages/ui/tailwind.config',
+    configPath: '',
   },
 
   image: {
@@ -70,6 +70,7 @@ export default defineNuxtConfig({
     prerender: {
       autoSubfolderIndex: false,
       failOnError: false,
+      routes: ['/blog-sitemap.xml'],
     },
   },
 
@@ -154,6 +155,10 @@ export default defineNuxtConfig({
         {
           name: 'theme-color',
           content: '#002c50',
+        },
+        {
+          name: 'google-site-verification',
+          content: 'IE-OeCkQ-EL2CgW7KaETUPPGQuI6xWJ704hNoA-Jd0o',
         },
       ],
     },

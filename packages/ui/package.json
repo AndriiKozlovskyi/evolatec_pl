@@ -1,0 +1,17 @@
+{
+  "name": "@evolatec/ui",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Shared Nuxt layer — EvolaTec component library",
+  "main": "./nuxt.config.ts",
+  "exports": {
+    ".": "./nuxt.config.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "nuxt": "^3.21.7"
+  },
+  "peerDependencies": {
+    "nuxt": ">=3.0.0"
+  }
+}
