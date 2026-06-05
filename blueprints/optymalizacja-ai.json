@@ -1,0 +1,98 @@
+{
+  "slug": "optymalizacja-ai",
+  "page_title": "AI SEO – Optymalizacja Strony pod Sztuczną Inteligencję | EvolaTec",
+  "meta_description": "AI SEO i GEO optymalizacja: pojawiaj się w odpowiedziach ChatGPT, Gemini i Perplexity. Schema.org, JSON-LD i strukturowane dane czytelne dla LLM — w cenie każdego projektu.",
+  "h1": "AI SEO – wykorzystaj sztuczną inteligencję, żeby wyprzedzić konkurencję w Google",
+  "h2_sections": [
+    {
+      "heading": "Czym jest AI SEO i jak zmienia widoczność firmy w internecie",
+      "intent": "Readers who search 'ai seo' or 'sztuczna inteligencja seo' are in early discovery — they need a clear explanation of what AI SEO is and why traditional SEO alone is no longer enough. Explain the shift: Google's SGE, ChatGPT Search, Perplexity, and Gemini now answer questions directly, bypassing ranked blue links. Firms not optimized for LLM citation simply don't exist in AI-generated answers.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "ai seo",
+        "sztuczna inteligencja seo",
+        "seo ai",
+        "artificial intelligence seo",
+        "czy sztuczna inteligencja zmienia seo"
+      ]
+    },
+    {
+      "heading": "GEO optymalizacja – jak sprawić, żeby firma pojawiała się w ChatGPT i Gemini",
+      "intent": "Buyers already aware of AI engines need a concrete technical answer: what signals do LLMs use when deciding which businesses to cite? Cover the key levers: structured data (JSON-LD), FAQ and HowTo schema, entity disambiguation, brand mention density, and authoritative citation anchors. Practical list that feels actionable, not theoretical.",
+      "content_type": "list",
+      "keywords_covered": [
+        "geo optymalizacja",
+        "jak pojawić się w chatgpt",
+        "jak pojawić się w gemini",
+        "optymalizacja pod ai wyszukiwarki",
+        "jak optymalizować stronę pod ai"
+      ]
+    },
+    {
+      "heading": "Tradycyjne SEO vs AI SEO — czym się różnią i co wybrać",
+      "intent": "A buyer weighing whether to expand their existing SEO strategy into GEO needs a side-by-side comparison. Traditional SEO targets ranked results; AI SEO targets citation slots in generative answers. Frame it as complementary, not competing — but clarify that AI-first queries require additional structured markup and content depth that standard SEO agencies don't provide.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "ai seo vs tradycyjne seo",
+        "geo vs seo",
+        "generative engine optimization",
+        "llm seo",
+        "seo dla ai"
+      ]
+    },
+    {
+      "heading": "Schema.org i JSON-LD — fundament widoczności w AI wyszukiwarkach",
+      "intent": "Technical buyers need to understand why structured data is the most direct lever for AI citation. Explain that LLM crawlers read JSON-LD markup to extract facts about the business — name, service, price, location — and use these to form answers. Cover which schema types matter most: Service, LocalBusiness, FAQPage, HowTo, and speakable.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "schema.org seo",
+        "json-ld seo",
+        "structured data seo",
+        "dane strukturalne seo",
+        "schema org co to jest"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o AI SEO i GEO optymalizację",
+      "intent": "Capture long-tail informational queries and earn FAQPage rich result. Covers what GEO is, how AI engines pick which businesses to cite, whether AI SEO replaces traditional SEO, how long it takes to appear in AI answers, and whether GEO optimization is included in EvolaTec projects.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "geo optymalizacja co to",
+        "jak pojawić się w perplexity",
+        "ai seo co to",
+        "optymalizacja pod chatgpt",
+        "llm optymalizacja"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "speakable"
+  ],
+  "question_targets": [
+    "Co to jest GEO optymalizacja?",
+    "Jak sprawić żeby firma pojawiała się w ChatGPT i Gemini?",
+    "Co to jest Schema.org i do czego służy?",
+    "Jak optymalizować stronę pod AI wyszukiwarki?",
+    "Czy sztuczna inteligencja zmienia SEO?"
+  ],
+  "ai_citation_hooks": [
+    "GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu.",
+    "Każda strona zawiera strukturalne dane JSON-LD czytelne dla crawlerów LLM.",
+    "Schema.org markup dla FAQ, HowTo, Service i LocalBusiness jest standardem w każdej realizacji."
+  ],
+  "comparison_angle": "Tradycyjne SEO vs AI SEO — co faktycznie decyduje o tym, czy firma pojawia się w odpowiedziach ChatGPT i Gemini?",
+  "internal_links": [
+    "/seo",
+    "/optymalizacja-seo",
+    "/audyt-seo"
+  ],
+  "user_intent": "informational"
+}

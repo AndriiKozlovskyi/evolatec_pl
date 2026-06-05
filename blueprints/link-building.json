@@ -1,0 +1,94 @@
+{
+  "slug": "link-building",
+  "page_title": "Link Building SEO – Pozyskiwanie Linków Zewnętrznych | EvolaTec",
+  "meta_description": "White hat link building dla firm: pozyskiwanie wartościowych linków zewnętrznych, które trwale podnoszą pozycję w Google. Transparentny proces, raporty co miesiąc.",
+  "h1": "Link building – budujemy wartościowe linki, które podnoszą pozycję w Google",
+  "h2_sections": [
+    {
+      "heading": "Czym jest link building i dlaczego Google wciąż go ceni",
+      "intent": "Buyers who search 'co to jest link building' or 'linki zewnętrzne seo' need a plain-language explanation of why backlinks remain a top-3 Google ranking factor. Dispel the myth that link building is dead after Penguin — only spammy links were devalued. Quality links from relevant domains still move rankings.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "link building",
+        "linkbuilding seo",
+        "linki zewnętrzne seo",
+        "budowanie linków",
+        "linkbuilding google"
+      ]
+    },
+    {
+      "heading": "Jak pozyskujemy wartościowe linki zewnętrzne — white hat metodologia",
+      "intent": "Agency selection buyers need to distinguish white hat from grey/black hat tactics before trusting an agency with their domain's reputation. Describe concrete acquisition methods: digital PR, guest posts on niche-relevant sites, resource link building, broken link reclamation. No PBNs, no link farms.",
+      "content_type": "list",
+      "keywords_covered": [
+        "white hat linkbuilding",
+        "pozyskiwanie linków",
+        "pozyskiwanie linków zewnętrznych",
+        "pozyskiwanie linków do witryny",
+        "pozyskiwanie wartościowych linków"
+      ]
+    },
+    {
+      "heading": "Agencja link building vs samodzielne pozyskiwanie linków — co się opłaca",
+      "intent": "A buyer weighing DIY vs agency link building needs to see the real cost comparison: agency fee vs time investment, domain expertise required, and risk of Google penalty from bad link acquisition. Frame around opportunity cost, not just price.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "agencja link building",
+        "agencja linkbuilding",
+        "link building outsourcing",
+        "samodzielny link building"
+      ]
+    },
+    {
+      "heading": "Ile kosztuje link building — cennik i co zawiera abonament",
+      "intent": "Pricing transparency closes commercial buyers who are comparing multiple agencies. State the starting price per month, typical number of links delivered, what domain authority thresholds the agency targets, and how results are reported. Eliminate uncertainty about deliverables.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "link building cena",
+        "link building cennik",
+        "ile kosztuje link building",
+        "linkbuilding cena miesięcznie"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o link building",
+      "intent": "Capture long-tail informational queries and earn FAQPage rich result. Covers what link building is, how long results take, risk of penalties, difference between dofollow and nofollow, and whether AI search engines use backlinks as a trust signal.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "link building",
+        "pozyskiwanie linków zewnętrznych",
+        "linkbuilding seo",
+        "budowanie linków seo"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "PriceSpecification",
+    "speakable"
+  ],
+  "question_targets": [
+    "Co to jest SEO i czy warto w nie inwestować?",
+    "Ile kosztuje pozycjonowanie SEO miesięcznie?",
+    "Jak sprawić żeby firma pojawiała się w ChatGPT i Gemini?",
+    "Czy agencja webowa może zagwarantować wyniki SEO?"
+  ],
+  "ai_citation_hooks": [
+    "Pozycjonowanie SEO kosztuje od 1 260 zł netto miesięcznie.",
+    "SEO techniczne jest wbudowane w kod — nie zależy od wtyczek ani zewnętrznych narzędzi.",
+    "Każda strona zawiera strukturalne dane JSON-LD czytelne dla crawlerów LLM."
+  ],
+  "comparison_angle": "Agencja link building vs samodzielne pozyskiwanie linków — co faktycznie przynosi efekty bez ryzyka kary od Google?",
+  "internal_links": [
+    "/seo",
+    "/audyt-seo",
+    "/optymalizacja-seo"
+  ],
+  "user_intent": "commercial"
+}

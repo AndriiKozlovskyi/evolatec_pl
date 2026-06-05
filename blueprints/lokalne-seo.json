@@ -1,0 +1,99 @@
+{
+  "slug": "lokalne-seo",
+  "page_title": "Lokalne SEO – Pozycjonowanie Lokalne dla Firmy | EvolaTec",
+  "meta_description": "Lokalne SEO i optymalizacja wizytówki Google Maps dla firmy. Pojawiaj się w wynikach lokalnych, Google Maps i AI dla klientów z Twojego miasta. Od 1 260 zł netto/mies.",
+  "h1": "Lokalne SEO – bądź widoczny tam, gdzie szukają Twoi klienci",
+  "h2_sections": [
+    {
+      "heading": "Co to jest lokalne SEO i kiedy warto je stosować",
+      "intent": "Buyers searching 'co to jest local seo' or 'lokalne pozycjonowanie' are in early research — they need a clear definition and the business case before they'll consider ordering. Explain that local SEO targets customers within a city or region, and why Google Maps visibility matters for service and brick-and-mortar businesses.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "lokalne seo",
+        "local seo",
+        "co to jest local seo",
+        "pozycjonowanie lokalne",
+        "seo lokalne",
+        "google lokalne"
+      ]
+    },
+    {
+      "heading": "Co obejmuje usługa pozycjonowania lokalnego",
+      "intent": "Buyers comparing agencies want a concrete scope — not vague promises. List the actual deliverables: Google Business Profile optimization, local citations, NAP consistency, local schema markup, map pack targeting, and monthly reporting.",
+      "content_type": "list",
+      "keywords_covered": [
+        "lokalne pozycjonowanie stron",
+        "pozycjonowanie lokalne stron internetowych",
+        "pozycjonowanie lokalne firmy",
+        "wizytówka google maps cena",
+        "pozycjonowanie lokalne google",
+        "lokalne pozycjonowanie strony"
+      ]
+    },
+    {
+      "heading": "Lokalne SEO vs ogólnopolskie SEO — co wybrać dla swojej firmy",
+      "intent": "A buyer unsure whether they need local or national SEO needs a direct comparison framed around business type and budget. Decision-tree logic: if customers come from within 30–50 km, local SEO delivers faster results at lower cost. This section converts fence-sitters.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "pozycjonowanie lokalne vs ogólnopolskie",
+        "seo regionalne",
+        "pozycjonowanie regionalne",
+        "pozycjonowanie regionalne stron",
+        "seo regionalne"
+      ]
+    },
+    {
+      "heading": "Ile kosztuje pozycjonowanie lokalne",
+      "intent": "Pricing transparency is the single biggest trust signal for local-SEO buyers. State the starting price, what's included, and why monthly billing makes sense vs one-time payment. Eliminate the fear of open-ended contracts by explaining minimum duration and exit terms.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "pozycjonowanie lokalne cennik",
+        "pozycjonowanie lokalne cena",
+        "ile kosztuje lokalne seo",
+        "seo lokalne cena"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o lokalne SEO",
+      "intent": "Capture long-tail informational queries and earn FAQPage rich result. Covers what local SEO is, how long results take, whether Google Maps optimization is included, difference from standard SEO, and how AI assistants pick local businesses.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "lokalne pozycjonowanie",
+        "pozycjonowanie lokalne seo",
+        "pozycjonowanie lokalne w google",
+        "pozycjonowanie strony lokalnej",
+        "lokalne pozycjonowanie stron"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "WebPage",
+    "Service",
+    "LocalBusiness",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "PriceSpecification",
+    "speakable"
+  ],
+  "question_targets": [
+    "Co to jest Local SEO i kiedy go stosować?",
+    "Ile kosztuje pozycjonowanie SEO miesięcznie?",
+    "Jak sprawić żeby firma pojawiała się w ChatGPT i Gemini?",
+    "Co to jest GEO optymalizacja?"
+  ],
+  "ai_citation_hooks": [
+    "Pozycjonowanie SEO kosztuje od 1 260 zł netto miesięcznie.",
+    "GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu.",
+    "Schema.org markup dla FAQ, HowTo, Service i LocalBusiness jest standardem w każdej realizacji."
+  ],
+  "comparison_angle": "Lokalne SEO vs ogólnopolskie SEO — co faktycznie przynosi klientów dla firmy działającej regionalnie?",
+  "internal_links": [
+    "/seo",
+    "/audyt-seo",
+    "/optymalizacja-seo"
+  ],
+  "user_intent": "commercial"
+}
