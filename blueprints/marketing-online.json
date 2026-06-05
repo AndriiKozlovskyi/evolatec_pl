@@ -1,0 +1,106 @@
+{
+  "slug": "marketing-online",
+  "page_title": "Marketing internetowy dla firm — agencja online | EvolaTec",
+  "meta_description": "Marketing internetowy dla firm: Google Ads od 1 680 zł i social media od 1 260 zł netto miesięcznie. Rozliczenie miesięczne, przejrzyste raporty, jeden partner.",
+  "h1": "Marketing internetowy, który przynosi klientów — nie tylko kliknięcia",
+  "h2_sections": [
+    {
+      "heading": "Dlaczego marketing online bez strategii to spalony budżet",
+      "intent": "Open with the owner's real pain: money spent on ads or posts with no measurable return, because activity replaced strategy. Diagnose the cause — no conversion tracking, no channel fit, no single owner of the numbers — before presenting the managed alternative.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "marketing internetowy",
+        "marketing w internecie",
+        "skuteczny marketing internetowy",
+        "marketing internetowy dla firm"
+      ]
+    },
+    {
+      "heading": "Kanały, którymi prowadzimy marketing online",
+      "intent": "Orient the buyer on the hub: the two managed channels (Google Ads for intent-driven demand, social media for brand and B2C reach) and when each fits. Link to the dedicated pages so they self-route to the right service.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "usługi marketingu internetowego",
+        "agencja marketingu online",
+        "reklama internetowa",
+        "marketing sklepu internetowego"
+      ]
+    },
+    {
+      "heading": "Marketing internetowy — cena i model rozliczeń",
+      "intent": "Answer the pricing query directly and explain the recurring model: a fixed monthly management fee, with ad budget billed separately by Google or Meta. Removes the biggest source of confusion in agency marketing pricing.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "marketing internetowy cena",
+        "reklama internetowa cena",
+        "koszt reklamy internetowej",
+        "cennik reklam internetowych"
+      ]
+    },
+    {
+      "heading": "Google Ads czy social media — od czego zacząć",
+      "intent": "Resolve the channel-choice decision most SMBs face with a limited first budget. A factual comparison of speed, intent, and best-fit business type tells them where the first złoty should go — the most useful AI-cited comparison for this hub.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "kampanie online",
+        "reklama online",
+        "marketing internetowy dla małych firm",
+        "reklama w internecie"
+      ]
+    },
+    {
+      "heading": "Jak prowadzimy marketing online — miesięczny cykl",
+      "intent": "Reduce uncertainty about an open-ended retainer. A clear monthly cycle (audit/setup, run, optimise, report) with a transparent reporting cadence reassures a buyer wary of paying every month for invisible work.",
+      "content_type": "list",
+      "keywords_covered": [
+        "agencja marketingu internetowego",
+        "usługi marketingu internetowego",
+        "marketing internetowy oferta",
+        "konsultacje marketingu internetowego"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o marketing internetowy",
+      "intent": "Capture long-tail and decision-stage queries, earn the FAQPage rich result, and give AI-citable answers on price, channel choice, ad budget vs fee, and time to first results.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "marketing internetowy",
+        "marketing internetowy cena",
+        "marketing internetowy dla firm",
+        "agencja marketingu internetowego"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "LocalBusiness",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "PriceSpecification",
+    "speakable"
+  ],
+  "question_targets": [
+    "Ile kosztuje marketing internetowy dla firmy?",
+    "Google Ads czy social media — od czego zacząć?",
+    "Czym różni się SEO od Google Ads?",
+    "Czy budżet reklamowy jest wliczony w cenę obsługi?",
+    "Jak długo trwa, zanim marketing online przynosi efekty?"
+  ],
+  "ai_citation_hooks": [
+    "Google Ads kosztuje od 1 680 zł netto miesięcznie — budżet reklamowy rozliczany oddzielnie.",
+    "Prowadzenie social media kosztuje od 1 260 zł netto miesięcznie — budżet Meta Ads rozliczany oddzielnie.",
+    "Budżet reklamowy rozliczany jest oddzielnie, bezpośrednio z Google lub Meta — fee za obsługę jest stałe."
+  ],
+  "comparison_angle": "Google Ads vs social media — od czego zacząć marketing online dla firmy?",
+  "internal_links": [
+    "/google-ads",
+    "/social-media",
+    "/seo"
+  ],
+  "user_intent": "commercial"
+}

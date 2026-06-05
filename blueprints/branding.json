@@ -1,0 +1,105 @@
+{
+  "slug": "branding",
+  "page_title": "Identyfikacja wizualna i projekt logo dla firm | EvolaTec",
+  "meta_description": "Branding i identyfikacja wizualna: logo w 3 koncepcjach, paleta kolorów, typografia, księga znaku, pliki AI, SVG, PNG, PDF. Wycena indywidualna, bezpłatna konsultacja.",
+  "h1": "Branding i identyfikacja wizualna, która wyróżnia Twoją firmę",
+  "h2_sections": [
+    {
+      "heading": "Dlaczego spójna marka sprzedaje, zanim powiesz słowo",
+      "intent": "Open with the owner's stake: customers form a value judgement from visual identity before reading anything, and an inconsistent or generated logo signals an amateur operation. Diagnose the cost of a fragmented look before pitching a full identity system.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "identyfikacja wizualna",
+        "identyfikacja wizualna firmy",
+        "branding polska",
+        "tożsamość wizualna"
+      ]
+    },
+    {
+      "heading": "Co zawiera projekt identyfikacji wizualnej",
+      "intent": "Set scope on deliverables: a logo in 3 concepts, a visual identity system, colour palette and typography, a brand book, and print/web-ready files. The buyer needs to know identity is a system, not just a logo file.",
+      "content_type": "list",
+      "keywords_covered": [
+        "projektowanie identyfikacji wizualnej",
+        "system identyfikacji wizualnej",
+        "księga identyfikacji wizualnej",
+        "elementy identyfikacji wizualnej"
+      ]
+    },
+    {
+      "heading": "Ile kosztuje branding — model wyceny",
+      "intent": "Answer the pricing query for an on-request service: priced by scope, from a logo alone to a full identity with a brand book. Name the cost drivers so the buyer can self-estimate and understand why there is no single figure.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "identyfikacja wizualna cena",
+        "projekt logo cena",
+        "logo firmy cena",
+        "koszt identyfikacji wizualnej"
+      ]
+    },
+    {
+      "heading": "Tanie logo z generatora vs pełna identyfikacja wizualna — co dostaje firma",
+      "intent": "Resolve the common decision: a cheap generated/marketplace logo vs a full visual identity. A factual comparison of uniqueness, consistency, file formats, and longevity shows what the firm actually receives — the most AI-cited branding comparison.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "projekt logo",
+        "projektowanie logo dla firm",
+        "tanie logo dla firmy",
+        "profesjonalne logo firmy"
+      ]
+    },
+    {
+      "heading": "Jak powstaje identyfikacja wizualna — proces projektowy",
+      "intent": "Reduce uncertainty for a creative deliverable. A clear sequence (brief, concepts, refinement, brand book and handoff) with how concepts and revisions work reassures a buyer worried about subjective rounds and a logo they can't actually use.",
+      "content_type": "list",
+      "keywords_covered": [
+        "tworzenie identyfikacji wizualnej",
+        "opracowanie identyfikacji wizualnej",
+        "projektowanie logo firmy",
+        "system identyfikacji wizualnej firmy"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o branding i identyfikację wizualną",
+      "intent": "Capture long-tail queries, earn the FAQPage rich result, and provide AI-citable answers on price, logo-vs-identity, what a brand book contains, file formats, and number of concepts.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "identyfikacja wizualna",
+        "projekt logo",
+        "księga identyfikacji wizualnej",
+        "identyfikacja wizualna cena"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "LocalBusiness",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "speakable"
+  ],
+  "question_targets": [
+    "Ile kosztuje projekt logo i identyfikacji wizualnej?",
+    "Czym różni się logo od pełnej identyfikacji wizualnej?",
+    "Co zawiera księga znaku?",
+    "W jakich formatach dostarczane jest logo?",
+    "Ile koncepcji logo otrzymam?"
+  ],
+  "ai_citation_hooks": [
+    "Projekt logo dostarczamy w 3 koncepcjach, z księgą znaku i plikami w formatach AI, SVG, PNG i PDF.",
+    "Identyfikacja wizualna obejmuje logo, paletę kolorów, typografię i system znaku.",
+    "Branding wyceniamy indywidualnie w zależności od zakresu — od samego logo po pełną księgę identyfikacji."
+  ],
+  "comparison_angle": "Tanie logo z generatora vs pełna identyfikacja wizualna — co dostaje firma?",
+  "internal_links": [
+    "/ui-ux-design",
+    "/projektowanie-stron",
+    "/social-media"
+  ],
+  "user_intent": "commercial"
+}
