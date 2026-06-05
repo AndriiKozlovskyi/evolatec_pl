@@ -190,6 +190,12 @@ const compareRows = [
   { label: 'Przeniesienie treści',    tpl: 'Ręczne tak czy inaczej',      custom: 'Ręczne tak czy inaczej'       },
 ]
 
+const relatedServices = [
+  { icon: 'ads_click', title: 'Landing page', description: 'Jednostronicowa strona konwersyjna pod kampanię Ads — od 2 100 zł, realizacja 3 dni.', price: 'od 2 100 zł netto', href: '/landing-page' },
+  { icon: 'trending_up', title: 'Pozycjonowanie SEO', description: 'Organiczna widoczność strony w Google — audyt, on-page i link building.', price: 'od 1 260 zł netto/mies.', href: '/seo' },
+  { icon: 'palette', title: 'Branding', description: 'Logo i identyfikacja wizualna spójna z projektem strony — 3 koncepcje.', price: 'Wycena indywidualna', href: '/branding' },
+]
+
 const processSteps = [
   {
     icon: 'mail',
@@ -466,6 +472,13 @@ const processSteps = [
         <FAQSection
           title="Najczęściej zadawane pytania o tworzenie stron firmowych"
           :faqs="faqData"
+        />
+
+        <RelatedServicesSection
+          eyebrow="Powiązane usługi"
+          title="Kompletna obecność online dla Twojej firmy"
+          cta="Dowiedz się więcej"
+          :services="relatedServices"
         />
 
       </article>

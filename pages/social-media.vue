@@ -185,6 +185,12 @@ const compareRows = [
   { label: 'Najlepsze dla',  org: 'Budowania marki w czasie',  paid: 'Promocji ofert i dotarcia'    },
 ]
 
+const relatedServices = [
+  { icon: 'ads_click', title: 'Google Ads', description: 'Kampanie Google — ruch z wyszukiwarki i remarketingu obok działań social.', price: 'od 1 680 zł netto/mies.', href: '/google-ads' },
+  { icon: 'trending_up', title: 'Marketing online', description: 'Strategia marketingowa łącząca social media, SEO i kampanie płatne.', price: 'Wycena indywidualna', href: '/marketing-online' },
+  { icon: 'article', title: 'Copywriting SEO', description: 'Treści do social media i na stronę pisane pod frazy i pod wyszukiwarki AI.', price: 'Wycena indywidualna', href: '/copywriting' },
+]
+
 const processSteps = [
   {
     icon: 'event_note',
@@ -468,6 +474,13 @@ const processSteps = [
         <FAQSection
           title="Najczęściej zadawane pytania o marketing w social media"
           :faqs="faqData"
+        />
+
+        <RelatedServicesSection
+          eyebrow="Powiązane usługi"
+          title="Rozszerz działania o płatne kanały"
+          cta="Dowiedz się więcej"
+          :services="relatedServices"
         />
 
       </article>

@@ -208,6 +208,12 @@ const compareRows = [
   { label: 'Własność kodu',    tpl: 'Uwiązanie do platformy',      custom: 'Pełna własność, bez abonamentu'       },
 ]
 
+const relatedServices = [
+  { icon: 'corporate_fare', title: 'Strona firmowa', description: 'Wielostronicowy serwis z SEO, blogiem i CMS — od 7 dni roboczych.', price: 'od 6 300 zł netto', href: '/stworz-strone-firmowa' },
+  { icon: 'trending_up', title: 'Pozycjonowanie SEO', description: 'Organiczna widoczność w Google — audyt, on-page SEO i raportowanie.', price: 'od 1 260 zł netto/mies.', href: '/seo' },
+  { icon: 'search_check', title: 'Audyt SEO', description: 'Jednorazowy raport techniczny z priorytetami do naprawy — bez abonamentu.', price: '840 zł netto', href: '/audyt-seo' },
+]
+
 const processSteps = [
   {
     icon: 'mail',
@@ -526,6 +532,13 @@ const processSteps = [
         <FAQSection
           title="Najczęściej zadawane pytania o strony internetowe dla firm"
           :faqs="faqData"
+        />
+
+        <RelatedServicesSection
+          eyebrow="Powiązane usługi"
+          title="Następny krok po stronie internetowej"
+          cta="Dowiedz się więcej"
+          :services="relatedServices"
         />
 
       </article>

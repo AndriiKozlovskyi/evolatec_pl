@@ -205,6 +205,12 @@ const compareRows = [
   { label: 'Budżet reklamowy', ads: 'Rozliczany z Google',            soc: 'Rozliczany z Meta'             },
 ]
 
+const relatedServices = [
+  { icon: 'ads_click', title: 'Google Ads', description: 'Kampanie reklamowe w Google — ruch od pierwszego dnia, budżet rozliczany z Google.', price: 'od 1 680 zł netto/mies.', href: '/google-ads' },
+  { icon: 'share', title: 'Social Media Marketing', description: 'Organiczne i płatne działania na Facebooku i Instagramie.', price: 'od 1 260 zł netto/mies.', href: '/social-media' },
+  { icon: 'trending_up', title: 'Pozycjonowanie SEO', description: 'Długoterminowa widoczność organiczna w Google obok kampanii płatnych.', price: 'od 1 260 zł netto/mies.', href: '/seo' },
+]
+
 const processSteps = [
   {
     icon: 'troubleshoot',
@@ -518,6 +524,13 @@ const processSteps = [
         <FAQSection
           title="Najczęściej zadawane pytania o marketing internetowy"
           :faqs="faqData"
+        />
+
+        <RelatedServicesSection
+          eyebrow="Powiązane usługi"
+          title="Kanały marketingowe dopasowane do celu"
+          cta="Dowiedz się więcej"
+          :services="relatedServices"
         />
 
       </article>

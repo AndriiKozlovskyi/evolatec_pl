@@ -178,6 +178,12 @@ const compareRows = [
   { label: 'Wyróżnienie w pamięci', tpl: 'Niskie',                    custom: 'Wysokie'                        },
 ]
 
+const relatedServices = [
+  { icon: 'palette', title: 'UI/UX Design', description: 'Projekt interfejsu oparty na badaniach użytkownika — wireframe i gotowy design.', price: 'Wycena indywidualna', href: '/ui-ux-design' },
+  { icon: 'corporate_fare', title: 'Strona firmowa', description: 'Wdrożenie projektu w Nuxt.js — Lighthouse 95–100, ładowanie poniżej 1 sekundy.', price: 'od 6 300 zł netto', href: '/stworz-strone-firmowa' },
+  { icon: 'brush', title: 'Branding', description: 'Logo i identyfikacja wizualna — system spójny z projektem strony.', price: 'Wycena indywidualna', href: '/branding' },
+]
+
 const processSteps = [
   {
     icon: 'lightbulb',
@@ -454,6 +460,13 @@ const processSteps = [
         <FAQSection
           title="Najczęściej zadawane pytania o projektowanie stron internetowych"
           :faqs="faqData"
+        />
+
+        <RelatedServicesSection
+          eyebrow="Powiązane usługi"
+          title="Od projektu do gotowej strony"
+          cta="Dowiedz się więcej"
+          :services="relatedServices"
         />
 
       </article>

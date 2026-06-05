@@ -181,6 +181,12 @@ const compareRows = [
   { label: 'Najlepsze dla',      ui: 'Prostych ekranów',          ux: 'Aplikacji, SaaS, sklepów'       },
 ]
 
+const relatedServices = [
+  { icon: 'corporate_fare', title: 'Strona firmowa', description: 'Wdrożenie zaprojektowanego interfejsu w Nuxt.js — Lighthouse 95–100.', price: 'od 6 300 zł netto', href: '/stworz-strone-firmowa' },
+  { icon: 'brush', title: 'Branding', description: 'Identyfikacja wizualna spójna z projektem UI — logo, kolory, typografia.', price: 'Wycena indywidualna', href: '/branding' },
+  { icon: 'web', title: 'Projektowanie stron', description: 'Projekt strony pod Twój produkt lub usługę — od wireframe po design.', price: 'Wycena indywidualna', href: '/projektowanie-stron' },
+]
+
 const processSteps = [
   {
     icon: 'query_stats',
@@ -457,6 +463,13 @@ const processSteps = [
         <FAQSection
           title="Najczęściej zadawane pytania o UI/UX Design"
           :faqs="faqData"
+        />
+
+        <RelatedServicesSection
+          eyebrow="Powiązane usługi"
+          title="Od projektu UX do wdrożonej strony"
+          cta="Dowiedz się więcej"
+          :services="relatedServices"
         />
 
       </article>
