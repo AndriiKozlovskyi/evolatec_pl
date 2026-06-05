@@ -176,5 +176,6 @@ const companyLinks = [
 
 const legalLinks = [
   { label: 'Polityka prywatności', href: '/polityka-prywatnosci' },
+  { label: 'Informacje prawne',    href: '/informacje-prawne' },
 ];
 </script>
