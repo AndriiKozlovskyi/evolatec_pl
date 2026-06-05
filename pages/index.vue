@@ -115,6 +115,60 @@ useHead({
   script: [{ type: 'application/ld+json', innerHTML: JSON.stringify(mainSchema) }],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
+// ─── Animated counters ─────────────────────────────────────────────────────
+
+const c95    = ref(0)
+const cLoad  = ref(0)
+const cDays  = ref(0)
+const c100   = ref(0)
+
+function easeOutCubic(t: number) { return 1 - Math.pow(1 - t, 3) }
+
+function animateCount(setter: (v: number) => void, from: number, to: number, ms: number) {
+  const start = performance.now()
+  const tick = (now: number) => {
+    const p = Math.min((now - start) / ms, 1)
+    setter(Math.round(from + (to - from) * easeOutCubic(p)))
+    if (p < 1) requestAnimationFrame(tick)
+  }
+  requestAnimationFrame(tick)
+}
+
+onMounted(() => {
+  const banner = document.querySelector('[data-metrics-banner]')
+  if (!banner) return
+  const obs = new IntersectionObserver(
+    (entries) => {
+      const entry = entries[0]
+      if (!entry?.isIntersecting) return
+      animateCount(v => (c95.value   = v),  40,  95,  900)
+      animateCount(v => (cLoad.value  = v),  80,  100, 700)
+      animateCount(v => (cDays.value  = v),  0,   3,   600)
+      animateCount(v => (c100.value   = v),  0,   100, 1100)
+      obs.disconnect()
+    },
+    { threshold: 0.3 },
+  )
+  obs.observe(banner)
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
@@ -341,6 +395,66 @@ const relatedPages = [
       </nav>
 
       <article>
+
+        <!-- ══ 2. METRICS BANNER — white ────────────────────────────────── -->
+        <section data-metrics-banner aria-label="Kluczowe wskaźniki" class="relative overflow-hidden bg-surface-container-lowest py-16 border-b border-outline-variant/20">
+          <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+            <div class="animate-float         absolute -top-32 -left-32  w-80 h-80 rounded-full bg-primary/5 blur-3xl"></div>
+            <div class="animate-float-reverse absolute -bottom-32 -right-32 w-72 h-72 rounded-full bg-secondary-container/40 blur-3xl"></div>
+          </div>
+          <div class="relative max-w-container-max mx-auto px-gutter">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
+
+              <div class="flex flex-col items-center text-center" data-reveal data-delay="1">
+                <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[22px]" aria-hidden="true">speed</span>
+                </div>
+                <div class="flex items-baseline gap-1 mb-1">
+                  <span class="counter-val font-display font-black text-5xl text-on-surface leading-none">{{ c95 }}</span>
+                  <span class="text-base font-bold text-on-surface-variant">–100</span>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-snug mt-1 max-w-[130px]">Lighthouse score na każdej realizacji</p>
+              </div>
+
+              <div class="flex flex-col items-center text-center" data-reveal data-delay="2">
+                <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[22px]" aria-hidden="true">bolt</span>
+                </div>
+                <div class="flex items-baseline gap-1 mb-1">
+                  <span class="text-base font-bold text-on-surface-variant">&lt;</span>
+                  <span class="counter-val font-display font-black text-5xl text-on-surface leading-none mx-0.5">1</span>
+                  <span class="text-base font-bold text-on-surface-variant">s</span>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-snug mt-1 max-w-[130px]">Czas ładowania — vs 3–8 s WordPress</p>
+              </div>
+
+              <div class="flex flex-col items-center text-center" data-reveal data-delay="3">
+                <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[22px]" aria-hidden="true">flash_on</span>
+                </div>
+                <div class="flex items-baseline gap-1 mb-1">
+                  <span class="text-base font-bold text-on-surface-variant">od</span>
+                  <span class="counter-val font-display font-black text-5xl text-on-surface leading-none mx-0.5">{{ cDays }}</span>
+                  <span class="text-base font-bold text-on-surface-variant">dni</span>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-snug mt-1 max-w-[130px]">Realizacja landing page</p>
+              </div>
+
+              <div class="flex flex-col items-center text-center" data-reveal data-delay="4">
+                <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[22px]" aria-hidden="true">lock</span>
+                </div>
+                <div class="flex items-baseline gap-1 mb-1">
+                  <span class="counter-val font-display font-black text-5xl text-on-surface leading-none">{{ c100 }}</span>
+                  <span class="text-base font-bold text-on-surface-variant">%</span>
+                </div>
+                <p class="text-sm text-on-surface-variant leading-snug mt-1 max-w-[130px]">Stała cena — bez zmian w trakcie projektu</p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
         <!-- ══ 3. CO DOSTAJESZ — white ════════════════════════════════════════ -->
         <section
           aria-labelledby="section-included"
@@ -349,7 +463,7 @@ const relatedPages = [
           <div class="max-w-container-max mx-auto px-gutter">
             <div class="grid lg:grid-cols-2 gap-stack-lg items-start">
 
-              <div>
+              <div data-reveal="left">
                 <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
                   <span class="material-symbols-outlined text-[18px]" aria-hidden="true">check_circle</span>
                   Bez ukrytych pozycji
@@ -376,7 +490,7 @@ const relatedPages = [
                 </div>
               </div>
 
-              <div class="flex flex-col gap-4">
+              <div class="flex flex-col gap-4" data-reveal="right">
                 <NuxtImg
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=640&h=320&fit=crop&auto=format&q=80"
                   alt="Panel analityczny z wykresami wydajności strony internetowej — wynik Lighthouse i Core Web Vitals"
@@ -387,8 +501,10 @@ const relatedPages = [
                 />
                 <div class="grid grid-cols-2 gap-3">
                   <div
-                    v-for="item in includedItems"
+                    v-for="(item, i) in includedItems"
                     :key="item.label"
+                    :data-reveal="'scale'"
+                    :data-delay="String(i + 1)"
                     class="group flex items-center gap-3 bg-surface-container-lowest rounded-xl border border-outline-variant/30 px-4 py-3.5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
                   >
                     <div class="w-9 h-9 rounded-lg bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center flex-shrink-0 transition-colors duration-200">
@@ -417,7 +533,7 @@ const relatedPages = [
             <div class="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-white/5 blur-3xl"></div>
           </div>
           <div class="relative max-w-container-max mx-auto px-gutter">
-            <div class="text-center max-w-2xl mx-auto mb-16">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
               <span class="inline-block text-xs font-bold uppercase tracking-[0.3em] text-on-primary/60 mb-3">Dlaczego EvolaTec</span>
               <h2 id="section-usps" class="font-display text-3xl sm:text-4xl font-black text-on-primary leading-tight mb-4">
                 Cztery rzeczy, których większość agencji nie może powiedzieć
@@ -428,8 +544,10 @@ const relatedPages = [
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div
-                v-for="usp in usps"
+                v-for="(usp, i) in usps"
                 :key="usp.title"
+                :data-reveal="'scale'"
+                :data-delay="String(i + 1)"
                 class="group bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6 hover:bg-white/18 hover:-translate-y-1 transition-all duration-300"
               >
                 <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center mb-5 group-hover:bg-white/25 transition-colors duration-300">
@@ -449,7 +567,7 @@ const relatedPages = [
         >
           <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+            <div class="text-center max-w-2xl mx-auto mb-stack-lg" data-reveal>
               <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Porównanie</span>
               <h2
                 id="section-types"
@@ -463,7 +581,7 @@ const relatedPages = [
             </div>
 
             <!-- Desktop table -->
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8 shadow-sm">
+            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8 shadow-sm" data-reveal>
               <table class="w-full text-sm">
                 <caption class="sr-only">Porównanie typów stron internetowych: landing page, strona firmowa, sklep internetowy</caption>
                 <thead>
@@ -553,12 +671,12 @@ const relatedPages = [
           </div>
         </section>
 
-        <!-- ══ 7. SEO — inverse-surface (dark) ══════════════════════════════ -->
-        <section aria-labelledby="section-seo" class="relative overflow-hidden py-section-padding bg-inverse-surface">
+        <!-- ══ 7. SEO — primary ══════════════════════════════════════════════ -->
+        <section aria-labelledby="section-seo" class="relative overflow-hidden py-section-padding bg-primary">
 
           <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-            <div class="absolute top-1/4 -left-32 w-80 h-80 rounded-full bg-primary/25 blur-3xl"></div>
-            <div class="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full bg-primary-container/25 blur-3xl"></div>
+            <div class="animate-float          absolute top-1/4  -left-32  w-80 h-80 rounded-full bg-primary/25 blur-3xl"></div>
+            <div class="animate-float-reverse  absolute bottom-1/4 -right-32 w-80 h-80 rounded-full bg-primary-container/25 blur-3xl"></div>
           </div>
 
           <div class="relative max-w-container-max mx-auto px-gutter">
@@ -566,18 +684,18 @@ const relatedPages = [
             <div class="grid lg:grid-cols-2 gap-16 items-center">
 
               <!-- Left copy -->
-              <div>
-                <span class="inline-flex items-center gap-2 rounded-full bg-primary/20 border border-primary/30 px-4 py-2 text-sm font-medium text-inverse-primary mb-6">
+              <div data-reveal="left">
+                <span class="inline-flex items-center gap-2 rounded-full bg-white/15 border border-white/25 px-4 py-2 text-sm font-medium text-on-primary mb-6">
                   <span class="material-symbols-outlined text-[16px]" aria-hidden="true">trending_up</span>
                   Pozycjonowanie SEO i GEO
                 </span>
                 <h2
                   id="section-seo"
-                  class="font-display text-3xl sm:text-4xl font-black text-inverse-on-surface leading-tight mb-6"
+                  class="font-display text-3xl sm:text-4xl font-black text-on-primary leading-tight mb-6"
                 >
                   Strona bez SEO to strona, którą klienci nie znajdą
                 </h2>
-                <div class="space-y-4 text-inverse-on-surface/70 leading-relaxed mb-8">
+                <div class="space-y-4 text-on-primary/80 leading-relaxed mb-8">
                   <p>
                     Pozycjonowanie SEO kosztuje od 1 260 zł netto miesięcznie. Obejmuje audyt techniczny, optymalizację on-page, budowanie profilu linków i miesięczny raport z pozycjami fraz.
                   </p>
@@ -594,20 +712,20 @@ const relatedPages = [
                   loading="lazy"
                 />
                 <NuxtLink to="/seo">
-                  <BaseButton variant="primary" size="lg">Sprawdź pozycjonowanie SEO</BaseButton>
+                  <BaseButton variant="secondary" size="lg">Sprawdź pozycjonowanie SEO</BaseButton>
                 </NuxtLink>
               </div>
 
               <!-- Right: SEO services grid -->
-              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3">
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3" data-reveal="right">
                 <NuxtLink
                   v-for="svc in seoServices"
                   :key="svc.title"
                   :to="svc.href"
                   class="group flex flex-col gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/40 rounded-xl p-4 transition-all duration-200 hover:-translate-y-0.5"
                 >
-                  <div class="w-9 h-9 rounded-lg bg-primary/20 group-hover:bg-primary/35 flex items-center justify-center transition-colors duration-200">
-                    <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">{{ svc.icon }}</span>
+                  <div class="w-9 h-9 rounded-lg bg-dark-inverse group-hover:bg-primary/35 flex items-center justify-center transition-colors duration-200">
+                    <span class="material-symbols-outlined text-white text-[18px]" aria-hidden="true">{{ svc.icon }}</span>
                   </div>
                   <div>
                     <p class="text-sm font-bold text-white leading-snug mb-1">{{ svc.title }}</p>
@@ -636,7 +754,7 @@ const relatedPages = [
             <div class="grid lg:grid-cols-2 gap-16 items-start">
 
               <!-- Left: image + copy -->
-              <div>
+              <div data-reveal="left">
                 <NuxtImg
                   src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=640&h=340&fit=crop&auto=format&q=80"
                   alt="Ekran z kodem źródłowym Vue.js i Nuxt.js — technologia używana przez EvolaTec zamiast WordPressa"
@@ -674,7 +792,7 @@ const relatedPages = [
               </div>
 
               <!-- Right: comparison table -->
-              <div>
+              <div data-reveal="right">
                 <div class="hidden md:block overflow-hidden rounded-2xl border border-outline-variant/30 shadow-sm">
                   <table class="w-full text-sm">
                     <caption class="sr-only">Porównanie WordPress z EvolaTec Nuxt.js</caption>
