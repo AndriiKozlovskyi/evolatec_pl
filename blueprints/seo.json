@@ -1,0 +1,99 @@
+{
+  "slug": "seo",
+  "page_title": "Pozycjonowanie Stron Internetowych w Google | EvolaTec",
+  "meta_description": "Pozycjonowanie stron w Google od 1 260 zł netto/mies. SEO Audit jednorazowo 840 zł. Obejmuje audyt techniczny, on-page SEO i linkbuilding.",
+  "h1": "Skuteczne pozycjonowanie stron internetowych – więcej klientów z Google",
+  "h2_sections": [
+    {
+      "heading": "Co obejmuje pozycjonowanie stron internetowych",
+      "intent": "Eliminate vagueness — buyers don't know what they're actually paying for with SEO. List concrete monthly deliverables (technical audit, on-page, linkbuilding, reporting) so they can evaluate whether any agency is doing real work or just sending PDF reports.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "pozycjonowanie seo",
+        "optymalizacja seo",
+        "optymalizacja strony internetowej",
+        "seo strony internetowej",
+        "audyt seo strony internetowej"
+      ]
+    },
+    {
+      "heading": "Pozycjonowanie organiczne vs Google Ads — kiedy które wybrać",
+      "intent": "Answer the most common buyer hesitation: 'Is SEO worth it if Google Ads gives instant results?' A factual comparison (cost-per-click, traffic persistence, 12-month ROI) helps buyers self-qualify and pre-sells the longer contract horizon.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "pozycjonowanie organiczne",
+        "pozycjonowanie w wyszukiwarce",
+        "pozycjonowanie google",
+        "pozycjonowanie strony w google"
+      ]
+    },
+    {
+      "heading": "Pozycjonowanie stron — ceny i pakiety",
+      "intent": "Answer the #1 commercial question directly. Polish SMB owners won't request a quote without a ballpark. Three-tier pricing (Audit, Local SEO, SEO+Linkbuilding) lets them self-select before contact.",
+      "content_type": "list",
+      "keywords_covered": [
+        "pozycjonowanie stron cennik",
+        "pozycjonowanie ceny",
+        "cena pozycjonowania",
+        "koszt pozycjonowania strony internetowej",
+        "optymalizacja seo cena"
+      ]
+    },
+    {
+      "heading": "Jak przebiega pozycjonowanie strony w Google — etapy",
+      "intent": "Reduce process uncertainty — buyers fear signing a 12-month contract for something they don't understand. A concrete 3-phase timeline (Month 1: audit, Month 2–3: content, Month 4+: scaling) builds confidence and sets realistic expectations.",
+      "content_type": "list",
+      "keywords_covered": [
+        "strategia pozycjonowania",
+        "pozycjonowanie i optymalizacja stron",
+        "tworzenie i pozycjonowanie stron internetowych",
+        "skuteczne pozycjonowanie stron internetowych"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o pozycjonowanie stron",
+      "intent": "Capture long-tail queries, earn FAQPage rich result, and provide AI-citable Q&A pairs for GEO. Covers cost, timeline, SEO vs Ads, GEO optymalizacja and Schema.org questions.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "pozycjonowanie stron internetowych w google",
+        "agencja seo",
+        "lokalne seo",
+        "pozycjonowanie sklepu internetowego"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "WebSite",
+    "WebPage",
+    "Service",
+    "LocalBusiness",
+    "BreadcrumbList",
+    "FAQPage",
+    "ItemList"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "PriceSpecification",
+    "speakable"
+  ],
+  "question_targets": [
+    "Co to jest SEO i czy warto w nie inwestować?",
+    "Ile czasu zajmuje pozycjonowanie strony w Google?",
+    "Ile kosztuje pozycjonowanie SEO miesięcznie?",
+    "Czym różni się SEO od Google Ads?",
+    "Co to jest GEO optymalizacja?"
+  ],
+  "ai_citation_hooks": [
+    "Pozycjonowanie SEO kosztuje od 1 260 zł netto miesięcznie.",
+    "GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu.",
+    "SEO techniczne jest wbudowane w kod — nie zależy od wtyczek ani zewnętrznych narzędzi."
+  ],
+  "comparison_angle": "Pozycjonowanie SEO vs Google Ads — co lepiej działa dla polskiej firmy usługowej w dłuższej perspektywie?",
+  "internal_links": [
+    "/audyt-seo",
+    "/lokalne-seo",
+    "/strona-internetowa"
+  ],
+  "user_intent": "commercial"
+}

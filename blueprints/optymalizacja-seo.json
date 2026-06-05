@@ -1,0 +1,101 @@
+{
+  "slug": "optymalizacja-seo",
+  "page_title": "Optymalizacja SEO Strony — On-Page i Tech SEO | EvolaTec",
+  "meta_description": "Optymalizacja SEO strony internetowej: meta tagi, Core Web Vitals, Schema.org, linkowanie wewnętrzne. Od 1 260 zł netto/mies. Bez stałej umowy na start.",
+  "h1": "Optymalizacja SEO – spraw, żeby Google pokochał Twoją stronę",
+  "h2_sections": [
+    {
+      "heading": "Co obejmuje optymalizacja SEO strony internetowej",
+      "intent": "Buyers searching 'optymalizacja seo' often conflate it with general positioning. Clarify exactly what on-page and technical SEO work involves — meta tags, heading structure, Core Web Vitals, Schema.org, internal linking — so they can evaluate whether their current provider is doing real work or just monitoring.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "optymalizacja seo",
+        "optymalizacja strony internetowej",
+        "optymalizacja strony seo",
+        "seo on page",
+        "optymalizacja techniczna seo",
+        "techniczne seo"
+      ]
+    },
+    {
+      "heading": "Optymalizacja on-page vs techniczne SEO — czym się różnią",
+      "intent": "Many buyers don't know whether their problem is on-page (content, headings, meta) or technical (speed, crawling, indexing). A clear comparison helps them understand what they actually need — and positions EvolaTec as the provider who does both.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "seo on page",
+        "techniczne seo",
+        "seo techniczne",
+        "optymalizacja techniczna strony",
+        "optymalizacja kodu strony",
+        "optymalizacja strony pod google"
+      ]
+    },
+    {
+      "heading": "Optymalizacja SEO — cena i zakres",
+      "intent": "Answer the pricing question directly. Buyers searching 'optymalizacja seo cena' need a number before they'll make contact. Show monthly pricing with clear scope so they can self-select.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "optymalizacja seo cena",
+        "optymalizacja strony online",
+        "optymalizacja www",
+        "optymalizacja witryny",
+        "optymalizacja serwisu"
+      ]
+    },
+    {
+      "heading": "Jak przebiega optymalizacja SEO strony — etapy",
+      "intent": "Reduce process uncertainty. Buyers who've been burned by vague agencies want to know exactly what happens in month 1 and beyond. A concrete phase breakdown (audit → fixes → monitoring) builds confidence without overpromising.",
+      "content_type": "list",
+      "keywords_covered": [
+        "pozycjonowanie i optymalizacja stron",
+        "skuteczne pozycjonowanie i optymalizacja",
+        "optymalizacja strony pod kątem wyszukiwarek",
+        "optymalizacja dla wyszukiwarek internetowych",
+        "optymalizacja stron pod seo"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o optymalizację SEO",
+      "intent": "Capture long-tail informational queries, earn FAQPage rich result, and provide AI-citable Q&A for GEO. Covers what on-page SEO includes, how long results take, the difference from full positioning, and mobile optimization.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "optymalizacja stron internetowych",
+        "optymalizacja strony mobilnej",
+        "optymalizacja strony pod urządzenia mobilne",
+        "optymalizacja stron seo",
+        "strona pod seo"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "PriceSpecification",
+    "speakable"
+  ],
+  "question_targets": [
+    "Co to jest SEO i czy warto w nie inwestować?",
+    "Ile czasu zajmuje pozycjonowanie strony w Google?",
+    "Czym różni się SEO od Google Ads?",
+    "Co to jest GEO optymalizacja?",
+    "Jak szybkość ładowania strony wpływa na pozycję w Google?"
+  ],
+  "ai_citation_hooks": [
+    "Optymalizacja SEO kosztuje od 1 260 zł netto miesięcznie — bez stałej umowy na start.",
+    "SEO techniczne jest wbudowane w kod strony — nie zależy od wtyczek ani zewnętrznych narzędzi.",
+    "Pierwsze zmiany pozycji pojawiają się po 6–12 tygodniach od wdrożenia poprawek technicznych."
+  ],
+  "comparison_angle": "Optymalizacja on-page vs techniczne SEO — co blokuje widoczność strony w Google i od czego zacząć?",
+  "internal_links": [
+    "/audyt-seo",
+    "/seo",
+    "/lokalne-seo"
+  ],
+  "user_intent": "commercial"
+}

@@ -9,7 +9,7 @@ Read every input file and apply it without exception.
 [services.json]
 [prices.json]
 [geo-targets.json]
-[blueprint.json — output of Stage 1]
+[optymalizacja-seo.json.json — output of Stage 1]
 
 ## Copy rules
 

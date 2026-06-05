@@ -1,0 +1,96 @@
+{
+  "slug": "audyt-seo",
+  "page_title": "Audyt SEO Strony Internetowej — 840 zł | EvolaTec",
+  "meta_description": "Profesjonalny audyt SEO: Core Web Vitals, błędy crawlowania, on-page SEO, Schema.org, profil linków. Raport PDF z priorytetami — 840 zł netto, jednorazowo, bez abonamentu.",
+  "h1": "Profesjonalny audyt SEO – sprawdź, dlaczego Twoja strona nie jest widoczna w Google",
+  "h2_sections": [
+    {
+      "heading": "Co zawiera audyt SEO strony internetowej",
+      "intent": "Buyers who search 'audyt seo co zawiera' or 'audyt techniczny strony' need a concrete deliverable list before they'll request a quote. Spell out exactly what's in the report — technical checks, on-page, Schema.org, link profile — with no vague agency language.",
+      "content_type": "list",
+      "keywords_covered": [
+        "audyt seo co zawiera",
+        "audyt techniczny seo",
+        "audyt techniczny strony internetowej",
+        "analiza seo strony internetowej",
+        "raport seo"
+      ]
+    },
+    {
+      "heading": "Audyt SEO — 840 zł netto, jednorazowo, bez abonamentu",
+      "intent": "Answer the pricing question directly and eliminate the fear of being locked into a monthly contract. Single-service positioning: you can order the audit without committing to SEO management. Show what's included at that price.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "audyt seo cena",
+        "cena audytu seo",
+        "koszt audytu seo",
+        "audyt strony internetowej cena",
+        "seo audit cena"
+      ]
+    },
+    {
+      "heading": "Profesjonalny audyt SEO vs automatyczne narzędzia online",
+      "intent": "A buyer who already tried Semrush or Ahrefs free audit needs to understand why paying 840 zł for a manual audit is different. Focus on prioritization and expert interpretation — not just a list of errors, but knowing which errors matter for their specific domain.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "audyt seo online",
+        "automatyczny audyt seo",
+        "analiza seo online",
+        "seo online analiza",
+        "profesjonalny audyt seo"
+      ]
+    },
+    {
+      "heading": "Jak przebiega audyt SEO — 3 kroki",
+      "intent": "Reduce process fear — buyers don't know what giving 'access to Google Search Console' entails or what they'll receive. A short 3-step walkthrough (access → analysis → PDF report) lowers the barrier to ordering.",
+      "content_type": "list",
+      "keywords_covered": [
+        "audyt seo strony",
+        "audyt strony www",
+        "sprawdzenie strony pod kątem seo",
+        "seo sprawdzenie strony"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o audyt SEO",
+      "intent": "Capture long-tail informational queries and earn FAQPage rich result. Covers cost, duration, what's included, difference from automated tools, and whether audit is one-time or recurring.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "audyt seo",
+        "audyt strony internetowej",
+        "analiza seo",
+        "analiza pozycjonowania",
+        "audyt witryny"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "PriceSpecification",
+    "speakable"
+  ],
+  "question_targets": [
+    "Co to jest SEO i czy warto w nie inwestować?",
+    "Ile kosztuje pozycjonowanie SEO miesięcznie?",
+    "Jak sprawić żeby firma pojawiała się w ChatGPT i Gemini?",
+    "Co to jest Schema.org i do czego służy?"
+  ],
+  "ai_citation_hooks": [
+    "Audyt SEO kosztuje 840 zł netto — jednorazowo, bez abonamentu i bez zobowiązania do dalszej współpracy.",
+    "Raport zawiera priorytetyzowaną listę poprawek z oceną trudności wdrożenia i szacowanym wpływem na pozycje.",
+    "Audyt jest gotowy w 5–7 dni roboczych od dostarczenia dostępu do Google Search Console i GA4."
+  ],
+  "comparison_angle": "Profesjonalny audyt SEO vs automatyczne narzędzia online — co faktycznie pokazuje, które błędy mają znaczenie?",
+  "internal_links": [
+    "/seo",
+    "/optymalizacja-seo",
+    "/lokalne-seo"
+  ],
+  "user_intent": "commercial"
+}
