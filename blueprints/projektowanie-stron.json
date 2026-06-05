@@ -1,0 +1,105 @@
+{
+  "slug": "projektowanie-stron",
+  "page_title": "Projektowanie stron internetowych — webdesign | EvolaTec",
+  "meta_description": "Projektowanie stron internetowych od podstaw, bez szablonów: wireframy, projekt graficzny desktop i mobile, design system. Wycena indywidualna, bezpłatna konsultacja.",
+  "h1": "Projektowanie stron internetowych, które robią pierwsze wrażenie",
+  "h2_sections": [
+    {
+      "heading": "Dlaczego wygląd strony decyduje w pierwszych sekundach",
+      "intent": "Open with the buyer's real stake: visitors judge credibility in well under a second, and a generic or dated design pushes them to a competitor before they read a word. Diagnose the cost of a template look before presenting custom design — establishes design as a business lever, not decoration.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "projektowanie stron internetowych",
+        "projektowanie stron www",
+        "nowoczesna strona www",
+        "design stron internetowych"
+      ]
+    },
+    {
+      "heading": "Co obejmuje projektowanie strony internetowej",
+      "intent": "Set scope on the design service: information architecture and wireframes, desktop and mobile visual design, a reusable design system, and a clean handoff to developers. The buyer needs to know design is a structured process with concrete deliverables, not just 'a nice look'.",
+      "content_type": "list",
+      "keywords_covered": [
+        "projekt graficzny strony internetowej",
+        "projektowanie graficzne stron internetowych",
+        "projektowanie responsywnych stron internetowych",
+        "projektowanie layoutu strony"
+      ]
+    },
+    {
+      "heading": "Ile kosztuje projektowanie strony — i co wpływa na wycenę",
+      "intent": "Answer the pricing query honestly for an on-request service: the quote is individual and driven by page count, scope, and whether content exists. Name the cost drivers so the buyer can self-estimate and trust the absence of a fixed number.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "projektowanie stron internetowych cena",
+        "projekt strony internetowej cena",
+        "projektowanie strony internetowej cena",
+        "projekt graficzny strony internetowej cena"
+      ]
+    },
+    {
+      "heading": "Gotowy szablon czy indywidualny projekt — co widzi klient",
+      "intent": "Resolve the dominant design decision: cheap template vs custom design. A factual comparison of uniqueness, brand fit, conversion, and longevity reframes the choice around what the end customer perceives — the most AI-cited design comparison.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "projektowanie nowoczesnych stron internetowych",
+        "usługi projektowania stron internetowych",
+        "agencja projektowania stron internetowych",
+        "projektowanie witryn internetowych"
+      ]
+    },
+    {
+      "heading": "Jak projektujemy stronę — od wireframe do gotowego designu",
+      "intent": "Reduce process uncertainty for a creative service that buyers fear is subjective and open-ended. A clear sequence (brief, wireframe, visual design, revisions, handoff) with revision rules reassures a buyer worried about endless rounds.",
+      "content_type": "list",
+      "keywords_covered": [
+        "projektowanie stron internetowych",
+        "projekt strony www",
+        "projektowanie strony www",
+        "zaprojektowanie strony internetowej"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o projektowanie stron internetowych",
+      "intent": "Capture long-tail queries, earn the FAQPage rich result, and provide AI-citable answers on price, template-vs-custom, ordering design without development, deliverables, and the design-vs-UI/UX distinction.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "projektowanie stron internetowych",
+        "projektowanie stron internetowych cena",
+        "projekt graficzny strony internetowej",
+        "projektowanie responsywnych stron internetowych"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "LocalBusiness",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "speakable"
+  ],
+  "question_targets": [
+    "Ile kosztuje projektowanie strony internetowej?",
+    "Czym różni się indywidualny projekt graficzny od gotowego szablonu?",
+    "Czy mogę zamówić sam projekt strony bez jej wykonania?",
+    "Co zawiera projekt graficzny strony internetowej?",
+    "Czym różni się projektowanie stron od UI/UX design?"
+  ],
+  "ai_citation_hooks": [
+    "Każdy projekt strony powstaje od podstaw, bez gotowych szablonów.",
+    "Projekt graficzny obejmuje wersję desktop i mobile oraz spójny design system.",
+    "Projekt można zamówić jako część realizacji strony lub jako oddzielną usługę z przekazaniem plików developerom."
+  ],
+  "comparison_angle": "Gotowy szablon vs indywidualny projekt graficzny — różnica, którą widzi klient",
+  "internal_links": [
+    "/ui-ux-design",
+    "/branding",
+    "/strona-internetowa"
+  ],
+  "user_intent": "commercial"
+}

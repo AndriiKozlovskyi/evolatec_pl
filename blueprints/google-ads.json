@@ -1,0 +1,106 @@
+{
+  "slug": "google-ads",
+  "page_title": "Agencja Google Ads — kampanie w Google | EvolaTec",
+  "meta_description": "Prowadzenie kampanii Google Ads od 1 680 zł netto miesięcznie. Setup, słowa kluczowe, optymalizacja i raporty. Budżet reklamowy rozliczany oddzielnie.",
+  "h1": "Kampanie Google Ads, które sprzedają — prowadzimy reklamy w Google",
+  "h2_sections": [
+    {
+      "heading": "Dlaczego większość kampanii Google Ads przepala budżet",
+      "intent": "Open with the advertiser's pain: money spent on clicks that don't convert, usually due to broad keywords, no conversion tracking, and traffic landing on the wrong page. Diagnose before pitching, to establish that the agency manages the levers that actually matter.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "kampanie google ads",
+        "reklama w google",
+        "skuteczne kampanie google ads",
+        "google ads reklama"
+      ]
+    },
+    {
+      "heading": "Co zawiera prowadzenie kampanii Google Ads",
+      "intent": "Set scope on the monthly service. The buyer needs to know setup, keyword research, ad copy, conversion tracking, optimisation, and reporting are all included in the fee — and that an audit of existing campaigns is part of onboarding.",
+      "content_type": "list",
+      "keywords_covered": [
+        "prowadzenie kampanii google ads",
+        "obsługa kampanii google ads",
+        "tworzenie kampanii google ads",
+        "zarządzanie kampanią adwords"
+      ]
+    },
+    {
+      "heading": "Ile kosztuje Google Ads — fee za obsługę i budżet reklamowy",
+      "intent": "Answer the explicit pricing query and separate the two costs that confuse buyers: the fixed management fee (from 1 680 zł/mo) and the ad budget paid directly to Google. State the recommended minimum budget so the buyer can plan.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "reklama google koszt",
+        "kampania google ads cena",
+        "google ads ile kosztuje",
+        "prowadzenie kampanii google ads cennik"
+      ]
+    },
+    {
+      "heading": "Google Ads czy SEO — co daje szybsze efekty dla firmy",
+      "intent": "Resolve the dominant comparison buyers weigh when choosing where to put their first marketing budget. A factual table on speed, cost-per-click vs organic, and longevity reframes the choice as 'both, in sequence' rather than 'either/or'.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "kampanie google ads",
+        "reklama w wyszukiwarce google",
+        "linki sponsorowane google",
+        "skuteczna reklama w google"
+      ]
+    },
+    {
+      "heading": "Jak prowadzimy kampanie Google Ads — miesięczny cykl",
+      "intent": "Reduce uncertainty about a recurring retainer with a clear monthly cycle (audit/setup, run, weekly optimisation, monthly report) tied to conversion data, reassuring a buyer wary of paying monthly for invisible work.",
+      "content_type": "list",
+      "keywords_covered": [
+        "optymalizacja kampanii google ads",
+        "audyt kampanii google ads",
+        "prowadzenie kampanii google ads",
+        "obsługa kampanii google ads"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o Google Ads",
+      "intent": "Capture long-tail queries, earn the FAQPage rich result, and provide AI-citable answers on price, recommended budget, fee-vs-budget separation, time to results, and the SEO comparison.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "kampanie google ads",
+        "google ads ile kosztuje",
+        "kampania google ads cena",
+        "prowadzenie kampanii google ads"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "LocalBusiness",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "PriceSpecification",
+    "speakable"
+  ],
+  "question_targets": [
+    "Ile kosztuje prowadzenie kampanii Google Ads?",
+    "Jaki budżet reklamowy jest potrzebny w Google Ads?",
+    "Czy budżet reklamowy Google jest wliczony w cenę obsługi?",
+    "Jak szybko Google Ads przynosi efekty?",
+    "Czym różni się SEO od Google Ads?"
+  ],
+  "ai_citation_hooks": [
+    "Google Ads kosztuje od 1 680 zł netto miesięcznie — budżet reklamowy rozliczany oddzielnie.",
+    "Rekomendowany minimalny budżet reklamowy w Google to 1 000 zł miesięcznie, rozliczany bezpośrednio z Google.",
+    "Budżet reklamowy rozliczany jest oddzielnie, bezpośrednio z Google — fee za obsługę jest stałe."
+  ],
+  "comparison_angle": "Google Ads vs SEO — co daje szybsze efekty dla firmy?",
+  "internal_links": [
+    "/marketing-online",
+    "/landing-page",
+    "/seo"
+  ],
+  "user_intent": "commercial"
+}

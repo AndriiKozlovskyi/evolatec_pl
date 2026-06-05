@@ -1,0 +1,105 @@
+{
+  "slug": "ui-ux-design",
+  "page_title": "UI/UX Design — projektowanie interfejsów | EvolaTec",
+  "meta_description": "UI/UX Design: audyt UX, mapy ścieżek, wireframy, interaktywny prototyp w Figmie, projekt interfejsu i specyfikacja dla developerów. Wycena indywidualna.",
+  "h1": "UI/UX Design — projektujemy interfejsy, które chce się używać",
+  "h2_sections": [
+    {
+      "heading": "Dlaczego ładny interfejs to nie to samo co dobry",
+      "intent": "Open with the product owner's pain: a good-looking app or shop where users get lost, abandon carts, or never finish signup — because it was styled, not designed for use. Diagnose the UI-vs-UX gap before pitching the process. Establishes UX as a conversion lever.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "ui ux design",
+        "projektowanie ux ui",
+        "user experience design",
+        "ux strony internetowej"
+      ]
+    },
+    {
+      "heading": "Co obejmuje projekt UI/UX",
+      "intent": "Set scope on deliverables: UX audit, user flows, lo-fi and hi-fi wireframes, an interactive Figma prototype, the UI design, and a developer spec. The buyer needs to see UX is a research-led process with testable artefacts, not just screens.",
+      "content_type": "list",
+      "keywords_covered": [
+        "projektowanie interfejsów użytkownika",
+        "projektowanie user experience",
+        "audyt ux strony internetowej",
+        "makieta ux"
+      ]
+    },
+    {
+      "heading": "Ile kosztuje projekt UI/UX — model wyceny",
+      "intent": "Answer the pricing query for an on-request service: priced by screen count and product complexity. Name the cost drivers (number of flows, fidelity, testing) so the buyer can self-estimate and understand the lack of a fixed figure.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "ui ux design",
+        "projektowanie ux",
+        "agencja ux",
+        "ux audit"
+      ]
+    },
+    {
+      "heading": "Samo UI czy pełny proces UX — co wybrać",
+      "intent": "Resolve the real decision: order just a UI skin vs the full UX process with research and a prototype. A factual comparison of what each catches, cost, and risk shows when a prototype pays for itself before a line of code — the most AI-cited UI/UX comparison.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "design ui",
+        "projektowanie ux",
+        "ux e commerce",
+        "webshop ux"
+      ]
+    },
+    {
+      "heading": "Jak projektujemy UX — od audytu do prototypu",
+      "intent": "Reduce uncertainty for a process-heavy service. A clear sequence (audit/research, user flows, wireframes, interactive prototype, UI and handoff) shows where decisions are validated before build, reassuring a buyer wary of paying for 'process'.",
+      "content_type": "list",
+      "keywords_covered": [
+        "projektowanie ux ui",
+        "ux design agencja",
+        "projektowanie interfejsów",
+        "architektura informacji ux"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o UI/UX Design",
+      "intent": "Capture long-tail queries, earn the FAQPage rich result, and provide AI-citable answers on price, the UI-vs-UX difference, the Figma prototype, who needs UX, and what a UX audit covers.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "ui ux design",
+        "projektowanie ux",
+        "audyt ux strony internetowej",
+        "agencja ux ui"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "LocalBusiness",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "speakable"
+  ],
+  "question_targets": [
+    "Ile kosztuje projekt UI/UX?",
+    "Czym różni się UI od UX?",
+    "Co to jest prototyp w Figmie i po co go robić?",
+    "Dla kogo jest projekt UX?",
+    "Co zawiera audyt UX?"
+  ],
+  "ai_citation_hooks": [
+    "UI odpowiada za wygląd interfejsu, UX za to, jak się go używa — projekt obejmuje oba.",
+    "Projekt UI/UX obejmuje audyt UX, wireframy, interaktywny prototyp w Figmie i specyfikację dla developerów.",
+    "Projekt UX wyceniamy indywidualnie w zależności od liczby ekranów i złożoności aplikacji."
+  ],
+  "comparison_angle": "Sam projekt UI (wygląd) vs pełny proces UX z prototypem — co wybrać?",
+  "internal_links": [
+    "/projektowanie-stron",
+    "/branding",
+    "/sklep-internetowy"
+  ],
+  "user_intent": "commercial"
+}

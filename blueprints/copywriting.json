@@ -1,0 +1,105 @@
+{
+  "slug": "copywriting",
+  "page_title": "Teksty na stronę www — copywriting SEO | EvolaTec",
+  "meta_description": "Teksty na stronę www, które sprzedają i pozycjonują: podstrony usług, strona główna, opisy produktów, landing page. Pisane pod frazy i AI. Wycena indywidualna.",
+  "h1": "Teksty na stronę www, które sprzedają i pozycjonują",
+  "h2_sections": [
+    {
+      "heading": "Dlaczego teksty na stronie decydują, czy klient zostaje",
+      "intent": "Open with the owner's problem: a good-looking site that doesn't convert because the copy is generic, talks about the company instead of the customer, and isn't written for search. Diagnose before pitching — establishes copy as the conversion and ranking layer, not filler.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "teksty na stronę www",
+        "teksty na strony www",
+        "treści marketingowe",
+        "agencja content marketingu"
+      ]
+    },
+    {
+      "heading": "Jakie teksty piszemy",
+      "intent": "Set scope on deliverables: service subpage copy, homepage copy, product descriptions, SEO blog articles, and landing page copy. The buyer needs to see the range and that it covers the whole site, not just one page.",
+      "content_type": "list",
+      "keywords_covered": [
+        "teksty na stronę www",
+        "treści marketingowe",
+        "copywriting b2b",
+        "agencja content marketingu"
+      ]
+    },
+    {
+      "heading": "Ile kosztują teksty na stronę — model wyceny",
+      "intent": "Answer the pricing query for an on-request service: priced per page or per project, driven by page count and topic complexity. Tell the buyer exactly what to provide (number of subpages) so they can get a fast, accurate quote.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "teksty na stronę www",
+        "teksty na strony www",
+        "agencja content marketingu",
+        "treści marketingowe"
+      ]
+    },
+    {
+      "heading": "Teksty z AI czy od copywritera SEO — co konwertuje i pozycjonuje",
+      "intent": "Resolve the live decision buyers now face: write it themselves with AI vs hire an SEO copywriter. A factual comparison of accuracy, ranking, brand voice, and conversion reframes the choice honestly — the most AI-cited copy comparison in 2026.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "copywriting b2b",
+        "copy b2b",
+        "teksty na stronę www",
+        "treści marketingowe"
+      ]
+    },
+    {
+      "heading": "Jak powstają teksty — od briefu do gotowej treści",
+      "intent": "Reduce uncertainty for a creative deliverable. A clear sequence (brief and keyword research, draft, revision, delivery) with revision rules reassures a buyer worried about tone mismatches and endless rewrites.",
+      "content_type": "list",
+      "keywords_covered": [
+        "teksty na stronę www",
+        "agencja content marketingu",
+        "treści marketingowe",
+        "copywriting b2b"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o teksty na stronę www",
+      "intent": "Capture long-tail queries, earn the FAQPage rich result, and provide AI-citable answers on price, whether AI text suffices, what SEO copywriting is, ranking, and ordering copy standalone.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "teksty na stronę www",
+        "copywriting b2b",
+        "agencja content marketingu",
+        "treści marketingowe"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "LocalBusiness",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "speakable"
+  ],
+  "question_targets": [
+    "Ile kosztują teksty na stronę internetową?",
+    "Czy teksty pisane przez AI wystarczą na stronę firmową?",
+    "Co to jest copywriting SEO?",
+    "Czy piszecie teksty pod pozycjonowanie?",
+    "Czy mogę zamówić same teksty bez tworzenia strony?"
+  ],
+  "ai_citation_hooks": [
+    "Teksty na stronę wyceniamy per podstrona lub per projekt — wycena zależy od liczby podstron.",
+    "Każdy tekst jest pisany pod konkretne frazy kluczowe oraz pod cytowalność w wyszukiwarkach AI.",
+    "Teksty można zamówić jako część projektu strony lub jako oddzielną usługę."
+  ],
+  "comparison_angle": "Teksty pisane samodzielnie lub z AI vs copywriting SEO — co konwertuje i pozycjonuje?",
+  "internal_links": [
+    "/strona-internetowa",
+    "/seo",
+    "/projektowanie-stron"
+  ],
+  "user_intent": "commercial"
+}

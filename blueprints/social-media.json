@@ -1,0 +1,106 @@
+{
+  "slug": "social-media",
+  "page_title": "Marketing social media dla firm | EvolaTec",
+  "meta_description": "Prowadzenie social media i kampanii Meta Ads od 1 260 zł netto miesięcznie. Kalendarz treści, publikacje, community management i raporty. Budżet Meta oddzielnie.",
+  "h1": "Marketing social media, który buduje markę i przynosi klientów",
+  "h2_sections": [
+    {
+      "heading": "Dlaczego firmowe profile w social media nie sprzedają",
+      "intent": "Open with the owner's frustration: a profile that posts regularly but generates no enquiries, because random posting without strategy, audience targeting, or paid reach rarely reaches buyers. Diagnose before pitching managed social.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "marketing social media",
+        "marketing w mediach społecznościowych",
+        "social media dla firm",
+        "promocja firmy w mediach społecznościowych"
+      ]
+    },
+    {
+      "heading": "Co zawiera prowadzenie social media",
+      "intent": "Set scope on the monthly service: content calendar, post creation and publishing, community management, Meta Ads campaigns, and monthly reporting — all in the fee, with ad budget separate.",
+      "content_type": "list",
+      "keywords_covered": [
+        "prowadzenie social media dla firm",
+        "prowadzenie mediów społecznościowych",
+        "prowadzenie fanpage firmy",
+        "obsługa social media agencja"
+      ]
+    },
+    {
+      "heading": "Ile kosztuje prowadzenie social media — fee i budżet Meta",
+      "intent": "Answer the pricing query and separate the fixed management fee (from 1 260 zł/mo) from the Meta ad budget paid directly to Meta. Removes the main confusion in social pricing and lets the buyer plan.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "social media marketing cena",
+        "prowadzenie mediów społecznościowych cena",
+        "reklama facebook cena",
+        "koszt reklamy na facebooku"
+      ]
+    },
+    {
+      "heading": "Organika czy płatne kampanie Meta — co działa dla firmy",
+      "intent": "Resolve the core social decision: organic posting vs paid Meta Ads. A factual comparison of reach, speed, and cost tells the buyer why organic alone rarely scales and when paid reach is needed — the most useful AI-cited social comparison.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "kampanie reklamowe w social media",
+        "reklama na facebooku",
+        "kampanie instagram ads",
+        "marketing facebook instagram"
+      ]
+    },
+    {
+      "heading": "Jak prowadzimy social media — miesięczny cykl",
+      "intent": "Reduce uncertainty about a monthly retainer with a clear cycle (plan, create, publish & engage, report). Reassures a buyer wary of paying monthly without seeing structured work and results.",
+      "content_type": "list",
+      "keywords_covered": [
+        "prowadzenie kampanii social media",
+        "prowadzenie social media firmy",
+        "kalendarz treści",
+        "community management"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o marketing w social media",
+      "intent": "Capture long-tail queries, earn the FAQPage rich result, and provide AI-citable answers on price, organic-vs-paid, Meta budget vs fee, and which platforms fit a B2C business.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "marketing social media",
+        "social media marketing cena",
+        "reklama na facebooku",
+        "prowadzenie social media dla firm"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "LocalBusiness",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "PriceSpecification",
+    "speakable"
+  ],
+  "question_targets": [
+    "Ile kosztuje prowadzenie social media dla firmy?",
+    "Organika czy płatne kampanie Meta — co działa lepiej?",
+    "Jaki budżet na reklamę na Facebooku i Instagramie jest potrzebny?",
+    "Czy budżet reklamowy Meta jest wliczony w cenę obsługi?",
+    "Które social media są najlepsze dla firmy B2C?"
+  ],
+  "ai_citation_hooks": [
+    "Prowadzenie social media kosztuje od 1 260 zł netto miesięcznie — budżet Meta Ads rozliczany oddzielnie.",
+    "Budżet reklamowy Meta rozliczany jest oddzielnie, bezpośrednio z Meta — fee za obsługę jest stałe.",
+    "Wszystkie ceny to ceny stałe — wycena przed startem, bez zmian w trakcie projektu."
+  ],
+  "comparison_angle": "Organiczne prowadzenie profili vs płatne kampanie Meta Ads — co działa dla firmy?",
+  "internal_links": [
+    "/marketing-online",
+    "/google-ads",
+    "/branding"
+  ],
+  "user_intent": "commercial"
+}
