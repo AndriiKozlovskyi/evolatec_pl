@@ -151,6 +151,16 @@ useHead({
   ],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-revealed'); observer.unobserve(entry.target) } }) },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
@@ -241,24 +251,41 @@ const processSteps = [
           aria-labelledby="section-when"
           class="py-section-padding bg-surface"
         >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <h2
-              id="section-when"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Kiedy warto zamówić stronę firmową — i co to realnie zmienia
-            </h2>
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
 
-            <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-              <p>
-                Są dwa momenty, w których firma zamawia stronę: gdy nie ma jej wcale i traci zapytania do konkurencji, która ją ma, albo gdy stara strona na WordPressie psuje się co kilka miesięcy i nikt już nie pamięta hasła do panelu. W obu przypadkach koszt zwlekania jest ten sam — klient, który szukał Twojej usługi, znalazł kogoś innego.
-              </p>
-              <p>
-                Strona firmowa zmienia to w jeden konkretny sposób: daje wielostronicowy, indeksowany przez Google obraz firmy, do którego prowadzi reklama, wizytówka i polecenie. To różnica między „mamy stronę" a „strona przynosi nam zapytania". Tworzymy ją jako indywidualny projekt pod Twoją branżę — nie kupiony szablon, w którym podmieniono logo.
-              </p>
-              <p>
-                Cała rzecz ma sens tylko wtedy, gdy wiesz, ile zapłacisz i kiedy strona będzie gotowa. Dlatego <strong class="text-on-surface">wycena jest bezpłatna i stała — klient wie ile zapłaci przed podpisaniem umowy</strong>, a termin realizacji jest jej częścią, nie obietnicą złożoną przez telefon.
-              </p>
+              <div data-reveal="left">
+                <h2
+                  id="section-when"
+                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
+                >
+                  Kiedy warto zamówić stronę firmową — i co to realnie zmienia
+                </h2>
+
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                  <p>
+                    Są dwa momenty, w których firma zamawia stronę: gdy nie ma jej wcale i traci zapytania do konkurencji, która ją ma, albo gdy stara strona na WordPressie psuje się co kilka miesięcy i nikt już nie pamięta hasła do panelu. W obu przypadkach koszt zwlekania jest ten sam — klient, który szukał Twojej usługi, znalazł kogoś innego.
+                  </p>
+                  <p>
+                    Strona firmowa zmienia to w jeden konkretny sposób: daje wielostronicowy, indeksowany przez Google obraz firmy, do którego prowadzi reklama, wizytówka i polecenie. To różnica między „mamy stronę" a „strona przynosi nam zapytania". Tworzymy ją jako indywidualny projekt pod Twoją branżę — nie kupiony szablon, w którym podmieniono logo.
+                  </p>
+                  <p>
+                    Cała rzecz ma sens tylko wtedy, gdy wiesz, ile zapłacisz i kiedy strona będzie gotowa. Dlatego <strong class="text-on-surface">wycena jest bezpłatna i stała — klient wie ile zapłaci przed podpisaniem umowy</strong>, a termin realizacji jest jej częścią, nie obietnicą złożoną przez telefon.
+                  </p>
+                </div>
+              </div>
+
+              <div data-reveal="right" class="rounded-2xl overflow-hidden">
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=640&h=420&fit=crop&auto=format&q=80"
+                  alt="Nowoczesna strona firmowa wyświetlona na laptopie i smartfonie — responsywny design i szybkie ładowanie"
+                  width="640"
+                  height="420"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+
             </div>
           </div>
         </section>

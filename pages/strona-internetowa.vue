@@ -162,6 +162,16 @@ useHead({
   ],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-revealed'); observer.unobserve(entry.target) } }) },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
@@ -257,24 +267,41 @@ const processSteps = [
           aria-labelledby="section-problem"
           class="py-section-padding bg-surface"
         >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <h2
-              id="section-problem"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Dlaczego większość firmowych stron nie przynosi zapytań
-            </h2>
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
 
-            <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-              <p>
-                Firma zamawia stronę, płaci, dostaje ją — i po pół roku okazuje się, że telefon milczy, a w Google nie widać jej nawet po nazwie. Powód jest niemal zawsze ten sam: powstała „wizytówka", a nie narzędzie sprzedaży. Ładnie wygląda, ale ładuje się wolno, nie ma struktury pod wyszukiwarkę i nie odpowiada na pytania, które zadaje klient gotowy do zakupu.
-              </p>
-              <p>
-                Strona, która przynosi zapytania, musi robić trzy rzeczy naraz: ładować się poniżej 1 sekundy, być zrozumiała dla Google od strony kodu i prowadzić odwiedzającego do jednego jasnego działania — kontaktu lub wyceny. To nie jest kwestia ładniejszego szablonu, tylko architektury. Strona zbudowana w Nuxt.js osiąga <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> mierzony w Google PageSpeed Insights, podczas gdy typowa witryna na gotowym szablonie zatrzymuje się na 40–70/100.
-              </p>
-              <p>
-                Druga połowa problemu to widoczność. Budujemy każdą stronę z wbudowanym SEO i danymi strukturalnymi Schema.org, dzięki czemu firma może pojawiać się nie tylko w klasycznych wynikach Google, ale też jako cytowane źródło w <strong class="text-on-surface">ChatGPT, Gemini i Perplexity</strong>. Coraz więcej klientów zaczyna poszukiwania właśnie od asystenta AI — strona bez tej warstwy jest dla nich niewidoczna.
-              </p>
+              <div data-reveal="left">
+                <h2
+                  id="section-problem"
+                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
+                >
+                  Dlaczego większość firmowych stron nie przynosi zapytań
+                </h2>
+
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                  <p>
+                    Firma zamawia stronę, płaci, dostaje ją — i po pół roku okazuje się, że telefon milczy, a w Google nie widać jej nawet po nazwie. Powód jest niemal zawsze ten sam: powstała „wizytówka", a nie narzędzie sprzedaży. Ładnie wygląda, ale ładuje się wolno, nie ma struktury pod wyszukiwarkę i nie odpowiada na pytania, które zadaje klient gotowy do zakupu.
+                  </p>
+                  <p>
+                    Strona, która przynosi zapytania, musi robić trzy rzeczy naraz: ładować się poniżej 1 sekundy, być zrozumiała dla Google od strony kodu i prowadzić odwiedzającego do jednego jasnego działania — kontaktu lub wyceny. To nie jest kwestia ładniejszego szablonu, tylko architektury. Strona zbudowana w Nuxt.js osiąga <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> mierzony w Google PageSpeed Insights, podczas gdy typowa witryna na gotowym szablonie zatrzymuje się na 40–70/100.
+                  </p>
+                  <p>
+                    Druga połowa problemu to widoczność. Budujemy każdą stronę z wbudowanym SEO i danymi strukturalnymi Schema.org, dzięki czemu firma może pojawiać się nie tylko w klasycznych wynikach Google, ale też jako cytowane źródło w <strong class="text-on-surface">ChatGPT, Gemini i Perplexity</strong>. Coraz więcej klientów zaczyna poszukiwania właśnie od asystenta AI — strona bez tej warstwy jest dla nich niewidoczna.
+                  </p>
+                </div>
+              </div>
+
+              <div data-reveal="right" class="rounded-2xl overflow-hidden">
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=640&h=420&fit=crop&auto=format&q=80"
+                  alt="Strona internetowa dla firmy wyświetlona na MacBooku — nowoczesny design i wynik Lighthouse 100/100"
+                  width="640"
+                  height="420"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+
             </div>
           </div>
         </section>

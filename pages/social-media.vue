@@ -150,6 +150,16 @@ useHead({
   ],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-revealed'); observer.unobserve(entry.target) } }) },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
@@ -236,24 +246,41 @@ const processSteps = [
           aria-labelledby="section-problem"
           class="py-section-padding bg-surface"
         >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <h2
-              id="section-problem"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Dlaczego firmowe profile w social media nie sprzedają
-            </h2>
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
 
-            <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-              <p>
-                Firma zakłada profil na Facebooku i Instagramie, publikuje regularnie, zbiera kilka polubień od znajomych — i nic z tego nie wynika. To najczęstszy obraz firmowego social media: aktywność jest, zapytań nie ma. Problem nie leży w tym, że „social media nie działa", tylko w tym, jak jest prowadzone.
-              </p>
-              <p>
-                Trzy rzeczy zwykle zawodzą. Posty powstają bez planu i przekazu, więc nie budują żadnej spójnej historii marki. Trafiają wyłącznie do obecnych obserwujących, bo bez płatnego zasięgu organiczny zasięg Facebooka spadł do kilku procent fanów. I nikt nie mierzy, czy te treści w ogóle przekładają się na ruch lub zapytania — publikacja jest celem samym w sobie.
-              </p>
-              <p>
-                Prowadzimy social media jako narzędzie sprzedaży, nie kronikę firmy. Zaczynamy od strategii i kalendarza treści, łączymy organikę z płatnymi kampaniami Meta Ads, żeby treść docierała poza grono obecnych fanów, i co miesiąc raportujemy efekty. <strong class="text-on-surface">Budżet reklamowy Meta rozliczany jest oddzielnie, bezpośrednio z Meta — fee za obsługę jest stałe.</strong>
-              </p>
+              <div data-reveal="left">
+                <h2
+                  id="section-problem"
+                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
+                >
+                  Dlaczego firmowe profile w social media nie sprzedają
+                </h2>
+
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                  <p>
+                    Firma zakłada profil na Facebooku i Instagramie, publikuje regularnie, zbiera kilka polubień od znajomych — i nic z tego nie wynika. To najczęstszy obraz firmowego social media: aktywność jest, zapytań nie ma. Problem nie leży w tym, że „social media nie działa", tylko w tym, jak jest prowadzone.
+                  </p>
+                  <p>
+                    Trzy rzeczy zwykle zawodzą. Posty powstają bez planu i przekazu, więc nie budują żadnej spójnej historii marki. Trafiają wyłącznie do obecnych obserwujących, bo bez płatnego zasięgu organiczny zasięg Facebooka spadł do kilku procent fanów. I nikt nie mierzy, czy te treści w ogóle przekładają się na ruch lub zapytania — publikacja jest celem samym w sobie.
+                  </p>
+                  <p>
+                    Prowadzimy social media jako narzędzie sprzedaży, nie kronikę firmy. Zaczynamy od strategii i kalendarza treści, łączymy organikę z płatnymi kampaniami Meta Ads, żeby treść docierała poza grono obecnych fanów, i co miesiąc raportujemy efekty. <strong class="text-on-surface">Budżet reklamowy Meta rozliczany jest oddzielnie, bezpośrednio z Meta — fee za obsługę jest stałe.</strong>
+                  </p>
+                </div>
+              </div>
+
+              <div data-reveal="right" class="rounded-2xl overflow-hidden">
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=640&h=420&fit=crop&auto=format&q=80"
+                  alt="Smartfon z otwartymi profilami firmowymi na Facebooku i Instagramie — zasięg organiczny i kampania Meta Ads"
+                  width="640"
+                  height="420"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+
             </div>
           </div>
         </section>

@@ -151,6 +151,23 @@ useHead({
   ],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
@@ -176,6 +193,30 @@ const compareRows = [
   { label: 'Główny cel',      lp: 'Jedno działanie',          biz: 'Widoczność organiczna'         },
   { label: 'Najlepsze dla',   lp: 'Kampanii Google i Meta Ads', biz: 'Budowania marki w Google'    },
   { label: 'CMS i blog',      lp: '—',                        biz: 'tak'                           },
+]
+
+const relatedServices = [
+  {
+    icon: 'corporate_fare',
+    title: 'Strona firmowa',
+    description: 'Wielostronicowy serwis z SEO, blogiem i CMS — gdy potrzebujesz widoczności organicznej.',
+    price: 'od 6 300 zł netto',
+    href: '/stworz-strone-firmowa',
+  },
+  {
+    icon: 'ads_click',
+    title: 'Google Ads',
+    description: 'Kampanie reklamowe w Google — ruch od pierwszego dnia bez czekania na SEO.',
+    price: 'od 1 680 zł netto/mies.',
+    href: '/google-ads',
+  },
+  {
+    icon: 'trending_up',
+    title: 'Pozycjonowanie SEO',
+    description: 'Organiczne pozycje w Google obok kampanii Ads — długoterminowy ruch bez kosztu za kliknięcie.',
+    price: 'od 1 260 zł netto/mies.',
+    href: '/seo',
+  },
 ]
 
 const processSteps = [
@@ -234,76 +275,87 @@ const processSteps = [
 
       <article>
 
-        <!-- ── Section 1: Dlaczego ruch nie konwertuje ───────────────────── -->
-        <section
-          aria-labelledby="section-problem"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <h2
-              id="section-problem"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Dlaczego ruch z reklamy nie zamienia się w zapytania
-            </h2>
-
-            <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-              <p>
-                Firma uruchamia kampanię Google Ads, płaci za kliknięcia, a formularz milczy. Pierwszym podejrzanym jest zwykle reklama — ale częściej winna jest strona, na którą trafia kliknięcie. Ruch z reklamy ląduje na stronie głównej, która ma dziesięć celów naraz i żadnego konkretnego, więc odwiedzający klika „wstecz", zanim znajdzie to, po co przyszedł.
-              </p>
-              <p>
-                Landing page rozwiązuje dokładnie ten problem. To jedna strona z jednym celem — zapis, wycena, pobranie, zakup — pozbawiona menu i rozpraszaczy, które na stronie firmowej mają sens, a tutaj tylko obniżają konwersję. Każdy element prowadzi do jednego działania.
-              </p>
-              <p>
-                Drugim cichym zabójcą konwersji jest szybkość. Po trzech sekundach ładowania znika połowa ruchu mobilnego. Nasze landing page osiągają <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> mierzony w Google PageSpeed Insights i ładują się poniżej 1 sekundy, więc budżet reklamowy nie wycieka na porzucone ładowania.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- ── Section 2: Co zawiera ─────────────────────────────────────── -->
-        <section
-          aria-labelledby="section-included"
-          class="py-section-padding bg-surface-container-low"
-        >
+        <!-- ── Section 1: Dlaczego ruch nie konwertuje — white, 2-col ─── -->
+        <section aria-labelledby="section-problem" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-start">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
 
-              <div>
+              <div data-reveal="left">
                 <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
                   <span class="material-symbols-outlined text-[18px]" aria-hidden="true">ads_click</span>
-                  Jedna strona, jeden cel
+                  Konwersja, nie tylko ruch
                 </span>
-
-                <h2
-                  id="section-included"
-                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-                >
-                  Co zawiera landing page od 2 100 zł
+                <h2 id="section-problem" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Dlaczego ruch z reklamy nie zamienia się w zapytania
                 </h2>
-
-                <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
                   <p>
-                    Landing page jest celowo jedną stroną — jego siła bierze się z koncentracji, nie z liczby podstron. Za 2 100 zł netto dostajesz komplet potrzebny, żeby strona przyjęła ruch z kampanii i zamieniła go w zapytania.
+                    Firma uruchamia kampanię Google Ads, płaci za kliknięcia, a formularz milczy. Pierwszym podejrzanym jest zwykle reklama — ale częściej winna jest strona, na którą trafia kliknięcie. Ruch ląduje na stronie głównej z dziesięcioma celami naraz i żadnym konkretnym, więc odwiedzający klika „wstecz", zanim znajdzie to, po co przyszedł.
                   </p>
                   <p>
-                    Świadomie nie zawiera CMS, bloga ani wielu podstron — to elementy
-                    <NuxtLink to="/strona-internetowa" class="text-primary font-semibold hover:underline">strony firmowej</NuxtLink>,
-                    które tutaj rozpraszałyby uwagę i opóźniały start.
+                    Landing page rozwiązuje ten problem. To jedna strona z jednym celem — zapis, wycena, pobranie, zakup — pozbawiona menu i rozpraszaczy. Każdy element prowadzi do jednego działania.
+                  </p>
+                  <p>
+                    Po trzech sekundach ładowania znika połowa ruchu mobilnego. Nasze landing page osiągają <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> i ładują się poniżej 1 sekundy — budżet reklamowy nie wycieka na porzucone ładowania.
                   </p>
                 </div>
               </div>
 
-              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div data-reveal="right">
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=640&h=420&fit=crop&auto=format&q=80"
+                  alt="Osoba analizująca wskaźniki konwersji kampanii Google Ads na laptopie — CTR, CPC i liczba leadów"
+                  width="640"
+                  height="420"
+                  class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover"
+                  loading="lazy"
+                />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Section 2: Co zawiera — primary (purple) ──────────────────── -->
+        <section aria-labelledby="section-included" class="relative overflow-hidden py-section-padding bg-primary">
+          <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+            <div class="animate-float          absolute -top-32 -right-32 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
+            <div class="animate-float-reverse  absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-white/5 blur-3xl"></div>
+          </div>
+          <div class="relative max-w-container-max mx-auto px-gutter">
+
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
+
+              <div data-reveal="left">
+                <span class="inline-block text-xs font-bold uppercase tracking-[0.3em] text-on-primary/60 mb-3">Co dostajesz</span>
+                <h2 id="section-included" class="font-display text-3xl sm:text-4xl font-black text-on-primary leading-tight mb-6">
+                  Co zawiera landing page od 2 100 zł
+                </h2>
+                <div class="space-y-4 text-on-primary/80 leading-relaxed">
+                  <p>
+                    Landing page jest celowo jedną stroną — jego siła bierze się z koncentracji, nie z liczby podstron. Za 2 100 zł netto dostajesz komplet potrzebny, żeby strona przyjęła ruch z kampanii i zamieniła go w zapytania.
+                  </p>
+                  <p>
+                    Świadomie nie zawiera CMS, bloga ani wielu podstron — to elementy strony firmowej, które tutaj rozpraszałyby uwagę i opóźniały start.
+                  </p>
+                </div>
+                <NuxtLink to="/kontakt" class="inline-block mt-8">
+                  <BaseButton variant="outline" size="lg">Uzyskaj bezpłatną wycenę</BaseButton>
+                </NuxtLink>
+              </div>
+
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3" data-reveal="right">
                 <li
-                  v-for="item in includedItems"
+                  v-for="(item, i) in includedItems"
                   :key="item.label"
-                  class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/30 px-5 py-4 ambient-shadow"
+                  :data-reveal="'scale'"
+                  :data-delay="String(i + 1)"
+                  class="group flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-5 py-4 hover:bg-white/18 hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">{{ item.icon }}</span>
+                  <div class="w-9 h-9 rounded-lg bg-white/15 group-hover:bg-white/25 flex items-center justify-center flex-shrink-0 transition-colors duration-200">
+                    <span class="material-symbols-outlined text-on-primary text-[18px]" aria-hidden="true">{{ item.icon }}</span>
                   </div>
-                  <span class="text-sm font-semibold text-on-surface leading-snug">{{ item.label }}</span>
+                  <span class="text-sm font-semibold text-on-primary leading-snug">{{ item.label }}</span>
                 </li>
               </ul>
 
@@ -435,6 +487,14 @@ const processSteps = [
         <FAQSection
           title="Najczęściej zadawane pytania o tworzenie landing page"
           :faqs="faqData"
+        />
+
+        <!-- ── Related ────────────────────────────────────────────────────── -->
+        <RelatedServicesSection
+          eyebrow="Powiązane usługi"
+          title="Co jeszcze możesz potrzebować do kampanii"
+          cta="Dowiedz się więcej"
+          :services="relatedServices"
         />
 
       </article>

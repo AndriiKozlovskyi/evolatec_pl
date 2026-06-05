@@ -150,6 +150,23 @@ useHead({
   ],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
@@ -174,6 +191,30 @@ const compareRows = [
   { label: 'Po wyłączeniu',          ads: 'Ruch znika natychmiast', seo: 'Ruch zostaje'           },
   { label: 'Pozycja w wynikach',     ads: 'Górne sloty reklamowe',  seo: 'Wyniki organiczne'      },
   { label: 'Najlepsze dla',          ads: 'Szybkiego ruchu i testów', seo: 'Trwałego wzrostu na lata' },
+]
+
+const relatedServices = [
+  {
+    icon: 'ads_click',
+    title: 'Landing page',
+    description: 'Strona konwersyjna pod kampanię Ads — wyższy Quality Score i niższy koszt kliknięcia.',
+    price: 'od 2 100 zł netto',
+    href: '/landing-page',
+  },
+  {
+    icon: 'trending_up',
+    title: 'Pozycjonowanie SEO',
+    description: 'Organiczne pozycje obok reklam — ruch, który zostaje po wyłączeniu kampanii.',
+    price: 'od 1 260 zł netto/mies.',
+    href: '/seo',
+  },
+  {
+    icon: 'share',
+    title: 'Social Media Marketing',
+    description: 'Reklamy na Facebooku i Instagramie w połączeniu z Google Ads — pełne pokrycie kanałów.',
+    price: 'od 1 260 zł netto/mies.',
+    href: '/social-media',
+  },
 ]
 
 const processSteps = [
@@ -232,76 +273,86 @@ const processSteps = [
 
       <article>
 
-        <!-- ── Section 1: Przepalony budżet ──────────────────────────────── -->
-        <section
-          aria-labelledby="section-problem"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <h2
-              id="section-problem"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Dlaczego większość kampanii Google Ads przepala budżet
-            </h2>
-
-            <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-              <p>
-                Firma uruchamia Google Ads, widzi rosnący wydatek i kilka telefonów, ale nie wie, czy te telefony przyszły z reklamy, czy mimo niej. Tak wygląda większość źle ustawionych kampanii: budżet znika, a związek między wydatkiem a sprzedażą pozostaje zgadywaniem.
-              </p>
-              <p>
-                Trzy błędy powtarzają się najczęściej. Pierwszy to zbyt szerokie słowa kluczowe — reklama wyświetla się na zapytania, które nigdy nie kończą się zakupem, a każde kliknięcie kosztuje. Drugi to brak śledzenia konwersji, więc nie wiadomo, którą kampanię wyłączyć, a którą zwiększyć. Trzeci to ruch kierowany na stronę główną zamiast na stronę docelową dopasowaną do reklamy, co obniża konwersję i podnosi koszt kliknięcia przez niski Quality Score.
-              </p>
-              <p>
-                Prowadzimy kampanie odwrotnie: zaczynamy od wdrożenia śledzenia konwersji, zawężamy słowa kluczowe do tych, które realnie sprzedają, i kierujemy ruch na dopasowany landing page. <strong class="text-on-surface">Budżet reklamowy rozliczany jest oddzielnie, bezpośrednio z Google — fee za obsługę jest stałe</strong>, więc widzisz osobno, ile płacisz za pracę, a ile za same kliknięcia.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- ── Section 2: Co zawiera ─────────────────────────────────────── -->
-        <section
-          aria-labelledby="section-included"
-          class="py-section-padding bg-surface-container-low"
-        >
+        <!-- ── Section 1: Przepalony budżet — white, 2-col ─────────────── -->
+        <section aria-labelledby="section-problem" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-start">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
 
-              <div>
+              <div data-reveal="left">
                 <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
-                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">ads_click</span>
-                  Praca miesięczna, nie jednorazowy setup
+                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">track_changes</span>
+                  Konwersje, nie kliknięcia
                 </span>
-
-                <h2
-                  id="section-included"
-                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-                >
-                  Co zawiera prowadzenie kampanii Google Ads
+                <h2 id="section-problem" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Dlaczego większość kampanii Google Ads przepala budżet
                 </h2>
-
-                <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
                   <p>
-                    Prowadzenie kampanii Google Ads to praca miesięczna, nie jednorazowy setup. W stałym fee mieści się wszystko, co potrzebne, żeby kampania działała i się poprawiała.
+                    Firma uruchamia Google Ads, widzi rosnący wydatek i kilka telefonów, ale nie wie, czy te telefony przyszły z reklamy, czy mimo niej. Tak wygląda większość źle ustawionych kampanii: budżet znika, a związek między wydatkiem a sprzedażą pozostaje zgadywaniem.
                   </p>
                   <p>
-                    Jeśli przejmujemy istniejące konto, zaczynamy od audytu i mówimy wprost, co działa, a co przepala budżet. Ruch z reklam najlepiej kierować na osobny
-                    <NuxtLink to="/landing-page" class="text-primary font-semibold hover:underline">landing page</NuxtLink>
-                    dopasowany do przekazu, a nie na stronę główną.
+                    Trzy błędy powtarzają się najczęściej: zbyt szerokie słowa kluczowe, brak śledzenia konwersji i ruch kierowany na stronę główną zamiast dopasowany landing page.
+                  </p>
+                  <p>
+                    Prowadzimy kampanie odwrotnie: od wdrożenia śledzenia konwersji, przez zawężenie słów kluczowych. <strong class="text-on-surface">Budżet reklamowy rozliczany jest oddzielnie z Google — fee za obsługę jest stałe</strong> i nie rośnie wraz z wydanym budżetem.
                   </p>
                 </div>
               </div>
 
-              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div data-reveal="right">
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=640&h=420&fit=crop&auto=format&q=80"
+                  alt="Dashboard Google Ads z wykresem konwersji, kosztu kliknięcia i ROAS kampanii reklamowej"
+                  width="640"
+                  height="420"
+                  class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover"
+                  loading="lazy"
+                />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Section 2: Co zawiera — primary (purple) ──────────────────── -->
+        <section aria-labelledby="section-included" class="relative overflow-hidden py-section-padding bg-primary">
+          <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+            <div class="animate-float          absolute -top-32 -right-32 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
+            <div class="animate-float-reverse  absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-white/5 blur-3xl"></div>
+          </div>
+          <div class="relative max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
+
+              <div data-reveal="left">
+                <span class="inline-block text-xs font-bold uppercase tracking-[0.3em] text-on-primary/60 mb-3">Co dostajesz</span>
+                <h2 id="section-included" class="font-display text-3xl sm:text-4xl font-black text-on-primary leading-tight mb-6">
+                  Co zawiera prowadzenie kampanii Google Ads
+                </h2>
+                <div class="space-y-4 text-on-primary/80 leading-relaxed">
+                  <p>
+                    Prowadzenie kampanii Google Ads to praca miesięczna, nie jednorazowy setup. W stałym fee mieści się wszystko, co potrzebne, żeby kampania działała i się poprawiała.
+                  </p>
+                  <p>
+                    Jeśli przejmujemy istniejące konto, zaczynamy od audytu i mówimy wprost, co działa, a co przepala budżet. Ruch z reklam najlepiej kierować na dopasowany landing page, a nie stronę główną.
+                  </p>
+                </div>
+                <NuxtLink to="/kontakt" class="inline-block mt-8">
+                  <BaseButton variant="outline" size="lg">Uzyskaj bezpłatną wycenę</BaseButton>
+                </NuxtLink>
+              </div>
+
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3" data-reveal="right">
                 <li
-                  v-for="item in includedItems"
+                  v-for="(item, i) in includedItems"
                   :key="item.label"
-                  class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/30 px-5 py-4 ambient-shadow"
+                  :data-reveal="'scale'"
+                  :data-delay="String(i + 1)"
+                  class="group flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-5 py-4 hover:bg-white/18 hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">{{ item.icon }}</span>
+                  <div class="w-9 h-9 rounded-lg bg-white/15 group-hover:bg-white/25 flex items-center justify-center flex-shrink-0 transition-colors duration-200">
+                    <span class="material-symbols-outlined text-on-primary text-[18px]" aria-hidden="true">{{ item.icon }}</span>
                   </div>
-                  <span class="text-sm font-semibold text-on-surface leading-snug">{{ item.label }}</span>
+                  <span class="text-sm font-semibold text-on-primary leading-snug">{{ item.label }}</span>
                 </li>
               </ul>
 
@@ -444,6 +495,14 @@ const processSteps = [
         <FAQSection
           title="Najczęściej zadawane pytania o Google Ads"
           :faqs="faqData"
+        />
+
+        <!-- ── Related ────────────────────────────────────────────────────── -->
+        <RelatedServicesSection
+          eyebrow="Powiązane usługi"
+          title="Zmaksymalizuj efekty kampanii"
+          cta="Dowiedz się więcej"
+          :services="relatedServices"
         />
 
       </article>

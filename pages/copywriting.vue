@@ -53,30 +53,19 @@ const mainSchema = {
         contentUrl: 'https://evolatec.pl/logo.webp',
       },
       image: { '@id': 'https://evolatec.pl/#logo' },
-      description: 'Agencja webowa tworząca strony internetowe, sklepy online i rozwiązania SEO dla polskich firm. Realizacja od 3 dni roboczych, Lighthouse 95–100, stała cena.',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Warszawa',
-        addressCountry: 'PL',
-      },
+      description: 'Agencja webowa tworząca strony internetowe, sklepy online i rozwiązania SEO dla polskich firm.',
+      address: { '@type': 'PostalAddress', addressLocality: 'Warszawa', addressCountry: 'PL' },
       email: 'kontakt@evolatec.pl',
-      areaServed: [
-        { '@type': 'Country', name: 'Poland' },
-        { '@type': 'City', name: 'Warszawa' },
-        { '@type': 'City', name: 'Kraków' },
-        { '@type': 'City', name: 'Wrocław' },
-        { '@type': 'City', name: 'Gdańsk' },
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        contactType: 'sales',
-        email: 'kontakt@evolatec.pl',
-      },
-      sameAs: [
-        'https://g.page/evolatec-pl',
-        'https://www.linkedin.com/company/evolatec',
-      ],
-      priceRange: '2100 zł – 25200 zł',
+      areaServed: { '@type': 'Country', name: 'Poland' },
+      sameAs: ['https://g.page/evolatec-pl', 'https://www.linkedin.com/company/evolatec'],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://evolatec.pl/#website',
+      name: 'EvolaTec',
+      url: 'https://evolatec.pl',
+      publisher: { '@id': 'https://evolatec.pl/#organization' },
+      inLanguage: 'pl-PL',
     },
     {
       '@type': 'WebPage',
@@ -87,10 +76,8 @@ const mainSchema = {
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['h1', '.speakable-intro'],
-      },
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-intro'] },
+      breadcrumb: { '@id': 'https://evolatec.pl/copywriting#breadcrumb' },
     },
     {
       '@type': 'BreadcrumbList',
@@ -145,6 +132,23 @@ useHead({
   ],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
@@ -154,42 +158,96 @@ const heroStats = [
   { value: 'Bezpłatna',   label: 'Wycena indywidualna',      icon: 'request_quote' },
 ]
 
-const includedItems = [
-  { icon: 'sell',          label: 'Teksty na podstrony usług'        },
-  { icon: 'home',          label: 'Teksty na stronę główną'          },
-  { icon: 'inventory_2',   label: 'Opisy produktów pod sklep'        },
-  { icon: 'feed',          label: 'Artykuły blogowe SEO'             },
-  { icon: 'ads_click',     label: 'Teksty landing page'              },
+const textTypes = [
+  {
+    icon: 'sell',
+    iconBg: 'bg-violet-50',
+    iconColor: 'text-violet-600',
+    title: 'Teksty na podstrony usług',
+    description: 'Konwertujące opisy usług pisane z perspektywy problemu klienta — nie firmowej prezentacji. Każdy tekst zawiera frazy kluczowe i cytowalne zdania dla AI.',
+  },
+  {
+    icon: 'home',
+    iconBg: 'bg-sky-50',
+    iconColor: 'text-sky-600',
+    title: 'Teksty na stronę główną',
+    description: 'Tekst główny, sekcje usług i wyróżniki firmy — napisane tak, żeby odwiedzający w 10 sekund wiedział, co oferujesz i dlaczego warto wybrać właśnie Ciebie.',
+  },
+  {
+    icon: 'inventory_2',
+    iconBg: 'bg-emerald-50',
+    iconColor: 'text-emerald-600',
+    title: 'Opisy produktów pod sklep',
+    description: 'Opisy sprzedające i zoptymalizowane pod frazy — nie „opisy producenta" wklejone z hurt. Każdy opis jest unikalny i napisany pod konkretne słowo kluczowe.',
+  },
+  {
+    icon: 'feed',
+    iconBg: 'bg-amber-50',
+    iconColor: 'text-amber-600',
+    title: 'Artykuły blogowe SEO',
+    description: 'Artykuły z researchu fraz pisane pod długi ogon — z sekcją FAQ pod rich snippets i strukturą odpowiadającą na zapytania głosowe.',
+  },
+  {
+    icon: 'ads_click',
+    iconBg: 'bg-rose-50',
+    iconColor: 'text-rose-600',
+    title: 'Teksty landing page',
+    description: 'Copywriting pod konkretną konwersję — lead, zakup lub zapis. Hierarchia treści zgodna z zasadą AIDA, CTA powtórzone w kluczowych punktach strony.',
+  },
 ]
 
 const compareRows = [
-  { label: 'Czas i koszt',      ai: 'Sekundy, za darmo',          seo: 'Płatny, kilka dni'        },
-  { label: 'Konkrety i fakty',  ai: 'Często ogólne lub zmyślone', seo: 'Oparte na danych firmy'   },
-  { label: 'Ton marki',         ai: 'Uśredniony, rozpoznawalny',  seo: 'Dopasowany do firmy'      },
-  { label: 'Pozycjonowanie',    ai: 'Bez strategii fraz',         seo: 'Pisany pod konkretne frazy' },
-  { label: 'Różnicowanie',      ai: 'Podobny do konkurencji',     seo: 'Unikalny przekaz'         },
+  { label: 'Czas i koszt',       ai: 'Sekundy, za darmo',           seo: 'Płatny, kilka dni'          },
+  { label: 'Konkrety i fakty',   ai: 'Często ogólne lub zmyślone',  seo: 'Oparte na danych firmy'     },
+  { label: 'Ton marki',          ai: 'Uśredniony, rozpoznawalny',   seo: 'Dopasowany do firmy'        },
+  { label: 'Pozycjonowanie',     ai: 'Bez strategii fraz',          seo: 'Pisany pod konkretne frazy' },
+  { label: 'Różnicowanie',       ai: 'Podobny do konkurencji',      seo: 'Unikalny przekaz'           },
 ]
 
 const processSteps = [
   {
     icon: 'fact_check',
     title: 'Brief i research fraz',
-    description: 'Zbieramy fakty o firmie i ofercie oraz dobieramy frazy kluczowe pod każdą podstronę.',
+    description: 'Zbieramy fakty o firmie i ofercie, dobieramy frazy kluczowe pod każdą podstronę na podstawie danych z Google Search Console lub narzędzi SEO.',
   },
   {
     icon: 'edit',
     title: 'Pierwsza wersja',
-    description: 'Piszemy tekst pod ustalony cel, frazy i ton marki.',
+    description: 'Piszemy tekst pod ustalony cel, frazy i ton marki. Tekst otwiera się od problemu klienta — nie od autoprezentacji firmy.',
   },
   {
     icon: 'rate_review',
     title: 'Poprawki',
-    description: 'Wprowadzamy ustaloną liczbę rund uwag, dopasowując ton i akcenty.',
+    description: 'Wprowadzamy ustaloną liczbę rund uwag, dopasowując ton i akcenty. Każda zmiana jest uzasadniona — nie poprawiamy dla poprawiania.',
   },
   {
     icon: 'task_alt',
     title: 'Przekazanie',
-    description: 'Dostarczamy gotowe teksty w formacie do wdrożenia, z nagłówkami i strukturą pod SEO.',
+    description: 'Dostarczamy gotowe teksty w formacie do wdrożenia, z nagłówkami H1–H4 i strukturą pod SEO. Wystarczy wkleić do CMS.',
+  },
+]
+
+const relatedServices = [
+  {
+    icon: 'trending_up',
+    title: 'Pozycjonowanie SEO',
+    description: 'Teksty działają najlepiej w parze z technicznym SEO — audyt, on-page i link building w jednym pakiecie.',
+    price: 'od 1 260 zł netto/mies.',
+    href: '/seo',
+  },
+  {
+    icon: 'web',
+    title: 'Strona firmowa',
+    description: 'Teksty i strona zamówione razem — wyceniane łącznie i spójne wizualnie od pierwszego ekranu.',
+    price: 'od 6 300 zł netto',
+    href: '/stworz-strone-firmowa',
+  },
+  {
+    icon: 'palette',
+    title: 'Branding',
+    description: 'Spójny ton marki zaczyna się od identyfikacji wizualnej — logo, paleta, typografia, księga znaku.',
+    price: 'Wycena indywidualna',
+    href: '/branding',
   },
 ]
 </script>
@@ -197,27 +255,24 @@ const processSteps = [
 <template>
   <div>
 
-    <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+    <!-- ══ Hero ══════════════════════════════════════════════════════════════ -->
     <HeroSection
       badge="Teksty na stronę www"
       title="Teksty na stronę www, które sprzedają i pozycjonują"
       description="Piszemy teksty pod konkretne frazy i pod wyszukiwarki AI — od strony głównej po opisy produktów i bloga. Po polsku jako native, nie jako tłumaczenie. Wycena indywidualna."
       primaryCTA="Uzyskaj bezpłatną wycenę"
-      secondaryCTA="Zobacz SEO"
-      primary-href="/kontakt"
-      secondary-href="/seo"
+      secondaryCTA="Jakie teksty piszemy"
       :stats="heroStats"
     />
 
     <main id="main-content">
 
-      <!-- Breadcrumb -->
       <nav aria-label="breadcrumb" class="border-b border-outline-variant/30 bg-surface">
         <div class="max-w-container-max mx-auto px-gutter py-3">
           <ol class="flex items-center flex-wrap gap-2 text-sm text-on-surface-variant">
-            <li><NuxtLink to="/" class="hover:text-primary">Strona główna</NuxtLink></li>
+            <li><NuxtLink to="/" class="hover:text-primary transition-colors">Strona główna</NuxtLink></li>
             <li aria-hidden="true" class="text-outline">/</li>
-            <li><NuxtLink to="/projektowanie-stron" class="hover:text-primary">Projektowanie stron internetowych</NuxtLink></li>
+            <li><NuxtLink to="/projektowanie-stron" class="hover:text-primary transition-colors">Projektowanie stron</NuxtLink></li>
             <li aria-hidden="true" class="text-outline">/</li>
             <li aria-current="page" class="text-on-surface font-medium">Teksty na stronę www</li>
           </ol>
@@ -226,144 +281,138 @@ const processSteps = [
 
       <article>
 
-        <!-- ── Section 1: Dlaczego teksty decydują ───────────────────────── -->
-        <section
-          aria-labelledby="section-why"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <h2
-              id="section-why"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Dlaczego teksty na stronie decydują, czy klient zostaje
-            </h2>
-
-            <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-              <p>
-                Firma inwestuje w ładny projekt strony, a potem wkleja w niego teksty napisane w pół godziny wieczorem — i dziwi się, że strona nie sprzedaje. Wygląd przyciąga wzrok na sekundę, ale to tekst decyduje, czy odwiedzający zostaje, rozumie ofertę i wysyła zapytanie. Najsłabszym ogniwem większości stron nie jest design, tylko treść.
-              </p>
-              <p>
-                Trzy błędy powtarzają się najczęściej. Tekst mówi o firmie („jesteśmy zespołem profesjonalistów") zamiast o problemie klienta, który ten klient właśnie próbuje rozwiązać. Jest ogólny, więc nie różni się od tekstu konkurencji i niczego nie obiecuje konkretnie. I nie jest pisany pod wyszukiwarkę, więc nawet najlepsza treść nie zostaje znaleziona.
-              </p>
-              <p>
-                Piszemy teksty, które zaczynają od problemu czytelnika, mówią konkretami — ceną, terminem, liczbą — i są zbudowane pod frazy, na które szukają klienci. <strong class="text-on-surface">Każdy tekst jest pisany pod konkretne frazy kluczowe oraz pod cytowalność w wyszukiwarkach AI</strong>, dzięki czemu może być znaleziony zarówno w Google, jak i w odpowiedziach ChatGPT czy Perplexity.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- ── Section 2: Jakie teksty ───────────────────────────────────── -->
-        <section
-          aria-labelledby="section-included"
-          class="py-section-padding bg-surface-container-low"
-        >
+        <!-- ══ 1. Dlaczego teksty decydują — white ════════════════════════════ -->
+        <section aria-labelledby="section-why" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-start">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
 
-              <div>
+              <div data-reveal="left">
                 <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
                   <span class="material-symbols-outlined text-[18px]" aria-hidden="true">edit_note</span>
-                  Treści dla całej strony
+                  Tekst sprzedaje, design przyciąga wzrok
                 </span>
-
-                <h2
-                  id="section-included"
-                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-                >
-                  Jakie teksty piszemy
+                <h2 id="section-why" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Dlaczego teksty na stronie decydują, czy klient zostaje
                 </h2>
-
-                <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
                   <p>
-                    Piszemy treści dla całej strony, nie tylko pojedynczej podstrony — od pierwszego ekranu po opisy produktów i bloga.
+                    Firma inwestuje w ładny projekt strony, a potem wkleja w niego teksty napisane w pół godziny wieczorem — i dziwi się, że strona nie sprzedaje. Wygląd przyciąga wzrok na sekundę, ale to tekst decyduje, czy odwiedzający zostaje, rozumie ofertę i wysyła zapytanie.
                   </p>
                   <p>
-                    Wszystkie teksty piszemy po polsku jako native, nie jako tłumaczenie z angielskiego czy niemieckiego. Teksty można zamówić jako część
-                    <NuxtLink to="/strona-internetowa" class="text-primary font-semibold hover:underline">projektu strony</NuxtLink>
-                    lub jako oddzielną usługę, gdy stronę masz już gotową.
+                    Trzy błędy powtarzają się najczęściej. Tekst mówi o firmie zamiast o problemie klienta. Jest ogólny, więc nie różni się od konkurencji. I nie jest pisany pod wyszukiwarkę, więc nawet najlepsza treść nie zostaje znaleziona.
+                  </p>
+                  <p>
+                    <strong class="text-on-surface">Każdy tekst jest pisany pod konkretne frazy kluczowe oraz pod cytowalność w wyszukiwarkach AI</strong>, dzięki czemu może być znaleziony zarówno w Google, jak i w odpowiedziach ChatGPT czy Perplexity.
                   </p>
                 </div>
               </div>
 
-              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <li
-                  v-for="item in includedItems"
-                  :key="item.label"
-                  class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/30 px-5 py-4 ambient-shadow"
-                >
-                  <div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">{{ item.icon }}</span>
+              <div data-reveal="right">
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=640&h=420&fit=crop&auto=format&q=80"
+                  alt="Osoba pisząca profesjonalne teksty na stronę internetową na laptopie przy biurku"
+                  width="640"
+                  height="420"
+                  class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover"
+                  loading="lazy"
+                />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ══ 2. Jakie teksty — primary (purple) ════════════════════════════ -->
+        <section aria-labelledby="section-types" class="relative overflow-hidden py-section-padding bg-primary">
+          <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+            <div class="animate-float          absolute -top-32 -right-32 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
+            <div class="animate-float-reverse  absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-white/5 blur-3xl"></div>
+          </div>
+          <div class="relative max-w-container-max mx-auto px-gutter">
+
+            <div class="text-center max-w-2xl mx-auto mb-14" data-reveal>
+              <span class="inline-block text-xs font-bold uppercase tracking-[0.3em] text-on-primary/60 mb-3">Zakres</span>
+              <h2 id="section-types" class="font-display text-3xl sm:text-4xl font-black text-on-primary leading-tight mb-4">
+                Jakie teksty piszemy
+              </h2>
+              <p class="text-on-primary/75 leading-relaxed">
+                Piszemy treści dla całej strony, nie tylko pojedynczej podstrony — od pierwszego ekranu po opisy produktów i bloga. Wszystkie po polsku jako native, nie jako tłumaczenie.
+              </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div
+                v-for="(item, i) in textTypes"
+                :key="item.title"
+                :data-reveal="'scale'"
+                :data-delay="String(i + 1)"
+                class="group bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6 hover:bg-white/18 hover:-translate-y-1 transition-all duration-300"
+              >
+                <div class="w-11 h-11 rounded-xl bg-white/15 flex items-center justify-center mb-4 group-hover:bg-white/25 transition-colors duration-300">
+                  <span class="material-symbols-outlined text-on-primary text-[22px]" aria-hidden="true">{{ item.icon }}</span>
+                </div>
+                <h3 class="font-bold text-on-primary text-base leading-snug mb-2">{{ item.title }}</h3>
+                <p class="text-sm text-on-primary/70 leading-relaxed">{{ item.description }}</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ══ 3. Cena — gray ════════════════════════════════════════════════ -->
+        <section aria-labelledby="section-price" class="py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
+
+              <div data-reveal="left">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Wycena</span>
+                <h2 id="section-price" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Ile kosztują teksty na stronę — model wyceny
+                </h2>
+                <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                  <p>Teksty wyceniamy per podstrona lub per projekt — wycena zależy od liczby podstron. Nie ma jednej ceny, bo strona z pięcioma podstronami i sklep z dwustoma opisami produktów to zupełnie inny nakład pracy.</p>
+                  <p>Żeby otrzymać szybką i konkretną wycenę, wystarczy podać liczbę podstron i ich rodzaj. Jeśli zamawiasz u nas również projekt lub wykonanie strony, teksty wyceniamy łącznie z całością.</p>
+                </div>
+                <NuxtLink to="/kontakt" class="inline-block mt-8">
+                  <BaseButton variant="primary" size="lg">Omów projekt i poznaj wycenę</BaseButton>
+                </NuxtLink>
+              </div>
+
+              <div data-reveal="right">
+                <div class="bg-white rounded-2xl border border-outline-variant/20 p-8 shadow-sm">
+                  <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined text-primary text-[28px]" aria-hidden="true">article</span>
                   </div>
-                  <span class="text-sm font-semibold text-on-surface leading-snug">{{ item.label }}</span>
-                </li>
-              </ul>
+                  <h3 class="font-bold text-on-surface text-xl mb-1">Copywriting SEO</h3>
+                  <p class="font-display text-2xl font-black text-primary mb-1">Per podstrona lub projekt</p>
+                  <p class="text-sm text-on-surface-variant mb-6">bezpłatna wycena · podaj liczbę podstron</p>
+                  <ul class="space-y-2.5" role="list">
+                    <li v-for="item in textTypes" :key="item.title" class="flex items-start gap-2 text-sm text-on-surface-variant">
+                      <span class="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5" aria-hidden="true">check_circle</span>
+                      {{ item.title }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
             </div>
           </div>
         </section>
 
-        <!-- ── Section 3: Cena (wycena indywidualna) ─────────────────────── -->
-        <section
-          aria-labelledby="section-price"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Wycena</span>
-            <h2
-              id="section-price"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Ile kosztują teksty na stronę — model wyceny
-            </h2>
-
-            <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 sm:p-8 mb-8">
-              <p class="text-on-surface-variant mb-1">Teksty na stronę www</p>
-              <p class="font-display text-3xl sm:text-4xl font-black text-primary mb-1">Per podstrona lub projekt</p>
-              <p class="text-sm text-on-surface-variant">bezpłatna wycena · podaj liczbę podstron</p>
-            </div>
-
-            <div class="space-y-4 text-on-surface-variant leading-relaxed">
-              <p>
-                Teksty na stronę wyceniamy per podstrona lub per projekt — wycena zależy od liczby podstron. Nie ma jednej ceny za „teksty na stronę", bo strona z pięcioma podstronami i sklep z dwustoma opisami produktów to zupełnie inny nakład pracy.
-              </p>
-              <p>
-                Żeby otrzymać szybką i konkretną wycenę, wystarczy podać liczbę podstron i ich rodzaj — strona główna, podstrony usług, blog, opisy produktów. Na koszt wpływa też, czy dostarczasz materiały merytoryczne, czy musimy je zebrać w wywiadzie. Im więcej konkretów dostarczysz na starcie, tym niższy koszt i krótszy termin.
-              </p>
-              <p>
-                Jeśli zamawiasz u nas również projekt lub wykonanie strony, teksty wyceniamy łącznie z całością i często taniej, niż jako osobne zlecenie.
-              </p>
-            </div>
-
-            <div class="mt-10">
-              <NuxtLink to="/kontakt">
-                <BaseButton variant="outline" size="md">Omów projekt i poznaj wycenę</BaseButton>
-              </NuxtLink>
-            </div>
-          </div>
-        </section>
-
-        <!-- ── Section 4: AI vs copywriter ───────────────────────────────── -->
-        <section
-          aria-labelledby="section-compare"
-          class="py-section-padding bg-surface-container-low"
-        >
+        <!-- ══ 4. AI vs copywriter — white ═══════════════════════════════════ -->
+        <section aria-labelledby="section-compare" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
-              <h2
-                id="section-compare"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
-              >
+            <div class="text-center max-w-2xl mx-auto mb-stack-lg" data-reveal>
+              <h2 id="section-compare" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4">
                 Teksty z AI czy od copywritera SEO — co konwertuje i pozycjonuje
               </h2>
               <p class="text-on-surface-variant">
-                Generatory AI piszą teksty w sekundy i za darmo — to realna alternatywa. Pytanie nie brzmi „czy AI umie pisać", tylko „czy tekst z generatora sprzedaje i pozycjonuje tak samo jak pisany pod konkretny cel".
+                Generatory AI piszą w sekundy i za darmo — to realna alternatywa. Pytanie nie brzmi „czy AI umie pisać", tylko „czy tekst z generatora sprzedaje i pozycjonuje tak samo jak pisany pod konkretny cel".
               </p>
             </div>
 
-            <!-- Desktop table -->
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8">
+            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8 shadow-sm" data-reveal>
               <table class="w-full text-sm">
                 <caption class="sr-only">Porównanie tekstu z generatora AI z copywritingiem SEO</caption>
                 <thead>
@@ -374,27 +423,17 @@ const processSteps = [
                   </tr>
                 </thead>
                 <tbody>
-                  <tr
-                    v-for="(row, i) in compareRows"
-                    :key="row.label"
-                    class="border-b border-outline-variant/20"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'"
-                  >
+                  <tr v-for="(row, i) in compareRows" :key="row.label" class="border-b border-outline-variant/20" :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'">
                     <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
-                    <td class="p-4 text-center text-on-surface-variant">{{ row.ai }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.seo }}</td>
+                    <td class="p-4 text-center text-on-surface-variant text-xs">{{ row.ai }}</td>
+                    <td class="p-4 text-center text-primary font-semibold bg-primary/5 text-xs">{{ row.seo }}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <!-- Mobile cards -->
             <div class="md:hidden space-y-3 mb-8">
-              <div
-                v-for="row in compareRows"
-                :key="row.label"
-                class="bg-white rounded-xl border border-outline-variant/30 p-4"
-              >
+              <div v-for="row in compareRows" :key="row.label" class="bg-white rounded-xl border border-outline-variant/30 p-4">
                 <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.label }}</p>
                 <div class="grid grid-cols-2 gap-2">
                   <div class="bg-surface-container-low rounded-lg p-3 text-center">
@@ -409,39 +448,54 @@ const processSteps = [
               </div>
             </div>
 
-            <div class="max-w-3xl mx-auto">
-              <p class="text-on-surface-variant">
-                Tekst z AI wystarcza na szybką notatkę albo punkt wyjścia do dalszej pracy. Na stronę, która ma budować wiarygodność i sprzedawać, brakuje mu trzech rzeczy: konkretnych faktów o Twojej firmie, spójnego tonu i strategii fraz. W praktyce sami korzystamy z narzędzi AI jako wsparcia, ale finalny tekst powstaje pod konkretny cel, frazy i markę — bo to one decydują o konwersji.
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center mt-stack-lg">
+              <p class="text-on-surface-variant" data-reveal="left">
+                Tekst z AI wystarcza na szybką notatkę albo punkt wyjścia. Na stronę, która ma budować wiarygodność i sprzedawać, brakuje mu konkretnych faktów o Twojej firmie, spójnego tonu i strategii fraz. W praktyce sami korzystamy z narzędzi AI jako wsparcia, ale finalny tekst powstaje pod konkretny cel i markę.
               </p>
+              <NuxtImg
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=560&h=300&fit=crop&auto=format&q=80"
+                alt="Dane analityczne pokazujące wzrost ruchu organicznego po wdrożeniu tekstów SEO na stronie"
+                width="560"
+                height="300"
+                class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover"
+                data-reveal="right"
+                loading="lazy"
+              />
             </div>
 
           </div>
         </section>
 
-        <!-- ── Section 5: Proces ─────────────────────────────────────────── -->
+        <!-- ══ 5. Proces — gray (ProcessSection) ════════════════════════════ -->
         <ProcessSection
           eyebrow="Jak powstają teksty"
           title="Jak powstają teksty — od briefu do gotowej treści"
           :steps="processSteps"
         />
 
-        <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
+        <!-- ══ 6. FAQ — white ════════════════════════════════════════════════ -->
         <FAQSection
           title="Najczęściej zadawane pytania o teksty na stronę www"
           :faqs="faqData"
         />
 
+        <!-- ══ Related ════════════════════════════════════════════════════════ -->
+        <RelatedServicesSection
+          eyebrow="Powiązane usługi"
+          title="Teksty działają najlepiej w parze z SEO i dobrym projektem"
+          cta="Dowiedz się więcej"
+          :services="relatedServices"
+        />
+
       </article>
     </main>
 
-    <!-- ── CTA ───────────────────────────────────────────────────────────── -->
+    <!-- ══ CTA ═══════════════════════════════════════════════════════════════ -->
     <CTASection
       title="Teksty, które sprzedają i pozycjonują"
       description="Podaj liczbę podstron — wrócimy z wyceną i przykładem tonu, zanim zaczniemy pisać."
       primary-cta="Uzyskaj bezpłatną wycenę"
-      secondary-cta="Omów projekt"
-      primary-href="/kontakt"
-      secondary-href="/kontakt"
+      secondary-cta="Sprawdź SEO"
     />
 
   </div>

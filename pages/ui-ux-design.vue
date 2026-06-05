@@ -147,6 +147,16 @@ useHead({
 
 // ─── Page data ─────────────────────────────────────────────────────────────
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-revealed'); observer.unobserve(entry.target) } }) },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 const heroStats = [
   { value: 'Audyt UX',  label: 'Najtańszy pierwszy krok', icon: 'query_stats'    },
   { value: 'Prototyp',  label: 'Klikalny, w Figmie',      icon: 'touch_app'      },
@@ -232,24 +242,41 @@ const processSteps = [
           aria-labelledby="section-why"
           class="py-section-padding bg-surface"
         >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <h2
-              id="section-why"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Dlaczego ładny interfejs to nie to samo co dobry
-            </h2>
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
 
-            <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-              <p>
-                Aplikacja albo sklep mogą wyglądać świetnie i jednocześnie tracić użytkowników na każdym kroku. Ludzie nie kończą rejestracji, porzucają koszyk, nie znajdują funkcji, za którą zapłacili. Wygląd jest, a korzystanie boli — bo interfejs został pomalowany, a nie zaprojektowany pod sposób, w jaki ludzie naprawdę go używają.
-              </p>
-              <p>
-                Na tym polega różnica między UI a UX. <strong class="text-on-surface">UI odpowiada za wygląd interfejsu, UX za to, jak się go używa — projekt obejmuje oba.</strong> Ładny ekran, na którym przycisk „dalej" jest tam, gdzie nikt go nie szuka, to dobry UI i zły UX. Sam wygląd nie wyłapie, że ścieżka zakupu ma o dwa kroki za dużo albo że formularz odstrasza połowę użytkowników na trzecim polu.
-              </p>
-              <p>
-                Projektujemy interfejsy, zaczynając od tego, co użytkownik ma osiągnąć, a nie od tego, jak ekran ma wyglądać. Najpierw ścieżki i struktura, potem prototyp, który można przeklikać i przetestować, a dopiero na końcu warstwa graficzna. Dzięki temu błędy w sposobie korzystania wychodzą na jaw, zanim cokolwiek trafi do kodu.
-              </p>
+              <div data-reveal="left">
+                <h2
+                  id="section-why"
+                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
+                >
+                  Dlaczego ładny interfejs to nie to samo co dobry
+                </h2>
+
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                  <p>
+                    Aplikacja albo sklep mogą wyglądać świetnie i jednocześnie tracić użytkowników na każdym kroku. Ludzie nie kończą rejestracji, porzucają koszyk, nie znajdują funkcji, za którą zapłacili. Wygląd jest, a korzystanie boli — bo interfejs został pomalowany, a nie zaprojektowany pod sposób, w jaki ludzie naprawdę go używają.
+                  </p>
+                  <p>
+                    Na tym polega różnica między UI a UX. <strong class="text-on-surface">UI odpowiada za wygląd interfejsu, UX za to, jak się go używa — projekt obejmuje oba.</strong> Ładny ekran, na którym przycisk „dalej" jest tam, gdzie nikt go nie szuka, to dobry UI i zły UX. Sam wygląd nie wyłapie, że ścieżka zakupu ma o dwa kroki za dużo albo że formularz odstrasza połowę użytkowników na trzecim polu.
+                  </p>
+                  <p>
+                    Projektujemy interfejsy, zaczynając od tego, co użytkownik ma osiągnąć, a nie od tego, jak ekran ma wyglądać. Najpierw ścieżki i struktura, potem prototyp, który można przeklikać i przetestować, a dopiero na końcu warstwa graficzna. Dzięki temu błędy w sposobie korzystania wychodzą na jaw, zanim cokolwiek trafi do kodu.
+                  </p>
+                </div>
+              </div>
+
+              <div data-reveal="right" class="rounded-2xl overflow-hidden">
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1545235617-9465d2a55698?w=640&h=420&fit=crop&auto=format&q=80"
+                  alt="Projektant UX przy tablicy z wireframami strony internetowej — mapowanie ścieżki użytkownika i projekt interfejsu"
+                  width="640"
+                  height="420"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+
             </div>
           </div>
         </section>

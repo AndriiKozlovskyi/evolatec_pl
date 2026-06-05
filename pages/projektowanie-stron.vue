@@ -144,10 +144,20 @@ useHead({
   ],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-revealed'); observer.unobserve(entry.target) } }) },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
-  { value: 'Od zera',   label: 'Projekt bez szablonów',  icon: 'draw'          },
+  { value: 'Od zera', label: 'Projekt bez szablonów',  icon: 'draw'          },
   { value: '2 wersje',  label: 'Desktop i mobile',       icon: 'devices'       },
   { value: 'System',    label: 'Spójny design system',   icon: 'style'         },
   { value: 'Bezpłatna', label: 'Wycena indywidualna',    icon: 'request_quote' },
@@ -227,24 +237,41 @@ const processSteps = [
           aria-labelledby="section-impression"
           class="py-section-padding bg-surface"
         >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <h2
-              id="section-impression"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Dlaczego wygląd strony decyduje w pierwszych sekundach
-            </h2>
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
 
-            <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-              <p>
-                Odwiedzający ocenia stronę, zanim ją przeczyta. Pierwsze wrażenie buduje się w ułamku sekundy i opiera się nie na treści, lecz na wyglądzie — układzie, kolorach, typografii. Jeśli strona wygląda jak setki innych, klient podświadomie zakłada, że firma też jest jedną z setek innych, i klika dalej.
-              </p>
-              <p>
-                To nie jest kwestia gustu, tylko zaufania. Strona oparta na popularnym szablonie wygląda znajomo, bo te same motywy używane są przez tysiące firm — w tym Twoją konkurencję. Znajomość działa tu przeciwko Tobie: nic nie wyróżnia, nic nie zostaje w pamięci, a podobieństwo do tańszych usługodawców obniża postrzeganą wartość Twojej oferty.
-              </p>
-              <p>
-                Projektujemy strony od podstaw, pod konkretną markę i branżę. <strong class="text-on-surface">Każdy projekt powstaje od podstaw, bez gotowych szablonów</strong> — od układu, przez kolory, po typografię dobraną do charakteru firmy. Celem nie jest „ładnie", tylko żeby wygląd budował zaufanie i prowadził wzrok dokładnie tam, gdzie ma trafić: do oferty i do kontaktu.
-              </p>
+              <div data-reveal="left">
+                <h2
+                  id="section-impression"
+                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
+                >
+                  Dlaczego wygląd strony decyduje w pierwszych sekundach
+                </h2>
+
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                  <p>
+                    Odwiedzający ocenia stronę, zanim ją przeczyta. Pierwsze wrażenie buduje się w ułamku sekundy i opiera się nie na treści, lecz na wyglądzie — układzie, kolorach, typografii. Jeśli strona wygląda jak setki innych, klient podświadomie zakłada, że firma też jest jedną z setek innych, i klika dalej.
+                  </p>
+                  <p>
+                    To nie jest kwestia gustu, tylko zaufania. Strona oparta na popularnym szablonie wygląda znajomo, bo te same motywy używane są przez tysiące firm — w tym Twoją konkurencję. Znajomość działa tu przeciwko Tobie: nic nie wyróżnia, nic nie zostaje w pamięci, a podobieństwo do tańszych usługodawców obniża postrzeganą wartość Twojej oferty.
+                  </p>
+                  <p>
+                    Projektujemy strony od podstaw, pod konkretną markę i branżę. <strong class="text-on-surface">Każdy projekt powstaje od podstaw, bez gotowych szablonów</strong> — od układu, przez kolory, po typografię dobraną do charakteru firmy. Celem nie jest „ładnie", tylko żeby wygląd budował zaufanie i prowadził wzrok dokładnie tam, gdzie ma trafić: do oferty i do kontaktu.
+                  </p>
+                </div>
+              </div>
+
+              <div data-reveal="right" class="rounded-2xl overflow-hidden">
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=640&h=420&fit=crop&auto=format&q=80"
+                  alt="Projektant UX szkicujący interfejs strony internetowej na tablecie — prototyp i projekt graficzny"
+                  width="640"
+                  height="420"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+
             </div>
           </div>
         </section>

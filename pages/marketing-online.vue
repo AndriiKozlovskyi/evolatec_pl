@@ -156,6 +156,16 @@ useHead({
   ],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-revealed'); observer.unobserve(entry.target) } }) },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
@@ -254,24 +264,41 @@ const processSteps = [
           aria-labelledby="section-strategy"
           class="py-section-padding bg-surface"
         >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <h2
-              id="section-strategy"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Dlaczego marketing online bez strategii to spalony budżet
-            </h2>
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
 
-            <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-              <p>
-                Firma odpala reklamy, wrzuca posty, płaci co miesiąc — i po kwartale nie potrafi powiedzieć, czy to się opłaca. To najczęstszy scenariusz w marketingu małych firm: aktywność zastąpiła strategię. Pieniądze wychodzą, kliknięcia są, ale nikt nie liczy, ile z nich zamieniło się w zapytanie albo sprzedaż.
-              </p>
-              <p>
-                Powód jest zwykle techniczny, nie kreatywny. Brakuje śledzenia konwersji, więc nie wiadomo, która kampania działa. Budżet idzie na kanał dobrany przypadkiem, a nie pod to, jak kupują klienci w danej branży. I nikt nie odpowiada za jedną liczbę — koszt pozyskania klienta — która jako jedyna mówi, czy marketing zarabia, czy pali budżet.
-              </p>
-              <p>
-                Prowadzimy marketing online inaczej: zaczynamy od wdrożenia śledzenia konwersji, dobieramy kanał pod sposób, w jaki kupują Twoi klienci, i co miesiąc raportujemy konkretne liczby. <strong class="text-on-surface">Budżet reklamowy rozliczany jest oddzielnie, bezpośrednio z Google lub Meta — fee za obsługę jest stałe</strong>, więc wiesz, za co płacisz agencji, a ile idzie na same reklamy.
-              </p>
+              <div data-reveal="left">
+                <h2
+                  id="section-strategy"
+                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
+                >
+                  Dlaczego marketing online bez strategii to spalony budżet
+                </h2>
+
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                  <p>
+                    Firma odpala reklamy, wrzuca posty, płaci co miesiąc — i po kwartale nie potrafi powiedzieć, czy to się opłaca. To najczęstszy scenariusz w marketingu małych firm: aktywność zastąpiła strategię. Pieniądze wychodzą, kliknięcia są, ale nikt nie liczy, ile z nich zamieniło się w zapytanie albo sprzedaż.
+                  </p>
+                  <p>
+                    Powód jest zwykle techniczny, nie kreatywny. Brakuje śledzenia konwersji, więc nie wiadomo, która kampania działa. Budżet idzie na kanał dobrany przypadkiem, a nie pod to, jak kupują klienci w danej branży. I nikt nie odpowiada za jedną liczbę — koszt pozyskania klienta — która jako jedyna mówi, czy marketing zarabia, czy pali budżet.
+                  </p>
+                  <p>
+                    Prowadzimy marketing online inaczej: zaczynamy od wdrożenia śledzenia konwersji, dobieramy kanał pod sposób, w jaki kupują Twoi klienci, i co miesiąc raportujemy konkretne liczby. <strong class="text-on-surface">Budżet reklamowy rozliczany jest oddzielnie, bezpośrednio z Google lub Meta — fee za obsługę jest stałe</strong>, więc wiesz, za co płacisz agencji, a ile idzie na same reklamy.
+                  </p>
+                </div>
+              </div>
+
+              <div data-reveal="right" class="rounded-2xl overflow-hidden">
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=640&h=420&fit=crop&auto=format&q=80"
+                  alt="Dashboard marketingu internetowego z wykresami ruchu organicznego i konwersji kampanii Google Ads"
+                  width="640"
+                  height="420"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+
             </div>
           </div>
         </section>
