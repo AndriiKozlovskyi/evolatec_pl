@@ -155,6 +155,23 @@ useHead({
   script: [{ type: 'application/ld+json', innerHTML: JSON.stringify(mainSchema) }],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
@@ -245,35 +262,43 @@ const relatedServices = [
 
       <article>
 
-        <!-- ── Section 1: Co obejmuje ────────────────────────────────────── -->
-        <section
-          id="zakres"
-          aria-labelledby="section-scope"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
-              <span class="material-symbols-outlined text-[18px]" aria-hidden="true">tune</span>
-              On-page i techniczne SEO
-            </span>
+        <!-- ── Section 1: Co obejmuje — white, 2-col z NuxtImg ─────────── -->
+        <section id="zakres" aria-labelledby="section-scope" class="py-section-padding bg-surface">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
 
-            <h2
-              id="section-scope"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Co obejmuje optymalizacja SEO strony internetowej
-            </h2>
+              <div data-reveal="left">
+                <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
+                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">tune</span>
+                  On-page i techniczne SEO
+                </span>
+                <h2 id="section-scope" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Co obejmuje optymalizacja SEO strony internetowej
+                </h2>
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                  <p>
+                    Strona, która istnieje od roku i nadal nie pojawia się w Google, rzadko ma problem z ilością treści. Najczęstszy powód to kilkanaście technicznych błędów, które Google widzi zanim w ogóle dotrze do tekstu.
+                  </p>
+                  <p>
+                    Optymalizacja SEO to nie jednorazowe działanie, ale proces wdrażania konkretnych zmian w dwóch warstwach: on-page i technicznej. Warstwa on-page obejmuje meta tagi, strukturę nagłówków H1–H4, frazy kluczowe i linkowanie wewnętrzne. Warstwa techniczna obejmuje Core Web Vitals (LCP, CLS, INP), crawlability, URL, canonical tagi, Schema.org JSON-LD i indeksowalność przez Googlebot.
+                  </p>
+                  <p>
+                    <strong class="text-on-surface">SEO techniczne jest wbudowane w kod strony — nie zależy od wtyczek ani zewnętrznych narzędzi.</strong> Poprawki działają po wdrożeniu i nie dezaktualizują się po kolejnej aktualizacji CMS.
+                  </p>
+                </div>
+              </div>
 
-            <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-              <p>
-                Strona, która istnieje od roku i nadal nie pojawia się w Google, rzadko ma problem z ilością treści. Najczęstszy powód to kilkanaście technicznych błędów, które Google widzi zanim w ogóle dotrze do tekstu — i które sprawiają, że algorytm traktuje stronę jako gorszą wersję konkurencji.
-              </p>
-              <p>
-                Optymalizacja SEO to nie jednorazowe działanie, ale proces wdrażania konkretnych zmian w dwóch warstwach: on-page i technicznej. Warstwa on-page obejmuje meta tagi (title, meta description, og tags), strukturę nagłówków H1–H4, gęstość i rozmieszczenie fraz kluczowych w treści oraz linkowanie wewnętrzne między podstronami. Warstwa techniczna obejmuje szybkość ładowania, Core Web Vitals (LCP, CLS, INP), crawlability, strukturę URL, canonical tagi, dane strukturalne Schema.org JSON-LD i indeksowalność przez Googlebot.
-              </p>
-              <p>
-                <strong class="text-on-surface">SEO techniczne jest wbudowane w kod strony — nie zależy od wtyczek ani zewnętrznych narzędzi.</strong> Oznacza to, że poprawki działają po wdrożeniu i nie dezaktualizują się po kolejnej aktualizacji CMS. Każdy miesiąc kończy się raportem z listą wykonanych działań i zmianą pozycji na monitorowanych frazach kluczowych.
-              </p>
+              <div data-reveal="right">
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=640&h=420&fit=crop&auto=format&q=80"
+                  alt="Specjalista SEO weryfikujący Core Web Vitals i wyniki Google PageSpeed Insights na monitorze"
+                  width="640"
+                  height="420"
+                  class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover"
+                  loading="lazy"
+                />
+              </div>
+
             </div>
           </div>
         </section>
@@ -353,69 +378,62 @@ const relatedServices = [
           </div>
         </section>
 
-        <!-- ── Section 3: Cena i zakres ──────────────────────────────────── -->
-        <section
-          id="cennik"
-          aria-labelledby="section-price"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
+        <!-- ── Section 3: Cena — primary (purple) ───────────────────────── -->
+        <section id="cennik" aria-labelledby="section-price" class="relative overflow-hidden py-section-padding bg-primary">
+          <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+            <div class="animate-float          absolute -top-32 -right-32 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
+            <div class="animate-float-reverse  absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-white/5 blur-3xl"></div>
+          </div>
+          <div class="relative max-w-container-max mx-auto px-gutter">
             <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
 
-              <!-- Copy -->
-              <div>
-                <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Cena</span>
-                <h2
-                  id="section-price"
-                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-                >
+              <div data-reveal="left">
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-on-primary/60 mb-3 block">Cena</span>
+                <h2 id="section-price" class="font-display text-3xl sm:text-4xl font-black text-on-primary leading-tight mb-6">
                   Optymalizacja SEO — cena i zakres
                 </h2>
-                <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                <div class="space-y-4 text-on-primary/80 leading-relaxed">
                   <p>
-                    Optymalizacja SEO kosztuje od 1 260 zł netto miesięcznie — bez stałej umowy na start. Minimalne zaangażowanie to 3 miesiące, bo Google potrzebuje czasu na ponowne zaindeksowanie zmian i ocenę zaktualizowanej strony. Agencja, która obiecuje widoczne efekty w ciągu 30 dni, myli optymalizację z reklamą.
+                    Optymalizacja SEO kosztuje od 1 260 zł netto miesięcznie — bez stałej umowy na start. Minimalne zaangażowanie to 3 miesiące, bo Google potrzebuje czasu na ponowne zaindeksowanie zmian.
                   </p>
                   <p>
-                    W ramach miesięcznej obsługi wykonujemy optymalizację meta tagów i nagłówków priorytetowych podstron, poprawę struktury URL jeśli tego wymaga, techniczne SEO (szybkość ładowania, mobile, crawl budget), optymalizację Core Web Vitals, wdrożenie lub aktualizację danych strukturalnych Schema.org oraz optymalizację treści pod wybrane frazy kluczowe. Każdy miesiąc kończy się raportem z rankingami monitorowanych fraz i listą wykonanych działań.
+                    W ramach miesięcznej obsługi wykonujemy optymalizację meta tagów i nagłówków, techniczne SEO (szybkość ładowania, Core Web Vitals), wdrożenie Schema.org oraz optymalizację treści pod wybrane frazy. Każdy miesiąc kończy się raportem z rankingami i listą wykonanych działań.
                   </p>
                   <p>
-                    Jeśli nie wiesz, od czego zacząć — przed podpisaniem czegokolwiek możesz zamówić jednorazowy <NuxtLink to="/audyt-seo" class="text-primary font-semibold hover:underline">audyt SEO</NuxtLink> za 840 zł netto. Raport wskazuje dokładnie, które poprawki mają największy wpływ na pozycje Twojej strony.
+                    Jeśli nie wiesz, od czego zacząć — zamów jednorazowy audyt SEO za 840 zł netto. Raport wskazuje dokładnie, które poprawki mają największy wpływ na pozycje.
                   </p>
+                </div>
+                <div class="flex flex-wrap gap-3 mt-8">
+                  <NuxtLink to="/kontakt">
+                    <BaseButton variant="outline" size="lg">Uzyskaj bezpłatną wycenę</BaseButton>
+                  </NuxtLink>
+                  <NuxtLink to="/audyt-seo">
+                    <BaseButton variant="secondary" size="lg">Zamów audyt SEO — 840 zł</BaseButton>
+                  </NuxtLink>
                 </div>
               </div>
 
-              <!-- Price card -->
-              <div class="bg-white rounded-2xl border border-outline-variant/30 p-8 ambient-shadow">
-                <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
-                  <span class="material-symbols-outlined text-primary text-[26px]" aria-hidden="true">tune</span>
+              <div data-reveal="right">
+                <div class="bg-white rounded-2xl p-8 shadow-xl">
+                  <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined text-primary text-[26px]" aria-hidden="true">tune</span>
+                  </div>
+                  <h3 class="font-bold text-on-surface text-xl mb-2">Optymalizacja SEO</h3>
+                  <div class="flex items-baseline gap-2 mb-1">
+                    <span class="font-black text-primary text-3xl">od 1 260 zł netto</span>
+                  </div>
+                  <p class="text-sm text-on-surface-variant mb-6">miesięcznie — minimum 3 miesiące</p>
+                  <ul class="space-y-2 mb-8" role="list">
+                    <li v-for="item in ['Optymalizacja meta tagów i nagłówków', 'Techniczne SEO i Core Web Vitals', 'Dane strukturalne Schema.org JSON-LD', 'Linkowanie wewnętrzne', 'Optymalizacja treści pod frazy', 'Monitoring pozycji fraz', 'Raport miesięczny z działaniami']" :key="item" class="flex items-center gap-2 text-sm text-on-surface-variant">
+                      <span class="material-symbols-outlined text-primary text-base flex-shrink-0" aria-hidden="true">check_circle</span>
+                      {{ item }}
+                    </li>
+                  </ul>
+                  <NuxtLink to="/kontakt">
+                    <BaseButton variant="primary" size="lg" class="w-full">Uzyskaj bezpłatną wycenę</BaseButton>
+                  </NuxtLink>
+                  <p class="text-xs text-on-surface-variant text-center mt-4">Stała cena — wycena przed startem projektu</p>
                 </div>
-                <h3 class="font-bold text-on-surface text-xl mb-2">Optymalizacja SEO</h3>
-                <div class="flex items-baseline gap-2 mb-1">
-                  <span class="font-black text-primary text-3xl">od 1 260 zł netto</span>
-                </div>
-                <p class="text-sm text-on-surface-variant mb-6">miesięcznie — minimum 3 miesiące</p>
-                <ul class="space-y-2 mb-8" role="list">
-                  <li
-                    v-for="item in [
-                      'Optymalizacja meta tagów i nagłówków',
-                      'Techniczne SEO i Core Web Vitals',
-                      'Dane strukturalne Schema.org JSON-LD',
-                      'Linkowanie wewnętrzne',
-                      'Optymalizacja treści pod frazy',
-                      'Monitoring pozycji fraz',
-                      'Raport miesięczny z działaniami',
-                    ]"
-                    :key="item"
-                    class="flex items-center gap-2 text-sm text-on-surface-variant"
-                  >
-                    <span class="material-symbols-outlined text-primary text-base flex-shrink-0" aria-hidden="true">check_circle</span>
-                    {{ item }}
-                  </li>
-                </ul>
-                <NuxtLink to="/kontakt">
-                  <BaseButton variant="primary" size="lg" class="w-full">Uzyskaj bezpłatną wycenę</BaseButton>
-                </NuxtLink>
-                <p class="text-xs text-on-surface-variant text-center mt-4">Stała cena — wycena przed startem projektu</p>
               </div>
 
             </div>

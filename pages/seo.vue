@@ -192,6 +192,23 @@ useHead({
   ],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
@@ -315,52 +332,54 @@ const relatedServices = [
 
       <article>
 
-        <!-- ── Section 1: Co obejmuje ────────────────────────────────────── -->
-        <section
-          aria-labelledby="section-scope"
-          class="py-section-padding bg-surface"
-        >
+        <!-- ── Section 1: Co obejmuje — white ──────────────────────────── -->
+        <section aria-labelledby="section-scope" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-start">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
 
-              <!-- Copy -->
-              <div>
+              <div data-reveal="left">
                 <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
                   <span class="material-symbols-outlined text-[18px]" aria-hidden="true">search_insights</span>
                   Pozycjonowanie organiczne
                 </span>
-
-                <h2
-                  id="section-scope"
-                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-                >
+                <h2 id="section-scope" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
                   Co obejmuje pozycjonowanie stron internetowych
                 </h2>
-
                 <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
                   <p>
                     Większość firm płaci agencji SEO od 3 do 12 miesięcy, zanim zorientuje się, że nie dostaje nic poza comiesięcznym raportem z wykresem. Praca, która faktycznie podnosi pozycję, to kilka konkretnych czynności — i warto wiedzieć, czego wymagać.
                   </p>
                   <p>
-                    W każdym projekcie zaczynamy od audytu technicznego: sprawdzamy strukturę URL, czas ładowania, Core Web Vitals, dane strukturalne Schema.org, canonicale i błędy crawlowania. To nie jest jednorazowy punkt startowy — jest to stały element każdego miesiąca, bo Google aktualizuje algorytm, a strona się zmienia. <strong class="text-on-surface">SEO techniczne jest wbudowane w kod strony — nie zależy od wtyczek ani zewnętrznych narzędzi</strong>, co oznacza brak ryzyka dezaktualizacji po kolejnej aktualizacji systemu CMS.
+                    W każdym projekcie zaczynamy od audytu technicznego: Core Web Vitals, dane strukturalne Schema.org, canonicale i błędy crawlowania. <strong class="text-on-surface">SEO techniczne jest wbudowane w kod strony — nie zależy od wtyczek ani zewnętrznych narzędzi</strong>, co oznacza brak ryzyka dezaktualizacji po kolejnej aktualizacji CMS.
                   </p>
                   <p>
-                    Optymalizacja on-page obejmuje meta tagi, strukturę nagłówków H1–H4, linkowanie wewnętrzne i nasycenie treści frazami kluczowymi w sposób, który Google odróżnia od keyword stuffingu. Linkbuilding — pozyskiwanie linków z zewnętrznych domen — jest dostępny w pakiecie SEO + Linkbuilding od <strong class="text-on-surface">2 100 zł netto miesięcznie</strong>. Każdy miesiąc kończy się raportem z rankingami konkretnych fraz, zmianami ruchu organicznego i listą wykonanych działań.
+                    Linkbuilding — pozyskiwanie linków z zewnętrznych domen — jest dostępny w pakiecie SEO + Linkbuilding od <strong class="text-on-surface">2 100 zł netto miesięcznie</strong>. Każdy miesiąc kończy się raportem z rankingami konkretnych fraz, zmianami ruchu organicznego i listą wykonanych działań.
                   </p>
                 </div>
               </div>
 
-              <!-- Included items grid -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div
-                  v-for="item in seoIncludes"
-                  :key="item.label"
-                  class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/30 px-5 py-4 ambient-shadow"
-                >
-                  <div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">{{ item.icon }}</span>
+              <div class="flex flex-col gap-4" data-reveal="right">
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=640&h=340&fit=crop&auto=format&q=80"
+                  alt="Profesjonalista analizujący pozycje strony w Google Search Console i Google Analytics 4"
+                  width="640"
+                  height="340"
+                  class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover"
+                  loading="lazy"
+                />
+                <div class="grid grid-cols-2 gap-2.5">
+                  <div
+                    v-for="(item, i) in seoIncludes"
+                    :key="item.label"
+                    :data-reveal="'scale'"
+                    :data-delay="String(i + 1)"
+                    class="group flex items-center gap-3 bg-surface-container-lowest rounded-xl border border-outline-variant/30 px-4 py-3 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                  >
+                    <div class="w-8 h-8 rounded-lg bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center flex-shrink-0 transition-colors">
+                      <span class="material-symbols-outlined text-primary text-[16px]" aria-hidden="true">{{ item.icon }}</span>
+                    </div>
+                    <span class="text-xs font-semibold text-on-surface leading-snug">{{ item.label }}</span>
                   </div>
-                  <span class="text-sm font-semibold text-on-surface leading-snug">{{ item.label }}</span>
                 </div>
               </div>
 
@@ -375,7 +394,7 @@ const relatedServices = [
         >
           <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+            <div class="text-center max-w-2xl mx-auto mb-stack-lg" data-reveal>
               <h2
                 id="section-comparison"
                 class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
@@ -445,32 +464,31 @@ const relatedServices = [
           </div>
         </section>
 
-        <!-- ── Section 3: Ceny i pakiety ─────────────────────────────────── -->
-        <section
-          id="cennik"
-          aria-labelledby="section-pricing"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
+        <!-- ── Section 3: Ceny i pakiety — primary (purple) ────────────── -->
+        <section id="cennik" aria-labelledby="section-pricing" class="relative overflow-hidden py-section-padding bg-primary">
+          <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+            <div class="animate-float          absolute -top-32 -right-32 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
+            <div class="animate-float-reverse  absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-white/5 blur-3xl"></div>
+          </div>
+          <div class="relative max-w-container-max mx-auto px-gutter">
 
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
-              <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Cennik</span>
-              <h2
-                id="section-pricing"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
-              >
+            <div class="text-center max-w-2xl mx-auto mb-14" data-reveal>
+              <span class="inline-block text-xs font-bold uppercase tracking-[0.3em] text-on-primary/60 mb-3">Cennik</span>
+              <h2 id="section-pricing" class="font-display text-3xl sm:text-4xl font-black text-on-primary leading-tight mb-4">
                 Pozycjonowanie stron — ceny i pakiety
               </h2>
-              <p class="text-on-surface-variant">
-                Agencje SEO ukrywają ceny, bo chcą przeprowadzić rozmowę i "wycenić indywidualnie" — co w praktyce często oznacza dopasowanie kwoty do budżetu klienta. Poniżej są nasze stałe stawki.
+              <p class="text-on-primary/75 leading-relaxed">
+                Agencje SEO ukrywają ceny, bo chcą "wycenić indywidualnie" — co w praktyce często oznacza dopasowanie kwoty do budżetu klienta. Poniżej są nasze stałe stawki.
               </p>
             </div>
 
-            <ul class="grid md:grid-cols-3 gap-5 mb-stack-lg" role="list">
+            <ul class="grid md:grid-cols-3 gap-5 mb-14" role="list">
               <li
-                v-for="item in pricingItems"
+                v-for="(item, i) in pricingItems"
                 :key="item.name"
-                class="bg-white rounded-2xl border border-outline-variant/30 p-7 flex flex-col ambient-shadow hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                :data-reveal="'scale'"
+                :data-delay="String(i + 1)"
+                class="group bg-white rounded-2xl p-7 flex flex-col shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 flex-shrink-0">
                   <span class="material-symbols-outlined text-primary text-[22px]" aria-hidden="true">{{ item.icon }}</span>
@@ -481,25 +499,19 @@ const relatedServices = [
                   <span class="text-xs text-on-surface-variant">{{ item.billing }}</span>
                 </div>
                 <p class="text-sm text-on-surface-variant leading-relaxed flex-1 mb-6">{{ item.description }}</p>
-                <NuxtLink
-                  :to="item.href"
-                  class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:gap-2.5 transition-all duration-200 mt-auto"
-                >
+                <NuxtLink :to="item.href" class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:gap-2.5 transition-all duration-200 mt-auto">
                   Dowiedz się więcej
                   <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
                 </NuxtLink>
               </li>
             </ul>
 
-            <div class="max-w-2xl mx-auto space-y-4 text-on-surface-variant">
-              <p>
-                Każda wycena jest stała i ustalana przed startem współpracy. Minimalny okres współpracy wynosi 3 miesiące — nie dlatego, że tak chcemy, ale dlatego, że Google potrzebuje czasu na ponowne zaindeksowanie zmian i ocenę autorytetu domeny. <strong class="text-on-surface">Agencja, która obiecuje widoczne efekty w ciągu 30 dni, kłamie.</strong>
+            <div class="max-w-2xl mx-auto text-center" data-reveal>
+              <p class="text-on-primary/75 mb-8">
+                Każda wycena jest stała i ustalana przed startem. Minimalny okres współpracy wynosi 3 miesiące — Google potrzebuje czasu na ponowne zaindeksowanie zmian. <strong class="text-on-primary">Agencja, która obiecuje widoczne efekty w ciągu 30 dni, myli optymalizację z reklamą.</strong>
               </p>
-            </div>
-
-            <div class="text-center mt-10">
               <NuxtLink to="/kontakt">
-                <BaseButton variant="primary" size="lg">Uzyskaj bezpłatną wycenę SEO</BaseButton>
+                <BaseButton variant="outline" size="lg">Uzyskaj bezpłatną wycenę SEO</BaseButton>
               </NuxtLink>
             </div>
 

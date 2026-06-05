@@ -396,65 +396,6 @@ const relatedPages = [
 
       <article>
 
-        <!-- ══ 2. METRICS BANNER — white ────────────────────────────────── -->
-        <section data-metrics-banner aria-label="Kluczowe wskaźniki" class="relative overflow-hidden bg-surface-container-lowest py-16 border-b border-outline-variant/20">
-          <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-            <div class="animate-float         absolute -top-32 -left-32  w-80 h-80 rounded-full bg-primary/5 blur-3xl"></div>
-            <div class="animate-float-reverse absolute -bottom-32 -right-32 w-72 h-72 rounded-full bg-secondary-container/40 blur-3xl"></div>
-          </div>
-          <div class="relative max-w-container-max mx-auto px-gutter">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
-
-              <div class="flex flex-col items-center text-center" data-reveal data-delay="1">
-                <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-                  <span class="material-symbols-outlined text-primary text-[22px]" aria-hidden="true">speed</span>
-                </div>
-                <div class="flex items-baseline gap-1 mb-1">
-                  <span class="counter-val font-display font-black text-5xl text-on-surface leading-none">{{ c95 }}</span>
-                  <span class="text-base font-bold text-on-surface-variant">–100</span>
-                </div>
-                <p class="text-sm text-on-surface-variant leading-snug mt-1 max-w-[130px]">Lighthouse score na każdej realizacji</p>
-              </div>
-
-              <div class="flex flex-col items-center text-center" data-reveal data-delay="2">
-                <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-                  <span class="material-symbols-outlined text-primary text-[22px]" aria-hidden="true">bolt</span>
-                </div>
-                <div class="flex items-baseline gap-1 mb-1">
-                  <span class="text-base font-bold text-on-surface-variant">&lt;</span>
-                  <span class="counter-val font-display font-black text-5xl text-on-surface leading-none mx-0.5">1</span>
-                  <span class="text-base font-bold text-on-surface-variant">s</span>
-                </div>
-                <p class="text-sm text-on-surface-variant leading-snug mt-1 max-w-[130px]">Czas ładowania — vs 3–8 s WordPress</p>
-              </div>
-
-              <div class="flex flex-col items-center text-center" data-reveal data-delay="3">
-                <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-                  <span class="material-symbols-outlined text-primary text-[22px]" aria-hidden="true">flash_on</span>
-                </div>
-                <div class="flex items-baseline gap-1 mb-1">
-                  <span class="text-base font-bold text-on-surface-variant">od</span>
-                  <span class="counter-val font-display font-black text-5xl text-on-surface leading-none mx-0.5">{{ cDays }}</span>
-                  <span class="text-base font-bold text-on-surface-variant">dni</span>
-                </div>
-                <p class="text-sm text-on-surface-variant leading-snug mt-1 max-w-[130px]">Realizacja landing page</p>
-              </div>
-
-              <div class="flex flex-col items-center text-center" data-reveal data-delay="4">
-                <div class="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-                  <span class="material-symbols-outlined text-primary text-[22px]" aria-hidden="true">lock</span>
-                </div>
-                <div class="flex items-baseline gap-1 mb-1">
-                  <span class="counter-val font-display font-black text-5xl text-on-surface leading-none">{{ c100 }}</span>
-                  <span class="text-base font-bold text-on-surface-variant">%</span>
-                </div>
-                <p class="text-sm text-on-surface-variant leading-snug mt-1 max-w-[130px]">Stała cena — bez zmian w trakcie projektu</p>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
         <!-- ══ 3. CO DOSTAJESZ — white ════════════════════════════════════════ -->
         <section
           aria-labelledby="section-included"

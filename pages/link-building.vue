@@ -333,8 +333,8 @@ const relatedServices = [
       badge="Link Building — white hat"
       title="Link building – budujemy wartościowe linki, które podnoszą pozycję w Google"
       description="Pozyskiwanie linków zewnętrznych z tematycznie powiązanych, wysokoautorytatywnych domen — bez PBN-ów, bez ryzyka kary Google. Od 2 100 zł netto miesięcznie, miesięczny raport z każdym pozyskanym linkiem."
-      primary-cta="Rozpocznij kampanię"
-      secondary-cta="Jak to działa"
+      primaryCTA="Rozpocznij kampanię"
+      secondaryCTA="Jak to działa"
       :stats="heroStats"
     />
 

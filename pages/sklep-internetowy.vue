@@ -158,6 +158,16 @@ useHead({
   ],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-revealed'); observer.unobserve(entry.target) } }) },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
@@ -191,6 +201,12 @@ const compareRows = [
   { label: 'Integracje',      shopify: 'Aplikacje z marketplace', custom: 'Dowolne, na zamówienie'     },
   { label: 'Skala',           shopify: 'Bardzo dobra',           custom: 'Nieograniczona'              },
   { label: 'Najlepsze dla',   shopify: 'Szybki start',           custom: 'Nietypowe procesy, wolumen'  },
+]
+
+const relatedServices = [
+  { icon: 'web', title: 'Strona firmowa', description: 'Wielostronicowy serwis z SEO i blogiem dla firmy usługowej.', price: 'od 6 300 zł netto', href: '/stworz-strone-firmowa' },
+  { icon: 'trending_up', title: 'Pozycjonowanie SEO', description: 'Widoczność organiczna sklepu w Google — frazy produktowe i kategorie.', price: 'od 1 260 zł netto/mies.', href: '/seo' },
+  { icon: 'ads_click', title: 'Google Ads', description: 'Kampanie produktowe i remarketingowe pod ruch e-commerce.', price: 'od 1 680 zł netto/mies.', href: '/google-ads' },
 ]
 
 const processSteps = [
@@ -249,77 +265,54 @@ const processSteps = [
 
       <article>
 
-        <!-- ── Section 1: Co decyduje ────────────────────────────────────── -->
-        <section
-          aria-labelledby="section-why"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <h2
-              id="section-why"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Co decyduje o tym, czy sklep internetowy zarabia
-            </h2>
-
-            <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-              <p>
-                Większość sklepów, które nie sprzedają, ma wystarczający ruch — gubi go dopiero między wejściem a płatnością. Klient otwiera kartę produktu, która ładuje się cztery sekundy, przechodzi przez koszyk z trzema niepotrzebnymi krokami i na ekranie płatności rezygnuje. Problem rzadko leży w asortymencie. Leży w tym, jak szybko i jak gładko sklep prowadzi od produktu do „kupuję".
-              </p>
-              <p>
-                Trzy rzeczy decydują o sprzedaży: szybkość ładowania, prostota checkoutu na telefonie i to, czy karty produktów są znajdowane w Google. Sklepy budujemy tak, żeby ładowały się poniżej 1 sekundy i osiągały <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> mierzony w Google PageSpeed Insights — bo każda sekunda opóźnienia na mobile to mierzalny spadek konwersji.
-              </p>
-              <p>
-                Czwarty element to widoczność. Karta produktu, której nie ma w wynikach Google ani w odpowiedziach asystentów AI, nie istnieje dla kupującego, który dopiero szuka. Dlatego każdy sklep dostaje SEO pod kategorie i produkty oraz dane strukturalne Schema.org, dzięki którym oferta może pojawiać się w <strong class="text-on-surface">ChatGPT, Gemini i Perplexity</strong>.
-              </p>
+        <!-- ── Section 1: Co decyduje — white, 2-col ───────────────────── -->
+        <section aria-labelledby="section-why" class="py-section-padding bg-surface">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
+              <div data-reveal="left">
+                <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
+                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">shopping_cart</span>
+                  Sprzedaż, nie tylko ruch
+                </span>
+                <h2 id="section-why" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Co decyduje o tym, czy sklep internetowy zarabia
+                </h2>
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                  <p>Większość sklepów, które nie sprzedają, ma wystarczający ruch — gubi go dopiero między wejściem a płatnością. Klient otwiera kartę produktu, która ładuje się cztery sekundy, przechodzi przez koszyk z trzema krokami i na ekranie płatności rezygnuje. Problem leży w tym, jak szybko i gładko sklep prowadzi od produktu do „kupuję".</p>
+                  <p>Sklepy budujemy tak, żeby ładowały się poniżej 1 sekundy i osiągały <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> — bo każda sekunda opóźnienia na mobile to mierzalny spadek konwersji.</p>
+                  <p>Każdy sklep dostaje SEO pod kategorie i produkty oraz Schema.org, dzięki któremu oferta może pojawiać się w <strong class="text-on-surface">ChatGPT, Gemini i Perplexity</strong>.</p>
+                </div>
+              </div>
+              <div data-reveal="right">
+                <NuxtImg src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=640&h=420&fit=crop&auto=format&q=80" alt="Osoba kupująca produkty w sklepie internetowym na telefonie — szybki checkout i wygodna nawigacja mobilna" width="640" height="420" class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover" loading="lazy" />
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- ── Section 2: Co zawiera ─────────────────────────────────────── -->
-        <section
-          aria-labelledby="section-included"
-          class="py-section-padding bg-surface-container-low"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-start">
-
-              <div>
-                <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
-                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">check_circle</span>
-                  Działający sklep, nie szkielet
-                </span>
-
-                <h2
-                  id="section-included"
-                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-                >
-                  Co zawiera sklep internetowy od 12 600 zł
-                </h2>
-
-                <div class="space-y-4 text-on-surface-variant leading-relaxed">
-                  <p>
-                    Sklep internetowy kosztuje od 12 600 zł netto i w tej cenie jest kompletnym, działającym sklepem — z katalogiem, płatnościami i panelem do zarządzania zamówieniami, a nie szkieletem do rozbudowy.
-                  </p>
-                  <p>
-                    Wersja podstawowa powstaje na Shopify — sprawdzonej platformie, która szybko rusza. Sklep o niestandardowych wymaganiach budujemy od podstaw w Nuxt.js od 25 200 zł netto.
-                  </p>
+        <!-- ── Section 2: Co zawiera — primary (purple) ──────────────────── -->
+        <section aria-labelledby="section-included" class="relative overflow-hidden py-section-padding bg-primary">
+          <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+            <div class="animate-float absolute -top-32 -right-32 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
+            <div class="animate-float-reverse absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-white/5 blur-3xl"></div>
+          </div>
+          <div class="relative max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
+              <div data-reveal="left">
+                <span class="inline-block text-xs font-bold uppercase tracking-[0.3em] text-on-primary/60 mb-3">Co dostajesz</span>
+                <h2 id="section-included" class="font-display text-3xl sm:text-4xl font-black text-on-primary leading-tight mb-6">Co zawiera sklep internetowy od 12 600 zł</h2>
+                <div class="space-y-4 text-on-primary/80 leading-relaxed">
+                  <p>Sklep internetowy kosztuje od 12 600 zł netto i jest kompletnym, działającym sklepem — z katalogiem, płatnościami i panelem do zarządzania zamówieniami.</p>
+                  <p>Wersja podstawowa powstaje na Shopify. Sklep o niestandardowych wymaganiach budujemy od podstaw w Nuxt.js od 25 200 zł netto.</p>
                 </div>
+                <NuxtLink to="/kontakt" class="inline-block mt-8"><BaseButton variant="outline" size="lg">Uzyskaj bezpłatną wycenę</BaseButton></NuxtLink>
               </div>
-
-              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <li
-                  v-for="item in includedItems"
-                  :key="item.label"
-                  class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/30 px-5 py-4 ambient-shadow"
-                >
-                  <div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">{{ item.icon }}</span>
-                  </div>
-                  <span class="text-sm font-semibold text-on-surface leading-snug">{{ item.label }}</span>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3" data-reveal="right">
+                <li v-for="(item, i) in includedItems" :key="item.label" :data-reveal="'scale'" :data-delay="String(i + 1)" class="group flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-5 py-4 hover:bg-white/18 hover:-translate-y-0.5 transition-all duration-200">
+                  <div class="w-9 h-9 rounded-lg bg-white/15 group-hover:bg-white/25 flex items-center justify-center flex-shrink-0 transition-colors"><span class="material-symbols-outlined text-on-primary text-[18px]" aria-hidden="true">{{ item.icon }}</span></div>
+                  <span class="text-sm font-semibold text-on-primary leading-snug">{{ item.label }}</span>
                 </li>
               </ul>
-
             </div>
           </div>
         </section>
@@ -493,6 +486,13 @@ const processSteps = [
         <FAQSection
           title="Najczęściej zadawane pytania o tworzenie sklepów internetowych"
           :faqs="faqData"
+        />
+
+        <RelatedServicesSection
+          eyebrow="Powiązane usługi"
+          title="Co jeszcze pomoże Twojemu sklepowi sprzedawać"
+          cta="Dowiedz się więcej"
+          :services="relatedServices"
         />
 
       </article>
