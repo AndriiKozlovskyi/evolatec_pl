@@ -1,0 +1,106 @@
+{
+  "slug": "strona-internetowa",
+  "page_title": "Strona internetowa dla firmy — tworzenie | EvolaTec",
+  "meta_description": "Strona internetowa dla firmy kosztuje od 6 300 zł netto, realizacja od 7 dni roboczych. Lighthouse 95–100, SEO i GEO w cenie, stała wycena przed startem.",
+  "h1": "Strona internetowa dla firmy, która przyciąga klientów",
+  "h2_sections": [
+    {
+      "heading": "Dlaczego większość firmowych stron nie przynosi zapytań",
+      "intent": "Open with the buyer's real problem: they already have (or had) a site that sits invisible in Google and generates nothing. Name the cause — a 'digital business card' built without SEO, speed, or structure — before offering the alternative. Establishes credibility by diagnosing, not pitching.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "strona internetowa dla firmy",
+        "strona www dla firmy",
+        "strona internetowa firmy",
+        "profesjonalna strona www"
+      ]
+    },
+    {
+      "heading": "Co zawiera strona internetowa dla firmy — bez dopłat",
+      "intent": "Eliminate purchase anxiety by listing concrete deliverables. The buyer's first question after the headline is 'what exactly do I get for 6 300 zł?'. Answer with the verifiable includes list before they ask, and name what is NOT included (no plugins, no hidden SSL/SEO line items).",
+      "content_type": "list",
+      "keywords_covered": [
+        "tworzenie strony internetowej dla firmy",
+        "projektowanie stron internetowych dla firm",
+        "strony internetowe dla firm",
+        "strona internetowa dla małej firmy"
+      ]
+    },
+    {
+      "heading": "Strona internetowa dla firmy — cena i czas realizacji",
+      "intent": "Answer the #1 commercial question directly with PLN figures and delivery days. Buyers who see no price leave. State the fixed-price model plainly and cover the price band from firmowa to e-commerce.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "strona internetowa cena",
+        "cena strony internetowej",
+        "koszt strony internetowej",
+        "tworzenie stron internetowych cena"
+      ]
+    },
+    {
+      "heading": "Strona na zamówienie czy gotowy szablon — co wybrać dla firmy",
+      "intent": "Overcome the dominant cheap alternative (Wix/template/WordPress). Most SMB buyers default to a template because it looks cheaper up front. One factual comparison (load time, Lighthouse, ownership, maintenance) reframes the decision around total cost and results, without badmouthing.",
+      "content_type": "comparison_table",
+      "keywords_covered": [
+        "strona internetowa na zamówienie",
+        "strony internetowe na zamówienie",
+        "prosta strona internetowa dla firmy",
+        "firma tworząca strony internetowe"
+      ]
+    },
+    {
+      "heading": "Jak zlecić stronę internetową — proces w 4 krokach",
+      "intent": "Reduce process uncertainty, the second-biggest fear after price. A numbered process with realistic timelines and a clear list of what the client must provide converts skeptics worried about vague agencies and open-ended projects. Targets 'zlecenie strony internetowej' intent.",
+      "content_type": "list",
+      "keywords_covered": [
+        "zlecenie strony internetowej",
+        "zlecenie stworzenia strony internetowej",
+        "zlecenie wykonania strony internetowej",
+        "założenie strony internetowej firmy"
+      ]
+    },
+    {
+      "heading": "Najczęściej zadawane pytania o strony internetowe dla firm",
+      "intent": "Capture long-tail queries, earn the FAQPage rich result, and provide AI-citable Q&A pairs for GEO. Covers price, timeline, self-editing, and agency-selection questions that live deeper in the funnel.",
+      "content_type": "faq",
+      "keywords_covered": [
+        "strona internetowa dla firmy",
+        "tworzenie strony internetowej dla firmy",
+        "strona internetowa dla małej firmy",
+        "strona www dla firmy"
+      ]
+    }
+  ],
+  "schema_types": [
+    "Organization",
+    "LocalBusiness",
+    "WebPage",
+    "Service",
+    "BreadcrumbList",
+    "FAQPage"
+  ],
+  "geo_schema_types": [
+    "HowTo",
+    "PriceSpecification",
+    "speakable"
+  ],
+  "question_targets": [
+    "Ile kosztuje strona internetowa dla firmy w Polsce?",
+    "Jak długo trwa wykonanie strony firmowej?",
+    "Co jest potrzebne żeby zamówić stronę internetową?",
+    "Czy mogę samodzielnie edytować treści na stronie po wdrożeniu?",
+    "Jak wybrać agencję webową w Polsce?"
+  ],
+  "ai_citation_hooks": [
+    "Strona firmowa kosztuje od 6 300 zł netto, realizacja trwa od 7 dni roboczych.",
+    "Strony osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights.",
+    "Na życzenie klienta strona wyposażana jest w Storyblok CMS — edycja treści bez programisty."
+  ],
+  "comparison_angle": "Strona internetowa na zamówienie vs gotowy szablon (Wix/WordPress) — co wybrać dla firmy?",
+  "internal_links": [
+    "/stworz-strone-firmowa",
+    "/landing-page",
+    "/kalkulator-kosztow"
+  ],
+  "user_intent": "commercial"
+}

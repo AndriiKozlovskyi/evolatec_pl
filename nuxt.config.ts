@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  extends: ['../evolatec_de/packages/ui'],
+  extends: ['../evolatec.de/packages/ui'],
 
   compatibilityDate: '2025-07-15',
 
@@ -48,7 +48,7 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     cssPath: '~/assets/css/main.css',
-    configPath: '../evolatec_de/packages/ui/tailwind.config',
+    configPath: '../evolatec.de/packages/ui/tailwind.config',
   },
 
   image: {
