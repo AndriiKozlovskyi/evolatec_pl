@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -360,7 +360,7 @@ const relatedServices = [
 
               <div class="flex flex-col gap-4" data-reveal="right">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=640&h=340&fit=crop&auto=format&q=80"
+                  src="/assets/link-building-bg.webp"
                   alt="Profesjonalista analizujący pozycje strony w Google Search Console i Google Analytics 4"
                   width="640"
                   height="340"

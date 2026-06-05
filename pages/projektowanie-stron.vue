@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -270,7 +270,7 @@ const processSteps = [
 
               <div data-reveal="right" class="rounded-2xl overflow-hidden">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=640&h=420&fit=crop&auto=format&q=80"
+                  src="/assets/web-design.webp"
                   alt="Projektant UX szkicujący interfejs strony internetowej na tablecie — prototyp i projekt graficzny"
                   width="640"
                   height="420"

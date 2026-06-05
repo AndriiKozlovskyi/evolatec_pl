@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -309,7 +309,7 @@ const relatedServices = [
 
               <div data-reveal="right">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=640&h=420&fit=crop&auto=format&q=80"
+                  src="/assets/copywriting.webp"
                   alt="Osoba pisząca profesjonalne teksty na stronę internetową na laptopie przy biurku"
                   width="640"
                   height="420"
@@ -453,7 +453,7 @@ const relatedServices = [
                 Tekst z AI wystarcza na szybką notatkę albo punkt wyjścia. Na stronę, która ma budować wiarygodność i sprzedawać, brakuje mu konkretnych faktów o Twojej firmie, spójnego tonu i strategii fraz. W praktyce sami korzystamy z narzędzi AI jako wsparcia, ale finalny tekst powstaje pod konkretny cel i markę.
               </p>
               <NuxtImg
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=560&h=300&fit=crop&auto=format&q=80"
+                src="/assets/seo-analytics.webp"
                 alt="Dane analityczne pokazujące wzrost ruchu organicznego po wdrożeniu tekstów SEO na stronie"
                 width="560"
                 height="300"

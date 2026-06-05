@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -303,7 +303,7 @@ const processSteps = [
 
               <div data-reveal="right">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=640&h=420&fit=crop&auto=format&q=80"
+                  src="/assets/landing-page.webp"
                   alt="Osoba analizująca wskaźniki konwersji kampanii Google Ads na laptopie — CTR, CPC i liczba leadów"
                   width="640"
                   height="420"

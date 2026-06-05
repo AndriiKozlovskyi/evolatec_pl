@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -284,7 +284,7 @@ const processSteps = [
                 </div>
               </div>
               <div data-reveal="right">
-                <NuxtImg src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=640&h=420&fit=crop&auto=format&q=80" alt="Osoba kupująca produkty w sklepie internetowym na telefonie — szybki checkout i wygodna nawigacja mobilna" width="640" height="420" class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover" loading="lazy" />
+                <NuxtImg src="/assets/ecommerce.webp" alt="Osoba kupująca produkty w sklepie internetowym na telefonie — szybki checkout i wygodna nawigacja mobilna" width="640" height="420" class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover" loading="lazy" />
               </div>
             </div>
           </div>

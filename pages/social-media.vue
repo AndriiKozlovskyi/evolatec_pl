@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -279,7 +279,7 @@ const processSteps = [
 
               <div data-reveal="right" class="rounded-2xl overflow-hidden">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=640&h=420&fit=crop&auto=format&q=80"
+                  src="/assets/social-media.webp"
                   alt="Smartfon z otwartymi profilami firmowymi na Facebooku i Instagramie — zasięg organiczny i kampania Meta Ads"
                   width="640"
                   height="420"

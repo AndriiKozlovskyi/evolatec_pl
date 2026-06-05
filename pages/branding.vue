@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -310,7 +310,7 @@ const relatedServices = [
 
               <div data-reveal="right">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=640&h=420&fit=crop&auto=format&q=80"
+                  src="/assets/branding-design.webp"
                   alt="Projekt identyfikacji wizualnej marki — logo, paleta kolorów i typografia na białym tle"
                   width="640"
                   height="420"
@@ -454,7 +454,7 @@ const relatedServices = [
                 Logo z generatora wystarcza, gdy potrzebujesz czegokolwiek na szybko i marka nie jest jeszcze priorytetem. Pełna identyfikacja opłaca się, gdy firma buduje wiarygodność i pojawia się w wielu miejscach naraz — bo wtedy spójność i pliki wektorowe przestają być luksusem.
               </p>
               <NuxtImg
-                src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=560&h=300&fit=crop&auto=format&q=80"
+                src="/assets/brand-identity.webp"
                 alt="Tablet z prezentacją identyfikacji wizualnej marki — logo na różnych nośnikach i materiałach firmowych"
                 width="560"
                 height="300"

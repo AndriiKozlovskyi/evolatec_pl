@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -356,7 +356,7 @@ const relatedServices = [
 
     <!-- ── Hero ──────────────────────────────────────────────────────────── -->
     <HeroSection
-      background-image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1600&h=900&fit=crop&auto=format&q=80"
+      background-image="/assets/city-map.webp"
       badge="Lokalne SEO — pozycjonowanie regionalne"
       title="Lokalne SEO – bądź widoczny tam, gdzie szukają Twoi klienci"
       description="Widoczność w Google Maps, Map Pack i AI wyszukiwarkach dla firm działających lokalnie. Optymalizacja Google Business Profile, lokalne cytowania i Schema.org LocalBusiness — od 1 260 zł netto miesięcznie."
@@ -383,7 +383,7 @@ const relatedServices = [
         <IntroSection
           heading="Co to jest lokalne SEO i kiedy warto je stosować"
           :paragraphs="introParagraphs"
-          image="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=640&h=420&fit=crop&auto=format&q=80"
+          image="/assets/local-seo.webp"
           image-alt="Widok centrum polskiego miasta z lotu ptaka — lokalne firmy widoczne na mapie Google Maps"
         />
 
@@ -416,7 +416,7 @@ const relatedServices = [
         <FeaturesSection
           title="Trzy obszary, w których lokalne SEO przewyższa ogólne pozycjonowanie"
           :features="featuresItems"
-          image-url="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=560&h=420&fit=crop&auto=format&q=80"
+          image-url="/assets/mobile-app.webp"
         />
 
         <!-- ── Section 7: Lokalne vs ogólnopolskie — tabela ──────────────── -->

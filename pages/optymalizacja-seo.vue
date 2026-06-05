@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -290,7 +290,7 @@ const relatedServices = [
 
               <div data-reveal="right">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=640&h=420&fit=crop&auto=format&q=80"
+                  src="/assets/seo-optimization.webp"
                   alt="Specjalista SEO weryfikujący Core Web Vitals i wyniki Google PageSpeed Insights na monitorze"
                   width="640"
                   height="420"

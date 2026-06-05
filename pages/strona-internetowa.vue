@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -299,7 +299,7 @@ const processSteps = [
 
               <div data-reveal="right" class="rounded-2xl overflow-hidden">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=640&h=420&fit=crop&auto=format&q=80"
+                  src="/assets/website.webp"
                   alt="Strona internetowa dla firmy wyświetlona na MacBooku — nowoczesny design i wynik Lighthouse 100/100"
                   width="640"
                   height="420"

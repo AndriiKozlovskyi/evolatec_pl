@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -275,7 +275,7 @@ const processSteps = [
 
               <div data-reveal="right" class="rounded-2xl overflow-hidden">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1545235617-9465d2a55698?w=640&h=420&fit=crop&auto=format&q=80"
+                  src="/assets/ui-ux-design.webp"
                   alt="Projektant UX przy tablicy z wireframami strony internetowej — mapowanie ścieżki użytkownika i projekt interfejsu"
                   width="640"
                   height="420"

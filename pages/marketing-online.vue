@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -297,7 +297,7 @@ const processSteps = [
 
               <div data-reveal="right" class="rounded-2xl overflow-hidden">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=640&h=420&fit=crop&auto=format&q=80"
+                  src="/assets/marketing-online.webp"
                   alt="Dashboard marketingu internetowego z wykresami ruchu organicznego i konwersji kampanii Google Ads"
                   width="640"
                   height="420"

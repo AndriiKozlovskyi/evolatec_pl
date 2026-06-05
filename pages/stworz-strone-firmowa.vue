@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -283,7 +283,7 @@ const processSteps = [
 
               <div data-reveal="right" class="rounded-2xl overflow-hidden">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=640&h=420&fit=crop&auto=format&q=80"
+                  src="/assets/business-website.webp"
                   alt="Nowoczesna strona firmowa wyświetlona na laptopie i smartfonie — responsywny design i szybkie ładowanie"
                   width="640"
                   height="420"

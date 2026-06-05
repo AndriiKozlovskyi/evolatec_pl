@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -302,7 +302,7 @@ const processSteps = [
 
               <div data-reveal="right">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=640&h=420&fit=crop&auto=format&q=80"
+                  src="/assets/google-ads.webp"
                   alt="Dashboard Google Ads z wykresem konwersji, kosztu kliknięcia i ROAS kampanii reklamowej"
                   width="640"
                   height="420"

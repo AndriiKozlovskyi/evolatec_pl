@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -292,7 +292,7 @@ const relatedServices = [
 
               <div data-reveal="right" class="flex flex-col gap-5">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=640&h=340&fit=crop&auto=format&q=80"
+                  src="/assets/seo-analytics.webp"
                   alt="Panel Google Search Console z analizą błędów crawlowania i widoczności strony w wynikach Google"
                   width="640"
                   height="340"
@@ -429,7 +429,7 @@ const relatedServices = [
                 Automatyczne narzędzia są użyteczne jako monitoring — sprawdzasz je regularnie, żeby wychwycić regresje. Audyt ekspercki odpowiada na pytanie, które błędy faktycznie blokują widoczność Twojej strony — i w jakiej kolejności je naprawić.
               </p>
               <NuxtImg
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=560&h=280&fit=crop&auto=format&q=80"
+                src="/assets/web-analytics.webp"
                 alt="Laptop z raportem SEO pokazującym błędy techniczne strony i priorytety do naprawy"
                 width="560"
                 height="280"

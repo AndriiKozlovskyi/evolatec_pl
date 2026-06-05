@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -467,7 +467,7 @@ const relatedPages = [
 
               <div class="flex flex-col gap-4" data-reveal="right">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=640&h=320&fit=crop&auto=format&q=80"
+                  src="/assets/seo-analytics.webp"
                   alt="Panel analityczny z wykresami wydajności strony internetowej — wynik Lighthouse i Core Web Vitals"
                   width="640"
                   height="320"
@@ -679,7 +679,7 @@ const relatedPages = [
                   </p>
                 </div>
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=560&h=260&fit=crop&auto=format&q=80"
+                  src="/assets/web-analytics.webp"
                   alt="Laptop z wykresem wzrostu ruchu organicznego i pozycji w wyszukiwarce Google"
                   width="560"
                   height="260"
@@ -731,7 +731,7 @@ const relatedPages = [
               <!-- Left: image + copy -->
               <div data-reveal="left">
                 <NuxtImg
-                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=640&h=340&fit=crop&auto=format&q=80"
+                  src="/assets/code-editor.webp"
                   alt="Ekran z kodem źródłowym Vue.js i Nuxt.js — technologia używana przez EvolaTec zamiast WordPressa"
                   width="640"
                   height="340"

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -394,7 +394,7 @@ const relatedServices = [
 
     <!-- ── Hero ──────────────────────────────────────────────────────────── -->
     <HeroSection
-      background-image="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1600&h=900&fit=crop&auto=format&q=80"
+      background-image="/assets/ai-bg.webp"
       badge="AI SEO — GEO optymalizacja"
       title="AI SEO – wykorzystaj sztuczną inteligencję, żeby wyprzedzić konkurencję w Google"
       description="Pojawiaj się w odpowiedziach ChatGPT, Gemini i Perplexity — nie tylko w rankingach Google. Schema.org, JSON-LD i strukturowane dane czytelne dla LLM wdrożone standardowo w każdym projekcie EvolaTec."
@@ -421,7 +421,7 @@ const relatedServices = [
         <IntroSection
           heading="Czym jest AI SEO i jak zmienia widoczność firmy w internecie"
           :paragraphs="introParagraphs"
-          image="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=640&h=420&fit=crop&auto=format&q=80"
+          image="/assets/ai-robot.webp"
           image-alt="Interfejs asystenta AI odpowiadającego na pytanie użytkownika z cytatem ze strony firmowej"
         />
 
@@ -448,7 +448,7 @@ const relatedServices = [
         <FeaturesSection
           title="5 typów Schema.org o najwyższej wartości dla AI wyszukiwarek"
           :features="schemaTypes"
-          image-url="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=560&h=420&fit=crop&auto=format&q=80"
+          image-url="/assets/code-editor.webp"
         />
 
         <!-- ── Section 6: Co LLM pobiera / czego nie ─────────────────────── -->
