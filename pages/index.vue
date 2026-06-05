@@ -54,11 +54,7 @@ const mainSchema = {
       },
       image: { '@id': 'https://evolatec.pl/#logo' },
       description: 'Agencja webowa tworząca strony internetowe, sklepy online i rozwiązania SEO dla polskich firm. Realizacja od 3 dni roboczych, Lighthouse 95–100, stała cena.',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Warszawa',
-        addressCountry: 'PL',
-      },
+      address: { '@type': 'PostalAddress', addressLocality: 'Warszawa', addressCountry: 'PL' },
       email: 'kontakt@evolatec.pl',
       areaServed: [
         { '@type': 'Country', name: 'Poland' },
@@ -67,15 +63,8 @@ const mainSchema = {
         { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Gdańsk' },
       ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        contactType: 'sales',
-        email: 'kontakt@evolatec.pl',
-      },
-      sameAs: [
-        'https://g.page/evolatec-pl',
-        'https://www.linkedin.com/company/evolatec',
-      ],
+      contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: 'kontakt@evolatec.pl' },
+      sameAs: ['https://g.page/evolatec-pl', 'https://www.linkedin.com/company/evolatec'],
       priceRange: '2100 zł – 25200 zł',
     },
     {
@@ -83,7 +72,6 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/#website',
       name: 'EvolaTec',
       url: 'https://evolatec.pl',
-      description: 'Tworzenie stron internetowych dla firm w Polsce — landing page, strony firmowe, sklepy online.',
       publisher: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
     },
@@ -96,62 +84,7 @@ const mainSchema = {
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['h1', '.speakable-intro'],
-      },
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': 'https://evolatec.pl/#breadcrumb',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Strona główna', item: 'https://evolatec.pl' },
-      ],
-    },
-    {
-      '@type': 'ItemList',
-      itemListElement: [
-        {
-          '@type': 'ListItem', position: 1,
-          item: {
-            '@type': 'Service',
-            name: 'Landing page',
-            description: 'Konwersyjna strona jednoelementowa do kampanii reklamowych i generowania leadów.',
-            url: 'https://evolatec.pl/landing-page',
-            offers: { '@type': 'Offer', priceSpecification: { '@type': 'PriceSpecification', minPrice: '2100', priceCurrency: 'PLN' } },
-          },
-        },
-        {
-          '@type': 'ListItem', position: 2,
-          item: {
-            '@type': 'Service',
-            name: 'Strona firmowa',
-            description: 'Wielostronicowa witryna firmowa z SEO, blogiem i CMS dla firm usługowych i startupów.',
-            url: 'https://evolatec.pl/stworz-strone-firmowa',
-            offers: { '@type': 'Offer', priceSpecification: { '@type': 'PriceSpecification', minPrice: '6300', priceCurrency: 'PLN' } },
-          },
-        },
-        {
-          '@type': 'ListItem', position: 3,
-          item: {
-            '@type': 'Service',
-            name: 'Sklep internetowy',
-            description: 'E-commerce z katalogiem produktów, koszykiem i bezpieczną obsługą płatności.',
-            url: 'https://evolatec.pl/sklep-internetowy',
-            offers: { '@type': 'Offer', priceSpecification: { '@type': 'PriceSpecification', minPrice: '12600', priceCurrency: 'PLN' } },
-          },
-        },
-        {
-          '@type': 'ListItem', position: 4,
-          item: {
-            '@type': 'Service',
-            name: 'SEO optymalizacja',
-            description: 'Pozycjonowanie organiczne w Google z audytem, optymalizacją on-page i linkbuildingiem.',
-            url: 'https://evolatec.pl/seo',
-            offers: { '@type': 'Offer', priceSpecification: { '@type': 'PriceSpecification', minPrice: '1260', priceCurrency: 'PLN' } },
-          },
-        },
-      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-intro'] },
     },
     {
       '@type': 'FAQPage',
@@ -161,48 +94,124 @@ const mainSchema = {
         acceptedAnswer: { '@type': 'Answer', text: answer },
       })),
     },
-  ],
-}
-
-const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: 'Jak zamówić stronę internetową dla firmy — 4 etapy',
-  description: 'Proces tworzenia strony internetowej w EvolaTec: od bezpłatnej konsultacji do wdrożenia.',
-  totalTime: 'P7D',
-  step: [
-    { '@type': 'HowToStep', position: 1, name: 'Bezpłatna konsultacja i wycena', text: 'Omawiamy cel, zakres i budżet. Wynik: stała wycena na piśmie przed startem. Czas: 1–2 dni robocze.' },
-    { '@type': 'HowToStep', position: 2, name: 'Projekt i design', text: 'Planowanie struktury stron, projekt UI. Czas: 2–3 dni robocze dla landing page, 3–5 dla strony firmowej.' },
-    { '@type': 'HowToStep', position: 3, name: 'Development, SEO i GEO', text: 'Kodowanie w Vue.js i Nuxt.js, pełne on-page SEO, Schema.org JSON-LD, konfiguracja hostingu.' },
-    { '@type': 'HowToStep', position: 4, name: 'Testy i launch', text: 'Sprawdzenie na wszystkich urządzeniach, weryfikacja Core Web Vitals, wdrożenie. Zaczyna się 30 dni wsparcia.' },
+    {
+      '@type': 'HowTo',
+      name: 'Jak zamówić stronę internetową dla firmy — 4 etapy',
+      description: 'Proces tworzenia strony internetowej w EvolaTec: od bezpłatnej konsultacji do wdrożenia.',
+      totalTime: 'P7D',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Bezpłatna konsultacja i wycena', text: 'Omawiamy cel, zakres i budżet. Wynik: stała wycena na piśmie przed startem. Czas: 1–2 dni robocze.' },
+        { '@type': 'HowToStep', position: 2, name: 'Projekt i design', text: 'Planowanie struktury stron, projekt UI. Czas: 2–3 dni robocze dla landing page, 3–5 dla strony firmowej.' },
+        { '@type': 'HowToStep', position: 3, name: 'Development, SEO i GEO', text: 'Kodowanie w Vue.js i Nuxt.js, pełne on-page SEO, Schema.org JSON-LD, konfiguracja hostingu.' },
+        { '@type': 'HowToStep', position: 4, name: 'Testy i launch', text: 'Sprawdzenie na wszystkich urządzeniach, weryfikacja Core Web Vitals, wdrożenie. Zaczyna się 30 dni wsparcia.' },
+      ],
+    },
   ],
 }
 
 useHead({
   htmlAttrs: { lang: 'pl' },
   link: [{ rel: 'canonical', href: 'https://evolatec.pl' }],
-  script: [
-    { type: 'application/ld+json', innerHTML: JSON.stringify(mainSchema) },
-    { type: 'application/ld+json', innerHTML: JSON.stringify(howToSchema) },
-  ],
+  script: [{ type: 'application/ld+json', innerHTML: JSON.stringify(mainSchema) }],
 })
 
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
-  { value: 'od 3 dni', label: 'Czas realizacji',     icon: 'flash_on'  },
-  { value: '95–100',   label: 'Lighthouse score',    icon: 'speed'     },
-  { value: '< 1 s',    label: 'Czas ładowania',      icon: 'bolt'      },
-  { value: 'Stała',    label: 'Cena przed startem',  icon: 'verified'  },
+  { value: 'od 3 dni', label: 'Czas realizacji',    icon: 'flash_on' },
+  { value: '95–100',   label: 'Lighthouse score',   icon: 'speed'    },
+  { value: '< 1 s',    label: 'Czas ładowania',     icon: 'bolt'     },
+  { value: 'Stała',    label: 'Cena przed startem', icon: 'verified' },
+]
+
+const keyMetrics = [
+  { value: '95–100',   unit: '/100', label: 'Lighthouse score na każdej realizacji',    icon: 'speed'         },
+  { value: '< 1 s',    unit: '',     label: 'Czas ładowania — vs 3–8 s WordPress',      icon: 'bolt'          },
+  { value: 'od 3',     unit: ' dni', label: 'Realizacja landing page',                  icon: 'flash_on'      },
+  { value: '100%',     unit: '',     label: 'Stała cena — bez zmian w trakcie projektu', icon: 'lock'         },
 ]
 
 const includedItems = [
-  { icon: 'speed',           label: 'Lighthouse 95–100/100'             },
-  { icon: 'phone_iphone',    label: 'Responsive mobile-first'           },
-  { icon: 'search_insights', label: 'SEO on-page wbudowane w kod'       },
-  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Perplexity' },
-  { icon: 'lock',            label: 'Certyfikat SSL'                    },
-  { icon: 'support_agent',   label: '30 dni wsparcia po wdrożeniu'      },
+  { icon: 'speed',           label: 'Lighthouse 95–100/100'              },
+  { icon: 'phone_iphone',    label: 'Responsive mobile-first'            },
+  { icon: 'search_insights', label: 'SEO on-page wbudowane w kod'        },
+  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Perplexity'  },
+  { icon: 'lock',            label: 'Certyfikat SSL'                     },
+  { icon: 'support_agent',   label: '30 dni wsparcia po wdrożeniu'       },
+]
+
+const allServices = [
+  {
+    icon: 'web',
+    iconBg: 'bg-sky-50',
+    iconColor: 'text-sky-600',
+    title: 'Landing page',
+    description: 'Jedna konwersyjna strona do kampanii Google Ads lub launchu produktu. Gotowa w 3 dni robocze, od 2 100 zł netto.',
+    href: '/landing-page',
+  },
+  {
+    icon: 'corporate_fare',
+    iconBg: 'bg-violet-50',
+    iconColor: 'text-violet-600',
+    title: 'Strona firmowa',
+    description: 'Wielostronicowy serwis z SEO, blogiem i opcjonalnym CMS. Realizacja od 7 dni roboczych, od 6 300 zł netto.',
+    href: '/stworz-strone-firmowa',
+  },
+  {
+    icon: 'storefront',
+    iconBg: 'bg-emerald-50',
+    iconColor: 'text-emerald-600',
+    title: 'Sklep internetowy',
+    description: 'E-commerce z katalogiem produktów, koszykiem i płatnościami. Od 12 600 zł netto, realizacja od 14 dni.',
+    href: '/sklep-internetowy',
+  },
+  {
+    icon: 'trending_up',
+    iconBg: 'bg-amber-50',
+    iconColor: 'text-amber-600',
+    title: 'Pozycjonowanie SEO',
+    description: 'Miesięczna obsługa SEO z audytem technicznym, optymalizacją on-page i link buildingiem. Od 1 260 zł netto/mies.',
+    href: '/seo',
+  },
+  {
+    icon: 'location_on',
+    iconBg: 'bg-rose-50',
+    iconColor: 'text-rose-600',
+    title: 'Lokalne SEO',
+    description: 'Google Business Profile, Map Pack i widoczność lokalna dla firm działających regionalnie. Od 1 260 zł netto/mies.',
+    href: '/lokalne-seo',
+  },
+  {
+    icon: 'phone_android',
+    iconBg: 'bg-indigo-50',
+    iconColor: 'text-indigo-600',
+    title: 'Aplikacja mobilna',
+    description: 'React Native — jedna baza kodu na iOS i Android. MVP gotowy w 45 dni roboczych, od 21 000 zł netto.',
+    href: '/aplikacja-mobilna',
+  },
+]
+
+const usps = [
+  {
+    icon: 'verified',
+    title: 'Stała cena ustalana przed startem',
+    description: 'Wycenę dostajesz na piśmie przed podpisaniem umowy. Nie zmienia się w trakcie projektu — nie ma scope creep ani ukrytych pozycji za SSL, SEO ani responsywność.',
+  },
+  {
+    icon: 'speed',
+    title: 'Lighthouse 95–100/100 — mierzalne, nie obiecane',
+    description: 'Wynik sprawdzasz sam w Google PageSpeed Insights po wdrożeniu. Nie deklarujemy — dostarczamy liczby. WordPress osiąga zazwyczaj 40–70/100 przy tej samej treści.',
+  },
+  {
+    icon: 'smart_toy',
+    title: 'GEO optymalizacja w cenie każdego projektu',
+    description: 'Schema.org JSON-LD, FAQPage i LocalBusiness markup — Twoja firma jest widoczna w ChatGPT, Gemini i Perplexity bez dodatkowej opłaty. To był osobny pakiet rok temu.',
+  },
+  {
+    icon: 'shield',
+    title: 'Zero WordPress — zero wtyczek — zero podatności',
+    description: 'Nuxt.js i Vue.js bez CMS opartego na wtyczkach oznaczają brak powierzchni ataku. Nie potrzebujesz comiesięcznych aktualizacji wtyczek ani specjalisty od bezpieczeństwa WP.',
+  },
 ]
 
 const serviceTypes = [
@@ -244,21 +253,23 @@ const serviceTypes = [
   },
 ]
 
-const pricingRows = [
-  { service: 'Landing page',      price: 'od 2 100 zł netto',  delivery: 'od 3 dni roboczych'  },
-  { service: 'Strona firmowa',    price: 'od 6 300 zł netto',  delivery: 'od 7 dni roboczych'  },
-  { service: 'Sklep internetowy', price: 'od 12 600 zł netto', delivery: 'od 14 dni roboczych' },
-  { service: 'Premium e-commerce',price: 'od 25 200 zł netto', delivery: 'od 30 dni roboczych' },
+const seoServices = [
+  { icon: 'manage_search',  title: 'Pozycjonowanie SEO',   desc: 'Od 1 260 zł netto/mies.', href: '/seo'              },
+  { icon: 'location_on',    title: 'Lokalne SEO',           desc: 'Od 1 260 zł netto/mies.', href: '/lokalne-seo'     },
+  { icon: 'link',           title: 'Link Building',         desc: 'Od 2 100 zł netto/mies.', href: '/link-building'   },
+  { icon: 'search_check',   title: 'Audyt SEO',             desc: '840 zł netto, jednorazowo', href: '/audyt-seo'    },
+  { icon: 'tune',           title: 'Optymalizacja SEO',     desc: 'Wycena indywidualna',      href: '/optymalizacja-seo' },
+  { icon: 'smart_toy',      title: 'AI SEO / GEO',          desc: 'W cenie każdego projektu', href: '/optymalizacja-ai' },
 ]
 
 const wpRows = [
-  { label: 'Czas ładowania',        wp: '3–8 sekund',                      nuxt: '< 1 sekunda'              },
-  { label: 'Wynik Lighthouse',      wp: '40–70 / 100',                     nuxt: '95–100 / 100'             },
-  { label: 'Core Web Vitals',       wp: 'Często niezaliczone',             nuxt: 'Bardzo dobre'             },
-  { label: 'Bezpieczeństwo',        wp: 'Podatności przez wtyczki',        nuxt: 'Brak CMS, brak ataku'     },
-  { label: 'Baza SEO',              wp: 'Zależna od wtyczek',              nuxt: 'Zoptymalizowana w kodzie' },
-  { label: 'Nakład na utrzymanie',  wp: 'Wysoki — wtyczki, aktualizacje',  nuxt: 'Minimalny'                },
-  { label: 'Skalowalność',          wp: 'Ograniczona',                     nuxt: 'Nieograniczona'           },
+  { label: 'Czas ładowania',       wp: '3–8 sekund',                     nuxt: '< 1 sekunda'              },
+  { label: 'Wynik Lighthouse',     wp: '40–70 / 100',                    nuxt: '95–100 / 100'             },
+  { label: 'Core Web Vitals',      wp: 'Często niezaliczone',            nuxt: 'Bardzo dobre'             },
+  { label: 'Bezpieczeństwo',       wp: 'Podatności przez wtyczki',       nuxt: 'Brak CMS, brak ataku'     },
+  { label: 'Baza SEO',             wp: 'Zależna od wtyczek',             nuxt: 'Zoptymalizowana w kodzie' },
+  { label: 'Nakład na utrzymanie', wp: 'Wysoki — wtyczki, aktualizacje', nuxt: 'Minimalny'                },
+  { label: 'Skalowalność',         wp: 'Ograniczona',                    nuxt: 'Nieograniczona'           },
 ]
 
 const processSteps = [
@@ -280,7 +291,31 @@ const processSteps = [
   {
     icon: 'rocket_launch',
     title: 'Testy i launch',
-    description: 'Sprawdzenie na wszystkich urządzeniach, weryfikacja Core Web Vitals, wdrożenie na serwer produkcyjny. Zaczyna się 30 dni wsparcia.',
+    description: 'Sprawdzenie na wszystkich urządzeniach, weryfikacja Core Web Vitals, wdrożenie na serwer produkcyjny. Zaczyna się 30 dni wsparcia technicznego.',
+  },
+]
+
+const relatedPages = [
+  {
+    icon: 'web',
+    title: 'Strona firmowa',
+    description: 'Wielostronicowy serwis z SEO, blogiem i CMS. Realizacja od 7 dni roboczych.',
+    price: 'od 6 300 zł netto',
+    href: '/stworz-strone-firmowa',
+  },
+  {
+    icon: 'storefront',
+    title: 'Sklep internetowy',
+    description: 'E-commerce z koszykiem i płatnościami. Realizacja od 14 dni roboczych.',
+    price: 'od 12 600 zł netto',
+    href: '/sklep-internetowy',
+  },
+  {
+    icon: 'trending_up',
+    title: 'Pozycjonowanie SEO',
+    description: 'Miesięczna obsługa SEO z audytem technicznym i raportowaniem.',
+    price: 'od 1 260 zł netto/mies.',
+    href: '/seo',
   },
 ]
 </script>
@@ -288,30 +323,25 @@ const processSteps = [
 <template>
   <div>
 
-    <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+    <!-- ══ 1. HERO — dark branded ════════════════════════════════════════════ -->
     <HeroSection
       badge="Agencja webowa — Polska"
       title="Tworzymy strony internetowe, które pracują na Twój biznes"
       description="Strony firmowe, landing page i sklepy online budowane w Nuxt.js — szybkie, zoptymalizowane pod SEO i GEO, ze stałą ceną ustaloną przed startem."
       primaryCTA="Uzyskaj bezpłatną wycenę"
       secondaryCTA="Zobacz ceny"
-      primary-href="/kontakt"
-      secondary-href="/kalkulator-kosztow"
       :stats="heroStats"
     />
 
     <main id="main-content">
 
-      <!-- Breadcrumb — visually hidden, semantic only on homepage -->
+      <!-- ── sr-only breadcrumb ──────────────────────────────────────────── -->
       <nav aria-label="breadcrumb" class="sr-only">
-        <ol>
-          <li aria-current="page">Strona główna</li>
-        </ol>
+        <ol><li aria-current="page">Strona główna</li></ol>
       </nav>
 
       <article>
-
-        <!-- ── Section 1: Co dostajesz ──────────────────────────────────── -->
+        <!-- ══ 3. CO DOSTAJESZ — white ════════════════════════════════════════ -->
         <section
           aria-labelledby="section-included"
           class="py-section-padding bg-surface"
@@ -319,29 +349,26 @@ const processSteps = [
           <div class="max-w-container-max mx-auto px-gutter">
             <div class="grid lg:grid-cols-2 gap-stack-lg items-start">
 
-              <!-- Copy -->
               <div>
                 <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
                   <span class="material-symbols-outlined text-[18px]" aria-hidden="true">check_circle</span>
                   Bez ukrytych pozycji
                 </span>
-
                 <h2
                   id="section-included"
                   class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
                 >
                   Co dostajesz w każdym projekcie — bez dopłat
                 </h2>
-
                 <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
                   <p>
-                    Większość firm zamawiających stronę po raz pierwszy odkrywa po fakcie, że "cena bazowa" nie zawierała SSL, pozycjonowania ani wersji mobilnej. To nie jest złośliwość — to model biznesowy, który działa, bo kupujący nie wiedzą o co pytać.
+                    Większość firm zamawiających stronę po raz pierwszy odkrywa po fakcie, że "cena bazowa" nie zawierała SSL, pozycjonowania ani wersji mobilnej. To nie złośliwość — to model biznesowy.
                   </p>
                   <p>
-                    W każdym projekcie wychodzi strona z wynikiem <strong class="text-on-surface">Lighthouse 95–100/100</strong> — mierzonym w Google PageSpeed Insights, sprawdzalnym samodzielnie w 30 sekund po wdrożeniu. Do tego: responsywny projekt w podejściu mobile-first, certyfikat SSL, formularz kontaktowy i SEO wbudowane w kod — meta tagi, semantyczna struktura nagłówków, dane strukturalne Schema.org.
+                    W każdym projekcie wychodzi strona z wynikiem <strong class="text-on-surface">Lighthouse 95–100/100</strong> — sprawdzalnym samodzielnie w 30 sekund po wdrożeniu. Do tego: responsywny projekt mobile-first, certyfikat SSL, formularz kontaktowy i SEO wbudowane w kod.
                   </p>
                   <p>
-                    <strong class="text-on-surface">GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu.</strong> Struktury JSON-LD dla FAQ, usług i firmy lokalnej sprawiają, że asystent AI może zacytować Twoją firmę jako odpowiedź na zapytanie zakupowe. Jeszcze rok temu to była osobna usługa za kilkaset złotych miesięcznie.
+                    <strong class="text-on-surface">GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu.</strong> JSON-LD dla FAQ, usług i firmy lokalnej sprawiają, że asystent AI może zacytować Twoją firmę jako odpowiedź na zapytanie zakupowe.
                   </p>
                   <p>
                     Po wdrożeniu każdy projekt obejmuje <strong class="text-on-surface">30 dni wsparcia technicznego</strong> — termin zapisany w umowie, nie obietnica.
@@ -349,17 +376,26 @@ const processSteps = [
                 </div>
               </div>
 
-              <!-- Included items grid -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div
-                  v-for="item in includedItems"
-                  :key="item.label"
-                  class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/30 px-5 py-4 ambient-shadow"
-                >
-                  <div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">{{ item.icon }}</span>
+              <div class="flex flex-col gap-4">
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=640&h=320&fit=crop&auto=format&q=80"
+                  alt="Panel analityczny z wykresami wydajności strony internetowej — wynik Lighthouse i Core Web Vitals"
+                  width="640"
+                  height="320"
+                  class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover"
+                  loading="lazy"
+                />
+                <div class="grid grid-cols-2 gap-3">
+                  <div
+                    v-for="item in includedItems"
+                    :key="item.label"
+                    class="group flex items-center gap-3 bg-surface-container-lowest rounded-xl border border-outline-variant/30 px-4 py-3.5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                  >
+                    <div class="w-9 h-9 rounded-lg bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center flex-shrink-0 transition-colors duration-200">
+                      <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">{{ item.icon }}</span>
+                    </div>
+                    <span class="text-sm font-semibold text-on-surface leading-snug">{{ item.label }}</span>
                   </div>
-                  <span class="text-sm font-semibold text-on-surface leading-snug">{{ item.label }}</span>
                 </div>
               </div>
 
@@ -367,14 +403,54 @@ const processSteps = [
           </div>
         </section>
 
-        <!-- ── Section 2: Jaki typ strony ──────────────────────────────── -->
+        <!-- ══ 4. WSZYSTKIE USŁUGI — gray ════════════════════════════════════ -->
+        <ServicesSection
+          title="Strony, sklepy, SEO i aplikacje — jeden partner"
+          variant="centered"
+          :services="allServices"
+        />
+
+        <!-- ══ 5. DLACZEGO MY — primary ════════════════════════════════════════ -->
+        <section aria-labelledby="section-usps" class="relative overflow-hidden py-section-padding bg-primary">
+          <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-white/5 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-white/5 blur-3xl"></div>
+          </div>
+          <div class="relative max-w-container-max mx-auto px-gutter">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+              <span class="inline-block text-xs font-bold uppercase tracking-[0.3em] text-on-primary/60 mb-3">Dlaczego EvolaTec</span>
+              <h2 id="section-usps" class="font-display text-3xl sm:text-4xl font-black text-on-primary leading-tight mb-4">
+                Cztery rzeczy, których większość agencji nie może powiedzieć
+              </h2>
+              <p class="text-on-primary/70 leading-relaxed">
+                Nie są to obietnice — każda z nich jest weryfikowalna po wdrożeniu, zanim zapłacisz następną fakturę.
+              </p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div
+                v-for="usp in usps"
+                :key="usp.title"
+                class="group bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-6 hover:bg-white/18 hover:-translate-y-1 transition-all duration-300"
+              >
+                <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center mb-5 group-hover:bg-white/25 transition-colors duration-300">
+                  <span class="material-symbols-outlined text-on-primary text-[22px]" aria-hidden="true">{{ usp.icon }}</span>
+                </div>
+                <h3 class="font-bold text-on-primary text-base leading-snug mb-3">{{ usp.title }}</h3>
+                <p class="text-sm text-on-primary/70 leading-relaxed">{{ usp.description }}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══ 6. JAKI TYP STRONY — white ════════════════════════════════════ -->
         <section
           aria-labelledby="section-types"
-          class="py-section-padding bg-surface-container-low"
+          class="py-section-padding bg-surface"
         >
           <div class="max-w-container-max mx-auto px-gutter">
 
             <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+              <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Porównanie</span>
               <h2
                 id="section-types"
                 class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
@@ -387,13 +463,17 @@ const processSteps = [
             </div>
 
             <!-- Desktop table -->
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8">
+            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8 shadow-sm">
               <table class="w-full text-sm">
+                <caption class="sr-only">Porównanie typów stron internetowych: landing page, strona firmowa, sklep internetowy</caption>
                 <thead>
                   <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
                     <th class="text-left p-4 font-bold text-on-surface w-1/4" scope="col">Kryterium</th>
                     <th class="text-center p-4 font-bold text-on-surface" scope="col">Landing page</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Strona firmowa</th>
+                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">
+                      Strona firmowa
+                      <span class="block text-[10px] font-semibold text-primary/70 mt-0.5 uppercase tracking-wider">Najpopularniejszy</span>
+                    </th>
                     <th class="text-center p-4 font-bold text-on-surface" scope="col">Sklep internetowy</th>
                   </tr>
                 </thead>
@@ -452,17 +532,12 @@ const processSteps = [
                 :to="type.href"
                 class="block rounded-2xl p-6 border transition-all duration-300 hover:-translate-y-1"
                 :class="type.highlight
-                  ? 'bg-primary border-primary shadow-lg text-on-primary'
-                  : 'bg-white border-outline-variant/30 ambient-shadow'"
+                  ? 'bg-primary border-primary shadow-lg'
+                  : 'bg-white border-outline-variant/30 shadow-sm'"
               >
                 <div class="flex items-start justify-between gap-4 mb-4">
-                  <h3 class="font-bold text-lg leading-tight" :class="type.highlight ? 'text-white' : 'text-on-surface'">
-                    {{ type.name }}
-                  </h3>
-                  <span
-                    v-if="type.highlight"
-                    class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-full bg-white/20 text-white whitespace-nowrap"
-                  >Najpopularniejszy</span>
+                  <h3 class="font-bold text-lg leading-tight" :class="type.highlight ? 'text-white' : 'text-on-surface'">{{ type.name }}</h3>
+                  <span v-if="type.highlight" class="text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-full bg-white/20 text-white whitespace-nowrap">Najpopularniejszy</span>
                 </div>
                 <p class="font-black text-xl mb-1" :class="type.highlight ? 'text-white' : 'text-primary'">{{ type.price }}</p>
                 <p class="text-sm mb-4" :class="type.highlight ? 'text-white/70' : 'text-on-surface-variant'">{{ type.delivery }} roboczych</p>
@@ -472,202 +547,207 @@ const processSteps = [
 
             <p class="text-sm text-on-surface-variant text-center">
               Nie jesteś pewien, który wariant pasuje do Twojego celu?
-              <NuxtLink to="/kalkulator-kosztow" class="text-primary font-semibold hover:underline">Sprawdź kalkulator kosztów</NuxtLink>
-              — bez podawania danych kontaktowych.
+              <NuxtLink to="/kalkulator-kosztow" class="text-primary font-semibold hover:underline ml-1">Sprawdź kalkulator kosztów</NuxtLink> — bez podawania danych kontaktowych.
             </p>
 
           </div>
         </section>
 
-        <!-- ── Section 3: Ceny i terminy ────────────────────────────────── -->
-        <section
-          aria-labelledby="section-prices"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
+        <!-- ══ 7. SEO — inverse-surface (dark) ══════════════════════════════ -->
+        <section aria-labelledby="section-seo" class="relative overflow-hidden py-section-padding bg-inverse-surface">
 
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
-              <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Cennik</span>
-              <h2
-                id="section-prices"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
-              >
-                Tworzenie stron internetowych — ceny i terminy realizacji
-              </h2>
-              <p class="text-on-surface-variant">
-                Brak widocznych cen na stronie agencji to sygnał ostrzegawczy. Jeśli agencja ukrywa liczby, zazwyczaj dlatego, że zależy jej na rozmowie przed ofertą. Nasze ceny są stałe i publiczne.
-              </p>
-            </div>
+          <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+            <div class="absolute top-1/4 -left-32 w-80 h-80 rounded-full bg-primary/25 blur-3xl"></div>
+            <div class="absolute bottom-1/4 -right-32 w-80 h-80 rounded-full bg-primary-container/25 blur-3xl"></div>
+          </div>
 
-            <!-- Mobile cards -->
-            <div class="md:hidden space-y-3 mb-8">
-              <div
-                v-for="row in pricingRows"
-                :key="row.service"
-                class="bg-white rounded-xl border border-outline-variant/30 p-4 flex items-center justify-between gap-3"
-              >
-                <div>
-                  <p class="font-bold text-on-surface">{{ row.service }}</p>
-                  <p class="text-xs text-on-surface-variant mt-0.5 flex items-center gap-1">
-                    <span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span>
-                    {{ row.delivery }}
+          <div class="relative max-w-container-max mx-auto px-gutter">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+              <!-- Left copy -->
+              <div>
+                <span class="inline-flex items-center gap-2 rounded-full bg-primary/20 border border-primary/30 px-4 py-2 text-sm font-medium text-inverse-primary mb-6">
+                  <span class="material-symbols-outlined text-[16px]" aria-hidden="true">trending_up</span>
+                  Pozycjonowanie SEO i GEO
+                </span>
+                <h2
+                  id="section-seo"
+                  class="font-display text-3xl sm:text-4xl font-black text-inverse-on-surface leading-tight mb-6"
+                >
+                  Strona bez SEO to strona, którą klienci nie znajdą
+                </h2>
+                <div class="space-y-4 text-inverse-on-surface/70 leading-relaxed mb-8">
+                  <p>
+                    Pozycjonowanie SEO kosztuje od 1 260 zł netto miesięcznie. Obejmuje audyt techniczny, optymalizację on-page, budowanie profilu linków i miesięczny raport z pozycjami fraz.
+                  </p>
+                  <p>
+                    GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu strony. Dla istniejących stron wdrażamy ją w ramach pakietu SEO.
                   </p>
                 </div>
-                <p class="text-primary font-black text-lg whitespace-nowrap">{{ row.price }}</p>
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=560&h=260&fit=crop&auto=format&q=80"
+                  alt="Laptop z wykresem wzrostu ruchu organicznego i pozycji w wyszukiwarce Google"
+                  width="560"
+                  height="260"
+                  class="w-full rounded-xl border border-white/10 mb-8 object-cover"
+                  loading="lazy"
+                />
+                <NuxtLink to="/seo">
+                  <BaseButton variant="primary" size="lg">Sprawdź pozycjonowanie SEO</BaseButton>
+                </NuxtLink>
               </div>
-            </div>
 
-            <!-- Desktop table -->
-            <div class="hidden md:block mb-stack-lg rounded-xl overflow-hidden border border-outline-variant/30">
-              <table class="w-full text-base">
-                <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-primary/20">
-                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Usługa</th>
-                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Cena od</th>
-                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Czas realizacji</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="(row, i) in pricingRows"
-                    :key="row.service"
-                    class="border-b border-outline-variant/20 hover:bg-surface-container-low/50 transition-colors"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/30'"
-                  >
-                    <td class="p-4 font-medium text-on-surface">{{ row.service }}</td>
-                    <td class="p-4 font-bold text-primary text-lg">{{ row.price }}</td>
-                    <td class="p-4 text-on-surface-variant">{{ row.delivery }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+              <!-- Right: SEO services grid -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3">
+                <NuxtLink
+                  v-for="svc in seoServices"
+                  :key="svc.title"
+                  :to="svc.href"
+                  class="group flex flex-col gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/40 rounded-xl p-4 transition-all duration-200 hover:-translate-y-0.5"
+                >
+                  <div class="w-9 h-9 rounded-lg bg-primary/20 group-hover:bg-primary/35 flex items-center justify-center transition-colors duration-200">
+                    <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">{{ svc.icon }}</span>
+                  </div>
+                  <div>
+                    <p class="text-sm font-bold text-white leading-snug mb-1">{{ svc.title }}</p>
+                    <p class="text-xs text-white/50 leading-snug">{{ svc.desc }}</p>
+                  </div>
+                </NuxtLink>
+              </div>
 
-            <div class="max-w-2xl mx-auto space-y-4 text-on-surface-variant">
-              <p>
-                <strong class="text-on-surface">Strona firmowa kosztuje od 6 300 zł netto i jest gotowa w 7 dni roboczych</strong> od dostarczenia treści i materiałów. To cena stała — wycena jest ustalana przed podpisaniem umowy i nie zmienia się w trakcie projektu. Nie ma osobnych pozycji za SSL, GEO, responsywność ani podstawowe SEO — to wszystko jest wliczone.
-              </p>
-              <p>
-                Dla projektów wykraczających poza powyższe ramy — integracje z ERP, niestandardowy checkout, rozbudowana architektura backendowa — wycenę przygotowujemy bezpłatnie po krótkiej rozmowie technicznej.
-              </p>
             </div>
-
-            <div class="text-center mt-10">
-              <NuxtLink to="/kalkulator-kosztow">
-                <BaseButton variant="outline" size="md">Oblicz koszt swojej strony</BaseButton>
-              </NuxtLink>
-            </div>
-
           </div>
         </section>
 
-        <!-- ── Section 4: Dlaczego Nuxt.js ──────────────────────────────── -->
-        <section
-          aria-labelledby="section-nuxt"
-          class="py-section-padding bg-surface-container-low"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
-
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
-              <h2
-                id="section-nuxt"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
-              >
-                Dlaczego Nuxt.js — nie WordPress
-              </h2>
-            </div>
-
-            <div class="max-w-3xl mx-auto space-y-5 text-on-surface-variant mb-stack-lg">
-              <p>
-                Gdy zapytasz dziesięć polskich agencji o ofertę na stronę firmową, osiem wróci z wyceną na WordPress. To wybór, który ma swoje uzasadnienie — WordPress jest wszędzie, każdy go zna, łatwo znaleźć kogoś do utrzymania. Problem w tym, że te trzy zalety są jednocześnie jego największymi wadami.
-              </p>
-              <p>
-                WordPress oparty jest o dynamiczne generowanie stron z bazy danych i system wtyczek, który rozszerza każdą funkcjonalność. Przy ponad 60 000 dostępnych wtyczek, każda z osobna to potencjalna luka bezpieczeństwa i kolejna rzecz wymagająca aktualizacji. Wynik Lighthouse typowej witryny WordPress wynosi <strong class="text-on-surface">40–70/100</strong>. Nasze strony budowane w Nuxt.js osiągają <strong class="text-on-surface">95–100/100</strong> — nie dlatego, że "się staramy", ale dlatego, że architektura SSR i brak wtyczek sprawia, że tak po prostu wychodzi.
-              </p>
-            </div>
-
-            <!-- Desktop table -->
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8">
-              <table class="w-full text-sm">
-                <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
-                    <th class="text-left p-4 font-bold text-on-surface w-1/3" scope="col">Kryterium</th>
-                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">WordPress</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">EvolaTec (Nuxt.js)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="(row, i) in wpRows"
-                    :key="row.label"
-                    class="border-b border-outline-variant/20"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'"
-                  >
-                    <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
-                    <td class="p-4 text-center text-on-surface-variant">{{ row.wp }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.nuxt }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Mobile cards -->
-            <div class="md:hidden space-y-3 mb-8">
-              <div
-                v-for="row in wpRows"
-                :key="row.label"
-                class="bg-white rounded-xl border border-outline-variant/30 p-4"
-              >
-                <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.label }}</p>
-                <div class="grid grid-cols-2 gap-2">
-                  <div class="bg-surface-container-low rounded-lg p-3 text-center">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1">WordPress</p>
-                    <p class="text-xs text-on-surface-variant leading-snug">{{ row.wp }}</p>
-                  </div>
-                  <div class="bg-primary/5 rounded-lg p-3 text-center border border-primary/15">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1">EvolaTec</p>
-                    <p class="text-xs text-primary font-semibold leading-snug">{{ row.nuxt }}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p class="text-xs text-center text-on-surface-variant mb-stack-lg">
-              Dane oparte na pomiarach Google PageSpeed Insights i Lighthouse dla typowych witryn w obu technologiach.
-            </p>
-
-            <div class="max-w-3xl mx-auto">
-              <p class="text-on-surface-variant">
-                Jeśli potrzebujesz możliwości samodzielnej edycji treści bez programisty — integrujemy <strong class="text-on-surface">Storyblok CMS</strong>, który daje ten sam wygodny panel administracyjny bez bagażu WordPress. Klient edytuje teksty i zdjęcia przez przeglądarkę, kod pozostaje czysty.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- ── Section 5: Proces ─────────────────────────────────────────── -->
+        <!-- ══ 8. PROCES — gray ═══════════════════════════════════════════════ -->
         <ProcessSection
-          eyebrow="Jak pracujemy"
           title="Jak wygląda tworzenie strony internetowej — 4 etapy"
           :steps="processSteps"
         />
 
-        <!-- ── Section 6: FAQ ─────────────────────────────────────────────── -->
+        <!-- ══ 9. NUXT VS WORDPRESS — white ═══════════════════════════════════ -->
+        <section
+          aria-labelledby="section-nuxt"
+          class="py-section-padding bg-surface"
+        >
+          <div class="max-w-container-max mx-auto px-gutter">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+              <!-- Left: image + copy -->
+              <div>
+                <NuxtImg
+                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=640&h=340&fit=crop&auto=format&q=80"
+                  alt="Ekran z kodem źródłowym Vue.js i Nuxt.js — technologia używana przez EvolaTec zamiast WordPressa"
+                  width="640"
+                  height="340"
+                  class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover mb-8"
+                  loading="lazy"
+                />
+                <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Technologia</span>
+                <h2
+                  id="section-nuxt"
+                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
+                >
+                  Dlaczego Nuxt.js — nie WordPress
+                </h2>
+                <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                  <p>
+                    Gdy zapytasz dziesięć polskich agencji o ofertę na stronę firmową, osiem wróci z wyceną na WordPress. To wybór z uzasadnieniem — WordPress jest wszędzie, każdy go zna. Problem w tym, że te zalety są jednocześnie jego największymi wadami.
+                  </p>
+                  <p>
+                    WordPress oparty jest o dynamiczne generowanie stron z bazy danych i system wtyczek. Przy ponad 60 000 wtyczek, każda to potencjalna luka bezpieczeństwa. Wynik Lighthouse typowej witryny WordPress wynosi <strong class="text-on-surface">40–70/100</strong>. Nasze strony budowane w Nuxt.js osiągają <strong class="text-on-surface">95–100/100</strong> — nie dlatego, że "się staramy", ale dlatego, że architektura SSR i brak wtyczek tak po prostu działa.
+                  </p>
+                  <p>
+                    Jeśli potrzebujesz możliwości samodzielnej edycji treści — integrujemy <strong class="text-on-surface">Storyblok CMS</strong>. Klient edytuje teksty przez przeglądarkę, kod pozostaje czysty.
+                  </p>
+                </div>
+
+                <!-- Tech stack pills -->
+                <div class="flex flex-wrap gap-2 mt-6">
+                  <span v-for="tech in ['Vue.js', 'Nuxt.js', 'TypeScript', 'Tailwind CSS', 'Storyblok CMS']" :key="tech"
+                    class="inline-flex items-center px-3 py-1.5 rounded-full bg-primary/8 border border-primary/15 text-xs font-semibold text-primary">
+                    {{ tech }}
+                  </span>
+                </div>
+              </div>
+
+              <!-- Right: comparison table -->
+              <div>
+                <div class="hidden md:block overflow-hidden rounded-2xl border border-outline-variant/30 shadow-sm">
+                  <table class="w-full text-sm">
+                    <caption class="sr-only">Porównanie WordPress z EvolaTec Nuxt.js</caption>
+                    <thead>
+                      <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
+                        <th class="text-left p-4 font-bold text-on-surface" scope="col">Kryterium</th>
+                        <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">WordPress</th>
+                        <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">EvolaTec</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(row, i) in wpRows"
+                        :key="row.label"
+                        class="border-b border-outline-variant/20"
+                        :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'"
+                      >
+                        <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
+                        <td class="p-4 text-center text-on-surface-variant text-xs">{{ row.wp }}</td>
+                        <td class="p-4 text-center text-primary font-semibold bg-primary/5 text-xs">{{ row.nuxt }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Mobile cards -->
+                <div class="md:hidden space-y-3">
+                  <div v-for="row in wpRows" :key="row.label" class="bg-white rounded-xl border border-outline-variant/30 p-4">
+                    <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.label }}</p>
+                    <div class="grid grid-cols-2 gap-2">
+                      <div class="bg-surface-container-low rounded-lg p-3 text-center">
+                        <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1">WordPress</p>
+                        <p class="text-xs text-on-surface-variant leading-snug">{{ row.wp }}</p>
+                      </div>
+                      <div class="bg-primary/5 rounded-lg p-3 text-center border border-primary/15">
+                        <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1">EvolaTec</p>
+                        <p class="text-xs text-primary font-semibold leading-snug">{{ row.nuxt }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="text-xs text-on-surface-variant mt-4 text-center">
+                  Dane oparte na pomiarach Google PageSpeed Insights i Lighthouse.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ══ 10. FAQ — gray ════════════════════════════════════════════════ -->
         <FAQSection
           title="Najczęściej zadawane pytania o tworzenie stron www dla firm"
           :faqs="faqData"
         />
 
+        <!-- ══ 11. POWIĄZANE STRONY — white ═══════════════════════════════════ -->
+        <RelatedServicesSection
+          eyebrow="Odkryj więcej"
+          title="Usługi dopasowane do etapu Twojego projektu"
+          :services="relatedPages"
+        />
+
       </article>
     </main>
 
-    <!-- ── CTA ───────────────────────────────────────────────────────────── -->
+    <!-- ══ 12. CTA — dark branded ════════════════════════════════════════════ -->
     <CTASection
       title="Uzyskaj bezpłatną wycenę w 24 godziny"
       description="Opisz projekt w kilku zdaniach — wracamy ze stałą ceną i terminem realizacji przed podpisaniem jakiejkolwiek umowy."
       primary-cta="Uzyskaj bezpłatną wycenę"
       secondary-cta="Omów projekt"
-      primary-href="/kontakt"
-      secondary-href="/kontakt"
     />
 
   </div>
