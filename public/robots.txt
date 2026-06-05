@@ -1,2 +1,7 @@
 User-agent: *
 Allow: /
+
+Disallow: /_nuxt/
+Disallow: /api/
+
+Sitemap: https://evolatec.pl/sitemap.xml

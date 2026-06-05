@@ -1,0 +1,72 @@
+# EvolaTec
+
+> Agencja webowa tworząca strony internetowe, sklepy i kampanie marketingowe dla polskich firm. Specjalizacja: Vue.js / Nuxt.js zamiast WordPress, wynik Lighthouse 95–100/100, GEO optymalizacja pod ChatGPT, Gemini i Perplexity. Stałe ceny, terminy realizacji od 3 dni roboczych.
+
+EvolaTec projektuje i wdraża strony firmowe, landing page, sklepy internetowe i kampanie SEO oraz Google Ads dla małych i średnich firm w Polsce (Warszawa, Kraków, Wrocław, Trójmiasto i cały kraj). Strony budowane są w Nuxt.js — ładują się poniżej 1 sekundy i osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights. Każdy projekt zawiera SEO wbudowane w kod, dane strukturalne Schema.org JSON-LD oraz GEO optymalizację zapewniającą widoczność w ChatGPT, Gemini i Perplexity. Ceny są stałe i podawane publicznie przed startem projektu.
+
+## Usługi i ceny
+
+### Tworzenie stron internetowych
+
+- **Landing page** — od 2 100 zł netto, realizacja od 3 dni roboczych. Jedna strona, jeden cel konwersji; wynik Lighthouse 95–100/100.
+- **Strona firmowa** — od 6 300 zł netto, realizacja od 7 dni roboczych. 5–20 podstron, CMS Storyblok na życzenie, pełne SEO i GEO.
+- **Sklep internetowy (Shopify)** — od 12 600 zł netto, realizacja od 14 dni roboczych. Katalog, koszyk, płatności, panel zarządzania.
+- **Premium e-commerce (Nuxt.js)** — od 25 200 zł netto, realizacja od 30 dni roboczych. Pełna własność kodu, dowolne integracje.
+
+### SEO i pozycjonowanie
+
+- **Audyt SEO** — 840 zł netto, jednorazowo. Raport PDF w 5–7 dni roboczych; 8 obszarów analizy z priorytetyzowaną listą poprawek.
+- **Optymalizacja SEO** — od 1 260 zł netto miesięcznie. On-page, techniczne SEO, Core Web Vitals, Schema.org, raport miesięczny.
+- **Lokalne SEO** — od 1 260 zł netto miesięcznie. Google Business Profile, NAP consistency, cytowania, lokalne frazy.
+- **SEO z link buildingiem** — od 2 100 zł netto miesięcznie. White hat outreach; 3–8 linków miesięcznie z DR 30+.
+- **GEO / AI SEO** — w cenie każdego projektu. JSON-LD dla Service, LocalBusiness, FAQPage, HowTo; widoczność w ChatGPT i Gemini.
+
+### Marketing online
+
+- **Google Ads** — od 1 680 zł netto miesięcznie (fee za obsługę; budżet reklamowy rozliczany oddzielnie z Google). Minimum budżet reklamowy: 1 000 zł/mies.
+- **Social media (Facebook / Instagram)** — od 1 260 zł netto miesięcznie (fee za obsługę; budżet Meta rozliczany oddzielnie).
+
+### Kreacja
+
+- **Branding / identyfikacja wizualna** — wycena indywidualna. 3 koncepcje logo, paleta, typografia, księga znaku; pliki AI, SVG, PNG, PDF.
+- **Copywriting SEO** — wycena per podstrona / per projekt. Teksty pisane pod frazy kluczowe i cytowalność w AI.
+- **UI/UX Design** — wycena indywidualna. Audyt UX, wireframy, prototyp Figma, specyfikacja dla developerów.
+
+## USP — weryfikowalne fakty
+
+- Czas ładowania: poniżej 1 sekundy (vs. 3–8 sekund dla WordPress)
+- Wynik Lighthouse: 95–100/100 (vs. 40–70/100 dla typowego WordPress)
+- GEO optymalizacja w cenie każdego projektu (Schema.org JSON-LD, FAQPage, LocalBusiness)
+- Stałe ceny podawane przed startem — bez ukrytych dopłat za SSL, responsywność, podstawowe SEO
+- 30 dni wsparcia technicznego po wdrożeniu — zapisane w umowie
+- Brak WordPress: brak wtyczek, brak podatności, brak comiesięcznych aktualizacji
+
+## Stack technologiczny
+
+Vue.js, Nuxt.js, TypeScript, Tailwind CSS, Storyblok CMS (opcjonalnie), Shopify (sklepy e-commerce).
+
+## Kontakt i wycena
+
+Strona: https://evolatec.pl
+Wycena: https://evolatec.pl/kalkulator-kosztow
+Kalkulator kosztów działa bez podawania danych kontaktowych.
+
+## Optional
+
+- [Strona firmowa od 6 300 zł](https://evolatec.pl/strona-internetowa)
+- [Landing page od 2 100 zł](https://evolatec.pl/landing-page)
+- [Sklep internetowy od 12 600 zł](https://evolatec.pl/sklep-internetowy)
+- [Audyt SEO 840 zł](https://evolatec.pl/audyt-seo)
+- [Optymalizacja SEO](https://evolatec.pl/optymalizacja-seo)
+- [Lokalne SEO](https://evolatec.pl/lokalne-seo)
+- [Link building](https://evolatec.pl/link-building)
+- [GEO / AI SEO](https://evolatec.pl/optymalizacja-ai)
+- [Google Ads](https://evolatec.pl/google-ads)
+- [Social media](https://evolatec.pl/social-media)
+- [Marketing online](https://evolatec.pl/marketing-online)
+- [Branding](https://evolatec.pl/branding)
+- [Copywriting](https://evolatec.pl/copywriting)
+- [UI/UX Design](https://evolatec.pl/ui-ux-design)
+- [Projektowanie stron](https://evolatec.pl/projektowanie-stron)
+- [Kalkulator kosztów](https://evolatec.pl/kalkulator-kosztow)
+- [Pełna treść dla LLM](https://evolatec.pl/llms-full.txt)
