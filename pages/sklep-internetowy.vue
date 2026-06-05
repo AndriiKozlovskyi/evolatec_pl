@@ -383,7 +383,7 @@ const processSteps = [
 
             <div class="max-w-2xl mx-auto space-y-4 text-on-surface-variant">
               <p>
-                <strong class="text-on-surface">Sklep internetowy kosztuje od 12 600 zł netto, realizacja od 14 dni roboczych</strong> — to wariant na Shopify. Sklep budowany od podstaw w Nuxt.js, z niestandardowymi integracjami, to premium e-commerce od 25 200 zł netto, realizacja od 30 dni roboczych.
+                <strong class="text-on-surface">Sklep internetowy kosztuje od 12 600 zł netto, realizacja od 14 dni roboczych</strong> — to wariant na Shopify. Premium e-commerce kosztuje od 25 200 zł netto, realizacja od 30 dni roboczych. Strony osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights.
               </p>
               <p>
                 Na wycenę wpływają liczba produktów na starcie, potrzebne integracje (magazyn, fakturowanie, kurierzy) oraz to, czy treści i zdjęcia dostarczasz, czy mamy je przygotować. Sklep bez ruchu zostaje pusty — dlatego warto od początku zaplanować

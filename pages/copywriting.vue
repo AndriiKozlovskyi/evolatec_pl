@@ -237,10 +237,10 @@ const relatedServices = [
   },
   {
     icon: 'web',
-    title: 'Strona firmowa',
+    title: 'Strona internetowa dla firmy',
     description: 'Teksty i strona zamówione razem — wyceniane łącznie i spójne wizualnie od pierwszego ekranu.',
     price: 'od 6 300 zł netto',
-    href: '/stworz-strone-firmowa',
+    href: '/strona-internetowa',
   },
   {
     icon: 'palette',

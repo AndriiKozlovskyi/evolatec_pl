@@ -91,6 +91,7 @@ const mainSchema = {
         '@type': 'SpeakableSpecification',
         cssSelector: ['h1', '.speakable-intro'],
       },
+      breadcrumb: { '@id': 'https://evolatec.pl/social-media#breadcrumb' },
     },
     {
       '@type': 'BreadcrumbList',
@@ -376,7 +377,7 @@ const processSteps = [
                 Budżet reklamowy Meta rozliczany jest oddzielnie, bezpośrednio z Meta — ustalasz go samodzielnie i płacisz platformie, nie nam. Dla firmy zaczynającej z płatną promocją rozsądny próg to kilkaset złotych miesięcznie.
               </p>
               <p>
-                Nasze fee nie rośnie wraz z budżetem przeznaczonym na reklamy — nie pobieramy prowizji od kwoty wydanej w Meta.
+                Nasze fee nie rośnie wraz z budżetem przeznaczonym na reklamy — nie pobieramy prowizji od kwoty wydanej w Meta. Wszystkie ceny to ceny stałe — wycena przed startem, bez zmian w trakcie projektu.
               </p>
             </div>
 

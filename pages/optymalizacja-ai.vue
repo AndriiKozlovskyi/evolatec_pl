@@ -422,7 +422,7 @@ const relatedServices = [
 
         <!-- ── Section 3: Dlaczego teraz ─────────────────────────────────── -->
         <BenefitsSection
-          title="Dlaczego GEO optymalizację warto wdrożyć już teraz"
+          title="Firmy bez GEO optymalizacji znikają z odpowiedzi AI — zanim konkurencja to zrobi"
           :benefits="whyGeoNow"
         />
 

@@ -238,17 +238,17 @@ const relatedServices = [
   },
   {
     icon: 'web',
-    title: 'Strona firmowa',
-    description: 'Wdrożenie projektu w Nuxt.js — Lighthouse 95–100, ładowanie poniżej 1 sekundy.',
-    price: 'od 6 300 zł netto',
-    href: '/stworz-strone-firmowa',
+    title: 'Projektowanie stron',
+    description: 'Projekt strony spójny z identyfikacją — wireframe, design desktop i mobile, design system.',
+    price: 'Wycena indywidualna',
+    href: '/projektowanie-stron',
   },
   {
-    icon: 'article',
-    title: 'Copywriting SEO',
-    description: 'Teksty na stronę pisane pod frazy i pod wyszukiwarki AI — spójne z tonem marki.',
-    price: 'Wycena indywidualna',
-    href: '/copywriting',
+    icon: 'share',
+    title: 'Social Media Marketing',
+    description: 'Spójna marka na Facebooku i Instagramie — posty, kampanie Meta Ads i community management.',
+    price: 'od 1 260 zł netto/mies.',
+    href: '/social-media',
   },
 ]
 </script>
@@ -303,7 +303,7 @@ const relatedServices = [
                     Najczęstszy problem małych firm to nie brak logo, tylko brak systemu. Logo powstało kiedyś w generatorze albo u znajomego, kolory dobierane są za każdym razem na nowo, a typografia zależy od tego, w czym akurat ktoś robił grafikę. Efekt jest niespójny i wygląda taniej, niż firma realnie jest.
                   </p>
                   <p>
-                    <strong class="text-on-surface">Identyfikacja wizualna obejmuje logo, paletę kolorów, typografię i system znaku</strong> — komplet, dzięki któremu firma wygląda tak samo profesjonalnie na stronie, w social media i na dokumentach.
+                    <strong class="text-on-surface">Identyfikacja wizualna obejmuje logo, paletę kolorów, typografię i system znaku</strong> — komplet, dzięki któremu firma wygląda tak samo profesjonalnie na stronie, w social media i na dokumentach. Projekt logo dostarczamy w 3 koncepcjach, z księgą znaku i plikami w formatach AI, SVG, PNG i PDF.
                   </p>
                 </div>
               </div>

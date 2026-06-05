@@ -87,6 +87,40 @@ const mainSchema = {
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.speakable-intro'] },
     },
     {
+      '@type': 'Service',
+      '@id': 'https://evolatec.pl/#service',
+      name: 'Tworzenie stron internetowych dla firm',
+      description: 'Strony firmowe, landing page i sklepy internetowe budowane w Nuxt.js. Lighthouse 95–100/100, ładowanie poniżej 1 sekundy, GEO optymalizacja w cenie każdego projektu.',
+      url: 'https://evolatec.pl',
+      serviceType: 'Web Development',
+      provider: { '@id': 'https://evolatec.pl/#organization' },
+      areaServed: { '@type': 'Country', name: 'Poland' },
+      offers: {
+        '@type': 'AggregateOffer',
+        lowPrice: '2100',
+        highPrice: '25200',
+        priceCurrency: 'PLN',
+        offerCount: '4',
+        priceSpecification: [
+          { '@type': 'PriceSpecification', name: 'Landing page', price: '2100', priceCurrency: 'PLN', valueAddedTaxIncluded: false },
+          { '@type': 'PriceSpecification', name: 'Strona firmowa', price: '6300', priceCurrency: 'PLN', valueAddedTaxIncluded: false },
+          { '@type': 'PriceSpecification', name: 'Sklep internetowy', price: '12600', priceCurrency: 'PLN', valueAddedTaxIncluded: false },
+          { '@type': 'PriceSpecification', name: 'Premium e-commerce', price: '25200', priceCurrency: 'PLN', valueAddedTaxIncluded: false },
+        ],
+      },
+    },
+    {
+      '@type': 'ItemList',
+      '@id': 'https://evolatec.pl/#services-list',
+      name: 'Usługi EvolaTec',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, item: { '@type': 'Service', name: 'Landing page', url: 'https://evolatec.pl/landing-page', offers: { '@type': 'Offer', price: '2100', priceCurrency: 'PLN' } } },
+        { '@type': 'ListItem', position: 2, item: { '@type': 'Service', name: 'Strona firmowa', url: 'https://evolatec.pl/stworz-strone-firmowa', offers: { '@type': 'Offer', price: '6300', priceCurrency: 'PLN' } } },
+        { '@type': 'ListItem', position: 3, item: { '@type': 'Service', name: 'Sklep internetowy', url: 'https://evolatec.pl/sklep-internetowy', offers: { '@type': 'Offer', price: '12600', priceCurrency: 'PLN' } } },
+        { '@type': 'ListItem', position: 4, item: { '@type': 'Service', name: 'Pozycjonowanie SEO', url: 'https://evolatec.pl/seo', offers: { '@type': 'Offer', price: '1260', priceCurrency: 'PLN' } } },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: faqData.map(({ question, answer }) => ({
         '@type': 'Question',
@@ -709,7 +743,7 @@ const relatedPages = [
                   id="section-nuxt"
                   class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
                 >
-                  Dlaczego Nuxt.js — nie WordPress
+                  Agencja z własnym stackiem vs freelancer WordPress — co wybrać dla firmy
                 </h2>
                 <div class="space-y-4 text-on-surface-variant leading-relaxed">
                   <p>
@@ -719,7 +753,8 @@ const relatedPages = [
                     WordPress oparty jest o dynamiczne generowanie stron z bazy danych i system wtyczek. Przy ponad 60 000 wtyczek, każda to potencjalna luka bezpieczeństwa. Wynik Lighthouse typowej witryny WordPress wynosi <strong class="text-on-surface">40–70/100</strong>. Nasze strony budowane w Nuxt.js osiągają <strong class="text-on-surface">95–100/100</strong> — nie dlatego, że "się staramy", ale dlatego, że architektura SSR i brak wtyczek tak po prostu działa.
                   </p>
                   <p>
-                    Jeśli potrzebujesz możliwości samodzielnej edycji treści — integrujemy <strong class="text-on-surface">Storyblok CMS</strong>. Klient edytuje teksty przez przeglądarkę, kod pozostaje czysty.
+                    Jeśli potrzebujesz możliwości samodzielnej edycji treści — integrujemy <strong class="text-on-surface">Storyblok CMS</strong>. Klient edytuje teksty przez przeglądarkę, kod pozostaje czysty. Więcej o tym, jak wygląda
+                    <NuxtLink to="/strona-internetowa" class="text-primary font-semibold hover:underline">strona internetowa dla firmy</NuxtLink> w praktyce.
                   </p>
                 </div>
 

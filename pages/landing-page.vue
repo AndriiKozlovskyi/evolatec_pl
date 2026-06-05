@@ -296,7 +296,7 @@ const processSteps = [
                     Landing page rozwiązuje ten problem. To jedna strona z jednym celem — zapis, wycena, pobranie, zakup — pozbawiona menu i rozpraszaczy. Każdy element prowadzi do jednego działania.
                   </p>
                   <p>
-                    Po trzech sekundach ładowania znika połowa ruchu mobilnego. Nasze landing page osiągają <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> i ładują się poniżej 1 sekundy — budżet reklamowy nie wycieka na porzucone ładowania.
+                    Po trzech sekundach ładowania znika połowa ruchu mobilnego. Nasze landing page osiągają <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> i ładują się poniżej 1 sekundy — budżet reklamowy nie wycieka na porzucone ładowania. GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu.
                   </p>
                 </div>
               </div>

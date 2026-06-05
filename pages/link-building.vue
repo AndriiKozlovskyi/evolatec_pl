@@ -141,6 +141,7 @@ const introParagraphs = [
   'Google od ponad dwudziestu lat używa linków zewnętrznych jako sygnału zaufania. Jeśli wiarygodna strona o tematyce zbliżonej do Twojej zamieszcza link do Twojej witryny, traktuje to jako rekomendację. Im więcej takich rekomendacji pochodzi z domen o wysokim autorytecie i tematycznej spójności, tym wyżej strona plasuje się w wynikach organicznych.',
   'Po aktualizacji Penguin Google przestało nagradzać masowe pozyskiwanie linków z katalogów, farm linków i PBN-ów. Linki ze stron o niskiej jakości mogą dziś obniżyć widoczność domeny, a w skrajnych przypadkach skutkować manualną karą. Przez to część firm zrezygnowała z link buildingu całkowicie — to błąd. Wartościowe linki z tematycznie powiązanych, wysokoautorytatywnych serwisów nadal są jednym z trzech najważniejszych czynników rankingowych w Google.',
   'Link building ma sens wyłącznie wtedy, gdy zdobywasz linki, na które Twoja strona realnie zasługuje — bo ma treści, dane lub narzędzia, do których inni chcą naturalnie linkować.',
+  'SEO techniczne jest wbudowane w kod strony — nie zależy od wtyczek ani zewnętrznych narzędzi. Dlatego efekty link buildingu nie są blokowane przez wolne ładowanie ani błędy crawlowania, które niszczą kampanie oparte na WordPressie.',
 ]
 
 const acquisitionMethods = [

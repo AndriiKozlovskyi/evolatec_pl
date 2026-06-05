@@ -342,7 +342,7 @@ const relatedServices = [
                 </h2>
                 <div class="space-y-4 text-on-primary/80 leading-relaxed">
                   <p>Audyt SEO kosztuje 840 zł netto — jednorazowa, stała cena, bez abonamentu i bez zobowiązania do kontynuacji współpracy. Brak ukrytych pozycji za dostęp do narzędzi ani opłat za konsultacje.</p>
-                  <p>Po dostarczeniu dostępu do Google Search Console i GA4 (wystarczy rola „Widok" — tylko do odczytu) raport jest gotowy w 5–7 dni roboczych.</p>
+                  <p>Audyt jest gotowy w 5–7 dni roboczych od dostarczenia dostępu do Google Search Console i GA4 (wystarczy rola „Widok" — tylko do odczytu).</p>
                   <p>Audyt można zamówić bez podpisywania umowy na pozycjonowanie. Jeśli po raporcie zdecydujesz się na miesięczną obsługę SEO, koszt audytu jest zaliczany na poczet pierwszego miesiąca.</p>
                 </div>
               </div>

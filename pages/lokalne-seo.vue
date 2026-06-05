@@ -384,7 +384,7 @@ const relatedServices = [
 
         <!-- ── Section 3: Dlaczego lokalne SEO ───────────────────────────── -->
         <BenefitsSection
-          title="Dlaczego lokalne SEO przynosi efekty szybciej niż ogólnopolskie"
+          title="Dlaczego firmy lokalne tracą klientów bez lokalnego SEO — i jak to zmienić"
           :benefits="whyLocalBenefits"
         />
 

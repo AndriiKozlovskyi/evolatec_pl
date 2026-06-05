@@ -91,6 +91,7 @@ const mainSchema = {
         '@type': 'SpeakableSpecification',
         cssSelector: ['h1', '.speakable-intro'],
       },
+      breadcrumb: { '@id': 'https://evolatec.pl/marketing-online#breadcrumb' },
     },
     {
       '@type': 'BreadcrumbList',

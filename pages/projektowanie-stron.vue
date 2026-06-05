@@ -91,6 +91,7 @@ const mainSchema = {
         '@type': 'SpeakableSpecification',
         cssSelector: ['h1', '.speakable-intro'],
       },
+      breadcrumb: { '@id': 'https://evolatec.pl/projektowanie-stron#breadcrumb' },
     },
     {
       '@type': 'BreadcrumbList',
@@ -180,7 +181,7 @@ const compareRows = [
 
 const relatedServices = [
   { icon: 'palette', title: 'UI/UX Design', description: 'Projekt interfejsu oparty na badaniach użytkownika — wireframe i gotowy design.', price: 'Wycena indywidualna', href: '/ui-ux-design' },
-  { icon: 'corporate_fare', title: 'Strona firmowa', description: 'Wdrożenie projektu w Nuxt.js — Lighthouse 95–100, ładowanie poniżej 1 sekundy.', price: 'od 6 300 zł netto', href: '/stworz-strone-firmowa' },
+  { icon: 'web', title: 'Strona internetowa dla firmy', description: 'Wdrożenie projektu w Nuxt.js — od projektu do gotowej strony z Lighthouse 95–100.', price: 'od 6 300 zł netto', href: '/strona-internetowa' },
   { icon: 'brush', title: 'Branding', description: 'Logo i identyfikacja wizualna — system spójny z projektem strony.', price: 'Wycena indywidualna', href: '/branding' },
 ]
 
@@ -262,7 +263,7 @@ const processSteps = [
                     To nie jest kwestia gustu, tylko zaufania. Strona oparta na popularnym szablonie wygląda znajomo, bo te same motywy używane są przez tysiące firm — w tym Twoją konkurencję. Znajomość działa tu przeciwko Tobie: nic nie wyróżnia, nic nie zostaje w pamięci, a podobieństwo do tańszych usługodawców obniża postrzeganą wartość Twojej oferty.
                   </p>
                   <p>
-                    Projektujemy strony od podstaw, pod konkretną markę i branżę. <strong class="text-on-surface">Każdy projekt powstaje od podstaw, bez gotowych szablonów</strong> — od układu, przez kolory, po typografię dobraną do charakteru firmy. Celem nie jest „ładnie", tylko żeby wygląd budował zaufanie i prowadził wzrok dokładnie tam, gdzie ma trafić: do oferty i do kontaktu.
+                    Projektujemy strony od podstaw, pod konkretną markę i branżę. <strong class="text-on-surface">Każdy projekt powstaje od podstaw, bez gotowych szablonów</strong> — od układu, przez kolory, po typografię dobraną do charakteru firmy. Projekt graficzny obejmuje wersję desktop i mobile oraz spójny design system. Celem nie jest „ładnie", tylko żeby wygląd budował zaufanie i prowadził wzrok dokładnie tam, gdzie ma trafić: do oferty i do kontaktu.
                   </p>
                 </div>
               </div>
