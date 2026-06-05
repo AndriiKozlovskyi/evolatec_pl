@@ -4,13 +4,18 @@
     data-nav-icon="home"
     class="relative min-h-[calc(100svh-5rem)] md:min-h-[min(85vh,820px)] lg:min-h-[calc(100vh-5rem)] flex items-center overflow-hidden"
   >
-    <div class="absolute inset-0 bg-[#1e1638]">
-      <div class="absolute -top-[30%] -right-[20%] w-[70%] h-[70%] rounded-full bg-primary/45 blur-[120px]"></div>
-      <div class="absolute -bottom-[20%] -left-[15%] w-[60%] h-[60%] rounded-full bg-primary/65 blur-[100px]"></div>
-      <div class="absolute top-[20%] left-[30%] w-[35%] h-[35%] rounded-full bg-primary/35 blur-[80px]"></div>
-      <div class="absolute inset-0 opacity-70" style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 72px 72px;"></div>
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1e1638]/60"></div>
+    <!-- ─── Background ──────────────────────────────────────────────── -->
+    <div class="absolute inset-0 overflow-hidden bg-[#1A103D]">
+      <img
+        src="/assets/hero-bg.png"
+        alt=""
+        aria-hidden="true"
+        class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
+      />
+      <!-- Bottom fade -->
+      <div class="absolute inset-x-0 bottom-0 h-40 pointer-events-none" style="background: linear-gradient(to top, rgba(26,16,61,0.7), transparent);"></div>
     </div>
+    <!-- ─── End Background ──────────────────────────────────────────── -->
 
     <div class="relative z-10 w-full max-w-container-max mx-auto px-gutter pt-10 pb-12 md:pt-14 md:pb-14">
       <div class="max-w-2xl">
