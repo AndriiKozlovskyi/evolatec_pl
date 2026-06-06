@@ -405,15 +405,6 @@ const relatedServices = [
 
     <main id="main-content">
 
-      <nav aria-label="breadcrumb" class="max-w-container-max mx-auto px-gutter py-4">
-        <ol class="flex items-center gap-2 text-sm text-on-surface-variant">
-          <li><NuxtLink to="/" class="hover:text-primary transition-colors">Strona główna</NuxtLink></li>
-          <li aria-hidden="true"><span class="material-symbols-outlined text-sm">chevron_right</span></li>
-          <li><NuxtLink to="/seo" class="hover:text-primary transition-colors">Pozycjonowanie SEO</NuxtLink></li>
-          <li aria-hidden="true"><span class="material-symbols-outlined text-sm">chevron_right</span></li>
-          <li aria-current="page" class="text-on-surface font-medium">AI SEO i GEO optymalizacja</li>
-        </ol>
-      </nav>
 
       <article>
 

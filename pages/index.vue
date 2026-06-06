@@ -424,9 +424,6 @@ const relatedPages = [
     <main id="main-content">
 
       <!-- ── sr-only breadcrumb ──────────────────────────────────────────── -->
-      <nav aria-label="breadcrumb" class="sr-only">
-        <ol><li aria-current="page">Strona główna</li></ol>
-      </nav>
 
       <article>
 

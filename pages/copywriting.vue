@@ -267,17 +267,6 @@ const relatedServices = [
 
     <main id="main-content">
 
-      <nav aria-label="breadcrumb" class="border-b border-outline-variant/30 bg-surface">
-        <div class="max-w-container-max mx-auto px-gutter py-3">
-          <ol class="flex items-center flex-wrap gap-2 text-sm text-on-surface-variant">
-            <li><NuxtLink to="/" class="hover:text-primary transition-colors">Strona główna</NuxtLink></li>
-            <li aria-hidden="true" class="text-outline">/</li>
-            <li><NuxtLink to="/projektowanie-stron" class="hover:text-primary transition-colors">Projektowanie stron</NuxtLink></li>
-            <li aria-hidden="true" class="text-outline">/</li>
-            <li aria-current="page" class="text-on-surface font-medium">Teksty na stronę www</li>
-          </ol>
-        </div>
-      </nav>
 
       <article>
 
