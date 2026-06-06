@@ -4,9 +4,9 @@
 
 useSeoMeta({
   title: 'Lokalne SEO – Pozycjonowanie Lokalne dla Firmy | EvolaTec',
-  description: 'Lokalne SEO i optymalizacja wizytówki Google Maps dla firmy. Pojawiaj się w wynikach lokalnych, Google Maps i AI dla klientów z Twojego miasta. Od 1 260 zł netto/mies.',
+  description: 'Lokalne SEO i optymalizacja wizytówki Google Maps. Bądź widoczny w wynikach lokalnych dla klientów z Twojego miasta. Od 1 260 zł netto/mies.',
   ogTitle: 'Lokalne SEO – Pozycjonowanie Lokalne dla Firmy | EvolaTec',
-  ogDescription: 'Lokalne SEO i optymalizacja wizytówki Google Maps dla firmy. Pojawiaj się w wynikach lokalnych, Google Maps i AI dla klientów z Twojego miasta. Od 1 260 zł netto/mies.',
+  ogDescription: 'Lokalne SEO i optymalizacja wizytówki Google Maps. Bądź widoczny w wynikach lokalnych dla klientów z Twojego miasta. Od 1 260 zł netto/mies.',
   ogType: 'website',
   ogUrl: 'https://evolatec.pl/lokalne-seo',
   ogImage: 'https://evolatec.pl/og-image.webp',
@@ -77,7 +77,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/lokalne-seo#webpage',
       url: 'https://evolatec.pl/lokalne-seo',
       name: 'Lokalne SEO – Pozycjonowanie Lokalne dla Firmy | EvolaTec',
-      description: 'Lokalne SEO i optymalizacja wizytówki Google Maps dla firmy. Pojawiaj się w wynikach lokalnych, Google Maps i AI dla klientów z Twojego miasta. Od 1 260 zł netto/mies.',
+      description: 'Lokalne SEO i optymalizacja wizytówki Google Maps. Bądź widoczny w wynikach lokalnych dla klientów z Twojego miasta. Od 1 260 zł netto/mies.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
@@ -143,189 +143,110 @@ const heroStats = [
   { value: 'GEO',         label: 'Widoczność w AI — gratis', icon: 'smart_toy'   },
 ]
 
-const introParagraphs = [
-  'Lokalne SEO to zestaw działań, które sprawiają, że firma pojawia się w wynikach Google wtedy, gdy ktoś szuka usługi lub produktu w określonym mieście lub regionie. Chodzi o widoczność w trzech miejscach jednocześnie: w organicznych wynikach wyszukiwania, w Mapach Google i — coraz częściej — w odpowiedziach AI asystentów, takich jak ChatGPT i Gemini.',
-  'Lokalne SEO ma sens wtedy, gdy klientów pozyskujesz z określonego obszaru geograficznego. Firma budowlana działająca w Warszawie nie potrzebuje widoczności w Gdańsku — potrzebuje być pierwsza w wynikach dla zapytań z dopiskiem „Wrocław", „Mokotów" czy „Ursynów". Podobnie klinika stomatologiczna, salon urody, kancelaria prawna czy serwis samochodowy — każdy z tych biznesów ma swój promień działania i właśnie w tym promieniu musi być widoczny.',
-  'Bez lokalnego SEO wiele firm pojawia się w Google dopiero na drugiej lub trzeciej stronie wyników — w miejscu, gdzie użytkownicy już nie zaglądają. Wizytówka Google Business Profile bez optymalizacji jest niewidoczna w Map Pack, choć to właśnie Map Pack pojawia się jako pierwsze przy lokalnych zapytaniach.',
+// ── Statystyki: dlaczego lokalne SEO (sekcja kart — jak w wersji DE) ─────────
+const localStatsCards = [
+  { icon: 'phone', value: '80%', text: 'lokalnych wyszukiwań kończy się kontaktem z firmą.' },
+  { icon: 'location_on', value: 'Map Pack', text: 'decyduje o widoczności lokalnej i pozyskiwaniu nowych klientów.' },
+  { icon: 'verified_user', value: 'Więcej zaufania', text: 'dzięki lokalnym pozycjom i pozytywnym opiniom klientów.' },
 ]
 
-const deliverables = [
+// ── Korzyści lokalnego SEO (BenefitsSection — karty ze zdjęciem) ─────────────
+const benefits = [
   {
     icon: 'location_on',
-    iconBg: 'bg-sky-50',
-    iconColor: 'text-sky-600',
-    title: 'Optymalizacja Google Business Profile',
-    description: 'Uzupełnienie i weryfikacja wizytówki, dobór kategorii podstawowej i dodatkowych, opis z frazami kluczowymi, harmonogram postów GBP i odpowiedzi na recenzje. Wizytówka jest pierwszym wynikiem, który widzi użytkownik przy lokalnych zapytaniach.',
-  },
-  {
-    icon: 'corporate_fare',
-    iconBg: 'bg-violet-50',
-    iconColor: 'text-violet-600',
-    title: 'NAP consistency — spójność danych w internecie',
-    description: 'Weryfikacja i ujednolicenie nazwy firmy, adresu i numeru telefonu we wszystkich katalogach, agregatorach i wzmiankach w internecie. Niespójne dane NAP obniżają ranking w Map Pack — Google nie wie, który wpis jest aktualny.',
-  },
-  {
-    icon: 'hub',
-    iconBg: 'bg-emerald-50',
-    iconColor: 'text-emerald-600',
-    title: 'Lokalne cytowania i katalogi branżowe',
-    description: 'Zgłoszenie firmy do katalogów tematycznych i lokalnych portali miejskich z linkiem zwrotnym do strony i wizytówki. Każde cytowanie wzmacnia sygnał lokalności dla algorytmu Google.',
-  },
-  {
-    icon: 'schema',
-    iconBg: 'bg-amber-50',
-    iconColor: 'text-amber-600',
-    title: 'Dane strukturalne LocalBusiness Schema.org',
-    description: 'Implementacja JSON-LD z adresem, obszarem obsługi i godzinami otwarcia. Schema.org markup dla FAQ, HowTo, Service i LocalBusiness jest standardem w każdej realizacji — czytelny dla Google i dla AI wyszukiwarek.',
-  },
-  {
-    icon: 'article',
-    iconBg: 'bg-rose-50',
-    iconColor: 'text-rose-600',
-    title: 'Optymalizacja strony pod frazy lokalne',
-    description: 'Dedykowane podstrony dla obsługiwanych dzielnic lub miast, treści odpowiadające na lokalne zapytania i wewnętrzna struktura linków. Frazy z geolokalizacją konwertują wyżej niż ogólne — użytkownik, który szuka „elektryk Mokotów", jest gotowy do zamówienia.',
-  },
-  {
-    icon: 'analytics',
-    iconBg: 'bg-indigo-50',
-    iconColor: 'text-indigo-600',
-    title: 'Raport miesięczny z metrykami',
-    description: 'Pozycje fraz lokalnych, liczba wyświetleń wizytówki, zapytania w Map Pack, zmiany w Call Clicks i Direction Requests. Każdy raport zawiera porównanie z poprzednim miesiącem i listę działań zrealizowanych w danym okresie.',
-  },
-]
-
-const whyLocalBenefits = [
-  {
-    icon: 'speed',
-    title: 'Efekty szybciej niż w SEO ogólnopolskim',
-    description: 'Frazy lokalne mają niższą konkurencję niż ogólnopolskie. Pierwsze zmiany w Map Pack pojawiają się po 6–10 tygodniach, a organiczne wyniki dla fraz lokalnych — po 3–4 miesiącach od startu kampanii.',
+    title: 'Obecność w Google Maps',
+    description: 'Optymalizacja Google Business Profile pod lepsze pozycje w Mapach Google i wynikach lokalnych.',
+    bg: 'bg-gradient-to-br from-blue-600 to-blue-800',
+    image: '/assets/local-seo.webp',
   },
   {
     icon: 'people',
-    title: 'Wyższy współczynnik konwersji',
-    description: 'Użytkownik szukający „dentysta Wrocław" jest zdecydowanie bliżej decyzji zakupowej niż ktoś wpisujący „dentysta". Ruch lokalny konwertuje wyżej — bo intencja jest bardziej precyzyjna.',
+    title: 'Więcej klientów z regionu',
+    description: 'Widoczność przy lokalnych zapytaniach przyciąga klientów gotowych do kontaktu — prosto z Twojej okolicy.',
+    bg: 'bg-gradient-to-br from-emerald-600 to-teal-800',
+    image: '/assets/city-map.webp',
   },
   {
-    icon: 'smart_toy',
-    title: 'Widoczność w AI wyszukiwarkach — w cenie',
-    description: 'GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu. Dane strukturalne LocalBusiness i FAQ pozwalają AI asystentom cytować Twoją firmę przy zapytaniach lokalnych.',
-  },
-  {
-    icon: 'lock',
-    title: 'Stała cena bez niespodzianek',
-    description: 'Cena jest ustalana przed startem i nie zmienia się w trakcie kampanii. Jeśli zakres pracy rośnie — na przykład dodajesz nową lokalizację — nowy zakres jest wyceniany i zatwierdzany osobno.',
+    icon: 'star',
+    title: 'Opinie i zaufanie',
+    description: 'Strategiczne zarządzanie recenzjami wzmacnia profil lokalny i zaufanie potencjalnych klientów.',
+    bg: 'bg-gradient-to-br from-amber-500 to-orange-600',
+    image: '/assets/web-analytics.webp',
   },
 ]
 
 const processSteps = [
-  {
-    step: 1,
-    title: 'Audyt lokalny i analiza konkurencji',
-    description: 'Sprawdzamy aktualny stan wizytówki Google Business Profile, profil cytowań NAP, pozycje fraz lokalnych i Map Pack konkurencji. Na tej podstawie określamy, co wymaga natychmiastowej poprawy, a co można budować stopniowo.',
-  },
-  {
-    step: 2,
-    title: 'Optymalizacja wizytówki i struktury strony',
-    description: 'Uzupełniamy i optymalizujemy Google Business Profile, implementujemy dane strukturalne LocalBusiness Schema.org na stronie, tworzymy lub optymalizujemy podstrony lokalne i uruchamiamy kampanię cytowań NAP.',
-  },
-  {
-    step: 3,
-    title: 'Bieżące utrzymanie i budowanie autorytetu lokalnego',
-    description: 'Co miesiąc: posty na GBP, odpowiedzi na recenzje, nowe lokalne cytowania, optymalizacja treści pod nowe frazy lokalne. Monitorujemy pozycje i reagujemy na zmiany algorytmu Google.',
-  },
-  {
-    step: 4,
-    title: 'Raport miesięczny i planowanie',
-    description: 'Raport z pozycjami fraz, statystykami wizytówki, zmianami w Call Clicks i Direction Requests. Omawiamy wyniki i planujemy działania na kolejny miesiąc — każda decyzja jest uzasadniona danymi.',
-  },
+  { icon: 'search', title: 'Analiza lokalna', description: 'Analiza widoczności lokalnej, konkurencji i potencjału fraz w regionie.' },
+  { icon: 'storefront', title: 'Konfiguracja Google Business', description: 'Pełna optymalizacja Google Business Profile pod maksymalną widoczność.' },
+  { icon: 'edit_document', title: 'Optymalizacja fraz', description: 'Optymalizacja pod lokalne frazy i intencje wyszukiwania Twoich klientów.' },
+  { icon: 'article', title: 'Treść i struktura', description: 'Treści lokalne, podstrony lokalizacji i dane strukturalne LocalBusiness.' },
+  { icon: 'trending_up', title: 'Wzrost pozycji', description: 'Bieżący monitoring, raporty i optymalizacja dla większej widoczności lokalnej.' },
 ]
 
-const featuresItems = [
-  {
-    icon: 'map',
-    title: 'Map Pack — Top 3 w wynikach lokalnych',
-    description: 'Widoczność w Map Pack to najcenniejsza pozycja przy lokalnych zapytaniach — pojawia się nad organicznymi wynikami, z przyciskiem „Zadzwoń" widocznym bezpośrednio w wyszukiwarce.',
-  },
-  {
-    icon: 'record_voice_over',
-    title: 'Zapytania głosowe i mobilne',
-    description: 'Ponad 50% zapytań lokalnych pochodzi z urządzeń mobilnych. Optymalizujemy strukturę strony i wizytówki pod zapytania głosowe — krótsze frazy w formie pytań, które Siri, Google Assistant i Alexa przetwarzają inaczej niż wyszukiwarka desktopowa.',
-  },
-  {
-    icon: 'reviews',
-    title: 'Zarządzanie recenzjami Google',
-    description: 'Recenzje Google wpływają na pozycję w Map Pack i na konwersję. Odpowiadamy na recenzje w Twoim imieniu lub przygotowujemy szablony odpowiedzi — zarówno na pozytywne, jak i na negatywne opinie.',
-  },
+// ── Nasze usługi lokalnego SEO (FeaturesSection — primary + zdjęcie) ─────────
+const features = [
+  { icon: 'location_on', title: 'Optymalizacja Google Maps', description: 'Profesjonalna optymalizacja Google Business Profile pod lepsze pozycje lokalne.' },
+  { icon: 'engineering', title: 'Techniczne lokalne SEO', description: 'Dane strukturalne LocalBusiness, podstrony lokalne i optymalizacja techniczna.' },
+  { icon: 'star', title: 'Zarządzanie recenzjami', description: 'Strategie na lepsze opinie Google i większe zaufanie klientów.' },
+  { icon: 'analytics', title: 'Raportowanie lokalnego SEO', description: 'Monitoring pozycji lokalnych, widoczności i zapytań od klientów.' },
 ]
 
-const comparisonRows = [
-  { label: 'Zasięg docelowy',         local: 'Jedno miasto, region, województwo',       national: 'Cała Polska'                       },
-  { label: 'Czas do efektów',         local: '2–4 miesiące',                            national: '6–12 miesięcy'                     },
-  { label: 'Konkurencja fraz',        local: 'Niższa — frazy z geolokalizacją',          national: 'Wysoka — domeny ogólnopolskie'     },
-  { label: 'Kluczowe narzędzie',      local: 'Google Business Profile + Map Pack',       national: 'Profil linków zewnętrznych'        },
-  { label: 'Cena miesięczna',         local: 'Od 1 260 zł netto',                        national: 'Od 2 100 zł netto'                 },
-  { label: 'Kiedy wybrać',            local: 'Usługi lokalne, jeden lub kilka oddziałów', national: 'E-commerce, produkty ogólnopolskie' },
+// ── Lokalne SEO dla każdej branży (SEOSection — lista) ───────────────────────
+const industries = [
+  'Restauracje i kawiarnie',
+  'Lekarze i kliniki',
+  'Rzemieślnicy i firmy budowlane',
+  'Biura nieruchomości',
+  'Usługi lokalne',
+  'Siłownie i trenerzy',
+  'Kancelarie i doradcy',
+  'Sklepy stacjonarne',
 ]
+
 
 const pricingPlans = [
+  {
+    name: 'Wizytówka Google Business',
+    price: 'od 840 zł netto',
+    delivery: 'jednorazowo',
+    highlight: false,
+    features: [
+      'Optymalizacja Google Business Profile',
+      'Zdjęcia, opis i kategorie',
+      'Spójność danych NAP',
+      'Pierwsze pozycje lokalne',
+    ],
+    cta: 'Optymalizuj wizytówkę',
+    ctaLink: '/kontakt',
+  },
   {
     name: 'Local SEO',
     price: 'od 1 260 zł netto',
     delivery: 'miesięcznie',
     highlight: true,
-    badge: 'Dla firm lokalnych',
     features: [
-      'Optymalizacja Google Business Profile',
-      'NAP consistency — spójność danych we wszystkich katalogach',
+      'Wszystko z optymalizacji wizytówki',
       'Lokalne cytowania i katalogi branżowe',
       'Dane strukturalne LocalBusiness Schema.org',
-      'Optymalizacja on-page pod frazy lokalne',
-      'GEO optymalizacja — widoczność w ChatGPT, Gemini, Perplexity',
-      'Miesięczny raport z pozycjami i statystykami wizytówki',
+      'GEO — widoczność w ChatGPT, Gemini, Perplexity',
+      'Miesięczny raport z pozycjami',
     ],
-    cta: 'Rozpocznij pozycjonowanie lokalne',
+    cta: 'Wybieram Local SEO',
     ctaLink: '/kontakt',
-    note: 'Stała cena — wycena przed startem projektu',
   },
   {
-    name: 'SEO + Link Building',
+    name: 'Local SEO + Link Building',
     price: 'od 2 100 zł netto',
     delivery: 'miesięcznie',
     highlight: false,
     features: [
       'Wszystko z pakietu Local SEO',
       'Pozyskiwanie linków zewnętrznych z DR 30+',
-      'Digital PR i guest posting na niszowych serwisach',
-      'Raport linków: URL, DR, anchor text, data publikacji',
+      'Digital PR i guest posting',
+      'Raport linków: URL, DR, anchor text',
     ],
     cta: 'Sprawdź link building',
     ctaLink: '/link-building',
-    note: 'Stała cena — wycena przed startem projektu',
-  },
-]
-
-const checklistColumns = [
-  {
-    heading: 'Kiedy lokalne SEO przynosi efekty najszybciej',
-    items: [
-      'Firma świadczy usługi na miejscu — klient przyjeżdża do Ciebie',
-      'Obszar działania to jedno miasto lub kilka dzielnic',
-      'Branża lokalna: restauracja, klinika, salon, kancelaria, serwis',
-      'Google Business Profile jest niekompletna lub nieoptymalziowana',
-      'Konkurenci pojawiają się w Map Pack, Twoja firma — nie',
-      'Ponad 50% ruchu na stronie pochodzi z urządzeń mobilnych',
-    ],
-  },
-  {
-    heading: 'Kiedy lepiej wybrać ogólnopolskie SEO',
-    items: [
-      'Sprzedajesz produkty lub usługi na całą Polskę',
-      'Działasz w modelu e-commerce bez lokalnych punktów odbioru',
-      'Klientów pozyskujesz z całego kraju lub za granicą',
-      'Frazy docelowe nie zawierają nazwy miasta ani regionu',
-      'Planujesz ekspansję na nowe rynki geograficzne',
-      'Masz silną markę ogólnopolską wymagającą ochrony widoczności',
-    ],
   },
 ]
 
@@ -334,19 +255,22 @@ const relatedServices = [
     icon: 'trending_up',
     title: 'Pozycjonowanie SEO',
     description: 'Pełna obsługa SEO z audytem technicznym, optymalizacją on-page i link buildingiem — gdy Twoi klienci są w całej Polsce.',
-    link: '/seo',
+    price: 'od 1 260 zł netto',
+    href: '/seo',
   },
   {
     icon: 'search_check',
     title: 'Audyt SEO',
-    description: 'Sprawdź, dlaczego strona nie pojawia się w lokalnych wynikach. Jednorazowy raport PDF — 840 zł netto, bez abonamentu.',
-    link: '/audyt-seo',
+    description: 'Sprawdź, dlaczego strona nie pojawia się w lokalnych wynikach. Jednorazowy raport PDF, bez abonamentu.',
+    price: '840 zł netto',
+    href: '/audyt-seo',
   },
   {
     icon: 'tune',
     title: 'Optymalizacja SEO',
     description: 'Techniczne i on-page SEO — wdrożenie konkretnych poprawek bez stałej umowy miesięcznej.',
-    link: '/optymalizacja-seo',
+    price: 'od 1 260 zł netto',
+    href: '/optymalizacja-seo',
   },
 ]
 </script>
@@ -361,141 +285,82 @@ const relatedServices = [
       title="Lokalne SEO – bądź widoczny tam, gdzie szukają Twoi klienci"
       description="Widoczność w Google Maps, Map Pack i AI wyszukiwarkach dla firm działających lokalnie. Optymalizacja Google Business Profile, lokalne cytowania i Schema.org LocalBusiness — od 1 260 zł netto miesięcznie."
       primaryCTA="Rozpocznij pozycjonowanie lokalne"
-      secondaryCTA="Co obejmuje usługa"
+      secondaryCTA="Zobacz cennik"
+      primary-href="/kontakt"
+      secondary-href="#cennik"
       :stats="heroStats"
     />
 
     <main id="main-content">
 
-
       <article>
 
-        <!-- ── Section 1: Co to jest lokalne SEO ─────────────────────────── -->
-        <IntroSection
-          heading="Co to jest lokalne SEO i kiedy warto je stosować"
-          :paragraphs="introParagraphs"
-          image="/assets/local-seo.webp"
-          image-alt="Widok centrum polskiego miasta z lotu ptaka — lokalne firmy widoczne na mapie Google Maps"
-        />
-
-        <!-- ── Section 2: Co obejmuje usługa ─────────────────────────────── -->
-        <ServicesSection
-          title="Co obejmuje usługa pozycjonowania lokalnego"
-          variant="left"
-          :services="deliverables"
-          background="bg-surface-container-low"
-        />
-
-        <!-- ── Section 3: Dlaczego lokalne SEO ───────────────────────────── -->
-        <BenefitsSection
-          title="Dlaczego firmy lokalne tracą klientów bez lokalnego SEO — i jak to zmienić"
-          :benefits="whyLocalBenefits"
-        />
-
-        <!-- ── Section 4: Jak przebiega kampania ─────────────────────────── -->
-        <ProcessSection
-          title="Jak przebiega kampania lokalnego SEO — 4 etapy"
-          :steps="processSteps"
-        />
-
-        <!-- ── Section 5: Kiedy lokalne vs ogólnopolskie ──────────────────── -->
-        <ChecklistSection
-          bg="container-low"
-          :columns="checklistColumns"
-        />
-
-        <!-- ── Section 6: Specyficzne możliwości ─────────────────────────── -->
-        <FeaturesSection
-          title="Trzy obszary, w których lokalne SEO przewyższa ogólne pozycjonowanie"
-          :features="featuresItems"
-          image-url="/assets/mobile-app.webp"
-        />
-
-        <!-- ── Section 7: Lokalne vs ogólnopolskie — tabela ──────────────── -->
-        <section
-          aria-labelledby="section-compare"
-          class="py-section-padding bg-surface"
-        >
+        <!-- ── Dlaczego lokalne SEO jest ważne (sekcja kart statystyk — surface) -->
+        <section data-nav-icon="location_on" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-
             <div class="text-center max-w-2xl mx-auto mb-stack-lg">
-              <h2
-                id="section-compare"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
-              >
-                Lokalne SEO vs ogólnopolskie SEO — co wybrać dla swojej firmy
-              </h2>
-              <p class="text-on-surface-variant">
-                Wybór między lokalnym a ogólnopolskim SEO nie jest kwestią budżetu — jest kwestią zasięgu działalności. Firma obsługująca klientów wyłącznie z jednego województwa marnuje czas, walcząc o widoczność na frazach ogólnopolskich z domenami z wieloletnią historią.
-              </p>
+              <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-black leading-tight">Dlaczego lokalne SEO jest ważne</h2>
+              <p class="text-body-lg text-on-surface-variant mt-4">Klienci szukają lokalnie — bądź tym, kogo znajdą.</p>
             </div>
-
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8">
-              <table class="w-full text-sm">
-                <caption class="sr-only">Porównanie lokalnego SEO z ogólnopolskim pozycjonowaniem</caption>
-                <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
-                    <th class="text-left p-4 font-bold text-on-surface w-1/3" scope="col">Kryterium</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Lokalne SEO</th>
-                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Ogólnopolskie SEO</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="(row, i) in comparisonRows"
-                    :key="row.label"
-                    class="border-b border-outline-variant/20"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'"
-                  >
-                    <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.local }}</td>
-                    <td class="p-4 text-center text-on-surface-variant">{{ row.national }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="md:hidden space-y-3 mb-8">
+            <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-gutter">
               <div
-                v-for="row in comparisonRows"
-                :key="row.label"
-                class="bg-white rounded-xl border border-outline-variant/30 p-4"
+                v-for="card in localStatsCards"
+                :key="card.value"
+                class="glass-card border border-black/10 p-10 text-center rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 group"
               >
-                <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.label }}</p>
-                <div class="grid grid-cols-2 gap-2">
-                  <div class="bg-primary/5 rounded-lg p-3 text-center border border-primary/15">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1">Lokalne SEO</p>
-                    <p class="text-xs text-primary font-semibold leading-snug">{{ row.local }}</p>
-                  </div>
-                  <div class="bg-surface-container-low rounded-lg p-3 text-center">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1">Ogólnopolskie</p>
-                    <p class="text-xs text-on-surface-variant leading-snug">{{ row.national }}</p>
-                  </div>
-                </div>
+                <span class="material-symbols-outlined text-[3.5rem] mb-4 text-primary group-hover:scale-110 transition-transform duration-300">{{ card.icon }}</span>
+                <div class="font-display text-[2rem] font-black text-primary mb-3">{{ card.value }}</div>
+                <p class="font-body-md text-on-surface-variant">{{ card.text }}</p>
               </div>
             </div>
-
-            <p class="max-w-3xl mx-auto text-on-surface-variant">
-              Jeśli ponad 80% klientów pochodzi z jednego miasta lub regionu, lokalne SEO przyniesie mierzalne efekty szybciej i taniej niż kampania ogólnopolska. Przy skali działalności obejmującej kilka województw obie strategie można łączyć.
-            </p>
-
           </div>
         </section>
 
-        <!-- ── Section 8: Cennik ──────────────────────────────────────────── -->
+        <!-- ── Korzyści lokalnego SEO (BenefitsSection — white) ────────────── -->
+        <BenefitsSection
+          title="Korzyści lokalnego SEO dla Twojej firmy"
+          :benefits="benefits"
+        />
+
+        <!-- ── Jak działa nasze lokalne SEO (ProcessSection — container-low) ── -->
+        <ProcessSection
+          title="Jak działa nasze lokalne SEO"
+          :steps="processSteps"
+        />
+
+        <!-- ── Nasze usługi lokalnego SEO (FeaturesSection — primary) ──────── -->
+        <FeaturesSection
+          title="Nasze usługi lokalnego SEO"
+          :features="features"
+          image-url="/assets/local-seo.webp"
+          image-alt="Wizytówka Google Business Profile firmy lokalnej widoczna w Mapach Google i Map Pack"
+        />
+
+        <!-- ── Cennik (PricingSection — gradient) ─────────────────────────── -->
         <PricingSection
+          id="cennik"
           title="Ile kosztuje pozycjonowanie lokalne"
           subtitle="Stała cena miesięczna, ustalana przed startem. Bez ukrytych opłat za narzędzia, raportowanie ani konsultacje."
           :pricing-plans="pricingPlans"
         />
 
-        <!-- ── Section 9: FAQ ─────────────────────────────────────────────── -->
+        <!-- ── Lokalne SEO dla każdej branży (SEOSection — primary) ────────── -->
+        <SEOSection
+          title="Lokalne SEO dla każdej branży"
+          subtitle="Optymalizujemy widoczność lokalną niezależnie od branży — od gastronomii po usługi profesjonalne."
+          :features="industries"
+          cta-text="Dowiedz się więcej o lokalnym SEO"
+          image="/assets/city-map.webp"
+          image-alt="Mapa miasta z oznaczonymi lokalnymi firmami widocznymi w Mapach Google"
+        />
+
+        <!-- ── FAQ (container-low) ────────────────────────────────────────── -->
         <FAQSection
           title="Najczęściej zadawane pytania o lokalne SEO"
           :faqs="faqData"
         />
 
-        <!-- ── Related services ───────────────────────────────────────────── -->
+        <!-- ── Powiązane usługi (surface) ─────────────────────────────────── -->
         <RelatedServicesSection
           eyebrow="Powiązane usługi"
           title="Uzupełnij lokalne SEO o inne działania marketingowe"
@@ -512,6 +377,8 @@ const relatedServices = [
       description="Od 1 260 zł netto miesięcznie. Optymalizacja Google Business Profile, Map Pack i GEO widoczność w ChatGPT, Gemini i Perplexity — stała cena, bez niespodzianek."
       primary-cta="Rozpocznij pozycjonowanie lokalne"
       secondary-cta="Sprawdź pozycjonowanie ogólne"
+      primary-href="/kontakt"
+      secondary-href="/seo"
     />
 
   </div>

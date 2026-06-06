@@ -4,9 +4,9 @@
 
 useSeoMeta({
   title: 'Pozycjonowanie Stron Internetowych w Google | EvolaTec',
-  description: 'Pozycjonowanie stron w Google od 1 260 zł netto miesięcznie. Obejmuje audyt techniczny, on-page SEO, linkbuilding i miesięczny raport z pozycjami fraz. Stała cena, pierwsze efekty po 3–6 miesiącach.',
+  description: 'Pozycjonowanie stron w Google od 1 260 zł netto/mies. SEO Audit jednorazowo 840 zł. Obejmuje audyt techniczny, on-page SEO i linkbuilding.',
   ogTitle: 'Pozycjonowanie Stron Internetowych w Google | EvolaTec',
-  ogDescription: 'Pozycjonowanie stron w Google od 1 260 zł netto miesięcznie. Audyt techniczny, on-page SEO, linkbuilding i raportowanie. Stała cena, pierwsze efekty po 3–6 miesiącach.',
+  ogDescription: 'Pozycjonowanie stron w Google od 1 260 zł netto/mies. SEO Audit jednorazowo 840 zł. Obejmuje audyt techniczny, on-page SEO i linkbuilding.',
   ogType: 'website',
   ogUrl: 'https://evolatec.pl/seo',
   ogImage: 'https://evolatec.pl/og-image.webp',
@@ -75,7 +75,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/seo#webpage',
       url: 'https://evolatec.pl/seo',
       name: 'Pozycjonowanie Stron Internetowych w Google | EvolaTec',
-      description: 'Pozycjonowanie stron w Google od 1 260 zł netto miesięcznie. Obejmuje audyt techniczny, on-page SEO, linkbuilding i miesięczny raport z pozycjami fraz. Stała cena, pierwsze efekty po 3–6 miesiącach.',
+      description: 'Pozycjonowanie stron w Google od 1 260 zł netto/mies. SEO Audit jednorazowo 840 zł. Obejmuje audyt techniczny, on-page SEO i linkbuilding.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
@@ -218,47 +218,62 @@ const heroStats = [
   { value: 'GEO gratis',  label: 'ChatGPT, Gemini',    icon: 'smart_toy'     },
 ]
 
-const seoIncludes = [
-  { icon: 'rule',           label: 'Audyt techniczny co miesiąc'             },
-  { icon: 'code',           label: 'SEO wbudowane w kod — bez wtyczek'        },
-  { icon: 'schema',         label: 'Schema.org JSON-LD'                       },
-  { icon: 'analytics',      label: 'Google Search Console + GA4'              },
-  { icon: 'link',           label: 'Linkbuilding (pakiet SEO + Linkbuilding)'  },
-  { icon: 'summarize',      label: 'Raport miesięczny z rankingami fraz'       },
-]
-
-const comparisonRows = [
-  { label: 'Czas do pierwszych efektów', ads: '1–3 dni',                          seo: '3–6 miesięcy'                     },
-  { label: 'Koszt za kliknięcie',        ads: '2–50 zł (zależnie od branży)',      seo: '0 zł po opłacie miesięcznej'      },
-  { label: 'Co po zatrzymaniu budżetu',  ads: 'Ruch znika w 24 godziny',           seo: 'Pozycje pozostają'                },
-  { label: 'Efekty po 12 miesiącach',    ads: 'Proporcjonalne do budżetu',         seo: 'Rosnący ruch organiczny'          },
-  { label: 'Najlepiej dla',              ads: 'Kampanie czasowe, nowe produkty',   seo: 'Długoterminowa widoczność'        },
+// ── Pozycjonowanie vs Google Ads (ChecklistSection — dwie kolumny) ───────────
+const comparisonColumns = [
+  {
+    heading: 'Kiedy wybrać SEO',
+    paragraphs: ['Pozycjonowanie buduje trwałą widoczność organiczną — po zakończeniu współpracy pozycje nie znikają z dnia na dzień. Sprawdza się tam, gdzie celem jest długoterminowy wzrost ruchu.'],
+    items: ['Efekty po 3–6 miesiącach', 'Brak kosztu za kliknięcie', 'Pozycje zostają na stałe', 'Ruch rośnie w czasie', 'Długoterminowa widoczność'],
+    icon: 'check_circle',
+  },
+  {
+    heading: 'Kiedy wybrać Google Ads',
+    paragraphs: ['Google Ads daje ruch od pierwszego dnia, ale płacisz za każde kliknięcie, a ruch znika po zatrzymaniu budżetu. Sprawdza się w kampaniach czasowych i przy promocji nowych produktów.'],
+    items: ['Efekty w 1–3 dni', 'Koszt 2–50 zł / klik', 'Ruch znika bez budżetu', 'Wynik zależny od budżetu', 'Najlepsze do kampanii czasowych'],
+    icon: 'bolt',
+  },
 ]
 
 const pricingItems = [
   {
-    name: 'SEO Audit',
+    name: 'Audyt SEO',
     price: '840 zł netto',
     billing: 'jednorazowo',
-    description: 'Pełny raport techniczny: Core Web Vitals, błędy crawlowania, on-page, linkowanie wewnętrzne, dane strukturalne. Z priorytetyzowaną listą poprawek.',
+    description: 'Pełny raport techniczny z priorytetyzowaną listą poprawek — Core Web Vitals, błędy crawlowania, on-page i dane strukturalne.',
     href: '/audyt-seo',
     icon: 'search_check',
   },
   {
-    name: 'Local SEO',
+    name: 'Optymalizacja SEO',
     price: 'od 1 260 zł netto',
     billing: 'miesięcznie',
-    description: 'Optymalizacja Google Business Profile, lokalne frazy, budowanie autorytetu lokalnego. Dla firm działających w jednym mieście lub regionie.',
+    description: 'On-page i techniczne SEO wdrażane bezpośrednio w kodzie — bez wtyczek i bez stałej umowy na start.',
+    href: '/optymalizacja-seo',
+    icon: 'tune',
+  },
+  {
+    name: 'Lokalne SEO',
+    price: 'od 1 260 zł netto',
+    billing: 'miesięcznie',
+    description: 'Google Business Profile, lokalne frazy i autorytet lokalny — dla firm działających w jednym mieście lub regionie.',
     href: '/lokalne-seo',
     icon: 'location_on',
   },
   {
-    name: 'SEO + Linkbuilding',
+    name: 'Link Building',
     price: 'od 2 100 zł netto',
     billing: 'miesięcznie',
-    description: 'Pełna obsługa on-page, content SEO i regularne pozyskiwanie linków z tematycznych domen zewnętrznych.',
+    description: 'Pełna obsługa on-page i content SEO z regularnym pozyskiwaniem linków z tematycznych domen zewnętrznych.',
     href: '/link-building',
     icon: 'hub',
+  },
+  {
+    name: 'Optymalizacja AI (GEO)',
+    price: 'W cenie',
+    billing: 'każdego projektu',
+    description: 'GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity, dane strukturalne i treści cytowalne przez asystentów AI.',
+    href: '/optymalizacja-ai',
+    icon: 'smart_toy',
   },
 ]
 
@@ -303,6 +318,37 @@ const relatedServices = [
     href: '/strona-internetowa',
   },
 ]
+
+// ── Intro (component) ────────────────────────────────────────────────────────
+const introParagraphs = [
+  'Większość firm płaci agencji SEO od 3 do 12 miesięcy, zanim zorientuje się, że nie dostaje nic poza comiesięcznym raportem z wykresem. Praca, która faktycznie podnosi pozycję, to kilka konkretnych czynności — i warto wiedzieć, czego wymagać.',
+  'W każdym projekcie zaczynamy od audytu technicznego: Core Web Vitals, dane strukturalne Schema.org, canonicale i błędy crawlowania. <strong class="text-on-surface">SEO techniczne jest wbudowane w kod strony — nie zależy od wtyczek ani zewnętrznych narzędzi.</strong>',
+  'Linkbuilding — pozyskiwanie linków z zewnętrznych domen — jest dostępny w pakiecie SEO + Linkbuilding od <strong class="text-on-surface">2 100 zł netto miesięcznie</strong>. Każdy miesiąc kończy się raportem z rankingami konkretnych fraz i listą wykonanych działań.',
+]
+
+const introUsps = [
+  { title: 'SEO w kodzie', description: 'Techniczne SEO wbudowane w kod strony — bez wtyczek i ryzyka dezaktualizacji po aktualizacji CMS.', icon: 'code', iconBg: 'bg-blue-100', iconColor: 'text-blue-600', borderColor: 'border-blue-500' },
+  { title: 'Audyt techniczny', description: 'Core Web Vitals, dane strukturalne Schema.org, canonicale i błędy crawlowania w każdym projekcie.', icon: 'rule', iconBg: 'bg-emerald-100', iconColor: 'text-emerald-600', borderColor: 'border-emerald-500' },
+  { title: 'Raport z rankingami', description: 'Każdy miesiąc kończy się raportem z pozycjami konkretnych fraz i listą wykonanych działań.', icon: 'summarize', iconBg: 'bg-violet-100', iconColor: 'text-violet-600', borderColor: 'border-violet-500' },
+]
+
+// ── Pakiety SEO jako karty usług (ServicesSection) ───────────────────────────
+const seoServices = pricingItems.map((item) => ({
+  title: item.name,
+  description: `${item.price} ${item.billing} — ${item.description}`,
+  icon: item.icon,
+  iconBg: 'bg-primary/10',
+  iconColor: 'text-primary',
+  href: item.href,
+}))
+
+// ── Co daje dobre SEO (FeaturesSection — primary) ────────────────────────────
+const seoFeatures = [
+  { icon: 'visibility', title: 'Wysokie pozycje w Google', description: 'Strona pojawia się na pierwszej stronie wyników dla fraz istotnych w Twojej branży.' },
+  { icon: 'trending_up', title: 'Więcej ruchu organicznego', description: 'Rosnący ruch bez płacenia za każde kliknięcie — po opłacie miesięcznej ruch organiczny nie generuje kosztu za wejście.' },
+  { icon: 'code', title: 'SEO wbudowane w kod', description: 'Techniczne SEO działa bez wtyczek i nie dezaktualizuje się po kolejnej aktualizacji CMS.' },
+  { icon: 'smart_toy', title: 'Widoczność w AI (GEO)', description: 'Obecność w ChatGPT, Gemini i Perplexity jest w cenie każdego projektu — bez dopłat.' },
+]
 </script>
 
 <template>
@@ -322,216 +368,55 @@ const relatedServices = [
 
     <main id="main-content">
 
-
       <article>
 
-        <!-- ── Section 1: Co obejmuje — white ──────────────────────────── -->
-        <section aria-labelledby="section-scope" class="py-section-padding bg-surface">
-          <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
+        <!-- ── Intro (surface) ────────────────────────────────────────────── -->
+        <IntroSection
+          heading="Co obejmuje pozycjonowanie stron internetowych"
+          :paragraphs="introParagraphs"
+          image="/assets/link-building-bg.webp"
+          image-alt="Profesjonalista analizujący pozycje strony w Google Search Console i Google Analytics 4"
+          :usps="introUsps"
+        />
 
-              <div data-reveal="left">
-                <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
-                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">search_insights</span>
-                  Pozycjonowanie organiczne
-                </span>
-                <h2 id="section-scope" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
-                  Co obejmuje pozycjonowanie stron internetowych
-                </h2>
-                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-                  <p>
-                    Większość firm płaci agencji SEO od 3 do 12 miesięcy, zanim zorientuje się, że nie dostaje nic poza comiesięcznym raportem z wykresem. Praca, która faktycznie podnosi pozycję, to kilka konkretnych czynności — i warto wiedzieć, czego wymagać.
-                  </p>
-                  <p>
-                    W każdym projekcie zaczynamy od audytu technicznego: Core Web Vitals, dane strukturalne Schema.org, canonicale i błędy crawlowania. <strong class="text-on-surface">SEO techniczne jest wbudowane w kod strony — nie zależy od wtyczek ani zewnętrznych narzędzi</strong>, co oznacza brak ryzyka dezaktualizacji po kolejnej aktualizacji CMS.
-                  </p>
-                  <p>
-                    Linkbuilding — pozyskiwanie linków z zewnętrznych domen — jest dostępny w pakiecie SEO + Linkbuilding od <strong class="text-on-surface">2 100 zł netto miesięcznie</strong>. Każdy miesiąc kończy się raportem z rankingami konkretnych fraz, zmianami ruchu organicznego i listą wykonanych działań.
-                  </p>
-                </div>
-              </div>
+        <!-- ── Pozycjonowanie vs Google Ads (ChecklistSection — container-low) -->
+        <ChecklistSection
+          title="Pozycjonowanie organiczne vs Google Ads — kiedy które wybrać"
+          :columns="comparisonColumns"
+          bg="container-low"
+        />
 
-              <div class="flex flex-col gap-4" data-reveal="right">
-                <NuxtImg
-                  src="/assets/link-building-bg.webp"
-                  alt="Profesjonalista analizujący pozycje strony w Google Search Console i Google Analytics 4"
-                  width="640"
-                  height="340"
-                  class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover"
-                  loading="lazy"
-                />
-                <div class="grid grid-cols-2 gap-2.5">
-                  <div
-                    v-for="(item, i) in seoIncludes"
-                    :key="item.label"
-                    :data-reveal="'scale'"
-                    :data-delay="String(i + 1)"
-                    class="group flex items-center gap-3 bg-surface-container-lowest rounded-xl border border-outline-variant/30 px-4 py-3 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
-                  >
-                    <div class="w-8 h-8 rounded-lg bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center flex-shrink-0 transition-colors">
-                      <span class="material-symbols-outlined text-primary text-[16px]" aria-hidden="true">{{ item.icon }}</span>
-                    </div>
-                    <span class="text-xs font-semibold text-on-surface leading-snug">{{ item.label }}</span>
-                  </div>
-                </div>
-              </div>
+        <!-- ── Pakiety i ceny SEO (surface) ───────────────────────────────── -->
+        <ServicesSection
+          id="cennik"
+          title="Pakiety i ceny SEO"
+          subtitle="Stałe stawki ustalane przed startem — bez „wyceny indywidualnej”. Minimalny okres współpracy to 3 miesiące, bo Google potrzebuje czasu na ponowne zaindeksowanie zmian."
+          variant="centered"
+          :services="seoServices"
+          learn-more-label="Dowiedz się więcej"
+          background="bg-surface"
+        />
 
-            </div>
-          </div>
-        </section>
+        <!-- ── Co daje dobre SEO (primary) ────────────────────────────────── -->
+        <FeaturesSection
+          title="Co daje dobre SEO Twojej firmie"
+          :features="seoFeatures"
+          image-url="/assets/seo-optimization.webp"
+          image-alt="Specjalista SEO analizujący wzrost ruchu organicznego i pozycji fraz w Google"
+        />
 
-        <!-- ── Section 2: SEO vs Google Ads ─────────────────────────────── -->
-        <section
-          aria-labelledby="section-comparison"
-          class="py-section-padding bg-surface-container-low"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
-
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg" data-reveal>
-              <h2
-                id="section-comparison"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
-              >
-                Pozycjonowanie organiczne vs Google Ads — kiedy które wybrać
-              </h2>
-              <p class="text-on-surface-variant">
-                Firmy prowadzące kampanie Google Ads zadają to pytanie regularnie: czy SEO w ogóle ma sens, skoro reklama działa od razu? Odpowiedź zależy głównie od jednej zmiennej: co dzieje się z ruchem, gdy przestajesz płacić.
-              </p>
-            </div>
-
-            <!-- Desktop table -->
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8">
-              <table class="w-full text-sm">
-                <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
-                    <th class="text-left p-4 font-bold text-on-surface w-1/3" scope="col">Kryterium</th>
-                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Google Ads</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">SEO organiczne</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="(row, i) in comparisonRows"
-                    :key="row.label"
-                    class="border-b border-outline-variant/20"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'"
-                  >
-                    <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
-                    <td class="p-4 text-center text-on-surface-variant">{{ row.ads }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.seo }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Mobile cards -->
-            <div class="md:hidden space-y-3 mb-8">
-              <div
-                v-for="row in comparisonRows"
-                :key="row.label"
-                class="bg-white rounded-xl border border-outline-variant/30 p-4"
-              >
-                <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.label }}</p>
-                <div class="grid grid-cols-2 gap-2">
-                  <div class="bg-surface-container-low rounded-lg p-3 text-center">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1">Google Ads</p>
-                    <p class="text-xs text-on-surface-variant leading-snug">{{ row.ads }}</p>
-                  </div>
-                  <div class="bg-primary/5 rounded-lg p-3 text-center border border-primary/15">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1">SEO</p>
-                    <p class="text-xs text-primary font-semibold leading-snug">{{ row.seo }}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="max-w-3xl mx-auto space-y-4 text-on-surface-variant">
-              <p>
-                <strong class="text-on-surface">Pozycjonowanie SEO kosztuje od 1 260 zł netto miesięcznie</strong> i daje trwałe efekty — po zakończeniu współpracy pozycje nie znikają z dnia na dzień. Google Ads jest uzasadniony, gdy potrzebujesz ruchu natychmiast lub promujesz ofertę ograniczoną czasowo.
-              </p>
-              <p>
-                Dla większości firm usługowych w Polsce sensowna jest kombinacja: Ads generuje leady od pierwszego dnia, SEO buduje pozycję organiczną przez najbliższe 12–18 miesięcy. Dla firm z ograniczonym miesięcznym budżetem — SEO zwraca się lepiej po upływie 6 miesięcy.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- ── Section 3: Ceny i pakiety — primary (purple) ────────────── -->
-        <section id="cennik" aria-labelledby="section-pricing" class="relative overflow-hidden py-section-padding bg-primary">
-          <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-            <div class="animate-float          absolute -top-32 -right-32 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
-            <div class="animate-float-reverse  absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-white/5 blur-3xl"></div>
-          </div>
-          <div class="relative max-w-container-max mx-auto px-gutter">
-
-            <div class="text-center max-w-2xl mx-auto mb-14" data-reveal>
-              <span class="inline-block text-xs font-bold uppercase tracking-[0.3em] text-on-primary/60 mb-3">Cennik</span>
-              <h2 id="section-pricing" class="font-display text-3xl sm:text-4xl font-black text-on-primary leading-tight mb-4">
-                Pozycjonowanie stron — ceny i pakiety
-              </h2>
-              <p class="text-on-primary/75 leading-relaxed">
-                Agencje SEO ukrywają ceny, bo chcą "wycenić indywidualnie" — co w praktyce często oznacza dopasowanie kwoty do budżetu klienta. Poniżej są nasze stałe stawki.
-              </p>
-            </div>
-
-            <ul class="grid md:grid-cols-3 gap-5 mb-14" role="list">
-              <li
-                v-for="(item, i) in pricingItems"
-                :key="item.name"
-                :data-reveal="'scale'"
-                :data-delay="String(i + 1)"
-                class="group bg-white rounded-2xl p-7 flex flex-col shadow-xl hover:-translate-y-1 transition-all duration-300"
-              >
-                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 flex-shrink-0">
-                  <span class="material-symbols-outlined text-primary text-[22px]" aria-hidden="true">{{ item.icon }}</span>
-                </div>
-                <h3 class="font-bold text-on-surface text-lg mb-1 leading-snug">{{ item.name }}</h3>
-                <div class="flex items-baseline gap-2 mb-4">
-                  <span class="font-black text-primary text-xl">{{ item.price }}</span>
-                  <span class="text-xs text-on-surface-variant">{{ item.billing }}</span>
-                </div>
-                <p class="text-sm text-on-surface-variant leading-relaxed flex-1 mb-6">{{ item.description }}</p>
-                <NuxtLink :to="item.href" class="inline-flex items-center gap-1.5 text-sm font-semibold text-primary group-hover:gap-2.5 transition-all duration-200 mt-auto">
-                  Dowiedz się więcej
-                  <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
-                </NuxtLink>
-              </li>
-            </ul>
-
-            <div class="max-w-2xl mx-auto text-center" data-reveal>
-              <p class="text-on-primary/75 mb-8">
-                Każda wycena jest stała i ustalana przed startem. Minimalny okres współpracy wynosi 3 miesiące — Google potrzebuje czasu na ponowne zaindeksowanie zmian. <strong class="text-on-primary">Agencja, która obiecuje widoczne efekty w ciągu 30 dni, myli optymalizację z reklamą.</strong>
-              </p>
-              <NuxtLink to="/kontakt">
-                <BaseButton variant="outline" size="lg">Uzyskaj bezpłatną wycenę SEO</BaseButton>
-              </NuxtLink>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- ── Section 4: Etapy (ProcessSection) ─────────────────────────── -->
+        <!-- ── Etapy (ProcessSection — container-low) ─────────────────────── -->
         <ProcessSection
           eyebrow="Jak pracujemy"
           title="Jak przebiega pozycjonowanie strony w Google — etapy"
           :steps="processSteps"
-          background="bg-surface"
         />
-
-        <!-- Process closing note — rendered after the component -->
-        <div class="bg-surface-container-low border-t border-outline-variant/20 py-8">
-          <div class="max-w-container-max mx-auto px-gutter">
-            <p class="text-sm text-on-surface-variant text-center max-w-2xl mx-auto">
-              Pierwsze zmiany pozycji pojawiają się zazwyczaj po <strong class="text-on-surface">6–12 tygodniach</strong> od wdrożenia poprawek technicznych. Pełne efekty — widoczny wzrost ruchu organicznego — po 3–6 miesiącach. Każdy raport zawiera listę wykonanych działań i zmianę pozycji na konkretnych frazach.
-            </p>
-          </div>
-        </div>
 
         <!-- ── Section 5: FAQ ─────────────────────────────────────────────── -->
         <FAQSection
           title="Najczęściej zadawane pytania o pozycjonowanie stron"
           :faqs="faqData"
+          background="bg-surface"
         />
 
         <!-- ── Related services (internal links) ─────────────────────────── -->
@@ -540,7 +425,7 @@ const relatedServices = [
           title="Może Cię zainteresować"
           cta="Dowiedz się więcej"
           :services="relatedServices"
-          background="bg-surface"
+          background="bg-surface-container-low"
         />
 
       </article>

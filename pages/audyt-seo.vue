@@ -4,9 +4,9 @@
 
 useSeoMeta({
   title: 'Audyt SEO Strony Internetowej — 840 zł | EvolaTec',
-  description: 'Profesjonalny audyt SEO: Core Web Vitals, błędy crawlowania, on-page SEO, Schema.org, profil linków. Raport PDF z priorytetami — 840 zł netto, jednorazowo, bez abonamentu.',
+  description: 'Audyt SEO: Core Web Vitals, błędy crawlowania, on-page SEO i Schema.org. Raport PDF z priorytetami — 840 zł netto, jednorazowo, bez abonamentu.',
   ogTitle: 'Audyt SEO Strony Internetowej — 840 zł | EvolaTec',
-  ogDescription: 'Profesjonalny audyt SEO: Core Web Vitals, błędy crawlowania, on-page SEO, Schema.org, profil linków. Raport PDF z priorytetami — 840 zł netto, jednorazowo, bez abonamentu.',
+  ogDescription: 'Audyt SEO: Core Web Vitals, błędy crawlowania, on-page SEO i Schema.org. Raport PDF z priorytetami — 840 zł netto, jednorazowo, bez abonamentu.',
   ogType: 'website',
   ogUrl: 'https://evolatec.pl/audyt-seo',
   ogImage: 'https://evolatec.pl/og-image.webp',
@@ -68,7 +68,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/audyt-seo#webpage',
       url: 'https://evolatec.pl/audyt-seo',
       name: 'Audyt SEO Strony Internetowej — 840 zł | EvolaTec',
-      description: 'Profesjonalny audyt SEO: Core Web Vitals, błędy crawlowania, on-page SEO, Schema.org, profil linków. Raport PDF z priorytetami — 840 zł netto, jednorazowo, bez abonamentu.',
+      description: 'Audyt SEO: Core Web Vitals, błędy crawlowania, on-page SEO i Schema.org. Raport PDF z priorytetami — 840 zł netto, jednorazowo, bez abonamentu.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
@@ -142,74 +142,59 @@ const heroStats = [
   { value: 'Bez umowy', label: 'Brak abonamentu',        icon: 'verified'    },
 ]
 
-const auditBenefits = [
+// ── Dlaczego audyt SEO (BenefitsSection — karty ze zdjęciem) ─────────────────
+const benefits = [
   {
-    icon: 'speed',
-    title: 'Core Web Vitals — LCP, CLS, INP',
-    description: 'Każda wartość spoza zakresu „Bardzo dobre" jest opisana z przyczyną i konkretną poprawką mierzalną w Google PageSpeed Insights.',
+    icon: 'engineering',
+    title: 'Pełny audyt techniczny',
+    description: 'Czas ładowania, Core Web Vitals, indeksacja, crawling i błędy techniczne — analizowane systematycznie.',
+    bg: 'bg-gradient-to-br from-blue-600 to-blue-800',
+    image: '/assets/seo-analytics.webp',
   },
   {
-    icon: 'bug_report',
-    title: 'Błędy crawlowania i indeksowania',
-    description: 'Pełne crawlowanie domeny z analizą kodów HTTP, przekierowań, stron wyłączonych z indeksu i błędów 404 raportowanych przez Search Console.',
+    icon: 'edit_document',
+    title: 'Analiza on-page i treści',
+    description: 'Nagłówki, meta tagi, frazy, linkowanie wewnętrzne i struktura treści — sprawdzone i ocenione.',
+    bg: 'bg-gradient-to-br from-emerald-600 to-teal-800',
+    image: '/assets/seo-optimization.webp',
   },
   {
-    icon: 'tag',
-    title: 'Meta tagi i struktura nagłówków H1–H4',
-    description: 'Unikalność, długość, nasycenie frazami kluczowymi i hierarchia nagłówków na każdej podstronie — wykryte duplikaty i braki.',
-  },
-  {
-    icon: 'schema',
-    title: 'Dane strukturalne Schema.org JSON-LD',
-    description: 'Sprawdzenie obecności, poprawności i kompletności JSON-LD dla FAQ, Service, LocalBusiness, BreadcrumbList i HowTo.',
-  },
-  {
-    icon: 'link_off',
-    title: 'Profil linków zewnętrznych',
-    description: 'Analiza domen odsyłających: liczba, tematyczność, proporcja dofollow/nofollow i ewentualne toksyczne źródła przez Ahrefs i GSC.',
-  },
-  {
-    icon: 'phone_iphone',
-    title: 'Mobile-friendliness i UX mobilny',
-    description: 'Test responsywności, rozmiary tapowania, czcionki i wyświetlanie na urządzeniach mobilnych zgodnie z wytycznymi Google.',
+    icon: 'insights',
+    title: 'Analiza konkurencji w cenie',
+    description: 'Porównujemy Twoją stronę z konkurencją i wskazujemy konkretny potencjał wzrostu.',
+    bg: 'bg-gradient-to-br from-purple-600 to-indigo-800',
+    image: '/assets/web-analytics.webp',
   },
 ]
 
-const comparisonRows = [
-  { label: 'Koszt',              auto: '0–300 zł/mies. (abonament narzędzia)',   manual: '840 zł netto, jednorazowo'              },
-  { label: 'Priorytetyzacja',    auto: 'Brak — lista błędów bez oceny wpływu',   manual: 'Każdy problem oceniany wg wpływu i trudności' },
-  { label: 'Interpretacja',      auto: 'Algorytmiczna, bez kontekstu biznesowego', manual: 'Ręczna, z uwzględnieniem typu strony i branży' },
-  { label: 'Analiza GSC',        auto: 'Podstawowa lub niedostępna',             manual: 'Pełna — błędy, ostrzeżenia, wyłączenia' },
-  { label: 'Zalecenia',          auto: 'Generyczne',                             manual: 'Konkretne poprawki z opisem technicznym' },
-  { label: 'Czas dostarczenia',  auto: 'Natychmiast, automatycznie',             manual: 'PDF w 5–7 dni roboczych'                },
+// ── Co zawiera audyt SEO (FeaturesSection — primary + zdjęcie) ───────────────
+const features = [
+  { icon: 'speed', title: 'Szybkość i wydajność', description: 'Analiza wszystkich czynników wydajności, które Google bierze pod uwagę w rankingu.' },
+  { icon: 'smartphone', title: 'Mobile SEO', description: 'Weryfikacja optymalizacji mobilnej i wygody użytkowania na wszystkich urządzeniach.' },
+  { icon: 'description', title: 'Treść i frazy kluczowe', description: 'Identyfikacja potencjału fraz i luk treściowych względem konkurencji.' },
+  { icon: 'link', title: 'Profil linków', description: 'Analiza profilu linków zewnętrznych i identyfikacja toksycznych backlinków.' },
 ]
+
+// ── Częste problemy SEO, które wykrywamy (sekcja grid — jak w wersji DE) ──────
+const commonProblems = [
+  'Wolne ładowanie strony',
+  'Brakujące meta tagi',
+  'Słaba optymalizacja mobilna',
+  'Duplicate content',
+  'Zła struktura nagłówków',
+  'Brak linkowania wewnętrznego',
+  'Problemy z indeksacją',
+  'Słaba struktura fraz kluczowych',
+]
+
+const problemColors = ['text-red-500', 'text-orange-500', 'text-amber-500', 'text-rose-500']
 
 const processSteps = [
-  {
-    icon: 'login',
-    title: 'Dostęp do Google Search Console i GA4',
-    description: 'Potrzebujemy dostępu na poziomie widoku tylko do odczytu. Bez danych z Search Console audyt byłby niekompletny — narzędzia zewnętrzne nie mają dostępu do błędów crawlowania ani rzeczywistej widoczności fraz.',
-  },
-  {
-    icon: 'manage_search',
-    title: 'Analiza techniczna i on-page',
-    description: 'Pełne crawlowanie domeny, analiza Core Web Vitals, przegląd meta tagów i nagłówków, weryfikacja Schema.org oraz ręczna analiza raportów GSC. Profil linków sprawdzamy przez Ahrefs — nie wyłącznie przez automatyczne flagi.',
-  },
-  {
-    icon: 'description',
-    title: 'Raport PDF z listą priorytetów',
-    description: 'Raport z podziałem na trzy grupy: krytyczne, ważne i opcjonalne. Każda pozycja zawiera opis problemu, wpływ na widoczność i rekomendację techniczną. Raport kończy bezpłatne omówienie wyników.',
-  },
-]
-
-const priceIncludes = [
-  'Core Web Vitals i szybkość ładowania',
-  'Błędy crawlowania i indeksowania',
-  'Audyt meta tagów i nagłówków',
-  'Dane strukturalne Schema.org',
-  'Profil linków zewnętrznych',
-  'Priorytetyzowany raport PDF',
-  'Omówienie wyników bez dopłat',
+  { icon: 'travel_explore', title: 'Crawl strony', description: 'Pełne crawlowanie witryny w poszukiwaniu błędów technicznych i problemów ze strukturą.' },
+  { icon: 'engineering', title: 'Analiza techniczna', description: 'Sprawdzamy czas ładowania, Core Web Vitals, indeksację i bezpieczeństwo.' },
+  { icon: 'edit_document', title: 'Check on-page', description: 'Analiza fraz, nagłówków, meta tagów i treści na podstronach.' },
+  { icon: 'insights', title: 'Analiza konkurencji', description: 'Porównanie z najważniejszymi konkurentami w Twojej branży.' },
+  { icon: 'description', title: 'Raport SEO', description: 'Czytelny raport PDF z priorytetyzowaną listą konkretnych rekomendacji.' },
 ]
 
 const relatedServices = [
@@ -235,6 +220,52 @@ const relatedServices = [
     href: '/seo',
   },
 ]
+
+// ── Cennik audytu (PricingSection — 3 pakiety, środkowy wyróżniony) ──────────
+const pricingPlans = [
+  {
+    name: 'Podstawowy audyt SEO',
+    price: 'od 840 zł netto',
+    delivery: 'jednorazowo',
+    highlight: false,
+    features: [
+      'Analiza techniczna',
+      'Check on-page',
+      'Optymalizacja mobilna',
+      'Szczegółowy raport PDF',
+    ],
+    cta: 'Zamów audyt',
+    ctaLink: '/kontakt',
+  },
+  {
+    name: 'Techniczny audyt SEO',
+    price: 'od 1 260 zł netto',
+    delivery: 'jednorazowo',
+    highlight: true,
+    features: [
+      'Wszystko z audytu podstawowego',
+      'Pełny audyt techniczny',
+      'Core Web Vitals',
+      'Plan wdrożenia poprawek',
+    ],
+    cta: 'Zamów audyt techniczny',
+    ctaLink: '/kontakt',
+  },
+  {
+    name: 'Kompleksowy audyt SEO',
+    price: 'od 1 680 zł netto',
+    delivery: 'jednorazowo',
+    highlight: false,
+    features: [
+      'Wszystko z audytu technicznego',
+      'Analiza konkurencji',
+      'Strategia fraz kluczowych',
+      'Potencjał treści i luki contentowe',
+    ],
+    cta: 'Zamów pełny audyt',
+    ctaLink: '/kontakt',
+  },
+]
 </script>
 
 <template>
@@ -246,213 +277,77 @@ const relatedServices = [
       title="Profesjonalny audyt SEO – sprawdź, dlaczego Twoja strona nie jest widoczna w Google"
       description="Kompletny raport techniczny: Core Web Vitals, błędy crawlowania, on-page SEO, dane strukturalne Schema.org i priorytetyzowana lista poprawek. Gotowy w 5–7 dni roboczych — 840 zł netto, bez abonamentu."
       primaryCTA="Zamów audyt SEO"
-      secondaryCTA="Co zawiera audyt"
+      secondaryCTA="Zobacz cennik"
+      primary-href="/kontakt"
+      secondary-href="#cennik"
       :stats="heroStats"
     />
 
     <main id="main-content">
 
-
       <article>
 
-        <!-- ══ 1. Co zawiera — white ═════════════════════════════════════════ -->
-        <section id="zakres" aria-labelledby="section-scope" class="py-section-padding bg-surface">
-          <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
-
-              <div data-reveal="left">
-                <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
-                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">search_check</span>
-                  Jednorazowy raport techniczny
-                </span>
-                <h2 id="section-scope" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
-                  Co zawiera audyt SEO strony internetowej
-                </h2>
-                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-                  <p>
-                    Większość stron, które nie pojawiają się w Google, nie ma problemu z brakiem treści ani budżetem linków — mają problem z błędami technicznymi, których właściciel po prostu nie widzi. Core Web Vitals poniżej normy, zablokowane zasoby, brakujące canonical tagi, zduplikowane meta opisy — to rzeczy, które Google ocenia zanim w ogóle przeczyta treść strony.
-                  </p>
-                  <p>
-                    Audyt SEO w EvolaTec obejmuje osiem obszarów analizowanych łącznie. <strong class="text-on-surface">Każdy problem jest oceniany pod kątem trudności wdrożenia i realnego wpływu na pozycje</strong> — nie dostajesz listy błędów do samodzielnego przebrnięcia, tylko priorytetyzowany plan naprawy.
-                  </p>
-                  <p>
-                    Raport dostarczany jako PDF gotowy do przekazania agencji, freelancerowi lub własnemu developerowi. Audyt kosztuje <strong class="text-on-surface">840 zł netto</strong> i jest gotowy w 5–7 dni roboczych.
-                  </p>
-                </div>
-              </div>
-
-              <div data-reveal="right" class="flex flex-col gap-5">
-                <NuxtImg
-                  src="/assets/seo-analytics.webp"
-                  alt="Panel Google Search Console z analizą błędów crawlowania i widoczności strony w wynikach Google"
-                  width="640"
-                  height="340"
-                  class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover"
-                  loading="lazy"
-                />
-                <div class="grid grid-cols-2 gap-2.5">
-                  <div
-                    v-for="(item, i) in auditBenefits.slice(0, 4)"
-                    :key="item.title"
-                    :data-reveal="'scale'"
-                    :data-delay="String(i + 1)"
-                    class="group flex items-center gap-3 bg-surface-container-lowest rounded-xl border border-outline-variant/30 px-4 py-3 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
-                  >
-                    <div class="w-8 h-8 rounded-lg bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center flex-shrink-0 transition-colors">
-                      <span class="material-symbols-outlined text-primary text-[16px]" aria-hidden="true">{{ item.icon }}</span>
-                    </div>
-                    <span class="text-xs font-semibold text-on-surface leading-snug">{{ (item.title.split('—')[0] ?? item.title).trim() }}</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        <!-- ══ 2. Co obejmuje BenefitsSection — gray ═════════════════════════ -->
+        <!-- ══ Dlaczego audyt SEO (BenefitsSection — white) ══════════════════ -->
         <BenefitsSection
-          title="Osiem obszarów analizowanych w każdym audycie"
-          :benefits="auditBenefits"
+          title="Dlaczego profesjonalny audyt SEO jest ważny"
+          :benefits="benefits"
         />
 
-        <!-- ══ 3. Cena — primary (purple) ════════════════════════════════════ -->
-        <section aria-labelledby="section-price" class="relative overflow-hidden py-section-padding bg-primary">
-          <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-            <div class="animate-float         absolute -top-32 -right-32 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
-            <div class="animate-float-reverse absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-white/5 blur-3xl"></div>
-          </div>
-          <div class="relative max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
-
-              <!-- Copy -->
-              <div data-reveal="left">
-                <span class="text-xs font-bold uppercase tracking-[0.25em] text-on-primary/60 mb-3 block">Cena</span>
-                <h2 id="section-price" class="font-display text-3xl sm:text-4xl font-black text-on-primary leading-tight mb-6">
-                  Audyt SEO — 840 zł netto, jednorazowo, bez abonamentu
-                </h2>
-                <div class="space-y-4 text-on-primary/80 leading-relaxed">
-                  <p>Audyt SEO kosztuje 840 zł netto — jednorazowa, stała cena, bez abonamentu i bez zobowiązania do kontynuacji współpracy. Brak ukrytych pozycji za dostęp do narzędzi ani opłat za konsultacje.</p>
-                  <p>Audyt jest gotowy w 5–7 dni roboczych od dostarczenia dostępu do Google Search Console i GA4 (wystarczy rola „Widok" — tylko do odczytu).</p>
-                  <p>Audyt można zamówić bez podpisywania umowy na pozycjonowanie. Jeśli po raporcie zdecydujesz się na miesięczną obsługę SEO, koszt audytu jest zaliczany na poczet pierwszego miesiąca.</p>
-                </div>
-              </div>
-
-              <!-- Price card -->
-              <div data-reveal="right">
-                <div class="bg-white rounded-2xl p-8 shadow-xl">
-                  <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
-                    <span class="material-symbols-outlined text-primary text-[26px]" aria-hidden="true">search_check</span>
-                  </div>
-                  <h3 class="font-bold text-on-surface text-xl mb-1">SEO Audit</h3>
-                  <div class="flex items-baseline gap-2 mb-1">
-                    <span class="font-black text-primary text-3xl">840 zł netto</span>
-                  </div>
-                  <p class="text-sm text-on-surface-variant mb-6">jednorazowo — bez abonamentu</p>
-                  <ul class="space-y-2 mb-8" role="list">
-                    <li v-for="item in priceIncludes" :key="item" class="flex items-center gap-2 text-sm text-on-surface-variant">
-                      <span class="material-symbols-outlined text-primary text-base flex-shrink-0" aria-hidden="true">check_circle</span>
-                      {{ item }}
-                    </li>
-                  </ul>
-                  <NuxtLink to="/kontakt">
-                    <BaseButton variant="primary" size="lg" class="w-full">Zamów audyt SEO</BaseButton>
-                  </NuxtLink>
-                  <p class="text-xs text-on-surface-variant text-center mt-4">Stała cena — wycena przed startem projektu</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        <!-- ══ 4. Porównanie — white ══════════════════════════════════════════ -->
-        <section aria-labelledby="section-compare" class="py-section-padding bg-surface">
-          <div class="max-w-container-max mx-auto px-gutter">
-
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg" data-reveal>
-              <h2 id="section-compare" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4">
-                Profesjonalny audyt SEO vs automatyczne narzędzia online
-              </h2>
-              <p class="text-on-surface-variant">
-                Narzędzia takie jak Semrush czy Ahrefs generują listy błędów — często kilkuset pozycji w jednym raporcie. Problem: te listy nie są priorytetyzowane pod kątem konkretnej domeny i branży.
-              </p>
-            </div>
-
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8 shadow-sm" data-reveal>
-              <table class="w-full text-sm">
-                <caption class="sr-only">Porównanie profesjonalnego audytu SEO z automatycznymi narzędziami online</caption>
-                <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
-                    <th class="text-left p-4 font-bold text-on-surface w-1/3" scope="col">Kryterium</th>
-                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Automatyczny audyt online</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Profesjonalny audyt SEO</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="(row, i) in comparisonRows" :key="row.label" class="border-b border-outline-variant/20" :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'">
-                    <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
-                    <td class="p-4 text-center text-on-surface-variant text-xs">{{ row.auto }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5 text-xs">{{ row.manual }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="md:hidden space-y-3 mb-8">
-              <div v-for="row in comparisonRows" :key="row.label" class="bg-white rounded-xl border border-outline-variant/30 p-4">
-                <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.label }}</p>
-                <div class="grid grid-cols-2 gap-2">
-                  <div class="bg-surface-container-low rounded-lg p-3 text-center">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1">Narzędzie online</p>
-                    <p class="text-xs text-on-surface-variant leading-snug">{{ row.auto }}</p>
-                  </div>
-                  <div class="bg-primary/5 rounded-lg p-3 text-center border border-primary/15">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1">Audyt ekspercki</p>
-                    <p class="text-xs text-primary font-semibold leading-snug">{{ row.manual }}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-center mt-stack-lg">
-              <p class="text-on-surface-variant" data-reveal="left">
-                Automatyczne narzędzia są użyteczne jako monitoring — sprawdzasz je regularnie, żeby wychwycić regresje. Audyt ekspercki odpowiada na pytanie, które błędy faktycznie blokują widoczność Twojej strony — i w jakiej kolejności je naprawić.
-              </p>
-              <NuxtImg
-                src="/assets/web-analytics.webp"
-                alt="Laptop z raportem SEO pokazującym błędy techniczne strony i priorytety do naprawy"
-                width="560"
-                height="280"
-                class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover"
-                data-reveal="right"
-                loading="lazy"
-              />
-            </div>
-
-          </div>
-        </section>
-
-        <!-- ══ 5. Jak przebiega — gray (ProcessSection) ══════════════════════ -->
+        <!-- ══ Jak działa nasza analiza SEO (ProcessSection — container-low) ══ -->
         <ProcessSection
-          eyebrow="Jak przebiega"
-          title="Jak przebiega audyt SEO — 3 kroki"
+          title="Jak działa nasza analiza SEO"
           :steps="processSteps"
         />
 
-        <!-- ══ 6. FAQ — white ════════════════════════════════════════════════ -->
+        <!-- ══ Co zawiera nasz audyt SEO (FeaturesSection — primary) ═════════ -->
+        <FeaturesSection
+          title="Co zawiera nasz audyt SEO"
+          :features="features"
+          image-url="/assets/seo-analytics.webp"
+          image-alt="Panel Google Search Console z analizą błędów crawlowania i widoczności strony w wynikach Google"
+        />
+
+        <!-- ══ Częste problemy SEO, które wykrywamy (grid — container-low) ════ -->
+        <section data-nav-icon="bug_report" class="py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+              <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-black leading-tight">Częste problemy SEO, które wykrywamy</h2>
+            </div>
+            <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-4">
+              <div
+                v-for="(problem, index) in commonProblems"
+                :key="problem"
+                class="flex gap-4 items-center glass-card p-4 rounded-xl border border-black/10"
+              >
+                <span class="material-symbols-outlined text-xl flex-shrink-0" :class="problemColors[index % 4]">error</span>
+                <p class="font-body-md text-on-surface">{{ problem }}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══ Cennik (PricingSection — gradient) ════════════════════════════ -->
+        <PricingSection
+          id="cennik"
+          eyebrow="Cennik"
+          title="Cennik audytu SEO"
+          subtitle="Przejrzyste ceny za profesjonalną analizę SEO. Jeśli po audycie zdecydujesz się na miesięczną obsługę SEO, jego koszt zaliczamy na poczet pierwszego miesiąca."
+          :pricing-plans="pricingPlans"
+        />
+
+        <!-- ══ FAQ (container-low) ═══════════════════════════════════════════ -->
         <FAQSection
           title="Najczęściej zadawane pytania o audyt SEO"
           :faqs="faqData"
-          background="bg-surface"
         />
 
-        <!-- ══ Related ════════════════════════════════════════════════════════ -->
+        <!-- ══ Powiązane usługi (surface) ════════════════════════════════════ -->
         <RelatedServicesSection
           eyebrow="Kolejny krok"
           title="Po audycie — co dalej"
           cta="Dowiedz się więcej"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>
@@ -464,6 +359,8 @@ const relatedServices = [
       description="840 zł netto, jednorazowo. Raport PDF w 5–7 dni roboczych z priorytetyzowaną listą poprawek technicznych i on-page."
       primary-cta="Zamów audyt SEO"
       secondary-cta="Sprawdź pozycjonowanie"
+      primary-href="/kontakt"
+      secondary-href="/seo"
     />
 
   </div>

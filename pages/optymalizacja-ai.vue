@@ -3,10 +3,10 @@
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
 useSeoMeta({
-  title: 'AI SEO – Optymalizacja Strony pod Sztuczną Inteligencję | EvolaTec',
-  description: 'AI SEO i GEO optymalizacja: pojawiaj się w odpowiedziach ChatGPT, Gemini i Perplexity. Schema.org, JSON-LD i strukturowane dane czytelne dla LLM — w cenie każdego projektu.',
-  ogTitle: 'AI SEO – Optymalizacja Strony pod Sztuczną Inteligencję | EvolaTec',
-  ogDescription: 'AI SEO i GEO optymalizacja: pojawiaj się w odpowiedziach ChatGPT, Gemini i Perplexity. Schema.org, JSON-LD i strukturowane dane czytelne dla LLM — w cenie każdego projektu.',
+  title: 'AI SEO – Optymalizacja pod Sztuczną Inteligencję | EvolaTec',
+  description: 'AI SEO i GEO: pojawiaj się w odpowiedziach ChatGPT, Gemini i Perplexity. Schema.org i JSON-LD czytelne dla LLM — w cenie każdego projektu.',
+  ogTitle: 'AI SEO – Optymalizacja pod Sztuczną Inteligencję | EvolaTec',
+  ogDescription: 'AI SEO i GEO: pojawiaj się w odpowiedziach ChatGPT, Gemini i Perplexity. Schema.org i JSON-LD czytelne dla LLM — w cenie każdego projektu.',
   ogType: 'website',
   ogUrl: 'https://evolatec.pl/optymalizacja-ai',
   ogImage: 'https://evolatec.pl/og-image.webp',
@@ -101,8 +101,8 @@ const mainSchema = {
       '@type': 'WebPage',
       '@id': 'https://evolatec.pl/optymalizacja-ai#webpage',
       url: 'https://evolatec.pl/optymalizacja-ai',
-      name: 'AI SEO – Optymalizacja Strony pod Sztuczną Inteligencję | EvolaTec',
-      description: 'AI SEO i GEO optymalizacja: pojawiaj się w odpowiedziach ChatGPT, Gemini i Perplexity. Schema.org, JSON-LD i strukturowane dane czytelne dla LLM — w cenie każdego projektu.',
+      name: 'AI SEO – Optymalizacja pod Sztuczną Inteligencję | EvolaTec',
+      description: 'AI SEO i GEO: pojawiaj się w odpowiedziach ChatGPT, Gemini i Perplexity. Schema.org i JSON-LD czytelne dla LLM — w cenie każdego projektu.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
@@ -175,196 +175,77 @@ const introParagraphs = [
   'AI SEO — zwane też GEO (Generative Engine Optimization) — to zestaw działań, które sprawiają, że strona spełnia te wymagania równolegle do klasycznej optymalizacji pod Google. Nie zastępuje tradycyjnego SEO. Uzupełnia je o sygnały, których algorytmy klasycznego wyszukiwania nie wymagały — ale AI wyszukiwarki wymagają już dziś.',
 ]
 
-const geoSignals = [
-  {
-    icon: 'schema',
-    iconBg: 'bg-violet-50',
-    iconColor: 'text-violet-600',
-    title: 'Dane strukturalne JSON-LD',
-    description: 'Schema.org markup w formacie JSON-LD pozwala LLM-om identyfikować typ treści, podmiot, który ją tworzy, i fakty zawarte w odpowiedzi. Service, LocalBusiness, FAQPage i HowTo to typy o najwyższej wartości dla GEO.',
-  },
-  {
-    icon: 'format_quote',
-    iconBg: 'bg-sky-50',
-    iconColor: 'text-sky-600',
-    title: 'Kompletne zdania-cytaty z faktami',
-    description: 'Każda sekcja powinna zawierać przynajmniej jedno zdanie, które stanowi pełną odpowiedź bez potrzeby czytania kontekstu. Zdania z liczbami, nazwami własnymi i weryfikowalnymi faktami są cytowane częściej.',
-  },
-  {
-    icon: 'quiz',
-    iconBg: 'bg-emerald-50',
-    iconColor: 'text-emerald-600',
-    title: 'FAQ z pełnymi odpowiedziami',
-    description: 'Pytania i odpowiedzi w formacie FAQPage są bezpośrednio parsowane przez silniki AI. Odpowiedź musi być kompletna w 1–3 zdaniach — LLM nie skraca długich akapitów, pomija je.',
-  },
-  {
-    icon: 'verified',
-    iconBg: 'bg-amber-50',
-    iconColor: 'text-amber-600',
-    title: 'Autorytet domeny',
-    description: 'Wysoki Domain Rating i mocny profil linków zewnętrznych to sygnał wiarygodności czytelny zarówno dla Google, jak i dla LLM-ów korzystających z jego indeksu.',
-  },
-  {
-    icon: 'update',
-    iconBg: 'bg-rose-50',
-    iconColor: 'text-rose-600',
-    title: 'Aktualność treści',
-    description: 'Modele preferują strony z treściami datowanymi i aktualizowanymi. Data ostatniej modyfikacji w metadanych zwiększa szansę na cytowanie przy pytaniach o stan aktualny.',
-  },
-  {
-    icon: 'record_voice_over',
-    iconBg: 'bg-indigo-50',
-    iconColor: 'text-indigo-600',
-    title: 'Speakable markup',
-    description: 'Znacznik speakable wskazuje LLM-om, które fragmenty strony nadają się do bezpośredniego przytoczenia jako odpowiedź głosowa lub tekstowa. Stosujemy go na H1 i pierwszych akapitach kluczowych sekcji.',
-  },
+// ── SEO vs GEO (tabela — jak w wersji DE) ────────────────────────────────────
+const seoVsGeoRows = [
+  { criterion: 'Cel', seo: 'Wyniki wyszukiwania Google (SERP)', geo: 'Odpowiedzi AI i bezpośrednie cytaty' },
+  { criterion: 'Główna metoda', seo: 'Frazy kluczowe i linki', geo: 'Semantyka, struktura i Schema.org' },
+  { criterion: 'Efekt', seo: 'Pozycja na liście wyników', geo: 'Bezpośrednia rekomendacja AI i cytat' },
+  { criterion: 'Format danych', seo: 'Meta tagi, sitemap', geo: 'FAQ, HowTo, Service Schema' },
+  { criterion: 'Platformy docelowe', seo: 'Google, Bing', geo: 'ChatGPT, Gemini, Perplexity, Claude' },
+  { criterion: 'Pomiar efektów', seo: 'Pozycje, CTR, ruch', geo: 'Widoczność w AI, cytaty, wzmianki marki' },
+  { criterion: 'Horyzont czasowy', seo: '3–6 miesięcy', geo: '1–3 miesiące' },
+  { criterion: 'Status 2026', seo: 'Ugruntowane, wciąż ważne', geo: 'Rosnące, przewaga konkurencyjna' },
 ]
 
-const whyGeoNow = [
-  {
-    icon: 'trending_up',
-    title: 'Ruch z AI rośnie — nie czekaj na konkurencję',
-    description: 'ChatGPT Search przekroczył 1 miliard zapytań tygodniowo. Perplexity i Gemini rosną podobnie. Firmy, które wdrożą GEO optymalizację wcześniej, zbudują autorytet w indeksach LLM zanim zrobi to konkurencja.',
-  },
-  {
-    icon: 'attach_money',
-    title: 'GEO w cenie — bez dodatkowych kosztów',
-    description: 'GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu realizowanego przez EvolaTec. Nie ma osobnej pozycji za Schema.org ani za JSON-LD.',
-  },
-  {
-    icon: 'bolt',
-    title: 'Efekty szybciej niż w link buildingu',
-    description: 'Wdrożenie poprawnego markup Schema.org i FAQPage może skrócić czas do pierwszego cytowania w AI wyszukiwarkach do 4–8 tygodni — wielokrotnie szybciej niż budowanie autorytetu domenowego przez linki.',
-  },
-  {
-    icon: 'layers',
-    title: 'Komplementarne z tradycyjnym SEO',
-    description: 'GEO nie zastępuje SEO. Tradycyjne SEO buduje fundament — indeksowanie, autorytet, pozycje. GEO nakłada się na ten fundament i otwiera dodatkowy kanał widoczności, z którego tradycyjne SEO nie korzysta.',
-  },
+// ── Co GEO daje Twojej firmie (FeaturesSection — primary + zdjęcie) ──────────
+const features = [
+  { icon: 'smart_toy', title: 'Widoczność w odpowiedziach AI', description: 'Twoja strona jest rozpoznawana przez ChatGPT, Gemini i Perplexity jako wiarygodne źródło i cytowana w odpowiedziach.' },
+  { icon: 'trending_up', title: 'Strategia na przyszłość', description: 'GEO zabezpiecza widoczność, gdy klasyczne pozycje Google są wypierane przez odpowiedzi AI.' },
+  { icon: 'verified_user', title: 'Silniejszy autorytet marki', description: 'Regularne wzmianki w odpowiedziach AI budują markę jako zaufane źródło w branży.' },
+  { icon: 'analytics', title: 'Lepsza jakość treści', description: 'Treści zoptymalizowane pod GEO są czytelniejsze, lepiej ustrukturyzowane i łatwiej indeksowalne.' },
+]
+
+// ── Kluczowe elementy GEO (ServicesSection — centered) ───────────────────────
+const geoElements = [
+  { title: 'Wydajność techniczna', description: 'Szybkie ładowanie, Core Web Vitals i czysta architektura pozwalają AI sprawnie crawlować stronę.', icon: 'speed', iconBg: 'bg-primary/10', iconColor: 'text-primary', href: '/kontakt' },
+  { title: 'Semantyczne treści', description: 'Jasne pytania i odpowiedzi, tabele porównawcze i ustrukturyzowane teksty pomagają AI rozpoznać ekspertyzę.', icon: 'article', iconBg: 'bg-primary/10', iconColor: 'text-primary', href: '/kontakt' },
+  { title: 'Dane strukturalne', description: 'Schema.org dla FAQ, HowTo, Service i Organization — czytelne maszynowo dla LLM i AI wyszukiwarek.', icon: 'schema', iconBg: 'bg-primary/10', iconColor: 'text-primary', href: '/kontakt' },
+  { title: 'Autorytet i zaufanie', description: 'Wartościowe treści i silna obecność marki zwiększają szansę, że AI użyje Twojej strony jako źródła.', icon: 'verified', iconBg: 'bg-primary/10', iconColor: 'text-primary', href: '/kontakt' },
 ]
 
 const processSteps = [
+  { icon: 'search_check', title: 'Analiza GEO', description: 'Analiza obecnej widoczności strony w AI i identyfikacja konkretnego potencjału.' },
+  { icon: 'account_tree', title: 'Architektura treści', description: 'Semantyczna struktura, hierarchia informacji i format pytanie–odpowiedź dla LLM.' },
+  { icon: 'schema', title: 'Schema markup', description: 'Wdrożenie FAQ, HowTo, Service i Organization Schema dla danych czytelnych maszynowo.' },
+  { icon: 'edit_document', title: 'Treści pod AI', description: 'Autorytatywne, jasno ustrukturyzowane treści, które AI rozpoznaje i cytuje jako źródło.' },
+  { icon: 'monitoring', title: 'Monitoring GEO', description: 'Bieżąca kontrola widoczności w AI i ciągłe doskonalenie wyników GEO.' },
+]
+
+// ── Korzyści GEO (BenefitsSection — karty ze zdjęciem) ───────────────────────
+const benefits = [
   {
-    step: 1,
-    title: 'Audyt obecności w AI wyszukiwarkach',
-    description: 'Sprawdzamy, czy i jak Twoja firma pojawia się w odpowiedziach ChatGPT, Gemini i Perplexity przy zapytaniach z Twojej branży. Identyfikujemy, które frazy kluczowe generują cytowania — i które nie.',
+    icon: 'smart_toy',
+    title: 'Widoczność w ChatGPT i Gemini',
+    description: 'Twoja marka jest rekomendowana i cytowana bezpośrednio przez najczęściej używane asystenty AI.',
+    bg: 'bg-gradient-to-br from-purple-600 to-indigo-800',
+    image: '/assets/ai-robot.webp',
   },
   {
-    step: 2,
-    title: 'Implementacja danych strukturalnych',
-    description: 'Wdrażamy JSON-LD dla typów Service, LocalBusiness, FAQPage, HowTo i speakable. Każdy blok jest weryfikowany przez Google Rich Results Test i testowany na poprawność składniową przed wdrożeniem na produkcję.',
+    icon: 'trending_up',
+    title: 'Trwała przewaga konkurencyjna',
+    description: 'Wczesne wdrożenie GEO zapewnia mocną pozycję w widoczności AI, zanim dogoni Cię konkurencja.',
+    bg: 'bg-gradient-to-br from-blue-600 to-blue-800',
+    image: '/assets/seo-analytics.webp',
   },
   {
-    step: 3,
-    title: 'Optymalizacja treści pod cytowania',
-    description: 'Przepisujemy lub uzupełniamy kluczowe sekcje strony o zdania-cytaty z weryfikowalnymi faktami, cenami i terminami. Tworzymy lub rozszerzamy sekcje FAQ z odpowiedziami kompletnymi w 1–3 zdaniach.',
-  },
-  {
-    step: 4,
-    title: 'Monitoring i iteracja',
-    description: 'Monitorujemy wzmianki w AI wyszukiwarkach i zmiany w cytowaniach. Co miesiąc raportujemy, które frazy generują cytowania, i optymalizujemy treści, które wypadły z odpowiedzi AI.',
+    icon: 'person_add',
+    title: 'Lepiej dopasowane zapytania',
+    description: 'Użytkownicy, którzy trafiają na Ciebie przez odpowiedzi AI, są już poinformowani i gotowi do kontaktu.',
+    bg: 'bg-gradient-to-br from-emerald-600 to-teal-800',
+    image: '/assets/web-analytics.webp',
   },
 ]
 
-const schemaTypes = [
-  {
-    title: 'Service',
-    description: 'Opisuje usługę, jej cenę i dostawcę. Google i LLM-y używają go do odpowiedzi na zapytania o konkretne usługi z cenami — np. „ile kosztuje pozycjonowanie SEO".',
-    icon: 'build',
-  },
-  {
-    title: 'LocalBusiness',
-    description: 'Identyfikuje firmę jako podmiot działający w konkretnej lokalizacji. Używany przy zapytaniach lokalnych — „firma SEO Wrocław" — zarówno przez Google Maps, jak i przez AI asystentów.',
-    icon: 'store',
-  },
-  {
-    title: 'FAQPage',
-    description: 'Parsowany bezpośrednio przez silniki AI. Pytania i odpowiedzi są cytowane dosłownie w generowanych odpowiedziach — o ile każda odpowiedź jest kompletna w 1–3 zdaniach.',
-    icon: 'quiz',
-  },
-  {
-    title: 'HowTo',
-    description: 'Strukturyzuje procesy krok po kroku. Użyteczny przy zapytaniach instruktażowych — „jak zoptymalizować stronę pod AI" — gdzie LLM cytuje kolejne kroki bezpośrednio.',
-    icon: 'checklist',
-  },
-  {
-    title: 'speakable',
-    description: 'Wskazuje, które fragmenty strony nadają się jako bezpośrednia odpowiedź głosowa lub tekstowa. Stosujemy go na H1 i pierwszym akapicie każdej kluczowej sekcji.',
-    icon: 'record_voice_over',
-  },
-]
-
-const comparisonRows = [
-  { label: 'Cel',                    trad: 'Pozycja w rankingu organicznym Google',         ai: 'Cytowanie w odpowiedziach AI'                },
-  { label: 'Punkt styku',            trad: 'Kliknięcie w wynik wyszukiwania',                ai: 'Bezpośrednia odpowiedź bez kliknięcia'        },
-  { label: 'Kluczowe sygnały',       trad: 'Linki zewnętrzne, Core Web Vitals, treść',       ai: 'JSON-LD, FAQPage, kompletne zdania-cytaty'    },
-  { label: 'Mierzalność',            trad: 'GSC — pozycje, kliknięcia, impressions',         ai: 'Monitoring wzmianek w AI engines'             },
-  { label: 'Czas do efektów',        trad: '3–12 miesięcy',                                  ai: '4–8 tygodni od wdrożenia markup'             },
-  { label: 'Komplementarność',       trad: 'Fundament — bez tego GEO nie działa',            ai: 'Nakładka — wzmacnia efekty SEO'              },
-]
-
-const checklistColumns = [
-  {
-    heading: 'Co LLM pobiera ze strony przy cytowaniu',
-    items: [
-      'JSON-LD Service z nazwą, ceną i opisem usługi',
-      'JSON-LD FAQPage z pytaniami i pełnymi odpowiedziami',
-      'JSON-LD LocalBusiness z adresem i obszarem obsługi',
-      'Zdania speakable z H1 i pierwszych akapitów',
-      'Tekst z faktami: liczby, terminy, nazwy technologii',
-      'Data ostatniej modyfikacji strony (freshness signal)',
-    ],
-  },
-  {
-    heading: 'Czego AI wyszukiwarki nie indeksują jako cytowania',
-    items: [
-      'Treści bez weryfikowalnych faktów — ogólne opisy bez liczb',
-      'Odpowiedzi FAQ dłuższe niż 3 zdania — LLM je pomija',
-      'Strony bez Schema.org markup — brak kontekstu maszynowego',
-      'Treści zablokowane przez JavaScript bez SSR renderowania',
-      'Strony o niskim autorytecie domeny (DR poniżej 20)',
-      'Zduplikowane treści — identyczne teksty z innych domen',
-    ],
-  },
-]
-
-const pricingPlans = [
-  {
-    name: 'Strona firmowa z GEO',
-    price: 'od 6 300 zł netto',
-    delivery: 'od 7 dni roboczych',
-    highlight: true,
-    badge: 'GEO w cenie',
-    features: [
-      'GEO optymalizacja — widoczność w ChatGPT, Gemini, Perplexity',
-      'Schema.org JSON-LD: Service, LocalBusiness, FAQPage',
-      'speakable markup na H1 i kluczowych sekcjach',
-      'Lighthouse score 95–100/100',
-      'Czas ładowania poniżej 1 sekundy',
-      'Responsywny design (mobile-first)',
-      '30 dni wsparcia technicznego po wdrożeniu',
-    ],
-    cta: 'Uzyskaj bezpłatną wycenę',
-    ctaLink: '/kontakt',
-    note: 'Stała cena — wycena przed startem projektu',
-  },
-  {
-    name: 'Pozycjonowanie SEO z GEO',
-    price: 'od 1 260 zł netto',
-    delivery: 'miesięcznie',
-    highlight: false,
-    features: [
-      'Audyt i wdrożenie GEO optymalizacji',
-      'Schema.org dla wszystkich podstron usługowych',
-      'Optymalizacja FAQ pod cytowania AI',
-      'Monitoring wzmianek w AI wyszukiwarkach',
-      'Bieżąca optymalizacja on-page',
-      'Miesięczny raport z pozycjami i cytowaniami',
-    ],
-    cta: 'Sprawdź pozycjonowanie',
-    ctaLink: '/seo',
-    note: 'Stała cena — wycena przed startem projektu',
-  },
+// ── GEO w cenie każdej strony (SEOSection — lista) ───────────────────────────
+const geoChecklist = [
+  'Schema FAQ — czytelne maszynowo dla wszystkich systemów AI',
+  'Dane strukturalne HowTo i Service (Schema.org)',
+  'Semantyczna architektura treści dla crawlerów LLM',
+  'Tabele porównawcze pod zapytania zakupowe',
+  'Autorytatywne odpowiedzi na częste pytania użytkowników',
+  'Wydajność techniczna (Core Web Vitals, ładowanie < 1s)',
+  'Schema Organization i Website dla autorytetu marki',
+  'Czytelna hierarchia informacji w strukturze H1–H3',
 ]
 
 const relatedServices = [
@@ -372,19 +253,22 @@ const relatedServices = [
     icon: 'trending_up',
     title: 'Pozycjonowanie SEO',
     description: 'Pełna obsługa SEO z GEO optymalizacją — fundament dla widoczności zarówno w Google, jak i w AI wyszukiwarkach.',
-    link: '/seo',
+    price: 'od 1 260 zł netto',
+    href: '/seo',
   },
   {
     icon: 'tune',
     title: 'Optymalizacja SEO',
     description: 'Techniczne i on-page SEO — implementacja Schema.org, poprawa Core Web Vitals i struktury treści pod GEO.',
-    link: '/optymalizacja-seo',
+    price: 'od 1 260 zł netto',
+    href: '/optymalizacja-seo',
   },
   {
     icon: 'search_check',
     title: 'Audyt SEO',
-    description: 'Sprawdź, czy Twoja strona spełnia wymagania GEO — jednorazowy raport PDF z priorytetami. 840 zł netto.',
-    link: '/audyt-seo',
+    description: 'Sprawdź, czy Twoja strona spełnia wymagania GEO — jednorazowy raport PDF z priorytetami.',
+    price: '840 zł netto',
+    href: '/audyt-seo',
   },
 ]
 </script>
@@ -399,137 +283,148 @@ const relatedServices = [
       title="AI SEO – wykorzystaj sztuczną inteligencję, żeby wyprzedzić konkurencję w Google"
       description="Pojawiaj się w odpowiedziach ChatGPT, Gemini i Perplexity — nie tylko w rankingach Google. Schema.org, JSON-LD i strukturowane dane czytelne dla LLM wdrożone standardowo w każdym projekcie EvolaTec."
       primaryCTA="Uzyskaj bezpłatną wycenę"
-      secondaryCTA="Jak działa GEO"
+      secondaryCTA="Sprawdź pozycjonowanie SEO"
+      primary-href="/kontakt"
+      secondary-href="/seo"
       :stats="heroStats"
     />
 
     <main id="main-content">
 
-
       <article>
 
-        <!-- ── Section 1: Czym jest AI SEO ───────────────────────────────── -->
-        <IntroSection
-          heading="Czym jest AI SEO i jak zmienia widoczność firmy w internecie"
-          :paragraphs="introParagraphs"
-          image="/assets/ai-robot.webp"
-          image-alt="Interfejs asystenta AI odpowiadającego na pytanie użytkownika z cytatem ze strony firmowej"
-        />
-
-        <!-- ── Section 2: 6 sygnałów GEO ─────────────────────────────────── -->
-        <ServicesSection
-          title="GEO optymalizacja – 6 sygnałów, które decydują o cytowaniu w AI"
-          variant="left"
-          :services="geoSignals"
-          background="bg-surface-container-low"
-        />
-
-        <!-- ── Section 3: Dlaczego teraz ─────────────────────────────────── -->
-        <BenefitsSection
-          title="Firmy bez GEO optymalizacji znikają z odpowiedzi AI — zanim konkurencja to zrobi"
-          :benefits="whyGeoNow"
-        />
-
-        <!-- ── Section 4: Jak wdrażamy GEO ───────────────────────────────── -->
-        <ProcessSection
-          title="Jak wdrażamy GEO optymalizację — 4 etapy"
-          :steps="processSteps"
-        />
-
-        <!-- ── Section 5: Typy Schema.org ────────────────────────────────── -->
-        <FeaturesSection
-          title="5 typów Schema.org o najwyższej wartości dla AI wyszukiwarek"
-          :features="schemaTypes"
-          image-url="/assets/code-editor.webp"
-        />
-
-        <!-- ── Section 6: Co LLM pobiera / czego nie ─────────────────────── -->
-        <ChecklistSection
-          bg="container-low"
-          :columns="checklistColumns"
-        />
-
-        <!-- ── Section 7: Tradycyjne SEO vs AI SEO — tabela ──────────────── -->
-        <section
-          aria-labelledby="section-compare"
-          class="py-section-padding bg-surface"
-        >
+        <!-- ── Czym jest GEO (sekcja split + badge — jak w wersji DE) ──────── -->
+        <section class="py-8 md:py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-stack-lg items-center">
+              <div>
+                <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
+                  <span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+                  Czym jest GEO?
+                </span>
+                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-black text-on-surface leading-tight mb-6">Czym jest Generative Engine Optimization?</h2>
+                <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                  <p v-for="(p, i) in introParagraphs" :key="i" v-html="p"></p>
+                </div>
+              </div>
+              <div class="relative">
+                <NuxtImg
+                  src="/assets/ai-bg.webp"
+                  alt="GEO optymalizacja pod wyszukiwarki AI — ChatGPT, Gemini i Perplexity"
+                  width="640"
+                  height="427"
+                  sizes="100vw md:50vw lg:640px"
+                  loading="lazy"
+                  class="w-full rounded-2xl object-cover"
+                />
+                <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-xl border border-outline-variant/20">
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-2xl">verified</span>
+                    <div>
+                      <p class="font-bold text-on-surface text-sm">GEO w cenie</p>
+                      <p class="text-xs text-on-surface-variant">W każdym projekcie EvolaTec</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
-              <h2
-                id="section-compare"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
-              >
-                Tradycyjne SEO vs AI SEO — czym się różnią i co wybrać
-              </h2>
-              <p class="text-on-surface-variant">
-                Tradycyjne SEO i AI SEO nie wykluczają się — ale mają różne mechanizmy działania i różne punkty styku z użytkownikiem. Wybór nie istnieje: potrzebujesz obu. Bez tradycyjnego SEO domena nie ma autorytetu. Bez GEO optymalizacji strona znika z odpowiedzi AI.
-              </p>
+        <!-- ── SEO vs GEO — tabela (jak w wersji DE) ───────────────────────── -->
+        <section class="py-8 md:py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="text-center mb-8 md:mb-stack-lg">
+              <h2 class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight">SEO vs GEO — czym się różnią?</h2>
+              <p class="text-on-surface-variant mt-3 max-w-2xl mx-auto">Obie strategie się uzupełniają — ale GEO to niezbędne rozszerzenie pod wyszukiwanie sterowane przez AI.</p>
             </div>
 
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8">
-              <table class="w-full text-sm">
-                <caption class="sr-only">Porównanie tradycyjnego SEO z AI SEO i GEO optymalizacją</caption>
-                <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
-                    <th class="text-left p-4 font-bold text-on-surface w-1/3" scope="col">Kryterium</th>
-                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Tradycyjne SEO</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">AI SEO / GEO</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="(row, i) in comparisonRows"
-                    :key="row.label"
-                    class="border-b border-outline-variant/20"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'"
-                  >
-                    <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
-                    <td class="p-4 text-center text-on-surface-variant">{{ row.trad }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.ai }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="md:hidden space-y-3 mb-8">
-              <div
-                v-for="row in comparisonRows"
-                :key="row.label"
-                class="bg-white rounded-xl border border-outline-variant/30 p-4"
-              >
-                <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.label }}</p>
+            <!-- Mobile cards -->
+            <div class="md:hidden space-y-3">
+              <div v-for="(row, i) in seoVsGeoRows" :key="i" class="bg-white rounded-xl border border-outline-variant/30 p-4">
+                <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.criterion }}</p>
                 <div class="grid grid-cols-2 gap-2">
                   <div class="bg-surface-container-low rounded-lg p-3 text-center">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1">Tradycyjne SEO</p>
-                    <p class="text-xs text-on-surface-variant leading-snug">{{ row.trad }}</p>
+                    <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1.5">Klasyczne SEO</p>
+                    <p class="text-xs text-on-surface-variant leading-snug">{{ row.seo }}</p>
                   </div>
-                  <div class="bg-primary/5 rounded-lg p-3 text-center border border-primary/15">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1">AI SEO / GEO</p>
-                    <p class="text-xs text-primary font-semibold leading-snug">{{ row.ai }}</p>
+                  <div class="bg-primary/5 rounded-lg p-3 text-center">
+                    <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1.5">GEO</p>
+                    <p class="text-xs text-primary font-semibold leading-snug">{{ row.geo }}</p>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- Desktop table -->
+            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="bg-surface-container-low">
+                    <th class="text-left p-4 font-bold text-on-surface border-b border-outline-variant/30 w-1/4">Kryterium</th>
+                    <th class="text-center p-4 font-bold text-on-surface-variant border-b border-outline-variant/30">Klasyczne SEO</th>
+                    <th class="text-center p-4 font-bold text-primary bg-primary/5 border-b border-outline-variant/30">GEO (przyszłość)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(row, i) in seoVsGeoRows" :key="i" :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'">
+                    <td class="p-4 font-semibold text-on-surface">{{ row.criterion }}</td>
+                    <td class="p-4 text-center text-on-surface-variant">{{ row.seo }}</td>
+                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.geo }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
 
-        <!-- ── Section 8: Cennik ──────────────────────────────────────────── -->
-        <PricingSection
-          title="Schema.org i JSON-LD — fundament widoczności w AI wyszukiwarkach"
-          subtitle="GEO optymalizacja jest w cenie każdego projektu EvolaTec — bez osobnych opłat za markup Schema.org ani JSON-LD."
-          :pricing-plans="pricingPlans"
+        <!-- ── Co GEO daje Twojej firmie (FeaturesSection — primary) ───────── -->
+        <FeaturesSection
+          title="Co GEO daje Twojej firmie"
+          :features="features"
+          image-url="/assets/code-editor.webp"
+          image-alt="Dane strukturalne Schema.org i JSON-LD w edytorze kodu — fundament widoczności w AI"
         />
 
-        <!-- ── Section 9: FAQ ─────────────────────────────────────────────── -->
+        <!-- ── Kluczowe elementy GEO (ServicesSection — centered) ──────────── -->
+        <ServicesSection
+          title="Kluczowe elementy GEO optymalizacji"
+          subtitle="Te cztery filary tworzą podstawę maksymalnej widoczności w AI."
+          variant="centered"
+          :services="geoElements"
+          learn-more-label="Dowiedz się więcej"
+          background="bg-surface"
+        />
+
+        <!-- ── Jak optymalizujemy pod AI (ProcessSection — container-low) ──── -->
+        <ProcessSection
+          title="Jak optymalizujemy Twoją stronę pod wyszukiwanie AI"
+          :steps="processSteps"
+        />
+
+        <!-- ── Korzyści GEO (BenefitsSection — white) ──────────────────────── -->
+        <BenefitsSection
+          title="Korzyści GEO dla Twojej firmy"
+          :benefits="benefits"
+        />
+
+        <!-- ── GEO w cenie każdej strony (SEOSection — primary) ────────────── -->
+        <SEOSection
+          title="GEO w cenie każdej strony"
+          subtitle="Podstawowa optymalizacja GEO jest standardem w każdej stronie, którą tworzymy — bez dopłat."
+          :features="geoChecklist"
+          cta-text="Dowiedz się więcej o GEO"
+          image="/assets/seo-optimization.webp"
+          image-alt="Lista elementów GEO wdrażanych standardowo w każdej stronie EvolaTec"
+        />
+
+        <!-- ── FAQ (container-low) ────────────────────────────────────────── -->
         <FAQSection
           title="Najczęściej zadawane pytania o AI SEO i GEO optymalizację"
           :faqs="faqData"
         />
 
-        <!-- ── Related services ───────────────────────────────────────────── -->
+        <!-- ── Powiązane usługi (surface) ─────────────────────────────────── -->
         <RelatedServicesSection
           eyebrow="Powiązane usługi"
           title="Zbuduj pełną widoczność — w Google i w AI"
@@ -546,6 +441,8 @@ const relatedServices = [
       description="GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu EvolaTec. Schema.org, JSON-LD i speakable markup wdrożone standardowo, bez dopłat."
       primary-cta="Uzyskaj bezpłatną wycenę"
       secondary-cta="Sprawdź pozycjonowanie SEO"
+      primary-href="/kontakt"
+      secondary-href="/seo"
     />
 
   </div>
