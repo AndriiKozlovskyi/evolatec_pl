@@ -510,6 +510,7 @@ const processSteps = [
           eyebrow="Jak prowadzimy"
           title="Jak prowadzimy marketing online — miesięczny cykl"
           :steps="processSteps"
+          background="bg-surface"
         />
 
         <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
@@ -523,6 +524,7 @@ const processSteps = [
           title="Kanały marketingowe dopasowane do celu"
           cta="Dowiedz się więcej"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>

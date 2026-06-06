@@ -479,6 +479,7 @@ const processSteps = [
           eyebrow="Jak prowadzimy"
           title="Jak prowadzimy kampanie Google Ads — miesięczny cykl"
           :steps="processSteps"
+          background="bg-surface"
         />
 
         <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
@@ -493,6 +494,7 @@ const processSteps = [
           title="Zmaksymalizuj efekty kampanii"
           cta="Dowiedz się więcej"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>

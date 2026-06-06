@@ -446,6 +446,7 @@ const processSteps = [
           eyebrow="Jak projektujemy"
           title="Jak projektujemy stronę — od wireframe do gotowego designu"
           :steps="processSteps"
+          background="bg-surface"
         />
 
         <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
@@ -459,6 +460,7 @@ const processSteps = [
           title="Od projektu do gotowej strony"
           cta="Dowiedz się więcej"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>

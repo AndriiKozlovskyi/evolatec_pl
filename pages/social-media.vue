@@ -458,6 +458,7 @@ const processSteps = [
           eyebrow="Jak prowadzimy"
           title="Jak prowadzimy social media — miesięczny cykl"
           :steps="processSteps"
+          background="bg-surface"
         />
 
         <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
@@ -471,6 +472,7 @@ const processSteps = [
           title="Rozszerz działania o płatne kanały"
           cta="Dowiedz się więcej"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>

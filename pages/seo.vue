@@ -516,6 +516,7 @@ const relatedServices = [
           eyebrow="Jak pracujemy"
           title="Jak przebiega pozycjonowanie strony w Google — etapy"
           :steps="processSteps"
+          background="bg-surface"
         />
 
         <!-- Process closing note — rendered after the component -->
@@ -539,6 +540,7 @@ const relatedServices = [
           title="Może Cię zainteresować"
           cta="Dowiedz się więcej"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>

@@ -421,6 +421,7 @@ const relatedServices = [
           title="GEO optymalizacja – 6 sygnałów, które decydują o cytowaniu w AI"
           variant="left"
           :services="geoSignals"
+          background="bg-surface-container-low"
         />
 
         <!-- ── Section 3: Dlaczego teraz ─────────────────────────────────── -->
@@ -533,6 +534,7 @@ const relatedServices = [
           eyebrow="Powiązane usługi"
           title="Zbuduj pełną widoczność — w Google i w AI"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>

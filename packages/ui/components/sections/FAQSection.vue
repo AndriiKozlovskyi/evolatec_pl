@@ -1,5 +1,5 @@
 <template>
-  <section data-nav-label="FAQ" data-nav-icon="help" class="py-section-padding bg-surface-container-low">
+  <section data-nav-label="FAQ" data-nav-icon="help" class="py-section-padding" :class="background">
     <div class="max-w-3xl mx-auto px-gutter">
       <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-black text-primary mb-stack-lg text-center leading-tight">{{ title }}</h2>
       <div class="space-y-6">
@@ -16,8 +16,11 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+withDefaults(defineProps<{
   title: string
   faqs: Array<{ question: string; answer: string }>
-}>()
+  background?: string
+}>(), {
+  background: 'bg-surface-container-low',
+})
 </script>

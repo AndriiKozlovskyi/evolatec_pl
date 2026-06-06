@@ -365,6 +365,7 @@ const relatedServices = [
           title="Jak pozyskujemy wartościowe linki zewnętrzne — white hat metodologia"
           variant="left"
           :services="acquisitionMethods"
+          background="bg-surface-container-low"
         />
 
         <!-- ── Section 3: Dlaczego jakość, nie wolumen ───────────────────── -->
@@ -481,6 +482,7 @@ const relatedServices = [
           eyebrow="Powiązane usługi"
           title="Uzupełnij link building o optymalizację techniczną"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>

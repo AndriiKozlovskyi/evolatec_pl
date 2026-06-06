@@ -503,7 +503,7 @@ const geoBenefits = [
         </section>
 
         <!-- ══ 3. DLACZEGO MY — white ══════════════════════════════════════════ -->
-        <section aria-labelledby="section-why" class="relative py-section-padding bg-surface overflow-hidden">
+        <section aria-labelledby="section-why" class="relative py-section-padding bg-surface-container-low overflow-hidden">
           <div class="absolute top-20 -right-32 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" aria-hidden="true"></div>
           <div class="absolute bottom-0 -left-32 w-[400px] h-[400px] rounded-full bg-primary-container/20 blur-[100px] pointer-events-none" aria-hidden="true"></div>
           <div class="relative max-w-container-max mx-auto px-gutter">
@@ -580,7 +580,7 @@ const geoBenefits = [
         </section>
 
         <!-- ══ 4. GEO ══════════════════════════════════════════════════════════ -->
-        <section aria-labelledby="section-geo" class="py-8 md:py-section-padding bg-surface-container-low">
+        <section aria-labelledby="section-geo" class="py-8 md:py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
             <div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-stack-lg items-start">
               <div data-reveal="left">
@@ -640,7 +640,7 @@ const geoBenefits = [
         <!-- ══ 5. CO DOSTAJESZ ════════════════════════════════════════════════ -->
         <section
           aria-labelledby="section-included"
-          class="py-section-padding bg-surface"
+          class="py-section-padding bg-surface-container-low"
         >
           <div class="max-w-container-max mx-auto px-gutter">
             <div class="grid lg:grid-cols-2 gap-stack-lg items-start">
@@ -1038,6 +1038,7 @@ const geoBenefits = [
           eyebrow="Odkryj więcej"
           title="Usługi dopasowane do etapu Twojego projektu"
           :services="relatedPages"
+          background="bg-surface"
         />
 
       </article>

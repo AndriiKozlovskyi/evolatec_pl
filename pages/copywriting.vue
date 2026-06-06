@@ -466,6 +466,7 @@ const relatedServices = [
         <FAQSection
           title="Najczęściej zadawane pytania o teksty na stronę www"
           :faqs="faqData"
+          background="bg-surface"
         />
 
         <!-- ══ Related ════════════════════════════════════════════════════════ -->

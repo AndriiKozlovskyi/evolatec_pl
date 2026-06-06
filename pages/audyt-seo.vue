@@ -444,6 +444,7 @@ const relatedServices = [
         <FAQSection
           title="Najczęściej zadawane pytania o audyt SEO"
           :faqs="faqData"
+          background="bg-surface"
         />
 
         <!-- ══ Related ════════════════════════════════════════════════════════ -->

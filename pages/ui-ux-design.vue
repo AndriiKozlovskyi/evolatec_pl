@@ -447,6 +447,7 @@ const processSteps = [
           eyebrow="Jak projektujemy UX"
           title="Jak projektujemy UX — od audytu do prototypu"
           :steps="processSteps"
+          background="bg-surface"
         />
 
         <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
@@ -460,6 +461,7 @@ const processSteps = [
           title="Od projektu UX do wdrożonej strony"
           cta="Dowiedz się więcej"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>

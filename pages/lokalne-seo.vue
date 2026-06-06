@@ -383,6 +383,7 @@ const relatedServices = [
           title="Co obejmuje usługa pozycjonowania lokalnego"
           variant="left"
           :services="deliverables"
+          background="bg-surface-container-low"
         />
 
         <!-- ── Section 3: Dlaczego lokalne SEO ───────────────────────────── -->
@@ -499,6 +500,7 @@ const relatedServices = [
           eyebrow="Powiązane usługi"
           title="Uzupełnij lokalne SEO o inne działania marketingowe"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>

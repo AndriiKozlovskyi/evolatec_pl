@@ -436,6 +436,7 @@ const relatedServices = [
           eyebrow="Jak pracujemy"
           title="Jak przebiega optymalizacja SEO strony — etapy"
           :steps="processSteps"
+          background="bg-surface"
         />
 
         <!-- ── Section 5: FAQ ─────────────────────────────────────────────── -->
@@ -450,6 +451,7 @@ const relatedServices = [
           title="Może Cię zainteresować"
           cta="Dowiedz się więcej"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>

@@ -467,6 +467,7 @@ const relatedServices = [
         <FAQSection
           title="Najczęściej zadawane pytania o branding i identyfikację wizualną"
           :faqs="faqData"
+          background="bg-surface"
         />
 
         <!-- ══ Related ════════════════════════════════════════════════════════ -->

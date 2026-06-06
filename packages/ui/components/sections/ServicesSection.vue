@@ -1,5 +1,5 @@
 <template>
-  <section data-nav-icon="apps" class="py-section-padding">
+  <section data-nav-icon="apps" class="py-section-padding" :class="background">
     <div class="max-w-container-max mx-auto px-gutter">
       <div class="text-center max-w-2xl mx-auto mb-stack-lg">
         <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-black text-on-surface mb-4 leading-tight">{{ title }}</h2>
@@ -51,8 +51,10 @@ withDefaults(defineProps<{
   variant?: 'default' | 'centered'
   services: Service[]
   learnMoreLabel?: string
+  background?: string
 }>(), {
   variant: 'default',
   learnMoreLabel: 'Learn more',
+  background: '',
 })
 </script>
