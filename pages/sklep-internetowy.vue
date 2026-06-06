@@ -469,6 +469,7 @@ const processSteps = [
           eyebrow="Jak powstaje"
           title="Jak powstaje sklep internetowy — proces realizacji"
           :steps="processSteps"
+          background="bg-surface"
         />
 
         <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
@@ -482,6 +483,7 @@ const processSteps = [
           title="Co jeszcze pomoże Twojemu sklepowi sprzedawać"
           cta="Dowiedz się więcej"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>

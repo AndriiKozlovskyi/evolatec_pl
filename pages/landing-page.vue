@@ -470,6 +470,7 @@ const processSteps = [
           eyebrow="Jak powstaje"
           title="Jak powstaje landing page — od briefu do startu w 3 dni"
           :steps="processSteps"
+          background="bg-surface"
         />
 
         <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
@@ -484,6 +485,7 @@ const processSteps = [
           title="Co jeszcze możesz potrzebować do kampanii"
           cta="Dowiedz się więcej"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>

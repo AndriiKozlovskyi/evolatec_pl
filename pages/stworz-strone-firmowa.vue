@@ -455,6 +455,7 @@ const processSteps = [
           eyebrow="Jak zamówić"
           title="Jak zamówić stronę firmową — krok po kroku"
           :steps="processSteps"
+          background="bg-surface"
         />
 
         <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
@@ -468,6 +469,7 @@ const processSteps = [
           title="Kompletna obecność online dla Twojej firmy"
           cta="Dowiedz się więcej"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>

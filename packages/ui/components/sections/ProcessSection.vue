@@ -1,5 +1,5 @@
 <template>
-  <section data-nav-label="Process" data-nav-icon="route" class="py-section-padding bg-surface-container-low text-on-surface">
+  <section data-nav-label="Process" data-nav-icon="route" class="py-section-padding text-on-surface" :class="background">
     <div class="max-w-container-max mx-auto px-gutter">
       <div class="text-center mb-stack-lg max-w-2xl mx-auto">
         <span v-if="eyebrow" class="text-primary font-semibold text-xs uppercase tracking-[0.25em] mb-3 block">{{ eyebrow }}</span>
@@ -31,11 +31,14 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+withDefaults(defineProps<{
   title: string
   eyebrow?: string
   steps: Array<{ icon: string; title: string; description: string }>
-}>()
+  background?: string
+}>(), {
+  background: 'bg-surface-container-low',
+})
 
 const stepColors = [
   { iconBg: 'bg-sky-50',     iconColor: 'text-sky-500',     accentColor: 'bg-sky-300' },

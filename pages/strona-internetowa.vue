@@ -517,6 +517,7 @@ const processSteps = [
           eyebrow="Jak zlecić"
           title="Jak zlecić stronę internetową — proces w 4 krokach"
           :steps="processSteps"
+          background="bg-surface"
         />
 
         <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
@@ -530,6 +531,7 @@ const processSteps = [
           title="Następny krok po stronie internetowej"
           cta="Dowiedz się więcej"
           :services="relatedServices"
+          background="bg-surface"
         />
 
       </article>
