@@ -406,12 +406,44 @@ const relatedPages = [
     href: '/seo',
   },
 ]
+
+const aboutFeatures = [
+  { icon: 'code_blocks',    title: 'Nowoczesne technologie',    description: 'Vue.js, Nuxt.js, Tailwind CSS i TypeScript — bez WordPressa, bez wtyczek, bez kompromisów.' },
+  { icon: 'bolt',           title: 'Wydajność i szybkość',      description: 'Czas ładowania poniżej 1 sekundy i Lighthouse 95–100/100 — sprawdzalny samodzielnie po wdrożeniu.' },
+  { icon: 'search_insights',title: 'SEO i GEO w kodzie',        description: 'Schema.org JSON-LD, FAQPage i speakable markup — widoczność w Google i ChatGPT, Gemini, Perplexity.' },
+  { icon: 'verified',       title: 'Stała cena przed startem',  description: 'Wycena na piśmie przed podpisaniem umowy. Cena nie zmienia się w trakcie projektu.' },
+]
+
+const whyUsPoints = [
+  { icon: 'bolt',           title: 'Szybkie i wydajne strony',         description: 'Vue.js i Nuxt.js z SSR dają czas ładowania poniżej 1 sekundy i Lighthouse 95–100/100 — wielokrotnie szybciej niż typowy WordPress.' },
+  { icon: 'search_insights',title: 'SEO i GEO optymalizacja',          description: 'Techniczne SEO, SSR rendering i Schema.org JSON-LD zapewniają widoczność w Google oraz cytowania w ChatGPT, Gemini i Perplexity.' },
+  { icon: 'design_services',title: 'Premium design bez szablonów',     description: 'Żadnych motywów WordPress ani gotowych szablonów. Każdy projekt jest projektowany i kodowany indywidualnie.' },
+  { icon: 'rocket_launch',  title: 'Skalowalne rozwiązania',           description: 'Architektura JAMstack nadaje się zarówno na landing page, jak i rozbudowany sklep z tysiącami produktów.' },
+  { icon: 'security',       title: 'Zero wtyczek — zero podatności',   description: 'Brak CMS opartego na wtyczkach oznacza brak powierzchni ataku. Nie potrzebujesz comiesięcznych aktualizacji bezpieczeństwa.' },
+  { icon: 'psychology',     title: 'Strategiczne podejście',           description: 'Nie budujemy tylko ładnych stron — dostarczamy narzędzia konwersji zoptymalizowane pod Twoich klientów i cel biznesowy.' },
+]
+
+const geoPoints = [
+  'Dane strukturalne Schema.org dla zrozumienia przez AI',
+  'FAQPage i HowTo markup — bezpośrednie cytowania w LLM',
+  'Czytelna architektura informacji dla crawlerów AI',
+  'Autoryzowane treści z faktami — polecane przez AI asystentów',
+  'Server-Side Rendering — treść widoczna bez bariery JavaScript',
+]
+
+const aiEngines = ['ChatGPT', 'Google Gemini', 'Perplexity', 'Claude', 'Copilot']
+
+const geoBenefits = [
+  { icon: 'smart_toy', title: 'Widoczność w AI',           desc: 'Twoja firma jest cytowana przez ChatGPT, Gemini i Perplexity jako wiarygodne źródło.' },
+  { icon: 'schema',    title: 'Dane strukturalne',         desc: 'Schema.org JSON-LD dla FAQ, HowTo i Service — czytelne maszynowo dla LLM.' },
+  { icon: 'verified',  title: 'W cenie każdego projektu',  desc: 'GEO to nie osobna pozycja — jest wbudowane w każdą realizację EvolaTec.' },
+]
 </script>
 
 <template>
   <div>
 
-    <!-- ══ 1. HERO — dark branded ════════════════════════════════════════════ -->
+    <!-- ══ 1. HERO ════════════════════════════════════════════════════════════ -->
     <HeroSection
       badge="Agencja webowa — Polska"
       title="Tworzymy strony internetowe, które pracują na Twój biznes"
@@ -422,12 +454,190 @@ const relatedPages = [
     />
 
     <main id="main-content">
-
-      <!-- ── sr-only breadcrumb ──────────────────────────────────────────── -->
-
+      <nav aria-label="breadcrumb" class="sr-only">
+        <ol><li aria-current="page">Strona główna</li></ol>
+      </nav>
       <article>
 
-        <!-- ══ 3. CO DOSTAJESZ — white ════════════════════════════════════════ -->
+        <!-- ══ 2. O NAS ════════════════════════════════════════════════════════ -->
+        <section aria-labelledby="section-about" class="relative py-section-padding bg-surface overflow-hidden">
+          <div class="absolute top-20 -left-32 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" aria-hidden="true"></div>
+          <div class="absolute bottom-0 -right-32 w-[400px] h-[400px] rounded-full bg-primary-container/20 blur-[100px] pointer-events-none" aria-hidden="true"></div>
+          <div class="relative max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-stack-lg items-start">
+              <div data-reveal="left">
+                <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
+                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">info</span>
+                  O EvolaTec
+                </span>
+                <h2 id="section-about" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Nowoczesna agencja webowa dla
+                  <span class="relative inline-block">
+                    <span class="relative z-10">profesjonalnych</span>
+                    <span class="absolute -bottom-1 left-0 right-0 h-3 bg-primary/15 rounded-sm -z-0"></span>
+                  </span>
+                  rozwiązań cyfrowych
+                </h2>
+                <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                  <p>EvolaTec tworzy nowoczesne strony internetowe, serwisy firmowe, landing page i platformy cyfrowe dla firm, startupów i lokalnych usługodawców.</p>
+                  <p>Skupiamy się na wydajnym web developmencie, nowoczesnym UI/UX designie oraz optymalizacji SEO i GEO — rozwiązaniach, które nie tylko wyglądają profesjonalnie, ale dostarczają mierzalne wyniki.</p>
+                  <p>Łączymy nowoczesne technologie jak Vue.js, Nuxt, Tailwind CSS i TypeScript, tworząc szybkie, skalowalne strony internetowe dla nowoczesnych firm.</p>
+                  <p>Niezależnie czy potrzebujesz strony firmowej, platformy e-commerce, landing page czy indywidualnego rozwiązania — EvolaTec wspiera firmy w profesjonalnym cyfrowym wzroście.</p>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6" data-reveal="right">
+                <div
+                  v-for="card in aboutFeatures"
+                  :key="card.title"
+                  class="bg-white rounded-2xl p-6 border border-outline-variant/30 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-primary/20 transition-all duration-300"
+                >
+                  <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <span class="material-symbols-outlined text-primary text-[22px]" aria-hidden="true">{{ card.icon }}</span>
+                  </div>
+                  <h3 class="font-display font-bold text-on-surface mb-2 leading-tight">{{ card.title }}</h3>
+                  <p class="text-sm text-on-surface-variant leading-relaxed">{{ card.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══ 3. DLACZEGO MY — white ══════════════════════════════════════════ -->
+        <section aria-labelledby="section-why" class="relative py-section-padding bg-surface overflow-hidden">
+          <div class="absolute top-20 -right-32 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" aria-hidden="true"></div>
+          <div class="absolute bottom-0 -left-32 w-[400px] h-[400px] rounded-full bg-primary-container/20 blur-[100px] pointer-events-none" aria-hidden="true"></div>
+          <div class="relative max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-[1.15fr_1fr] gap-stack-lg items-center">
+              <div data-reveal="left">
+                <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
+                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">stars</span>
+                  Dlaczego EvolaTec?
+                </span>
+                <h2 id="section-why" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Web development dla firm z
+                  <span class="relative inline-block">
+                    <span class="relative z-10">wysokimi</span>
+                    <span class="absolute -bottom-1 left-0 right-0 h-3 bg-primary/15 rounded-sm -z-0"></span>
+                  </span>
+                  wymaganiami
+                </h2>
+                <p class="text-on-surface-variant mb-10 leading-relaxed">
+                  EvolaTec łączy nowoczesny design, wydajny development oraz technologie SEO i GEO — tworząc szybkie, profesjonalne i skalowalne strony internetowe.
+                </p>
+                <div class="space-y-5">
+                  <div v-for="(point, i) in whyUsPoints" :key="i" class="flex gap-4 items-start">
+                    <div class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">{{ point.icon }}</span>
+                    </div>
+                    <div class="flex-1">
+                      <h3 class="font-display font-bold text-on-surface mb-1 leading-tight">{{ point.title }}</h3>
+                      <p class="text-sm text-on-surface-variant leading-relaxed">{{ point.description }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Decorative toolkit — desktop only -->
+              <div class="relative hidden lg:block" data-reveal="right">
+                <div class="relative aspect-square max-w-md mx-auto">
+                  <div class="absolute inset-6 rounded-[2rem] bg-gradient-to-br from-primary/85 via-primary-container to-primary/60 shadow-2xl"></div>
+                  <div class="absolute top-0 right-8 w-20 h-20 rounded-2xl bg-white shadow-xl flex items-center justify-center rotate-[8deg]">
+                    <span class="material-symbols-outlined text-primary text-[40px]" aria-hidden="true">code_blocks</span>
+                  </div>
+                  <div class="absolute top-20 left-0 bg-white rounded-2xl p-5 shadow-xl rotate-[-5deg]">
+                    <div class="text-[0.65rem] uppercase tracking-widest font-bold text-on-surface-variant mb-3">Tech Stack</div>
+                    <div class="flex flex-wrap gap-1.5 max-w-[180px]">
+                      <span class="px-2 py-1 rounded-md bg-primary/10 text-primary text-[0.65rem] font-bold">Vue</span>
+                      <span class="px-2 py-1 rounded-md bg-primary/10 text-primary text-[0.65rem] font-bold">Nuxt</span>
+                      <span class="px-2 py-1 rounded-md bg-primary/10 text-primary text-[0.65rem] font-bold">Tailwind</span>
+                      <span class="px-2 py-1 rounded-md bg-primary/10 text-primary text-[0.65rem] font-bold">TypeScript</span>
+                    </div>
+                  </div>
+                  <div class="absolute top-44 right-0 bg-white rounded-2xl p-5 shadow-xl rotate-[5deg]">
+                    <div class="text-[0.65rem] uppercase tracking-widest font-bold text-on-surface-variant mb-2">Performance</div>
+                    <div class="font-display text-4xl font-black leading-none text-primary">99<span class="text-lg text-on-surface-variant">/100</span></div>
+                    <div class="text-xs text-on-surface-variant mt-1">Lighthouse</div>
+                  </div>
+                  <div class="absolute bottom-6 left-6 bg-white rounded-2xl p-5 shadow-xl rotate-[-3deg]">
+                    <div class="text-[0.65rem] uppercase tracking-widest font-bold text-on-surface-variant mb-3">Clean Code</div>
+                    <div class="flex flex-col gap-1.5 w-32">
+                      <div class="h-2 rounded-sm bg-primary w-full"></div>
+                      <div class="h-2 rounded-sm bg-primary/30 w-3/4"></div>
+                      <div class="h-2 rounded-sm bg-primary/30 w-5/6"></div>
+                      <div class="h-2 rounded-sm bg-primary w-2/3"></div>
+                    </div>
+                  </div>
+                  <div class="absolute bottom-16 right-0 bg-white rounded-full px-4 py-2 shadow-xl rotate-[6deg] flex items-center gap-2">
+                    <span class="relative flex w-2 h-2">
+                      <span class="absolute inline-flex w-full h-full rounded-full bg-emerald-500 opacity-75 animate-ping"></span>
+                      <span class="relative inline-flex w-2 h-2 rounded-full bg-emerald-500"></span>
+                    </span>
+                    <span class="text-xs font-bold text-on-surface uppercase tracking-wider">Live</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══ 4. GEO ══════════════════════════════════════════════════════════ -->
+        <section aria-labelledby="section-geo" class="py-8 md:py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-stack-lg items-start">
+              <div data-reveal="left">
+                <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
+                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">auto_awesome</span>
+                  Generative Engine Optimization
+                </span>
+                <h2 id="section-geo" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4">
+                  GEO: Widoczność w ChatGPT, Gemini i Perplexity
+                </h2>
+                <p class="text-on-surface-variant leading-relaxed mb-4">
+                  Klasyczne SEO optymalizuje pod Google. <strong class="text-on-surface">GEO — Generative Engine Optimization</strong> — optymalizuje Twoją stronę pod nową generację wyszukiwarek AI jak ChatGPT, Google Gemini, Perplexity i Claude.
+                </p>
+                <p class="text-on-surface-variant leading-relaxed mb-8">
+                  Coraz więcej osób zadaje pytania zakupowe bezpośrednio asystentom AI. Jeśli Twoja firma tam nie trafia, tracisz zapytania na rzecz konkurencji, która już ma GEO optymalizację.
+                </p>
+                <ul class="space-y-3 mb-8">
+                  <li v-for="point in geoPoints" :key="point" class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-lg flex-shrink-0" aria-hidden="true">check_circle</span>
+                    <span class="text-sm text-on-surface">{{ point }}</span>
+                  </li>
+                </ul>
+                <div class="inline-flex items-center gap-2 text-sm font-semibold text-primary bg-primary/8 border border-primary/15 rounded-xl px-5 py-3">
+                  <span class="material-symbols-outlined text-lg" aria-hidden="true">verified</span>
+                  GEO optymalizacja w cenie każdego projektu — bez dopłat
+                </div>
+              </div>
+              <div class="space-y-4" data-reveal="right">
+                <div class="bg-white rounded-2xl p-6 border border-outline-variant/30">
+                  <p class="text-xs uppercase tracking-widest font-bold text-on-surface-variant mb-4">Wyszukiwarki AI, dla których optymalizujemy</p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      v-for="ai in aiEngines"
+                      :key="ai"
+                      class="px-3 py-1.5 bg-surface-container-low rounded-full border border-outline-variant/30 text-sm font-semibold text-on-surface shadow-sm"
+                    >{{ ai }}</span>
+                  </div>
+                </div>
+                <div
+                  v-for="benefit in geoBenefits"
+                  :key="benefit.title"
+                  class="bg-white rounded-xl p-5 border border-outline-variant/20 flex items-start gap-4"
+                >
+                  <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-lg" aria-hidden="true">{{ benefit.icon }}</span>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-on-surface text-sm">{{ benefit.title }}</p>
+                    <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">{{ benefit.desc }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══ 5. CO DOSTAJESZ ════════════════════════════════════════════════ -->
         <section
           aria-labelledby="section-included"
           class="py-section-padding bg-surface"
