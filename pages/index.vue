@@ -4,7 +4,7 @@
 
 useSeoMeta({
   title: 'Tworzenie Stron Internetowych dla Firm | EvolaTec',
-  description: 'Profesjonalne strony internetowe dla firm: landing page od 2 100 zł, strona firmowa od 6 300 zł. Lighthouse 95–100, realizacja od 3 dni. Stała cena, wycena bezpłatna.',
+  description: 'Profesjonalne strony internetowe dla firm: landing page od 2 100 zł, strona firmowa od 6 300 zł. Lighthouse 95–100, realizacja od 3 dni. Stała cena.',
   ogTitle: 'Tworzenie Stron Internetowych dla Firm | EvolaTec',
   ogDescription: 'Strony internetowe dla firm w Polsce: landing page od 2 100 zł, strona firmowa od 6 300 zł. Lighthouse 95–100, realizacja od 3 dni. Stała cena.',
   ogType: 'website',
@@ -60,7 +60,7 @@ const mainSchema = {
         { '@type': 'Country', name: 'Poland' },
         { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Kraków' },
-        { '@type': 'City', name: 'Wrocław' },
+        { '@type': 'City', name: 'Warszawa' },
         { '@type': 'City', name: 'Gdańsk' },
       ],
       contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: 'team@evolatec.pl' },
@@ -80,7 +80,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/#webpage',
       url: 'https://evolatec.pl',
       name: 'Tworzenie Stron Internetowych dla Firm | EvolaTec',
-      description: 'Profesjonalne strony internetowe dla firm: landing page od 2 100 zł, strona firmowa od 6 300 zł. Lighthouse 95–100, realizacja od 3 dni. Stała cena, wycena bezpłatna.',
+      description: 'Profesjonalne strony internetowe dla firm: landing page od 2 100 zł, strona firmowa od 6 300 zł. Lighthouse 95–100, realizacja od 3 dni. Stała cena.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
@@ -118,6 +118,12 @@ const mainSchema = {
         { '@type': 'ListItem', position: 2, item: { '@type': 'Service', name: 'Strona firmowa', url: 'https://evolatec.pl/stworz-strone-firmowa', offers: { '@type': 'Offer', price: '6300', priceCurrency: 'PLN' } } },
         { '@type': 'ListItem', position: 3, item: { '@type': 'Service', name: 'Sklep internetowy', url: 'https://evolatec.pl/sklep-internetowy', offers: { '@type': 'Offer', price: '12600', priceCurrency: 'PLN' } } },
         { '@type': 'ListItem', position: 4, item: { '@type': 'Service', name: 'Pozycjonowanie SEO', url: 'https://evolatec.pl/seo', offers: { '@type': 'Offer', price: '1260', priceCurrency: 'PLN' } } },
+      ],
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Strona główna', item: 'https://evolatec.pl' },
       ],
     },
     {
@@ -407,6 +413,14 @@ const relatedPages = [
   },
 ]
 
+const pricingTableData = [
+  { service: 'Landing page',       price: 'od 2 100 zł netto',  delivery: 'od 3 dni roboczych'  },
+  { service: 'Strona firmowa',     price: 'od 6 300 zł netto',  delivery: 'od 7 dni roboczych'  },
+  { service: 'Sklep internetowy',  price: 'od 12 600 zł netto', delivery: 'od 14 dni roboczych' },
+  { service: 'Pozycjonowanie SEO', price: 'od 1 260 zł netto',  delivery: 'miesięcznie'         },
+  { service: 'Google Ads',         price: 'od 1 680 zł netto',  delivery: 'miesięcznie'         },
+]
+
 const aboutFeatures = [
   { icon: 'code_blocks',    title: 'Nowoczesne technologie',    description: 'Vue.js, Nuxt.js, Tailwind CSS i TypeScript — bez WordPressa, bez wtyczek, bez kompromisów.' },
   { icon: 'bolt',           title: 'Wydajność i szybkość',      description: 'Czas ładowania poniżej 1 sekundy i Lighthouse 95–100/100 — sprawdzalny samodzielnie po wdrożeniu.' },
@@ -471,12 +485,12 @@ const geoBenefits = [
                   O EvolaTec
                 </span>
                 <h2 id="section-about" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
-                  Nowoczesna agencja webowa dla
+                  Profesjonalna strona internetowa dla
                   <span class="relative inline-block">
-                    <span class="relative z-10">profesjonalnych</span>
+                    <span class="relative z-10">Twojej firmy</span>
                     <span class="absolute -bottom-1 left-0 right-0 h-3 bg-primary/15 rounded-sm -z-0"></span>
                   </span>
-                  rozwiązań cyfrowych
+                  — jak ją tworzymy
                 </h2>
                 <div class="space-y-4 text-on-surface-variant leading-relaxed">
                   <p>EvolaTec tworzy nowoczesne strony internetowe, serwisy firmowe, landing page i platformy cyfrowe dla firm, startupów i lokalnych usługodawców.</p>
@@ -926,7 +940,67 @@ const geoBenefits = [
           :steps="processSteps"
         />
 
-        <!-- ══ 9. NUXT VS WORDPRESS — white ═══════════════════════════════════ -->
+        <!-- ══ 9. CENY — gray ═════════════════════════════════════════════════ -->
+        <section aria-labelledby="section-pricing" class="py-8 md:py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="text-center mb-6 md:mb-stack-lg" data-reveal>
+              <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-2 block">Ceny</span>
+              <h2 id="section-pricing" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4">
+                Tworzenie stron internetowych — ceny i terminy realizacji
+              </h2>
+              <p class="text-on-surface-variant max-w-2xl mx-auto">
+                Strona firmowa kosztuje od 6 300 zł netto, realizacja trwa od 7 dni roboczych. Wszystkie ceny są stałe — wycena ustalana jest przed startem projektu i nie zmienia się w trakcie.
+              </p>
+            </div>
+
+            <!-- Mobile cards -->
+            <div class="md:hidden space-y-3 mb-6">
+              <div
+                v-for="(item, index) in pricingTableData"
+                :key="`m-${index}`"
+                class="bg-white rounded-xl border border-surface-container-high p-4 flex items-center justify-between gap-3"
+              >
+                <div class="min-w-0 flex-1">
+                  <p class="font-bold text-on-surface text-base leading-tight">{{ item.service }}</p>
+                  <p class="text-on-surface-variant text-xs mt-1 flex items-center gap-1">
+                    <span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span>
+                    {{ item.delivery }}
+                  </p>
+                </div>
+                <p class="text-primary font-black text-lg whitespace-nowrap">{{ item.price }}</p>
+              </div>
+            </div>
+
+            <!-- Desktop table -->
+            <div class="hidden md:block mb-stack-lg rounded-lg overflow-hidden" data-reveal>
+              <table class="w-full text-base">
+                <caption class="sr-only">Cennik usług EvolaTec — tworzenie stron internetowych, SEO, Google Ads</caption>
+                <thead>
+                  <tr class="border-b-2 border-primary/20 bg-surface">
+                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Usługa</th>
+                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Cena</th>
+                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Czas realizacji</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(item, index) in pricingTableData" :key="index" class="border-b border-surface-container hover:bg-white transition-colors duration-200">
+                    <td class="p-4 text-on-surface font-medium">{{ item.service }}</td>
+                    <td class="p-4 text-primary font-bold text-lg">{{ item.price }}</td>
+                    <td class="p-4 text-on-surface-variant">{{ item.delivery }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="text-center">
+              <NuxtLink to="/kalkulator-kosztow">
+                <BaseButton variant="primary" size="lg">Oblicz koszt swojej strony</BaseButton>
+              </NuxtLink>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══ 10. NUXT VS WORDPRESS — white ══════════════════════════════════ -->
         <section
           aria-labelledby="section-nuxt"
           class="py-section-padding bg-surface"
@@ -950,14 +1024,14 @@ const geoBenefits = [
                   id="section-nuxt"
                   class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
                 >
-                  Agencja z własnym stackiem vs freelancer WordPress — co wybrać dla firmy
+                  Dlaczego Nuxt.js — nie WordPress
                 </h2>
                 <div class="space-y-4 text-on-surface-variant leading-relaxed">
                   <p>
                     Gdy zapytasz dziesięć polskich agencji o ofertę na stronę firmową, osiem wróci z wyceną na WordPress. To wybór z uzasadnieniem — WordPress jest wszędzie, każdy go zna. Problem w tym, że te zalety są jednocześnie jego największymi wadami.
                   </p>
                   <p>
-                    WordPress oparty jest o dynamiczne generowanie stron z bazy danych i system wtyczek. Przy ponad 60 000 wtyczek, każda to potencjalna luka bezpieczeństwa. Wynik Lighthouse typowej witryny WordPress wynosi <strong class="text-on-surface">40–70/100</strong>. Nasze strony budowane w Nuxt.js osiągają <strong class="text-on-surface">95–100/100</strong> — nie dlatego, że "się staramy", ale dlatego, że architektura SSR i brak wtyczek tak po prostu działa.
+                    WordPress oparty jest o dynamiczne generowanie stron z bazy danych i system wtyczek. Przy ponad 60 000 wtyczek, każda to potencjalna luka bezpieczeństwa. Wynik Lighthouse typowej witryny WordPress wynosi <strong class="text-on-surface">40–70/100</strong>. Nasze strony budowane w Nuxt.js osiągają <strong class="text-on-surface">95–100/100</strong> mierzony w Google PageSpeed Insights — nie dlatego, że "się staramy", ale dlatego, że architektura SSR i brak wtyczek tak po prostu działa.
                   </p>
                   <p>
                     Jeśli potrzebujesz możliwości samodzielnej edycji treści — integrujemy <strong class="text-on-surface">Storyblok CMS</strong>. Klient edytuje teksty przez przeglądarkę, kod pozostaje czysty. Więcej o tym, jak wygląda
