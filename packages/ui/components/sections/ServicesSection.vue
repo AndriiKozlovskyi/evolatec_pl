@@ -39,8 +39,6 @@ interface Service {
   title: string
   description: string
   icon: string
-  iconBg: string
-  iconColor: string
   borderColor?: string
   href?: string
 }

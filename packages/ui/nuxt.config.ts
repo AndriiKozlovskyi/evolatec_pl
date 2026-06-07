@@ -1,14 +1,13 @@
-import { fileURLToPath } from 'node:url'
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   components: [
     {
-      path: fileURLToPath(new URL('./components', import.meta.url)),
+      path: './components',
       pathPrefix: false,
     },
     {
-      path: fileURLToPath(new URL('./storyblok', import.meta.url)),
+      path: './storyblok',
       pathPrefix: false,
       global: true,
     },

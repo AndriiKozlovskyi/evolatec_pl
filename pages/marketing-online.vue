@@ -1,4 +1,4 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -36,6 +36,14 @@ const faqData = [
     question: 'Jak długo trwa, zanim marketing online przynosi efekty?',
     answer: 'Google Ads przynosi pierwsze zapytania od pierwszego dnia kampanii, choć pełna optymalizacja stawek i odbiorców zajmuje zwykle 4–6 tygodni. Social media i budowanie marki działają wolniej — pierwsze mierzalne efekty pojawiają się po kilku tygodniach do kilku miesięcy. Dlatego od początku raportujemy koszt pozyskania klienta, żeby było widać, kiedy kampania zaczyna się zwracać.',
   },
+  {
+    question: 'Dla jakich firm sprawdza się marketing online?',
+    answer: 'Dla lokalnych firm, usługodawców, sklepów internetowych, startupów i marek cyfrowych. Kluczowe jest, żeby Twoi klienci byli aktywni online i żebyś był gotów inwestować w odpowiednie kanały. Dobieramy kanały pod branżę i model sprzedaży — nie ma jednej strategii dla wszystkich.',
+  },
+  {
+    question: 'Który kanał marketingowy jest najlepszy dla mojej firmy?',
+    answer: 'Zależy od branży, grupy docelowej i modelu sprzedaży. Lokalne firmy usługowe często korzystają z Local SEO i Google Ads, sklepy z Meta Ads, a firmy B2B — z SEO i content marketingu. Analizujemy Twoją grupę docelową i rekomendujemy kanały, które faktycznie docierają do Twoich klientów.',
+  },
 ]
 
 const mainSchema = {
@@ -64,7 +72,6 @@ const mainSchema = {
         { '@type': 'Country', name: 'Poland' },
         { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Kraków' },
-        { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Gdańsk' },
       ],
       contactPoint: {
@@ -170,68 +177,213 @@ onMounted(() => {
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
-  { value: 'Google Ads',   label: 'od 1 680 zł / mies.',  icon: 'ads_click'    },
-  { value: 'Social media', label: 'od 1 260 zł / mies.',  icon: 'thumb_up'     },
-  { value: 'Miesięcznie',  label: 'Bez długich umów',     icon: 'event_repeat' },
-  { value: 'Fee stałe',    label: 'Budżet reklam osobno', icon: 'verified'     },
+  { value: 'Full Service', label: 'Marketing online',      icon: 'campaign'      },
+  { value: 'Więcej leadów', label: 'Generowanie',          icon: 'person_add'    },
+  { value: 'Performance',  label: 'Fokus na wynikach',     icon: 'analytics'     },
+  { value: 'Mierzalne',    label: 'Efekty kampanii',       icon: 'trending_up'   },
 ]
 
-const channels = [
+const introParagraphs = [
+  'Firmy, które nie są widoczne online, tracą codziennie potencjalnych klientów.',
+  'Profesjonalny marketing internetowy pomaga budować zasięg, zdobywać zaufanie i generować stały strumień zapytań.',
+  'EvolaTec łączy <a href="/seo" class="text-primary font-semibold hover:underline">SEO</a>, tworzenie stron, performance marketing i strategie cyfrowe w mierzalne efekty.',
+]
+
+const marketingServices = [
   {
+    title: 'SEO i pozycjonowanie',
+    description: 'Więcej widoczności w Google przez techniczne SEO, strategie treści i trwałe pozycje organiczne.',
+    icon: 'search_insights',
+    iconBg: 'bg-blue-100',
+    iconColor: 'text-blue-600',
+    borderColor: 'border-blue-500',
+    href: '/seo',
+  },
+  {
+    title: 'Google Ads i performance',
+    description: 'Kampanie reklamowe zoptymalizowane pod konwersje, leady i wzrost sprzedaży.',
     icon: 'ads_click',
-    title: 'Google Ads',
-    text: 'Reklama dla ludzi, którzy już szukają Twojej usługi. Zapytania od pierwszego dnia kampanii.',
+    iconBg: 'bg-orange-100',
+    iconColor: 'text-orange-600',
+    borderColor: 'border-orange-500',
     href: '/google-ads',
-    cta: 'Zobacz Google Ads',
   },
   {
-    icon: 'thumb_up',
-    title: 'Social media',
-    text: 'Facebook i Instagram — organika i Meta Ads. Buduje rozpoznawalność i popyt, zanim klient zacznie szukać.',
-    href: '/social-media',
-    cta: 'Zobacz social media',
+    title: 'Cyfrowe strategie marketingowe',
+    description: 'Indywidualne strategie dla trwałego cyfrowego wzrostu dopasowane do branży.',
+    icon: 'insights',
+    iconBg: 'bg-emerald-100',
+    iconColor: 'text-emerald-600',
+    borderColor: 'border-emerald-500',
+    href: '/kontakt',
+  },
+  {
+    title: 'Branding i pozycjonowanie marki',
+    description: 'Profesjonalna identyfikacja wizualna dla większej rozpoznawalności i zaufania.',
+    icon: 'palette',
+    iconBg: 'bg-purple-100',
+    iconColor: 'text-purple-600',
+    borderColor: 'border-purple-500',
+    href: '/branding',
+  },
+  {
+    title: 'Optymalizacja konwersji',
+    description: 'Optymalizacja stron i landing page\'ów dla lepszych efektów kampanii.',
+    icon: 'conversion_path',
+    iconBg: 'bg-rose-100',
+    iconColor: 'text-rose-600',
+    borderColor: 'border-rose-500',
+    href: '/kontakt',
+  },
+  {
+    title: 'Doradztwo marketingowe',
+    description: 'Strategiczne doradztwo dla firm, startupów i projektów cyfrowych.',
+    icon: 'support_agent',
+    iconBg: 'bg-teal-100',
+    iconColor: 'text-teal-600',
+    borderColor: 'border-teal-500',
+    href: '/kontakt',
   },
 ]
 
-const pricingRows = [
-  { service: 'Google Ads',          fee: 'od 1 680 zł netto / mies.', budget: 'budżet Google osobno' },
-  { service: 'Social media (Meta)', fee: 'od 1 260 zł netto / mies.', budget: 'budżet Meta osobno'   },
-]
-
-const compareRows = [
-  { label: 'Fee od',         ads: '1 680 zł netto / mies.',           soc: '1 260 zł netto / mies.'        },
-  { label: 'Jak działa',     ads: 'Łapie istniejący popyt',           soc: 'Buduje popyt i markę'          },
-  { label: 'Pierwsze efekty', ads: 'Od pierwszego dnia',              soc: 'Tygodnie–miesiące'             },
-  { label: 'Najlepsze dla',  ads: 'Usług wyszukiwanych w Google',     soc: 'Marek B2C, sklepów, biznesów lokalnych' },
-  { label: 'Budżet reklamowy', ads: 'Rozliczany z Google',            soc: 'Rozliczany z Meta'             },
-]
-
-const relatedServices = [
-  { icon: 'ads_click', title: 'Google Ads', description: 'Kampanie reklamowe w Google — ruch od pierwszego dnia, budżet rozliczany z Google.', price: 'od 1 680 zł netto/mies.', href: '/google-ads' },
-  { icon: 'share', title: 'Social Media Marketing', description: 'Organiczne i płatne działania na Facebooku i Instagramie.', price: 'od 1 260 zł netto/mies.', href: '/social-media' },
-  { icon: 'trending_up', title: 'Pozycjonowanie SEO', description: 'Długoterminowa widoczność organiczna w Google obok kampanii płatnych.', price: 'od 1 260 zł netto/mies.', href: '/seo' },
+const marketingBenefits = [
+  {
+    title: 'Więcej zasięgu',
+    description: 'Profesjonalny marketing dowozi markę do właściwej grupy odbiorców.',
+    icon: 'public',
+    image: '/assets/marketing-online.webp',
+  },
+  {
+    title: 'Więcej leadów',
+    description: 'Kampanie zoptymalizowane pod konwersje generują kwalifikowane zapytania.',
+    icon: 'person_add',
+    image: '/assets/google-ads.webp',
+  },
+  {
+    title: 'Wzrost sprzedaży',
+    description: 'Dane z kampanii kierują budżet tam, gdzie faktycznie sprzedaje.',
+    icon: 'trending_up',
+    image: '/assets/seo-analytics.webp',
+  },
+  {
+    title: 'Trwałe efekty',
+    description: 'Długofalowe strategie zapewniają stabilną widoczność i zwrot z inwestycji.',
+    icon: 'schedule',
+    image: '/assets/web-analytics.webp',
+  },
 ]
 
 const processSteps = [
   {
-    icon: 'troubleshoot',
-    title: 'Audyt i setup',
-    description: 'Na starcie wdrażamy śledzenie konwersji, audytujemy istniejące kampanie i budujemy strategię pod cel. Jednorazowo, na początku współpracy.',
+    icon: 'analytics',
+    title: 'Analiza i strategia',
+    description: 'Analizujemy Twoją branżę, grupę docelową i konkurencję — i budujemy strategię pod cel.',
   },
   {
-    icon: 'campaign',
-    title: 'Prowadzenie kampanii',
-    description: 'Tworzymy reklamy lub treści, uruchamiamy i pilnujemy kampanii w trakcie miesiąca.',
+    icon: 'lightbulb',
+    title: 'Koncepcja marketingowa',
+    description: 'Opracowujemy indywidualną strategię wzrostu — dobór kanałów, przekaz i plan działania.',
+  },
+  {
+    icon: 'rocket_launch',
+    title: 'Wdrożenie i kampanie',
+    description: 'Wdrażamy SEO, Ads, content i działania konwersyjne zgodnie z planem.',
   },
   {
     icon: 'tune',
-    title: 'Optymalizacja',
-    description: 'Co tydzień korygujemy stawki, grupy odbiorców i przekaz na podstawie danych konwersji, nie przeczuć.',
+    title: 'Optymalizacja i skalowanie',
+    description: 'Co miesiąc korygujemy kampanie na podstawie danych — nie przeczuć.',
+  },
+]
+
+const marketingChannels = [
+  { title: 'Google SEO',            description: 'Organiczna widoczność przez pozycjonowanie w wyszukiwarce.',         icon: 'search_insights', href: '/seo'          },
+  { title: 'Google Ads',            description: 'Natychmiastowy zasięg przez płatne reklamy w Google.',               icon: 'ads_click',       href: '/google-ads'  },
+  { title: 'Social media marketing', description: 'Zasięg i budowanie marki na Facebooku i Instagramie.',              icon: 'groups',          href: '/social-media' },
+  { title: 'Content marketing',     description: 'Treści SEO, landing page\'i i content konwersyjny.',                 icon: 'article',         href: '/copywriting'  },
+]
+
+const whyEvolaTecParagraphs = [
+  'Wiele agencji marketingowych skupia się wyłącznie na reklamie.',
+  'EvolaTec łączy marketing, <a href="/seo" class="text-primary font-semibold hover:underline">SEO</a>, tworzenie stron, <a href="/branding" class="text-primary font-semibold hover:underline">branding</a> i optymalizację techniczną w kompleksowe rozwiązanie.',
+  'Dzięki temu powstają strony i strategie marketingowe, które nie tylko dobrze wyglądają, ale przynoszą realne wyniki.',
+]
+
+const whyEvolaTec = [
+  {
+    title: 'Know-how techniczne',
+    description: 'Łączymy development, SEO i marketing w jednym miejscu.',
+    icon: 'code',
+    iconBg: 'bg-blue-100',
+    iconColor: 'text-blue-600',
+    borderColor: 'border-blue-500',
   },
   {
-    icon: 'summarize',
-    title: 'Raport miesięczny',
-    description: 'Dostajesz konkretne liczby: wydatek, efekty, koszt pozyskania klienta i plan na kolejny miesiąc.',
+    title: 'Fokus na wynikach',
+    description: 'Więcej leadów, lepsze pozycje i trwały wzrost sprzedaży.',
+    icon: 'trending_up',
+    iconBg: 'bg-emerald-100',
+    iconColor: 'text-emerald-600',
+    borderColor: 'border-emerald-500',
+  },
+  {
+    title: 'Skalowalne strategie',
+    description: 'Systemy marketingowe, które działają długofalowo.',
+    icon: 'stacked_line_chart',
+    iconBg: 'bg-purple-100',
+    iconColor: 'text-purple-600',
+    borderColor: 'border-purple-500',
+  },
+]
+
+const consultingItems = [
+  { label: 'Doradztwo marketingu online', icon: 'support_agent'   },
+  { label: 'Digital marketing consulting', icon: 'business_center' },
+  { label: 'Strategie lejkowe',           icon: 'filter_alt'      },
+  { label: 'Generowanie leadów',          icon: 'person_add'      },
+  { label: 'Strategie SEO',              icon: 'search_insights'  },
+  { label: 'Branding i pozycjonowanie',   icon: 'palette'         },
+  { label: 'Optymalizacja konwersji',     icon: 'conversion_path' },
+  { label: 'Performance marketing',       icon: 'analytics'       },
+]
+
+const consultingColors = [
+  'text-blue-500',
+  'text-emerald-500',
+  'text-orange-500',
+  'text-purple-500',
+]
+
+const pricingItems = [
+  { name: 'Doradztwo marketingowe',          price: 'wycena indywidualna'        },
+  { name: 'Prowadzenie Google Ads',          price: 'od 1 680 zł netto/mies.'   },
+  { name: 'Prowadzenie Social Media (Meta)', price: 'od 1 260 zł netto/mies.'   },
+  { name: 'Pozycjonowanie SEO',              price: 'od 1 260 zł netto/mies.'   },
+  { name: 'Copywriting SEO',                price: 'wycena indywidualna'        },
+  { name: 'Landing page konwersyjny',        price: 'od 2 100 zł netto'         },
+]
+
+const relatedServices = [
+  {
+    icon: 'article',
+    title: 'Landing page',
+    description: 'Każda kampania potrzebuje strony konwersyjnej — bez niej tracisz budżet reklamowy.',
+    price: 'od 2 100 zł netto',
+    href: '/landing-page',
+  },
+  {
+    icon: 'language',
+    title: 'Strona firmowa',
+    description: 'Twoje kanały marketingowe generują ruch — profesjonalna strona zamienia go w zapytania.',
+    price: 'od 2 100 zł netto',
+    href: '/strona-internetowa',
+  },
+  {
+    icon: 'shopping_bag',
+    title: 'Sklep internetowy',
+    description: 'Prowadź reklamy na sklep, który naprawdę sprzedaje — szybki, bezpieczny i zoptymalizowany.',
+    price: 'od 4 200 zł netto',
+    href: '/sklep-internetowy',
   },
 ]
 </script>
@@ -241,180 +393,129 @@ const processSteps = [
 
     <!-- ── Hero ─────────────────────────────────────────────────────────── -->
     <HeroSection
-      badge="Marketing internetowy"
-      title="Marketing internetowy, który przynosi klientów — nie tylko kliknięcia"
-      description="Prowadzimy Google Ads i social media w modelu miesięcznym — fee stałe, budżet reklamowy rozliczany oddzielnie z Google lub Meta. Co miesiąc raportujemy koszt pozyskania klienta."
-      primaryCTA="Uzyskaj bezpłatną wycenę"
-      secondaryCTA="Oblicz koszt"
+      badge="Full Service Marketing Online"
+      title="Agencja marketingu online: więcej zasięgu, więcej leadów, więcej sprzedaży"
+      description="EvolaTec opracowuje cyfrowe strategie marketingowe, które budują widoczność firm, generują kwalifikowane leady i tworzą trwały wzrost."
+      primaryCTA="Zapytaj o strategię"
+      secondaryCTA="Zobacz cennik"
       primary-href="/kontakt"
-      secondary-href="/kalkulator-kosztow"
+      secondary-href="#cennik"
       :stats="heroStats"
     />
 
     <main id="main-content">
-
-      <!-- Breadcrumb -->
-
       <article>
 
-        <!-- ── Section 1: Bez strategii ──────────────────────────────────── -->
-        <section
-          aria-labelledby="section-strategy"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
+        <!-- ── Intro Section ──────────────────────────────────────────────── -->
+        <IntroSection
+          heading="Dlaczego nowoczesny marketing online jest kluczowy"
+          :paragraphs="introParagraphs"
+          image="/assets/marketing-online.webp"
+          image-alt="Agencja marketingu online EvolaTec — dashboard kampanii i analityki"
+        />
 
-              <div data-reveal="left">
-                <h2
-                  id="section-strategy"
-                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-                >
-                  Dlaczego marketing online bez strategii to spalony budżet
+        <!-- ── Services Section ───────────────────────────────────────────── -->
+        <ServicesSection
+          title="Nasze usługi marketingu internetowego"
+          variant="centered"
+          :services="marketingServices"
+          learnMoreLabel="Dowiedz się więcej"
+          background="bg-surface-container-low"
+        />
+
+        <!-- ── Benefits Section ───────────────────────────────────────────── -->
+        <BenefitsSection
+          title="Korzyści profesjonalnej agencji marketingowej"
+          :benefits="marketingBenefits"
+        />
+
+        <!-- ── Process Section ────────────────────────────────────────────── -->
+        <ProcessSection
+          title="Nasz proces marketingu online"
+          :steps="processSteps"
+          background="bg-surface-container-low"
+        />
+
+        <!-- ── Marketing Channels ─────────────────────────────────────────── -->
+        <DarkCardsSection
+          title="Kanały marketingowe dla wzrostu"
+          :cards="marketingChannels"
+        />
+
+        <!-- ── Why EvolaTec ───────────────────────────────────────────────── -->
+        <IntroSection
+          heading="Dlaczego EvolaTec jako agencja marketingu online?"
+          :paragraphs="whyEvolaTecParagraphs"
+          image="/assets/web-analytics.webp"
+          image-alt="Agencja marketingu online EvolaTec — analityka i wyniki kampanii"
+          :usps="whyEvolaTec"
+        />
+
+        <!-- ── Consulting Section ─────────────────────────────────────────── -->
+        <section class="py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid md:grid-cols-2 gap-stack-lg items-start">
+              <div>
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">
+                  Doradztwo marketingowe i strategie cyfrowe
                 </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                  Skuteczny marketing online opiera się na klarownych strategiach i mierzalnych celach.
+                </p>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                  EvolaTec wspiera firmy w budowie nowoczesnych koncepcji marketingowych, strategii wzrostu cyfrowego i skalowalnych systemów pozyskiwania klientów.
+                </p>
+                <NuxtLink to="/kontakt">
+                  <BaseButton variant="primary" size="lg">Zapytaj o doradztwo</BaseButton>
+                </NuxtLink>
+              </div>
 
-                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-                  <p>
-                    Firma odpala reklamy, wrzuca posty, płaci co miesiąc — i po kwartale nie potrafi powiedzieć, czy to się opłaca. To najczęstszy scenariusz w marketingu małych firm: aktywność zastąpiła strategię. Pieniądze wychodzą, kliknięcia są, ale nikt nie liczy, ile z nich zamieniło się w zapytanie albo sprzedaż.
-                  </p>
-                  <p>
-                    Powód jest zwykle techniczny, nie kreatywny. Brakuje śledzenia konwersji, więc nie wiadomo, która kampania działa. Budżet idzie na kanał dobrany przypadkiem, a nie pod to, jak kupują klienci w danej branży. I nikt nie odpowiada za jedną liczbę — koszt pozyskania klienta — która jako jedyna mówi, czy marketing zarabia, czy pali budżet.
-                  </p>
-                  <p>
-                    Prowadzimy marketing online inaczej: zaczynamy od wdrożenia śledzenia konwersji, dobieramy kanał pod sposób, w jaki kupują Twoi klienci, i co miesiąc raportujemy konkretne liczby. <strong class="text-on-surface">Budżet reklamowy rozliczany jest oddzielnie, bezpośrednio z Google lub Meta — fee za obsługę jest stałe</strong>, więc wiesz, za co płacisz agencji, a ile idzie na same reklamy.
-                  </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div
+                  v-for="(item, index) in consultingItems"
+                  :key="item.label"
+                  class="flex items-center gap-3 bg-surface rounded-xl p-4 border border-outline-variant/20"
+                >
+                  <span
+                    class="material-symbols-outlined text-xl flex-shrink-0"
+                    :class="consultingColors[index % consultingColors.length]"
+                  >{{ item.icon }}</span>
+                  <span class="font-body-md text-on-surface text-sm font-medium">{{ item.label }}</span>
                 </div>
               </div>
-
-              <div data-reveal="right" class="rounded-2xl overflow-hidden">
-                <NuxtImg
-                  src="/assets/marketing-online.webp"
-                  alt="Dashboard marketingu internetowego z wykresami ruchu organicznego i konwersji kampanii Google Ads"
-                  width="640"
-                  height="420"
-                  class="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
-
             </div>
           </div>
         </section>
 
-        <!-- ── Section 2: Kanały ─────────────────────────────────────────── -->
-        <section
-          aria-labelledby="section-channels"
-          class="py-section-padding bg-surface-container-low"
-        >
+        <!-- ── Pricing Section (1:1 German) ──────────────────────────────── -->
+        <section id="cennik" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
+            <h2 class="font-headline-lg text-headline-lg text-primary text-center mb-stack-lg">
+              Cennik usług marketingu internetowego
+            </h2>
+            <p class="text-center font-body-lg text-on-surface-variant mb-stack-lg">
+              Przejrzyste ceny za marketing, SEO i kampanie performance. Budżet reklamowy rozliczany oddzielnie z Google lub Meta.
+            </p>
 
-            <div class="max-w-3xl mx-auto mb-stack-lg">
-              <h2
-                id="section-channels"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-              >
-                Kanały, którymi prowadzimy marketing online
-              </h2>
-              <div class="space-y-4 text-on-surface-variant leading-relaxed">
-                <p>
-                  Marketing online to nie jeden kanał, tylko dobór właściwego do celu. Prowadzimy dwa, które dla większości polskich firm dają najszybszy mierzalny zwrot, i nie namawiamy na trzeci, jeśli budżet lepiej zadziała skupiony.
-                </p>
-                <p>
-                  Najczęściej łączymy oba: Google Ads łapie popyt, który już istnieje, a social media buduje ten, którego jeszcze nie ma. Jeśli ruch ma trafiać na dopracowaną stronę docelową, dokładamy do tego
-                  <NuxtLink to="/landing-page" class="text-primary font-semibold hover:underline">landing page</NuxtLink>
-                  pod konkretną kampanię.
-                </p>
-              </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-5">
-              <NuxtLink
-                v-for="ch in channels"
-                :key="ch.title"
-                :to="ch.href"
-                class="block bg-white rounded-2xl border border-outline-variant/30 p-6 ambient-shadow transition-all duration-300 hover:-translate-y-1"
-              >
-                <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <span class="material-symbols-outlined text-primary" aria-hidden="true">{{ ch.icon }}</span>
-                </div>
-                <h3 class="font-bold text-lg text-on-surface mb-2">{{ ch.title }}</h3>
-                <p class="text-sm text-on-surface-variant leading-relaxed mb-4">{{ ch.text }}</p>
-                <span class="text-sm font-semibold text-primary inline-flex items-center gap-1">
-                  {{ ch.cta }}
-                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span>
-                </span>
-              </NuxtLink>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- ── Section 3: Cena i model ───────────────────────────────────── -->
-        <section
-          aria-labelledby="section-prices"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
-
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
-              <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Cennik</span>
-              <h2
-                id="section-prices"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
-              >
-                Marketing internetowy — cena i model rozliczeń
-              </h2>
-              <p class="text-on-surface-variant">
-                Stałe fee za obsługę plus budżet reklamowy płacony osobno, bezpośrednio dostawcy. To rozróżnienie jest kluczowe — właśnie jego brak sprawia, że oferty agencji są nieporównywalne.
-              </p>
-            </div>
-
-            <!-- Mobile cards -->
-            <div class="md:hidden space-y-3 mb-8">
-              <div
-                v-for="row in pricingRows"
-                :key="row.service"
-                class="bg-white rounded-xl border border-outline-variant/30 p-4"
-              >
-                <p class="font-bold text-on-surface">{{ row.service }}</p>
-                <p class="text-primary font-black text-lg mt-1">{{ row.fee }}</p>
-                <p class="text-xs text-on-surface-variant mt-0.5">{{ row.budget }}</p>
-              </div>
-            </div>
-
-            <!-- Desktop table -->
-            <div class="hidden md:block mb-stack-lg rounded-xl overflow-hidden border border-outline-variant/30">
-              <table class="w-full text-base">
-                <caption class="sr-only">Ceny miesięczne marketingu internetowego</caption>
+            <div class="max-w-2xl mx-auto overflow-x-auto">
+              <table class="w-full">
                 <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-primary/20">
-                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Usługa</th>
-                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Fee miesięczne</th>
-                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Budżet reklamowy</th>
+                  <tr class="border-b-2 border-primary">
+                    <th class="text-left py-4 px-6 font-headline-md text-primary">Usługa</th>
+                    <th class="text-right py-4 px-6 font-headline-md text-primary">Cena</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr
-                    v-for="(row, i) in pricingRows"
-                    :key="row.service"
-                    class="border-b border-outline-variant/20"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/30'"
+                    v-for="item in pricingItems"
+                    :key="item.name"
+                    class="border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors"
                   >
-                    <td class="p-4 font-medium text-on-surface">{{ row.service }}</td>
-                    <td class="p-4 font-bold text-primary text-lg">{{ row.fee }}</td>
-                    <td class="p-4 text-on-surface-variant">{{ row.budget }}</td>
+                    <td class="py-4 px-6 font-body-md text-on-surface">{{ item.name }}</td>
+                    <td class="py-4 px-6 font-body-md text-primary font-bold text-right">{{ item.price }}</td>
                   </tr>
                 </tbody>
               </table>
-            </div>
-
-            <div class="max-w-2xl mx-auto space-y-4 text-on-surface-variant">
-              <p>
-                <strong class="text-on-surface">Google Ads kosztuje od 1 680 zł netto miesięcznie — budżet reklamowy rozliczany oddzielnie. Prowadzenie social media kosztuje od 1 260 zł netto miesięcznie — budżet Meta Ads rozliczany oddzielnie.</strong> Podana kwota to fee za pracę agencji: strategię, prowadzenie, optymalizację i raporty.
-              </p>
-              <p>
-                Nie dopłacasz agencji prowizji od wydanego budżetu reklamowego. Dla firmy zaczynającej rekomendujemy minimum 1 000 zł miesięcznie budżetu reklamowego, żeby kampania miała z czego się uczyć.
-              </p>
             </div>
 
             <div class="text-center mt-10">
@@ -422,106 +523,19 @@ const processSteps = [
                 <BaseButton variant="outline" size="md">Oblicz koszt usług</BaseButton>
               </NuxtLink>
             </div>
-
           </div>
         </section>
 
-        <!-- ── Section 4: Google Ads vs social ───────────────────────────── -->
-        <section
-          aria-labelledby="section-compare"
-          class="py-section-padding bg-surface-container-low"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
-
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
-              <h2
-                id="section-compare"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
-              >
-                Google Ads czy social media — od czego zacząć
-              </h2>
-              <p class="text-on-surface-variant">
-                Przy ograniczonym pierwszym budżecie pytanie nie brzmi „który kanał jest lepszy", tylko „gdzie ma trafić pierwsza złotówka". Odpowiedź zależy od tego, czy Twoi klienci już szukają Twojej usługi, czy trzeba dopiero zbudować popyt.
-              </p>
-            </div>
-
-            <!-- Desktop table -->
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8">
-              <table class="w-full text-sm">
-                <caption class="sr-only">Porównanie Google Ads z social media</caption>
-                <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
-                    <th class="text-left p-4 font-bold text-on-surface w-1/4" scope="col">Kryterium</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Google Ads</th>
-                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Social media (Meta)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="(row, i) in compareRows"
-                    :key="row.label"
-                    class="border-b border-outline-variant/20"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'"
-                  >
-                    <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.ads }}</td>
-                    <td class="p-4 text-center text-on-surface-variant">{{ row.soc }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Mobile cards -->
-            <div class="md:hidden space-y-3 mb-8">
-              <div
-                v-for="row in compareRows"
-                :key="row.label"
-                class="bg-white rounded-xl border border-outline-variant/30 p-4"
-              >
-                <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.label }}</p>
-                <div class="grid grid-cols-2 gap-2">
-                  <div class="bg-primary/5 rounded-lg p-3 text-center border border-primary/15">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1">Google Ads</p>
-                    <p class="text-xs text-primary font-semibold leading-snug">{{ row.ads }}</p>
-                  </div>
-                  <div class="bg-surface-container-low rounded-lg p-3 text-center">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1">Social media</p>
-                    <p class="text-xs text-on-surface-variant leading-snug">{{ row.soc }}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="max-w-3xl mx-auto">
-              <p class="text-on-surface-variant">
-                Jeśli klienci wpisują Twoją usługę w Google — zaczynaj od
-                <NuxtLink to="/google-ads" class="text-primary font-semibold hover:underline">Google Ads</NuxtLink>,
-                bo popyt już istnieje i wystarczy go przechwycić. Jeśli sprzedajesz produkt kupowany pod wpływem — zaczynaj od
-                <NuxtLink to="/social-media" class="text-primary font-semibold hover:underline">social media</NuxtLink>.
-                Firmy z większym budżetem prowadzą oba kanały równolegle.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- ── Section 5: Proces ─────────────────────────────────────────── -->
-        <ProcessSection
-          eyebrow="Jak prowadzimy"
-          title="Jak prowadzimy marketing online — miesięczny cykl"
-          :steps="processSteps"
-          background="bg-surface"
-        />
-
-        <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
+        <!-- ── FAQ Section ────────────────────────────────────────────────── -->
         <FAQSection
           title="Najczęściej zadawane pytania o marketing internetowy"
           :faqs="faqData"
         />
 
+        <!-- ── Related Services ───────────────────────────────────────────── -->
         <RelatedServicesSection
-          eyebrow="Powiązane usługi"
-          title="Kanały marketingowe dopasowane do celu"
+          eyebrow="Strona internetowa i development"
+          title="Marketing potrzebuje konwersyjnej strony jako podstawy"
           cta="Dowiedz się więcej"
           :services="relatedServices"
           background="bg-surface"
@@ -532,10 +546,10 @@ const processSteps = [
 
     <!-- ── CTA ───────────────────────────────────────────────────────────── -->
     <CTASection
-      title="Jeden partner do całego marketingu online"
-      description="Opisz cel i budżet — doradzimy, od którego kanału zacząć, i wrócimy ze stałym fee przed startem."
-      primary-cta="Uzyskaj bezpłatną wycenę"
-      secondary-cta="Omów projekt"
+      title="Więcej widoczności, więcej leadów, więcej wzrostu"
+      description="EvolaTec opracowuje nowoczesne strategie marketingu online dla firm, które chcą rosnąć cyfrowo."
+      primary-cta="Zapytaj o projekt marketingowy"
+      secondary-cta="Bezpłatna konsultacja"
       primary-href="/kontakt"
       secondary-href="/kontakt"
     />

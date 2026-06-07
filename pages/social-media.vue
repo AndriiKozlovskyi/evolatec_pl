@@ -1,12 +1,12 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
 useSeoMeta({
-  title: 'Marketing social media dla firm | EvolaTec',
-  description: 'Prowadzenie social media i kampanii Meta Ads od 1 260 zł netto miesięcznie. Kalendarz treści, publikacje, community management i raporty. Budżet Meta oddzielnie.',
-  ogTitle: 'Marketing social media dla firm | EvolaTec',
-  ogDescription: 'Prowadzenie social media i kampanii Meta Ads od 1 260 zł netto miesięcznie. Kalendarz treści, publikacje, community management. Budżet Meta osobno.',
+  title: 'Agencja Social Media — Facebook i Instagram Ads | EvolaTec',
+  description: 'Profesjonalne kampanie Social Media Ads na Facebooku i Instagramie. Strategia, kreacje, Meta Ads i raportowanie. Budżet reklamowy rozliczany oddzielnie.',
+  ogTitle: 'Agencja Social Media — Facebook i Instagram Ads | EvolaTec',
+  ogDescription: 'Social Media Ads na Facebooku i Instagramie — strategia, content i performance marketing dla mierzalnych wyników.',
   ogType: 'website',
   ogUrl: 'https://evolatec.pl/social-media',
   ogImage: 'https://evolatec.pl/og-image.webp',
@@ -17,24 +17,32 @@ useSeoMeta({
 
 const faqData = [
   {
-    question: 'Ile kosztuje prowadzenie social media dla firmy?',
-    answer: 'Prowadzenie social media kosztuje od 1 260 zł netto miesięcznie — to fee za obsługę agencji. Budżet reklamowy Meta jest rozliczany oddzielnie, bezpośrednio z Meta, i ustalasz go samodzielnie. Cena obejmuje kalendarz treści, tworzenie i publikację postów, community management, kampanie Meta Ads oraz miesięczny raport.',
+    question: 'Co robi agencja social media?',
+    answer: 'Agencja social media tworzy, uruchamia i optymalizuje kampanie reklamowe na platformach takich jak Instagram, Facebook i LinkedIn. Obejmuje to analizę grupy docelowej, tworzenie kreacji, teksty reklamowe, targetowanie i bieżącą optymalizację. Celem jest wygenerowanie jak największej liczby kwalifikowanych kliknięć, leadów lub sprzedaży z dostępnego budżetu.',
   },
   {
-    question: 'Organika czy płatne kampanie Meta — co działa lepiej?',
-    answer: 'Organika buduje wiarygodność i utrzymuje obecnych odbiorców, ale jej zasięg bez budżetu spadł do kilku procent fanów. Płatne kampanie Meta docierają do nowych odbiorców i przynoszą efekty w dni, a nie miesiące. Dla większości firm najlepiej działa połączenie obu: organika dla spójnego wizerunku, płatne kampanie dla zasięgu i zapytań.',
+    question: 'Ile kosztują Facebook lub Instagram Ads?',
+    answer: 'Prowadzenie Meta Ads zaczyna się od 1 260 zł netto miesięcznie za usługi agencji. Budżet reklamowy na Facebooka i Instagrama jest ustalany oddzielnie i płacony bezpośrednio do Meta. Wysokość budżetu zależy od branży i celu — przed startem kampanii podajemy rekomendację.',
   },
   {
-    question: 'Jaki budżet na reklamę na Facebooku i Instagramie jest potrzebny?',
-    answer: 'Dla firmy zaczynającej z płatną promocją rozsądny próg to kilkaset złotych miesięcznie budżetu Meta, żeby kampania miała z czego docierać do nowych odbiorców. Budżet ustalasz samodzielnie i płacisz bezpośrednio Meta, niezależnie od fee za obsługę. W bardziej konkurencyjnych branżach próg jest wyższy i ustalamy go przed startem.',
+    question: 'Jak szybko działają Social Media Ads?',
+    answer: 'Pierwsze wyniki mogą być widoczne już po kilku dniach. Pierwsze tygodnie służą głównie testowaniu różnych kreacji i grup docelowych — potem najlepsze kombinacje są dalej optymalizowane i skalowane.',
   },
   {
-    question: 'Czy budżet reklamowy Meta jest wliczony w cenę obsługi?',
-    answer: 'Nie — fee za obsługę i budżet reklamowy Meta to dwie osobne kwoty. Płacisz nam stałe miesięczne wynagrodzenie za prowadzenie social media, a budżet reklamowy trafia bezpośrednio do Meta. Dzięki temu nie pobieramy prowizji od wydanego budżetu, a nasze wynagrodzenie nie rośnie wraz z kwotą wydaną na reklamy.',
+    question: 'Która platforma social media jest odpowiednia dla mojej firmy?',
+    answer: 'Instagram i Facebook sprawdzają się szczególnie dla B2C, firm lokalnych i ofert wizualnych. TikTok działa dla młodszych grup docelowych. LinkedIn to pierwszy wybór w B2B. Analizujemy Twoją grupę docelową i rekomendujemy odpowiednią platformę.',
   },
   {
-    question: 'Które social media są najlepsze dla firmy B2C?',
-    answer: 'Dla większości firm B2C w Polsce podstawą są Facebook i Instagram — razem docierają do najszerszej grupy odbiorców i dzielą jeden system reklamowy Meta Ads. Instagram lepiej sprawdza się dla marek wizualnych i młodszej grupy, Facebook dla lokalnych biznesów i szerszej grupy wiekowej. Wybór platformy ustalamy na podstawie tego, gdzie realnie są Twoi klienci, a nie gdzie jest najmodniej.',
+    question: 'Jaka jest różnica między Social Media Marketing a Google Ads?',
+    answer: 'Google Ads dociera do użytkowników, którzy aktywnie szukają rozwiązania. Reklamy social media są wyświetlane użytkownikom pasującym do docelowej grupy odbiorców, ale niekoniecznie aktywnie szukającym. Social media sprawdza się szczególnie przy budowaniu marki i ofertach wizualnych, Google Ads — przy konkretnej intencji zakupowej.',
+  },
+  {
+    question: 'Czy przejmujecie też tworzenie contentu na social media?',
+    answer: 'Tak, tworzymy na życzenie kreacje, Reels, treści na Stories i teksty reklamowe do kampanii. Kreacje i grafiki zaczynają się od 630 zł, produkcja contentu od 1 260 zł.',
+  },
+  {
+    question: 'Dla jakich firm nadaje się Social Media Marketing?',
+    answer: 'Dla firm lokalnych, usługodawców, e-commerce, startupów i budowania marki. Szczególnie skuteczny, gdy Twoja oferta może być atrakcyjnie wizualnie zaprezentowana lub ma wyraźnie określoną grupę docelową.',
   },
 ]
 
@@ -53,7 +61,7 @@ const mainSchema = {
         contentUrl: 'https://evolatec.pl/logo.webp',
       },
       image: { '@id': 'https://evolatec.pl/#logo' },
-      description: 'Agencja webowa tworząca strony internetowe, sklepy online i rozwiązania SEO dla polskich firm. Realizacja od 3 dni roboczych, Lighthouse 95–100, stała cena.',
+      description: 'Agencja webowa tworząca strony internetowe, sklepy online i rozwiązania SEO dla polskich firm.',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Wrocław',
@@ -64,7 +72,6 @@ const mainSchema = {
         { '@type': 'Country', name: 'Poland' },
         { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Kraków' },
-        { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Gdańsk' },
       ],
       contactPoint: {
@@ -76,21 +83,17 @@ const mainSchema = {
         'https://g.page/evolatec-pl',
         'https://www.linkedin.com/company/evolatec',
       ],
-      priceRange: '2100 zł – 25200 zł',
+      priceRange: '1260 zł – 25200 zł',
     },
     {
       '@type': 'WebPage',
       '@id': 'https://evolatec.pl/social-media#webpage',
       url: 'https://evolatec.pl/social-media',
-      name: 'Marketing social media dla firm | EvolaTec',
-      description: 'Prowadzenie social media i kampanii Meta Ads od 1 260 zł netto miesięcznie. Kalendarz treści, publikacje, community management i raporty. Budżet Meta oddzielnie.',
+      name: 'Agencja Social Media — Facebook i Instagram Ads | EvolaTec',
+      description: 'Profesjonalne kampanie Social Media Ads na Facebooku i Instagramie. Strategia, kreacje, Meta Ads i raportowanie.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['h1', '.speakable-intro'],
-      },
       breadcrumb: { '@id': 'https://evolatec.pl/social-media#breadcrumb' },
     },
     {
@@ -99,21 +102,21 @@ const mainSchema = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Strona główna', item: 'https://evolatec.pl' },
         { '@type': 'ListItem', position: 2, name: 'Marketing internetowy', item: 'https://evolatec.pl/marketing-online' },
-        { '@type': 'ListItem', position: 3, name: 'Marketing social media', item: 'https://evolatec.pl/social-media' },
+        { '@type': 'ListItem', position: 3, name: 'Social Media', item: 'https://evolatec.pl/social-media' },
       ],
     },
     {
       '@type': 'Service',
       '@id': 'https://evolatec.pl/social-media#service',
-      name: 'Marketing social media',
-      serviceType: 'Prowadzenie social media i Meta Ads',
-      description: 'Prowadzenie social media na Facebooku i Instagramie: kalendarz treści, tworzenie i publikacja postów, community management, kampanie Meta Ads oraz miesięczny raport. Od 1 260 zł netto miesięcznie, budżet Meta rozliczany oddzielnie.',
+      name: 'Meta Ads i Social Media Marketing',
+      serviceType: 'Social Media Marketing',
+      description: 'Instagram, Facebook i LinkedIn Ads dla większego zasięgu, obserwujących i konwersji.',
       url: 'https://evolatec.pl/social-media',
       provider: { '@id': 'https://evolatec.pl/#organization' },
       areaServed: { '@type': 'Country', name: 'Poland' },
       offers: {
         '@type': 'Offer',
-        name: 'Prowadzenie social media',
+        name: 'Meta Ads Management',
         priceSpecification: { '@type': 'UnitPriceSpecification', minPrice: '1260', priceCurrency: 'PLN', unitText: 'MONTH', valueAddedTaxIncluded: false },
       },
     },
@@ -129,89 +132,197 @@ const mainSchema = {
   ],
 }
 
-const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: 'Jak prowadzimy social media — miesięczny cykl',
-  description: 'Miesięczny cykl prowadzenia social media w EvolaTec: od planowania treści po raport.',
-  step: [
-    { '@type': 'HowToStep', position: 1, name: 'Planowanie', text: 'Ustalamy tematy, przekaz i kalendarz treści na nadchodzący miesiąc pod cel biznesowy.' },
-    { '@type': 'HowToStep', position: 2, name: 'Produkcja treści', text: 'Przygotowujemy grafiki i teksty postów, gotowe do publikacji.' },
-    { '@type': 'HowToStep', position: 3, name: 'Publikacja i community management', text: 'Publikujemy zgodnie z harmonogramem, odpowiadamy na komentarze i wiadomości, prowadzimy płatne kampanie Meta.' },
-    { '@type': 'HowToStep', position: 4, name: 'Raport miesięczny', text: 'Podsumowujemy zasięg, zaangażowanie i efekty kampanii oraz ustalamy kierunek na kolejny miesiąc.' },
-  ],
-}
-
 useHead({
   htmlAttrs: { lang: 'pl' },
   link: [{ rel: 'canonical', href: 'https://evolatec.pl/social-media' }],
   script: [
     { type: 'application/ld+json', innerHTML: JSON.stringify(mainSchema) },
-    { type: 'application/ld+json', innerHTML: JSON.stringify(howToSchema) },
   ],
-})
-
-// ─── Scroll reveal ─────────────────────────────────────────────────────────
-
-onMounted(() => {
-  const observer = new IntersectionObserver(
-    (entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-revealed'); observer.unobserve(entry.target) } }) },
-    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
-  )
-  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
 })
 
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
-  { value: 'od 1 260 zł', label: 'Fee miesięczne netto',   icon: 'payments'     },
-  { value: 'FB i IG',     label: 'Organika i Meta Ads',    icon: 'thumb_up'     },
-  { value: 'Miesięcznie', label: 'Bez długich umów',       icon: 'event_repeat' },
-  { value: 'Budżet osobno', label: 'Meta Ads rozliczane',  icon: 'account_balance_wallet' },
+  { value: 'Facebook',    label: 'Instagram i Meta',   icon: 'groups'     },
+  { value: 'Więcej leadów', label: 'Generowanie',      icon: 'person_add' },
+  { value: 'Performance', label: 'Fokus na wynikach',  icon: 'analytics'  },
+  { value: 'Zasięg',      label: 'Budowanie',          icon: 'public'     },
 ]
 
-const includedItems = [
-  { icon: 'calendar_month', label: 'Kalendarz treści miesięczny'     },
-  { icon: 'image',          label: 'Tworzenie i publikacja postów'   },
-  { icon: 'forum',          label: 'Community management'            },
-  { icon: 'ads_click',      label: 'Kampanie Meta Ads (FB + IG)'     },
-  { icon: 'insights',       label: 'Raport miesięczny'               },
+const introParagraphs = [
+  'Facebook, Instagram i inne sieci społecznościowe należą do najważniejszych kanałów marketingowych dla nowoczesnych firm.',
+  'Profesjonalna reklama social media pozwala precyzyjnie dotrzeć do nowych klientów, budować rozpoznawalność marki i zwiększać sprzedaż.',
+  'Jako agencja social media EvolaTec tworzy kampanie, które generują zasięg, zaangażowanie, leady i obroty — uzupełnione o <a href="/seo" class="text-primary font-semibold hover:underline">SEO</a> i <a href="/google-ads" class="text-primary font-semibold hover:underline">Google Ads</a>.',
 ]
 
-const compareRows = [
-  { label: 'Zasięg',         org: 'Kilka procent fanów',       paid: 'Nowi odbiorcy spoza fanów'    },
-  { label: 'Koszt',          org: 'W ramach fee',              paid: 'Budżet Meta osobno'           },
-  { label: 'Pierwsze efekty', org: 'Wolno, miesiącami',        paid: 'Dni–tygodnie'                 },
-  { label: 'Główna rola',    org: 'Wiarygodność i lojalność',  paid: 'Pozyskiwanie zasięgu i leadów' },
-  { label: 'Najlepsze dla',  org: 'Budowania marki w czasie',  paid: 'Promocji ofert i dotarcia'    },
+const socialPlatforms = [
+  {
+    name: 'Facebook Marketing',
+    description: 'Reklamy dla firm lokalnych, usługodawców i e-commerce.',
+    icon: 'thumb_up',
+    bg: 'bg-gradient-to-br from-blue-600 to-blue-800',
+    image: '/assets/marketing-online.webp',
+  },
+  {
+    name: 'Instagram Marketing',
+    description: 'Wizualne kampanie dla budowania marki i zasięgu.',
+    icon: 'photo_camera',
+    bg: 'bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400',
+    image: '/assets/social-media.webp',
+  },
+  {
+    name: 'Meta Ads',
+    description: 'Kampanie performance w całej sieci Meta.',
+    icon: 'hub',
+    bg: 'bg-gradient-to-br from-indigo-600 to-blue-700',
+    image: '/assets/seo-analytics.webp',
+  },
+  {
+    name: 'Retargeting',
+    description: 'Odzyskiwanie odwiedzających i zainteresowanych.',
+    icon: 'refresh',
+    bg: 'bg-gradient-to-br from-slate-700 to-slate-900',
+    image: '/assets/web-analytics.webp',
+  },
+]
+
+const socialServices = [
+  {
+    title: 'Facebook Ads',
+    description: 'Targetowane reklamy na Facebooku dla leadów, sprzedaży i budowania marki.',
+    icon: 'thumb_up',
+    iconBg: 'bg-blue-100',
+    iconColor: 'text-blue-600',
+    borderColor: 'border-blue-500',
+  },
+  {
+    title: 'Instagram Ads',
+    description: 'Nowoczesne kampanie na Instagramie dla zasięgu i performance.',
+    icon: 'photo_camera',
+    iconBg: 'bg-pink-100',
+    iconColor: 'text-pink-600',
+    borderColor: 'border-pink-500',
+  },
+  {
+    title: 'Kampanie Meta Ads',
+    description: 'Kampanie performance w całej sieci Meta.',
+    icon: 'hub',
+    iconBg: 'bg-indigo-100',
+    iconColor: 'text-indigo-600',
+    borderColor: 'border-indigo-500',
+  },
+  {
+    title: 'Content social media',
+    description: 'Tworzenie treści reklamowych, kreacji i materiałów kampanijnych.',
+    icon: 'edit_square',
+    iconBg: 'bg-orange-100',
+    iconColor: 'text-orange-600',
+    borderColor: 'border-orange-500',
+  },
+  {
+    title: 'Zarządzanie Social Media',
+    description: 'Opieka, planowanie i optymalizacja Twoich kanałów social media.',
+    icon: 'manage_accounts',
+    iconBg: 'bg-emerald-100',
+    iconColor: 'text-emerald-600',
+    borderColor: 'border-emerald-500',
+  },
+  {
+    title: 'Performance Marketing',
+    description: 'Skalowalne kampanie skoncentrowane na obrocie i konwersji.',
+    icon: 'analytics',
+    iconBg: 'bg-purple-100',
+    iconColor: 'text-purple-600',
+    borderColor: 'border-purple-500',
+  },
+]
+
+const socialProcess = [
+  {
+    icon: 'analytics',
+    title: 'Analiza i strategia',
+    description: 'Analizujemy Twoją grupę docelową, branżę i konkurencję.',
+  },
+  {
+    icon: 'brush',
+    title: 'Content i kreacje',
+    description: 'Tworzymy treści reklamowe, grafiki i materiały kampanijne.',
+  },
+  {
+    icon: 'campaign',
+    title: 'Setup kampanii',
+    description: 'Konfigurujemy profesjonalne kampanie na Facebooku i Instagramie.',
+  },
+  {
+    icon: 'tune',
+    title: 'Optymalizacja i skalowanie',
+    description: 'Stała analiza i poprawa efektywności kampanii.',
+  },
+]
+
+const whyEvolaTecParagraphs = [
+  'Skuteczny Social Media Marketing to coś więcej niż ładne posty.',
+  'Kluczowe są strategia, analiza grupy docelowej, content i optymalizacja oparta na danych.',
+  'EvolaTec łączy reklamy social media, <a href="/marketing-online" class="text-primary font-semibold hover:underline">performance marketing</a>, web design i <a href="/seo" class="text-primary font-semibold hover:underline">SEO</a> w wydajne systemy marketingowe.',
+]
+
+const whyEvolaTec = [
+  {
+    title: 'Fokus na performance',
+    description: 'Kampanie z mierzalnymi wynikami.',
+    icon: 'ads_click',
+    iconBg: 'bg-blue-100',
+    iconColor: 'text-blue-600',
+    borderColor: 'border-blue-500',
+  },
+  {
+    title: 'Kreatywny content',
+    description: 'Reklamy, które przyciągają uwagę.',
+    icon: 'brush',
+    iconBg: 'bg-pink-100',
+    iconColor: 'text-pink-600',
+    borderColor: 'border-pink-500',
+  },
+  {
+    title: 'Skalowalne systemy',
+    description: 'Strategie dla długofalowego wzrostu.',
+    icon: 'stacked_line_chart',
+    iconBg: 'bg-purple-100',
+    iconColor: 'text-purple-600',
+    borderColor: 'border-purple-500',
+  },
+]
+
+const pricingItems = [
+  { name: 'Doradztwo Social Media',   price: 'od 380 zł/h'        },
+  { name: 'Prowadzenie Meta Ads',     price: 'od 1 260 zł/mies.'  },
+  { name: 'Kreacje i grafiki',        price: 'od 630 zł'           },
+  { name: 'Raport miesięczny',        price: 'od 420 zł/mies.'    },
+  { name: 'Szablony Social Media',    price: 'od 630 zł'           },
+  { name: 'Produkcja contentu',       price: 'od 1 260 zł'         },
 ]
 
 const relatedServices = [
-  { icon: 'ads_click', title: 'Google Ads', description: 'Kampanie Google — ruch z wyszukiwarki i remarketingu obok działań social.', price: 'od 1 680 zł netto/mies.', href: '/google-ads' },
-  { icon: 'trending_up', title: 'Marketing online', description: 'Strategia marketingowa łącząca social media, SEO i kampanie płatne.', price: 'Wycena indywidualna', href: '/marketing-online' },
-  { icon: 'article', title: 'Copywriting SEO', description: 'Treści do social media i na stronę pisane pod frazy i pod wyszukiwarki AI.', price: 'Wycena indywidualna', href: '/copywriting' },
-]
-
-const processSteps = [
   {
-    icon: 'event_note',
-    title: 'Planowanie',
-    description: 'Ustalamy tematy, przekaz i kalendarz treści na nadchodzący miesiąc pod cel biznesowy.',
+    icon: 'article',
+    title: 'Landing page',
+    description: 'Konwersyjna landing page jako cel kampanii social media — więcej leadów, mniej odrzuceń.',
+    price: 'od 2 100 zł netto',
+    href: '/landing-page',
   },
   {
-    icon: 'palette',
-    title: 'Produkcja treści',
-    description: 'Przygotowujemy grafiki i teksty postów, gotowe do publikacji.',
+    icon: 'language',
+    title: 'Strona firmowa',
+    description: 'Profesjonalna strona firmowa jako cyfrowa baza, na którą kierujesz ruch z social media.',
+    price: 'od 2 100 zł netto',
+    href: '/strona-internetowa',
   },
   {
-    icon: 'forum',
-    title: 'Publikacja i community management',
-    description: 'Publikujemy zgodnie z harmonogramem, odpowiadamy na komentarze i wiadomości, prowadzimy płatne kampanie Meta.',
-  },
-  {
-    icon: 'summarize',
-    title: 'Raport miesięczny',
-    description: 'Podsumowujemy zasięg, zaangażowanie i efekty kampanii oraz ustalamy kierunek na kolejny miesiąc.',
+    icon: 'shopping_bag',
+    title: 'Sklep internetowy',
+    description: 'E-commerce ze Social Commerce Integration — sprzedaż bezpośrednio z Instagrama i Facebooka.',
+    price: 'od 4 200 zł netto',
+    href: '/sklep-internetowy',
   },
 ]
 </script>
@@ -221,156 +332,132 @@ const processSteps = [
 
     <!-- ── Hero ─────────────────────────────────────────────────────────── -->
     <HeroSection
-      badge="Marketing social media"
-      title="Marketing social media, który buduje markę i przynosi klientów"
-      description="Prowadzenie Facebooka i Instagrama — organika i płatne kampanie Meta Ads — od 1 260 zł netto miesięcznie. Kalendarz treści, community management i raporty. Budżet Meta osobno."
-      primaryCTA="Uzyskaj bezpłatną wycenę"
-      secondaryCTA="Zobacz marketing online"
+      badge="Profesjonalna agencja Social Media i Meta Ads"
+      title="Agencja Social Media Ads: reklamy na Facebooku i Instagramie, które sprzedają"
+      description="EvolaTec tworzy skuteczne kampanie Social Media na Facebooku, Instagramie i Meta Ads — strategia, content i performance marketing dla mierzalnych wyników."
+      primaryCTA="Zapytaj o Social Media"
+      secondaryCTA="Zobacz cennik"
       primary-href="/kontakt"
-      secondary-href="/marketing-online"
+      secondary-href="#cennik"
       :stats="heroStats"
     />
 
     <main id="main-content">
-
-      <!-- Breadcrumb -->
-
       <article>
 
-        <!-- ── Section 1: Profile nie sprzedają ──────────────────────────── -->
-        <section
-          aria-labelledby="section-problem"
-          class="py-section-padding bg-surface"
-        >
+        <!-- ── Intro Section ──────────────────────────────────────────────── -->
+        <IntroSection
+          heading="Dlaczego Social Media Marketing jest dziś kluczowy"
+          :paragraphs="introParagraphs"
+          image="/assets/social-media.webp"
+          image-alt="Social Media Marketing EvolaTec — kampanie Meta Ads i content"
+        />
+
+        <!-- ── Platforms Section ──────────────────────────────────────────── -->
+        <section class="py-section-padding bg-surface-container-low">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
+            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+              <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+                Social Media Marketing dla różnych platform
+              </h2>
+              <p class="font-body-lg text-on-surface-variant">
+                Tworzymy kampanie dostosowane do każdego kanału.
+              </p>
+            </div>
 
-              <div data-reveal="left">
-                <h2
-                  id="section-problem"
-                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-                >
-                  Dlaczego firmowe profile w social media nie sprzedają
-                </h2>
-
-                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-                  <p>
-                    Firma zakłada profil na Facebooku i Instagramie, publikuje regularnie, zbiera kilka polubień od znajomych — i nic z tego nie wynika. To najczęstszy obraz firmowego social media: aktywność jest, zapytań nie ma. Problem nie leży w tym, że „social media nie działa", tylko w tym, jak jest prowadzone.
-                  </p>
-                  <p>
-                    Trzy rzeczy zwykle zawodzą. Posty powstają bez planu i przekazu, więc nie budują żadnej spójnej historii marki. Trafiają wyłącznie do obecnych obserwujących, bo bez płatnego zasięgu organiczny zasięg Facebooka spadł do kilku procent fanów. I nikt nie mierzy, czy te treści w ogóle przekładają się na ruch lub zapytania — publikacja jest celem samym w sobie.
-                  </p>
-                  <p>
-                    Prowadzimy social media jako narzędzie sprzedaży, nie kronikę firmy. Zaczynamy od strategii i kalendarza treści, łączymy organikę z płatnymi kampaniami Meta Ads, żeby treść docierała poza grono obecnych fanów, i co miesiąc raportujemy efekty. <strong class="text-on-surface">Budżet reklamowy Meta rozliczany jest oddzielnie, bezpośrednio z Meta — fee za obsługę jest stałe.</strong>
-                  </p>
-                </div>
-              </div>
-
-              <div data-reveal="right" class="rounded-2xl overflow-hidden">
-                <NuxtImg
-                  src="/assets/social-media.webp"
-                  alt="Smartfon z otwartymi profilami firmowymi na Facebooku i Instagramie — zasięg organiczny i kampania Meta Ads"
-                  width="640"
-                  height="420"
-                  class="w-full h-auto object-cover"
-                  loading="lazy"
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+              <div
+                v-for="platform in socialPlatforms"
+                :key="platform.name"
+                class="group relative rounded-3xl overflow-hidden aspect-[4/3] cursor-pointer"
+                :class="platform.bg"
+              >
+                <NuxtPicture
+                  :src="platform.image"
+                  alt=""
+                  format="avif,webp"
+                  sizes="xs:100vw sm:100vw md:50vw lg:25vw xl:25vw xxl:25vw"
+                  :width="600"
+                  :height="450"
+                  :img-attrs="{
+                    loading: 'lazy',
+                    decoding: 'async',
+                    class: 'absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-500 scale-105 group-hover:scale-110 transition-transform',
+                  }"
                 />
-              </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-            </div>
-          </div>
-        </section>
-
-        <!-- ── Section 2: Co zawiera ─────────────────────────────────────── -->
-        <section
-          aria-labelledby="section-included"
-          class="py-section-padding bg-surface-container-low"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-start">
-
-              <div>
-                <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
-                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">thumb_up</span>
-                  Treść plus jej promocja
-                </span>
-
-                <h2
-                  id="section-included"
-                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-                >
-                  Co zawiera prowadzenie social media
-                </h2>
-
-                <div class="space-y-4 text-on-surface-variant leading-relaxed">
-                  <p>
-                    Prowadzenie social media to praca miesięczna obejmująca i treść, i jej promocję. W stałym fee mieści się komplet, dzięki któremu profil żyje i dociera dalej niż do obecnych obserwujących.
-                  </p>
-                  <p>
-                    Łączymy treść organiczną z płatną dystrybucją, bo sam organiczny zasięg dziś nie wystarcza. Spójny przekaz wizualny zaczyna się od
-                    <NuxtLink to="/branding" class="text-primary font-semibold hover:underline">identyfikacji marki</NuxtLink>
-                    — jeśli jej nie masz, najpierw warto zająć się brandingiem.
-                  </p>
+                <div class="relative h-full flex flex-col justify-between p-6">
+                  <div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <span class="material-symbols-outlined text-white text-2xl">{{ platform.icon }}</span>
+                  </div>
+                  <div>
+                    <h3 class="font-headline-md text-white mb-1">{{ platform.name }}</h3>
+                    <p class="text-white/70 text-sm font-body-md">{{ platform.description }}</p>
+                  </div>
                 </div>
               </div>
-
-              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <li
-                  v-for="item in includedItems"
-                  :key="item.label"
-                  class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/30 px-5 py-4 ambient-shadow"
-                >
-                  <div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">{{ item.icon }}</span>
-                  </div>
-                  <span class="text-sm font-semibold text-on-surface leading-snug">{{ item.label }}</span>
-                </li>
-              </ul>
-
             </div>
           </div>
         </section>
 
-        <!-- ── Section 3: Cena ───────────────────────────────────────────── -->
-        <section
-          aria-labelledby="section-price"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Cennik</span>
-            <h2
-              id="section-price"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Ile kosztuje prowadzenie social media — fee i budżet Meta
+        <!-- ── Services Section ───────────────────────────────────────────── -->
+        <ServicesSection
+          title="Nasze usługi Social Media"
+          variant="centered"
+          :services="socialServices"
+          learnMoreLabel="Dowiedz się więcej"
+          background="bg-surface"
+        />
+
+        <!-- ── Process Section ────────────────────────────────────────────── -->
+        <ProcessSection
+          title="Nasz proces Social Media"
+          :steps="socialProcess"
+          background="bg-surface-container-low"
+        />
+
+        <!-- ── Why EvolaTec ───────────────────────────────────────────────── -->
+        <IntroSection
+          heading="Dlaczego EvolaTec jako agencja Social Media?"
+          :paragraphs="whyEvolaTecParagraphs"
+          image="/assets/marketing-online.webp"
+          image-alt="Agencja Social Media Marketing EvolaTec"
+          :usps="whyEvolaTec"
+        />
+
+        <!-- ── Pricing Table ──────────────────────────────────────────────── -->
+        <section id="cennik" class="py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <h2 class="font-headline-lg text-headline-lg text-primary text-center mb-4">
+              Cennik Social Media Marketing
             </h2>
+            <p class="text-center font-body-lg text-on-surface-variant mb-stack-lg">
+              Przejrzyste ceny za obsługę social media, Meta Ads i kampanie performance. Budżet reklamowy rozliczany oddzielnie z Meta.
+            </p>
 
-            <div class="grid sm:grid-cols-2 gap-4 mb-8">
-              <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6">
-                <p class="text-on-surface-variant mb-1 text-sm">Fee za obsługę</p>
-                <p class="font-display text-3xl font-black text-primary mb-1">od 1 260 zł netto</p>
-                <p class="text-sm text-on-surface-variant">miesięcznie · praca agencji</p>
-              </div>
-              <div class="rounded-2xl border border-outline-variant/40 bg-white p-6">
-                <p class="text-on-surface-variant mb-1 text-sm">Budżet reklamowy Meta</p>
-                <p class="font-display text-3xl font-black text-on-surface mb-1">od kilkuset zł</p>
-                <p class="text-sm text-on-surface-variant">miesięcznie · płacony Meta</p>
-              </div>
+            <div class="max-w-2xl mx-auto overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b-2 border-primary">
+                    <th class="text-left py-4 px-6 font-headline-md text-primary">Usługa</th>
+                    <th class="text-right py-4 px-6 font-headline-md text-primary">Cena</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    v-for="item in pricingItems"
+                    :key="item.name"
+                    class="border-b border-outline-variant/20 hover:bg-surface transition-colors"
+                  >
+                    <td class="py-4 px-6 font-body-md text-on-surface">{{ item.name }}</td>
+                    <td class="py-4 px-6 font-body-md text-primary font-bold text-right">{{ item.price }}</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            <div class="space-y-4 text-on-surface-variant leading-relaxed">
-              <p>
-                <strong class="text-on-surface">Prowadzenie social media kosztuje od 1 260 zł netto miesięcznie — budżet Meta Ads rozliczany oddzielnie.</strong> Podana kwota to fee za pracę agencji: strategię, treści, prowadzenie profili i raportowanie.
-              </p>
-              <p>
-                Budżet reklamowy Meta rozliczany jest oddzielnie, bezpośrednio z Meta — ustalasz go samodzielnie i płacisz platformie, nie nam. Dla firmy zaczynającej z płatną promocją rozsądny próg to kilkaset złotych miesięcznie.
-              </p>
-              <p>
-                Nasze fee nie rośnie wraz z budżetem przeznaczonym na reklamy — nie pobieramy prowizji od kwoty wydanej w Meta. Wszystkie ceny to ceny stałe — wycena przed startem, bez zmian w trakcie projektu.
-              </p>
-            </div>
-
-            <div class="mt-10">
+            <div class="text-center mt-10">
               <NuxtLink to="/kalkulator-kosztow">
                 <BaseButton variant="outline" size="md">Oblicz koszt usług</BaseButton>
               </NuxtLink>
@@ -378,98 +465,16 @@ const processSteps = [
           </div>
         </section>
 
-        <!-- ── Section 4: Organika vs płatne ─────────────────────────────── -->
-        <section
-          aria-labelledby="section-compare"
-          class="py-section-padding bg-surface-container-low"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
-
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
-              <h2
-                id="section-compare"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
-              >
-                Organika czy płatne kampanie Meta — co działa dla firmy
-              </h2>
-              <p class="text-on-surface-variant">
-                Organiczne posty i płatne kampanie Meta to nie alternatywy, tylko dwie warstwy tej samej pracy. Organika buduje wiarygodność i utrzymuje obecnych odbiorców; płatne kampanie docierają do nowych.
-              </p>
-            </div>
-
-            <!-- Desktop table -->
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8">
-              <table class="w-full text-sm">
-                <caption class="sr-only">Porównanie organiki z płatnymi kampaniami Meta</caption>
-                <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
-                    <th class="text-left p-4 font-bold text-on-surface w-1/4" scope="col">Kryterium</th>
-                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Organika</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Płatne kampanie Meta</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="(row, i) in compareRows"
-                    :key="row.label"
-                    class="border-b border-outline-variant/20"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'"
-                  >
-                    <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
-                    <td class="p-4 text-center text-on-surface-variant">{{ row.org }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.paid }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Mobile cards -->
-            <div class="md:hidden space-y-3 mb-8">
-              <div
-                v-for="row in compareRows"
-                :key="row.label"
-                class="bg-white rounded-xl border border-outline-variant/30 p-4"
-              >
-                <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.label }}</p>
-                <div class="grid grid-cols-2 gap-2">
-                  <div class="bg-surface-container-low rounded-lg p-3 text-center">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1">Organika</p>
-                    <p class="text-xs text-on-surface-variant leading-snug">{{ row.org }}</p>
-                  </div>
-                  <div class="bg-primary/5 rounded-lg p-3 text-center border border-primary/15">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1">Płatne Meta</p>
-                    <p class="text-xs text-primary font-semibold leading-snug">{{ row.paid }}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="max-w-3xl mx-auto">
-              <p class="text-on-surface-variant">
-                Dla większości firm właściwy układ to jedno i drugie: organika utrzymuje spójny wizerunek, a płatne kampanie Meta dowożą zasięg i zapytania. Jeśli budżet jest mały, lepiej zacząć od kilku dobrze wypromowanych treści niż od dużej liczby postów, których nikt nie zobaczy.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- ── Section 5: Proces ─────────────────────────────────────────── -->
-        <ProcessSection
-          eyebrow="Jak prowadzimy"
-          title="Jak prowadzimy social media — miesięczny cykl"
-          :steps="processSteps"
-          background="bg-surface"
-        />
-
-        <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
+        <!-- ── FAQ Section ────────────────────────────────────────────────── -->
         <FAQSection
-          title="Najczęściej zadawane pytania o marketing w social media"
+          title="Najczęściej zadawane pytania o Social Media Marketing"
           :faqs="faqData"
         />
 
+        <!-- ── Related Services ───────────────────────────────────────────── -->
         <RelatedServicesSection
-          eyebrow="Powiązane usługi"
-          title="Rozszerz działania o płatne kanały"
+          eyebrow="Strona internetowa i development"
+          title="Reklama social media działa tylko z właściwą stroną docelową"
           cta="Dowiedz się więcej"
           :services="relatedServices"
           background="bg-surface"
@@ -480,12 +485,12 @@ const processSteps = [
 
     <!-- ── CTA ───────────────────────────────────────────────────────────── -->
     <CTASection
-      title="Social media, które buduje markę i sprzedaje"
-      description="Opisz firmę i cel — zaproponujemy plan treści i kampanii oraz stałe fee przed startem."
-      primary-cta="Uzyskaj bezpłatną wycenę"
-      secondary-cta="Omów projekt"
+      title="Więcej zasięgu i klientów dzięki Social Media Marketing"
+      description="EvolaTec tworzy kampanie social media, które zwiększają widoczność, zdobywają klientów i pomagają firmom rosnąć."
+      primary-cta="Uruchom Social Media"
+      secondary-cta="Zobacz wszystkie ceny"
       primary-href="/kontakt"
-      secondary-href="/kontakt"
+      secondary-href="#cennik"
     />
 
   </div>
