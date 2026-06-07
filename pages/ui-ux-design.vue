@@ -64,7 +64,7 @@ const mainSchema = {
         { '@type': 'Country', name: 'Poland' },
         { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Kraków' },
-        { '@type': 'City', name: 'Wrocław' },
+        { '@type': 'City', name: 'Warszawa' },
         { '@type': 'City', name: 'Gdańsk' },
       ],
       contactPoint: {

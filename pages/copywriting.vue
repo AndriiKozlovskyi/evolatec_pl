@@ -4,7 +4,7 @@
 
 useSeoMeta({
   title: 'Teksty na stronę www — copywriting SEO | EvolaTec',
-  description: 'Teksty na stronę www, które sprzedają i pozycjonują: podstrony usług, strona główna, opisy produktów, landing page. Pisane pod frazy i AI. Wycena indywidualna.',
+  description: 'Teksty na stronę www, które sprzedają i pozycjonują: podstrony usług, strona główna, opisy produktów, landing page. Pisane pod frazy i AI.',
   ogTitle: 'Teksty na stronę www — copywriting SEO | EvolaTec',
   ogDescription: 'Teksty na stronę www, które sprzedają i pozycjonują — pisane pod konkretne frazy i pod wyszukiwarki AI. Wycena indywidualna.',
   ogType: 'website',
@@ -72,7 +72,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/copywriting#webpage',
       url: 'https://evolatec.pl/copywriting',
       name: 'Teksty na stronę www — copywriting SEO | EvolaTec',
-      description: 'Teksty na stronę www, które sprzedają i pozycjonują: podstrony usług, strona główna, opisy produktów, landing page. Pisane pod frazy i AI. Wycena indywidualna.',
+      description: 'Teksty na stronę www, które sprzedają i pozycjonują: podstrony usług, strona główna, opisy produktów, landing page. Pisane pod frazy i AI.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',

@@ -4,7 +4,7 @@
 
 useSeoMeta({
   title: 'Identyfikacja wizualna i projekt logo dla firm | EvolaTec',
-  description: 'Branding i identyfikacja wizualna: logo w 3 koncepcjach, paleta kolorów, typografia, księga znaku, pliki AI, SVG, PNG, PDF. Wycena indywidualna, bezpłatna konsultacja.',
+  description: 'Branding i identyfikacja wizualna: logo w 3 koncepcjach, paleta kolorów, typografia, księga znaku, pliki AI, SVG, PNG, PDF. Wycena indywidualna.',
   ogTitle: 'Identyfikacja wizualna i projekt logo dla firm | EvolaTec',
   ogDescription: 'Branding i identyfikacja wizualna: logo w 3 koncepcjach, paleta, typografia, księga znaku, pliki AI, SVG, PNG, PDF. Wycena indywidualna.',
   ogType: 'website',

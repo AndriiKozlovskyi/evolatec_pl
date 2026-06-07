@@ -265,6 +265,15 @@ const processSteps = [
   },
 ]
 
+const seoCompareRows = [
+  { criterion: 'Co obejmuje', onpage: 'Meta tagi, nagłówki H1–H4, treści, frazy kluczowe, linkowanie wewnętrzne', tech: 'Core Web Vitals, crawlability, URL, canonical, Schema.org, szybkość ładowania' },
+  { criterion: 'Kto to widzi', onpage: 'Użytkownik i Google (treść strony)', tech: 'Głównie Googlebot (kod i infrastruktura)' },
+  { criterion: 'Efekty po wdrożeniu', onpage: '4–8 tygodni', tech: '2–6 tygodni (po ponownym crawlowaniu)' },
+  { criterion: 'Jak sprawdzić problem', onpage: 'Google Search Console → Wyniki wyszukiwania', tech: 'Google Search Console → Pokrycie, PageSpeed Insights' },
+  { criterion: 'Kiedy zacząć', onpage: 'Gdy strona jest indeksowana, ale nie rankuje na frazy', tech: 'Gdy strona ma błędy crawlowania lub wolno się ładuje' },
+  { criterion: 'Narzędzie EvolaTec', onpage: 'Ręczna optymalizacja każdej podstrony', tech: 'Wbudowane w kod — bez wtyczek' },
+]
+
 const relatedServices = [
   {
     icon: 'search_check',
@@ -316,12 +325,35 @@ const relatedServices = [
           :benefits="benefits"
         />
 
-        <!-- ── Jak optymalizujemy stronę (ProcessSection — container-low) ──── -->
-        <ProcessSection
-          eyebrow="Jak pracujemy"
-          title="Jak przebiega optymalizacja SEO strony — etapy"
-          :steps="processSteps"
-        />
+        <!-- ── Optymalizacja on-page vs techniczne SEO (tabela porównawcza) ── -->
+        <section aria-labelledby="section-onpage-vs-tech" class="py-section-padding bg-surface">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <h2 id="section-onpage-vs-tech" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6 text-center">
+              Optymalizacja on-page vs techniczne SEO — czym się różnią
+            </h2>
+            <p class="text-on-surface-variant text-center max-w-2xl mx-auto mb-10 leading-relaxed">Wielu właścicieli stron nie wie, czy problem leży w treści, czy w kodzie. To ważne pytanie — odpowiedź zmienia zakres i koszt pracy oraz decyduje, od czego zacząć.</p>
+            <div class="overflow-x-auto rounded-2xl border border-outline-variant/30 shadow-sm mb-8">
+              <table class="w-full text-sm">
+                <caption class="sr-only">Porównanie optymalizacji on-page z technicznym SEO</caption>
+                <thead>
+                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
+                    <th class="text-left p-4 font-bold text-on-surface w-1/4" scope="col">Obszar</th>
+                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Optymalizacja on-page</th>
+                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Techniczne SEO</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(row, i) in seoCompareRows" :key="i" :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'">
+                    <td class="p-4 font-semibold text-on-surface">{{ row.criterion }}</td>
+                    <td class="p-4 text-center text-on-surface-variant text-xs">{{ row.onpage }}</td>
+                    <td class="p-4 text-center text-primary font-semibold bg-primary/5 text-xs">{{ row.tech }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-sm text-on-surface-variant text-center">Większość stron potrzebuje obu warstw jednocześnie — techniczne błędy blokują efekty on-page. Dlatego każdy projekt optymalizacji zaczynamy od krótkiego audytu wskazującego główny problem.</p>
+          </div>
+        </section>
 
         <!-- ── Nasze usługi optymalizacji (FeaturesSection — primary) ──────── -->
         <FeaturesSection
@@ -329,6 +361,29 @@ const relatedServices = [
           :features="features"
           image-url="/assets/code-editor.webp"
           image-alt="Edytor kodu z optymalizacją technicznego SEO i danych strukturalnych Schema.org"
+        />
+
+        <!-- ── Optymalizacja SEO — cena i zakres ─────────────────────────── -->
+        <section aria-labelledby="section-cena-seo" class="py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="max-w-3xl mx-auto">
+              <h2 id="section-cena-seo" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                Optymalizacja SEO — cena i zakres
+              </h2>
+              <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                <p>Optymalizacja SEO kosztuje od 1 260 zł netto miesięcznie — bez stałej umowy na start. Minimalne zaangażowanie to 3 miesiące, bo Google potrzebuje czasu na ponowne zaindeksowanie zmian i ocenę zaktualizowanej strony. Agencja, która obiecuje widoczne efekty w ciągu 30 dni, myli optymalizację z reklamą.</p>
+                <p>W ramach miesięcznej obsługi wykonujemy optymalizację meta tagów i nagłówków priorytetowych podstron, poprawę struktury URL jeśli tego wymaga, techniczne SEO (szybkość ładowania, mobile, crawl budget), optymalizację Core Web Vitals, wdrożenie lub aktualizację danych strukturalnych Schema.org oraz optymalizację treści pod wybrane frazy kluczowe. Każdy miesiąc kończy się raportem z rankingami monitorowanych fraz i listą wykonanych działań.</p>
+                <p>Jeśli nie wiesz, od czego zacząć — przed podpisaniem czegokolwiek możesz zamówić jednorazowy <NuxtLink to="/audyt-seo" class="text-primary font-semibold hover:underline">audyt SEO</NuxtLink> za 840 zł netto. Raport wskazuje dokładnie, które poprawki mają największy wpływ na pozycje Twojej strony.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Jak optymalizujemy stronę (ProcessSection — container-low) ──── -->
+        <ProcessSection
+          eyebrow="Jak pracujemy"
+          title="Jak przebiega optymalizacja SEO strony — etapy"
+          :steps="processSteps"
         />
 
         <!-- ── Częste problemy techniczne SEO (split image + lista) ───────── -->

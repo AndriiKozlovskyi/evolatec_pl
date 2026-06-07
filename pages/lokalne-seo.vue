@@ -55,7 +55,7 @@ const mainSchema = {
       areaServed: [
         { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Kraków' },
-        { '@type': 'City', name: 'Wrocław' },
+        { '@type': 'City', name: 'Warszawa' },
         { '@type': 'City', name: 'Gdańsk' },
         { '@type': 'Country', name: 'Poland' },
       ],
@@ -134,6 +134,23 @@ useHead({
   script: [{ type: 'application/ld+json', innerHTML: JSON.stringify(mainSchema) }],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
@@ -148,6 +165,26 @@ const localStatsCards = [
   { icon: 'phone', value: '80%', text: 'lokalnych wyszukiwań kończy się kontaktem z firmą.' },
   { icon: 'location_on', value: 'Map Pack', text: 'decyduje o widoczności lokalnej i pozyskiwaniu nowych klientów.' },
   { icon: 'verified_user', value: 'Więcej zaufania', text: 'dzięki lokalnym pozycjom i pozytywnym opiniom klientów.' },
+]
+
+// ── Zakres usługi lokalnego SEO ──────────────────────────────────────────────
+const localSeoScope = [
+  { title: 'Optymalizacja Google Business Profile', desc: 'Uzupełnienie i weryfikacja wizytówki, kategorie podstawowa i dodatkowe, opis z frazami kluczowymi, harmonogram postów GBP i odpowiedzi na recenzje.' },
+  { title: 'NAP consistency', desc: 'Spójność nazwy firmy, adresu i numeru telefonu we wszystkich katalogach, agregatorach i wzmiankach w internecie. Niespójne dane NAP obniżają ranking w Map Pack.' },
+  { title: 'Lokalne cytowania i katalogi branżowe', desc: 'Zgłoszenie firmy do katalogów tematycznych i lokalnych portali miejskich z linkiem zwrotnym do strony i wizytówki.' },
+  { title: 'Lokalne dane strukturalne Schema.org', desc: 'Implementacja LocalBusiness JSON-LD z adresem, obszarem obsługi i godzinami otwarcia. Schema.org markup dla FAQ, HowTo, Service i LocalBusiness w każdej realizacji.' },
+  { title: 'Optymalizacja strony pod lokalne frazy', desc: 'Dedykowane podstrony dla obsługiwanych dzielnic lub miast, treści odpowiadające na lokalne zapytania, wewnętrzna struktura linków.' },
+  { title: 'Raport miesięczny', desc: 'Pozycje fraz lokalnych, liczba wyświetleń wizytówki, zapytania w Map Pack, zmiany w Call Clicks i Direction Requests.' },
+]
+
+// ── Lokalne SEO vs ogólnopolskie SEO ─────────────────────────────────────────
+const localVsNationalRows = [
+  { criterion: 'Zasięg docelowy', local: 'Jedno miasto, region, województwo', national: 'Cała Polska' },
+  { criterion: 'Czas do pierwszych efektów', local: '2–4 miesiące', national: '6–12 miesięcy' },
+  { criterion: 'Konkurencja fraz', local: 'Niższa — frazy z geolokalizacją', national: 'Wysoka — domeny ogólnopolskie' },
+  { criterion: 'Kluczowe narzędzie', local: 'Google Business Profile + Map Pack', national: 'Profil linków zewnętrznych' },
+  { criterion: 'Cena miesięczna', local: 'Od 1 260 zł netto', national: 'Od 2 100 zł netto' },
+  { criterion: 'Kiedy wybrać', local: 'Usługi lokalne, jeden lub kilka oddziałów', national: 'E-commerce, produkty ogólnopolskie' },
 ]
 
 // ── Korzyści lokalnego SEO (BenefitsSection — karty ze zdjęciem) ─────────────
@@ -295,6 +332,58 @@ const relatedServices = [
 
       <article>
 
+        <!-- ── Co to jest lokalne SEO i kiedy warto je stosować ────────────── -->
+        <section aria-labelledby="section-co-to-lokalne" class="py-section-padding bg-surface">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+              <div data-reveal="left">
+                <h2 id="section-co-to-lokalne" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Co to jest lokalne SEO i kiedy warto je stosować
+                </h2>
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                  <p>Lokalne SEO to zestaw działań, które sprawiają, że firma pojawia się w wynikach Google wtedy, gdy ktoś szuka usługi lub produktu w określonym mieście lub regionie. Chodzi o widoczność w trzech miejscach jednocześnie: w organicznych wynikach wyszukiwania, w Mapach Google i — coraz częściej — w odpowiedziach AI asystentów, takich jak ChatGPT i Gemini.</p>
+                  <p>Lokalne SEO ma sens wtedy, gdy klientów pozyskujesz z określonego obszaru geograficznego. Firma budowlana działająca w Warszawie nie potrzebuje widoczności w Gdańsku — potrzebuje być pierwsza w wynikach dla zapytań z dopiskiem „Warszawa", „Mokotów" czy „Ursynów". Podobnie klinika stomatologiczna, salon urody, kancelaria prawna czy serwis samochodowy — każdy z tych biznesów ma swój promień działania i właśnie w tym promieniu musi być widoczny.</p>
+                  <p>Bez lokalnego SEO wiele firm pojawia się w Google dopiero na drugiej lub trzeciej stronie wyników — w miejscu, gdzie użytkownicy już nie zaglądają. Wizytówka Google Business Profile bez optymalizacji jest niewidoczna w Map Pack, choć to właśnie Map Pack pojawia się jako pierwsze przy lokalnych zapytaniach.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4" data-reveal="right">
+                <div v-for="stat in localStatsCards" :key="stat.text" class="bg-white rounded-2xl p-6 border border-outline-variant/30 shadow-sm flex gap-4 items-start">
+                  <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-[22px]" aria-hidden="true">{{ stat.icon }}</span>
+                  </div>
+                  <div>
+                    <p class="font-black text-on-surface text-lg leading-tight">{{ stat.value }}</p>
+                    <p class="text-sm text-on-surface-variant mt-1 leading-relaxed">{{ stat.text }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Co obejmuje usługa pozycjonowania lokalnego ────────────────── -->
+        <section aria-labelledby="section-co-obejmuje-lokalne" class="py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+              <div data-reveal="left">
+                <h2 id="section-co-obejmuje-lokalne" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Co obejmuje usługa pozycjonowania lokalnego
+                </h2>
+                <p class="text-on-surface-variant leading-relaxed">Lokalne pozycjonowanie to nie tylko wizytówka Google Maps. To skoordynowany zestaw działań, który obejmuje każdy punkt styku między firmą a lokalnym wyszukiwaniem:</p>
+              </div>
+              <div class="space-y-4" data-reveal="right">
+                <div v-for="item in localSeoScope" :key="item.title" class="bg-white rounded-xl p-5 border border-outline-variant/20 flex items-start gap-4">
+                  <span class="material-symbols-outlined text-primary text-lg flex-shrink-0 mt-0.5" aria-hidden="true">check_circle</span>
+                  <div>
+                    <p class="font-semibold text-on-surface text-sm">{{ item.title }}</p>
+                    <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">{{ item.desc }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- ── Dlaczego lokalne SEO jest ważne (sekcja kart statystyk — surface) -->
         <section data-nav-icon="location_on" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
@@ -321,6 +410,52 @@ const relatedServices = [
           title="Korzyści lokalnego SEO dla Twojej firmy"
           :benefits="benefits"
         />
+
+        <!-- ── Lokalne SEO vs ogólnopolskie SEO ──────────────────────────────── -->
+        <section aria-labelledby="section-lokalne-vs-ogolnopolskie" class="py-section-padding bg-surface">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <h2 id="section-lokalne-vs-ogolnopolskie" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6 text-center">
+              Lokalne SEO vs ogólnopolskie SEO — co wybrać dla swojej firmy
+            </h2>
+            <p class="text-on-surface-variant mx-auto mb-10 leading-relaxed">Wybór między lokalnym a ogólnopolskim SEO nie jest kwestią budżetu — jest kwestią zasięgu działalności. Firma obsługująca jedno województwo marnuje zasoby, walcząc o widoczność na frazach ogólnopolskich z domenami z wieloletnią historią.</p>
+            <div class="overflow-x-auto rounded-2xl border border-outline-variant/30 shadow-sm mb-6">
+              <table class="w-full text-sm">
+                <caption class="sr-only">Porównanie lokalnego SEO z ogólnopolskim pozycjonowaniem</caption>
+                <thead>
+                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
+                    <th class="text-left p-4 font-bold text-on-surface w-1/3" scope="col">Kryterium</th>
+                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Lokalne SEO</th>
+                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Ogólnopolskie SEO</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(row, i) in localVsNationalRows" :key="i" :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'">
+                    <td class="p-4 font-semibold text-on-surface">{{ row.criterion }}</td>
+                    <td class="p-4 text-center text-primary font-semibold bg-primary/5 text-xs">{{ row.local }}</td>
+                    <td class="p-4 text-center text-on-surface-variant text-xs">{{ row.national }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-sm text-on-surface-variant mt-10">Jeśli ponad 80% klientów pochodzi z jednego miasta lub regionu, lokalne SEO przyniesie mierzalne efekty szybciej i taniej niż kampania ogólnopolska.</p>
+          </div>
+        </section>
+
+        <!-- ── Ile kosztuje pozycjonowanie lokalne (prose) ────────────────── -->
+        <section aria-labelledby="section-cena-lokalne" class="py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="max-w-3xl mx-auto">
+              <h2 id="section-cena-lokalne" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                Ile kosztuje pozycjonowanie lokalne
+              </h2>
+              <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                <p>Pozycjonowanie lokalne SEO kosztuje od 1 260 zł netto miesięcznie. W tej kwocie zawarte są: optymalizacja Google Business Profile, bieżąca optymalizacja on-page, budowanie lokalnych cytowań, implementacja danych strukturalnych Schema.org i raport miesięczny z pozycjami fraz i statystykami wizytówki.</p>
+                <p>Cena jest stała i ustalana przed startem — bez zmian w trakcie trwania kampanii. Nie ma osobnych opłat za dostęp do narzędzi, raportowanie ani konsultacje. Jeśli zakres kampanii zmienia się — na przykład rozszerzasz działalność na nowe miasto — nowy zakres jest wyceniany osobno i zatwierdzany przed wdrożeniem.</p>
+                <p>Pierwsze efekty w Map Pack pojawiają się zazwyczaj po 6–10 tygodniach od startu kampanii. Organiczne wyniki wyszukiwania dla fraz lokalnych — po 3–4 miesiącach. Czas zależy od konkurencyjności branży i aktualnego stanu domeny przed startem.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- ── Jak działa nasze lokalne SEO (ProcessSection — container-low) ── -->
         <ProcessSection

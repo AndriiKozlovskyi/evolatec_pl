@@ -4,7 +4,7 @@
 
 useSeoMeta({
   title: 'Tworzenie landing page — skuteczne strony | EvolaTec',
-  description: 'Tworzenie landing page od 2 100 zł netto, realizacja od 3 dni roboczych. Strona pod kampanie Google i Meta Ads, Lighthouse 95–100, GEO w cenie. Stała wycena.',
+  description: 'Tworzenie landing page od 2 100 zł netto, realizacja od 3 dni roboczych. Strona pod kampanie Google i Meta Ads, Lighthouse 95–100, GEO w cenie.',
   ogTitle: 'Tworzenie landing page — skuteczne strony | EvolaTec',
   ogDescription: 'Landing page od 2 100 zł netto, realizacja od 3 dni. Strona pod kampanie Google i Meta Ads, Lighthouse 95–100, GEO w cenie.',
   ogType: 'website',
@@ -64,7 +64,7 @@ const mainSchema = {
         { '@type': 'Country', name: 'Poland' },
         { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Kraków' },
-        { '@type': 'City', name: 'Wrocław' },
+        { '@type': 'City', name: 'Warszawa' },
         { '@type': 'City', name: 'Gdańsk' },
       ],
       contactPoint: {
@@ -83,7 +83,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/landing-page#webpage',
       url: 'https://evolatec.pl/landing-page',
       name: 'Tworzenie landing page — skuteczne strony | EvolaTec',
-      description: 'Tworzenie landing page od 2 100 zł netto, realizacja od 3 dni roboczych. Strona pod kampanie Google i Meta Ads, Lighthouse 95–100, GEO w cenie. Stała wycena.',
+      description: 'Tworzenie landing page od 2 100 zł netto, realizacja od 3 dni roboczych. Strona pod kampanie Google i Meta Ads, Lighthouse 95–100, GEO w cenie.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',

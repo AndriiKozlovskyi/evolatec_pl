@@ -4,7 +4,7 @@
 
 useSeoMeta({
   title: 'Marketing internetowy dla firm — agencja online | EvolaTec',
-  description: 'Marketing internetowy dla firm: Google Ads od 1 680 zł i social media od 1 260 zł netto miesięcznie. Rozliczenie miesięczne, przejrzyste raporty, jeden partner.',
+  description: 'Marketing internetowy dla firm: Google Ads od 1 680 zł i social media od 1 260 zł netto miesięcznie. Rozliczenie miesięczne, jeden partner.',
   ogTitle: 'Marketing internetowy dla firm — agencja online | EvolaTec',
   ogDescription: 'Marketing internetowy dla firm: Google Ads od 1 680 zł i social media od 1 260 zł netto miesięcznie. Budżet reklamowy rozliczany oddzielnie.',
   ogType: 'website',
@@ -90,7 +90,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/marketing-online#webpage',
       url: 'https://evolatec.pl/marketing-online',
       name: 'Marketing internetowy dla firm — agencja online | EvolaTec',
-      description: 'Marketing internetowy dla firm: Google Ads od 1 680 zł i social media od 1 260 zł netto miesięcznie. Rozliczenie miesięczne, przejrzyste raporty, jeden partner.',
+      description: 'Marketing internetowy dla firm: Google Ads od 1 680 zł i social media od 1 260 zł netto miesięcznie. Rozliczenie miesięczne, jeden partner.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',

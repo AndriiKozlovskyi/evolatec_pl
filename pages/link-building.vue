@@ -128,6 +128,23 @@ useHead({
   script: [{ type: 'application/ld+json', innerHTML: JSON.stringify(mainSchema) }],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
@@ -135,6 +152,31 @@ const heroStats = [
   { value: '3–8',         label: 'linków miesięcznie',   icon: 'link'          },
   { value: 'DR 30+',      label: 'minimalne kryterium',  icon: 'verified'      },
   { value: 'White hat',   label: 'bez ryzyka kary',      icon: 'security'      },
+]
+
+// ── Korzyści link buildingu (sekcja "Czym jest") ─────────────────────────────
+const lbBenefits = [
+  { icon: 'verified', title: 'Sygnał zaufania dla Google', desc: 'Linki z wiarygodnych, tematycznie powiązanych stron to potwierdzenie autorytetu Twojej domeny.' },
+  { icon: 'trending_up', title: 'Jeden z trzech najważniejszych czynników', desc: 'Obok treści i technicznego SEO — profil linków zewnętrznych bezpośrednio decyduje o pozycjach w Google.' },
+  { icon: 'security', title: 'White hat — bez ryzyka kary', desc: 'Pracujemy tylko z metodami zgodnymi z wytycznymi Google. Żadnych PBN-ów, farm linków ani kupionych linków niezgodnych z zasadami.' },
+]
+
+// ── Metody pozyskiwania linków ────────────────────────────────────────────────
+const lbMethods = [
+  { title: 'Digital PR i content outreach', desc: 'Tworzymy materiały (dane, zestawienia, ekspertyzy) z wartością redakcyjną dla mediów branżowych. Linki zdobyte tą metodą mają najwyższy autorytet.' },
+  { title: 'Guest posting na niszowych serwisach', desc: 'Publikujemy artykuły eksperckie na serwisach tematycznie powiązanych z Twoją działalnością. Każdy artykuł jest oryginalny.' },
+  { title: 'Resource link building', desc: 'Identyfikujemy strony zbierające zasoby w Twojej branży i proponujemy Twoją stronę jako uzupełnienie ich listy.' },
+  { title: 'Broken link reclamation', desc: 'Szukamy linków do nieistniejących już stron pokrywających się tematycznie z Twoją ofertą i proponujemy zamianę uszkodzonego linku.' },
+]
+
+// ── Agencja vs samodzielny link building ─────────────────────────────────────
+const lbCompareRows = [
+  { criterion: 'Czas własny', self: '15–30 h miesięcznie', agency: '0 — pełna obsługa' },
+  { criterion: 'Baza kontaktów', self: 'Budowana od zera', agency: 'Gotowe relacje z redakcjami' },
+  { criterion: 'Weryfikacja jakości domen', self: 'Manualna, bez benchmarku', agency: 'Systematyczna — DR, historia, tematyka' },
+  { criterion: 'Ryzyko kary Google', self: 'Wysokie przy błędnych wyborach', agency: 'Niskie — white hat metodologia' },
+  { criterion: 'Raportowanie', self: 'Brak standardu', agency: 'Miesięczny raport z metrykami' },
+  { criterion: 'Koszt wejścia', self: 'Niski (czas własny)', agency: 'Od 2 100 zł netto/mies.' },
 ]
 
 // ── Dlaczego link building (BenefitsSection — karty ze zdjęciem) ─────────────
@@ -280,10 +322,115 @@ const relatedServices = [
 
       <article>
 
+        <!-- ── Czym jest link building i dlaczego Google wciąż go ceni ──────── -->
+        <section aria-labelledby="section-czym-jest-lb" class="py-section-padding bg-surface">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+              <div data-reveal="left">
+                <h2 id="section-czym-jest-lb" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Czym jest link building i dlaczego Google wciąż go ceni
+                </h2>
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                  <p>Google od ponad dwudziestu lat używa linków zewnętrznych jako sygnału zaufania. Logika jest prosta: jeśli wiarygodna strona o tematyce zbliżonej do Twojej zamieszcza link do Twojej witryny, traktuje to jako rekomendację. Im więcej takich rekomendacji pochodzi z domen o wysokim autorytecie i tematycznej spójności, tym wyżej strona plasuje się w wynikach organicznych.</p>
+                  <p>Po aktualizacji Penguin (2012) i kolejnych zmianach algorytmu Google przestało nagradzać masowe pozyskiwanie linków z katalogów, farm linków i PBN-ów. Linki ze stron o niskiej jakości — lub kupionych niezgodnie z wytycznymi — mogą dziś obniżyć widoczność domeny, a w skrajnych przypadkach skutkować manualną karą. Wartościowe linki z tematycznie powiązanych, wysokoautorytatywnych serwisów nadal są jednym z trzech najważniejszych czynników rankingowych w Google.</p>
+                  <p>Link building jako element SEO ma sens wyłącznie wtedy, gdy zdobywasz linki, na które Twoja strona realnie zasługuje — bo ma treści, dane lub narzędzia, do których inni chcą naturalnie linkować.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3" data-reveal="right">
+                <div v-for="benefit in lbBenefits" :key="benefit.title" class="bg-white rounded-xl p-5 border border-outline-variant/20 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-lg" aria-hidden="true">{{ benefit.icon }}</span>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-on-surface text-sm">{{ benefit.title }}</p>
+                    <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">{{ benefit.desc }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Jak pozyskujemy wartościowe linki zewnętrzne ───────────────── -->
+        <section aria-labelledby="section-jak-pozyskujemy" class="py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+              <div data-reveal="left">
+                <h2 id="section-jak-pozyskujemy" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Jak pozyskujemy wartościowe linki zewnętrzne — white hat metodologia
+                </h2>
+                <p class="text-on-surface-variant leading-relaxed mb-6">Każda pozyskana przez nas domena przechodzi weryfikację przed akwizycją: sprawdzamy profil linków przychodzących, historię domeny w Wayback Machine, indeksowalność w Google i tematyczną spójność z Twoją branżą. Nie korzystamy z PBN-ów, giełd linków ani linków generowanych automatycznie.</p>
+                <p class="text-on-surface-variant leading-relaxed">Co miesiąc dostarczamy raport z nowo pozyskanymi linkami: adres URL strony linkującej, Domain Rating, anchor text i data publikacji.</p>
+              </div>
+              <div class="space-y-4" data-reveal="right">
+                <div v-for="method in lbMethods" :key="method.title" class="bg-white rounded-xl p-5 border border-outline-variant/20 flex items-start gap-4">
+                  <span class="material-symbols-outlined text-primary text-lg flex-shrink-0 mt-0.5" aria-hidden="true">arrow_forward</span>
+                  <div>
+                    <p class="font-semibold text-on-surface text-sm">{{ method.title }}</p>
+                    <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">{{ method.desc }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- ── Dlaczego link building (BenefitsSection — white) ────────────── -->
         <BenefitsSection
           title="Dlaczego profesjonalny link building jest ważny"
           :benefits="benefits"
+        />
+
+        <!-- ── Agencja link building vs samodzielne pozyskiwanie linków ──────── -->
+        <section aria-labelledby="section-agencja-vs-sam" class="py-section-padding bg-surface">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <h2 id="section-agencja-vs-sam" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6 text-center">
+              Agencja link building vs samodzielne pozyskiwanie linków — co się opłaca
+            </h2>
+            <p class="text-on-surface-variant text-center max-w-2xl mx-auto mb-10 leading-relaxed">Samodzielne pozyskiwanie linków nie jest niemożliwe — ale ma realny koszt: outreach do redakcji, negocjacje, weryfikacja jakości i pisanie artykułów to kilkanaście godzin miesięcznie pracy.</p>
+            <div class="overflow-x-auto rounded-2xl border border-outline-variant/30 shadow-sm mb-6">
+              <table class="w-full text-sm">
+                <caption class="sr-only">Porównanie agencji link building z samodzielnym pozyskiwaniem linków</caption>
+                <thead>
+                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
+                    <th class="text-left p-4 font-bold text-on-surface w-1/3" scope="col">Kryterium</th>
+                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Samodzielny link building</th>
+                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Agencja link building</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(row, i) in lbCompareRows" :key="i" :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'">
+                    <td class="p-4 font-semibold text-on-surface">{{ row.criterion }}</td>
+                    <td class="p-4 text-center text-on-surface-variant text-xs">{{ row.self }}</td>
+                    <td class="p-4 text-center text-primary font-semibold bg-primary/5 text-xs">{{ row.agency }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-sm text-on-surface-variant text-center">Agencja wychodzi taniej wtedy, gdy alternatywą jest własny czas właściciela firmy — bo godzina właściciela na outreach to godzina niezainwestowana w sprzedaż lub obsługę klienta.</p>
+          </div>
+        </section>
+
+        <!-- ── Ile kosztuje link building (prose) ─────────────────────────── -->
+        <section aria-labelledby="section-cena-lb" class="py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="max-w-3xl mx-auto">
+              <h2 id="section-cena-lb" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                Ile kosztuje link building — cennik i co zawiera abonament
+              </h2>
+              <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                <p>SEO z link buildingiem kosztuje od 2 100 zł netto miesięcznie. W tej kwocie zawarte jest pozyskiwanie linków zewnętrznych, bieżąca optymalizacja on-page i miesięczny raport z wynikami. Budżet link buildingowy nie jest rozliczany oddzielnie — cena jest stała i ustalana przed startem kampanii.</p>
+                <p>W każdym miesiącu pozyskujemy od 3 do 8 linków zewnętrznych, w zależności od branży i konkurencyjności fraz docelowych. Koncentrujemy się na domenach z Domain Rating powyżej 30 i tematyczną spójnością z Twoją działalnością — nie na wolumenie. Dziesięć słabych linków wyrządza więcej szkody niż trzy mocne.</p>
+                <p>Kampania link buildingowa wymaga minimum 3 miesięcy, żeby efekty były mierzalne w Google Search Console. Pierwsze zmiany w widoczności fraz zazwyczaj pojawiają się po 6–8 tygodniach od pierwszych pozyskanych linków.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Jak działa nasz link building (ProcessSection — container-low) ── -->
+        <ProcessSection
+          title="Jak działa nasz link building"
+          :steps="processSteps"
         />
 
         <!-- ── Nasze usługi link buildingu (FeaturesSection — primary) ────── -->
@@ -292,12 +439,6 @@ const relatedServices = [
           :features="features"
           image-url="/assets/link-network.webp"
           image-alt="Sieć połączeń między domenami symbolizująca profil linków zewnętrznych SEO"
-        />
-
-        <!-- ── Jak działa nasz link building (ProcessSection — container-low) ── -->
-        <ProcessSection
-          title="Jak działa nasz link building"
-          :steps="processSteps"
         />
 
         <!-- ── Jakie linki budujemy (SEOSection — primary) ────────────────── -->

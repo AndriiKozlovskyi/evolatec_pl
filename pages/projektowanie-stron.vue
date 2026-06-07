@@ -4,7 +4,7 @@
 
 useSeoMeta({
   title: 'Projektowanie stron internetowych — webdesign | EvolaTec',
-  description: 'Projektowanie stron internetowych od podstaw, bez szablonów: wireframy, projekt graficzny desktop i mobile, design system. Wycena indywidualna, bezpłatna konsultacja.',
+  description: 'Projektowanie stron internetowych od podstaw, bez szablonów: wireframy, projekt graficzny desktop i mobile, design system. Wycena indywidualna.',
   ogTitle: 'Projektowanie stron internetowych — webdesign | EvolaTec',
   ogDescription: 'Projektowanie stron internetowych od podstaw, bez szablonów: wireframy, projekt desktop i mobile, design system. Wycena indywidualna.',
   ogType: 'website',
@@ -98,7 +98,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/projektowanie-stron#webpage',
       url: 'https://evolatec.pl/projektowanie-stron',
       name: 'Projektowanie stron internetowych — webdesign | EvolaTec',
-      description: 'Projektowanie stron internetowych od podstaw, bez szablonów: wireframy, projekt graficzny desktop i mobile, design system. Wycena indywidualna, bezpłatna konsultacja.',
+      description: 'Projektowanie stron internetowych od podstaw, bez szablonów: wireframy, projekt graficzny desktop i mobile, design system. Wycena indywidualna.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',

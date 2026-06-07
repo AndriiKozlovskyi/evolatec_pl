@@ -4,7 +4,7 @@
 
 useSeoMeta({
   title: 'Tworzenie sklepów internetowych dla firm | EvolaTec',
-  description: 'Tworzenie sklepów internetowych od 12 600 zł netto, realizacja od 14 dni. Shopify lub sklep własny w Nuxt, płatności online, SEO i GEO w cenie. Stała wycena.',
+  description: 'Tworzenie sklepów internetowych od 12 600 zł netto, realizacja od 14 dni. Shopify lub sklep własny w Nuxt, płatności online, SEO i GEO w cenie.',
   ogTitle: 'Tworzenie sklepów internetowych dla firm | EvolaTec',
   ogDescription: 'Sklep internetowy od 12 600 zł netto, realizacja od 14 dni. Shopify lub sklep własny w Nuxt, płatności online, SEO i GEO w cenie.',
   ogType: 'website',
@@ -64,7 +64,7 @@ const mainSchema = {
         { '@type': 'Country', name: 'Poland' },
         { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Kraków' },
-        { '@type': 'City', name: 'Wrocław' },
+        { '@type': 'City', name: 'Warszawa' },
         { '@type': 'City', name: 'Gdańsk' },
       ],
       contactPoint: {
@@ -83,7 +83,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/sklep-internetowy#webpage',
       url: 'https://evolatec.pl/sklep-internetowy',
       name: 'Tworzenie sklepów internetowych dla firm | EvolaTec',
-      description: 'Tworzenie sklepów internetowych od 12 600 zł netto, realizacja od 14 dni. Shopify lub sklep własny w Nuxt, płatności online, SEO i GEO w cenie. Stała wycena.',
+      description: 'Tworzenie sklepów internetowych od 12 600 zł netto, realizacja od 14 dni. Shopify lub sklep własny w Nuxt, płatności online, SEO i GEO w cenie.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',

@@ -4,7 +4,7 @@
 
 useSeoMeta({
   title: 'Tworzenie stron firmowych — strona dla firmy | EvolaTec',
-  description: 'Tworzenie stron firmowych od 6 300 zł netto, realizacja od 7 dni roboczych. Stała cena zapisana w umowie, indywidualny projekt, Lighthouse 95–100. Wycena bezpłatna.',
+  description: 'Tworzenie stron firmowych od 6 300 zł netto, realizacja od 7 dni roboczych. Stała cena zapisana w umowie, indywidualny projekt, Lighthouse 95–100.',
   ogTitle: 'Tworzenie stron firmowych — strona dla firmy | EvolaTec',
   ogDescription: 'Strona firmowa od 6 300 zł netto, realizacja od 7 dni. Stała cena w umowie, indywidualny projekt, Lighthouse 95–100. Bezpłatna wycena.',
   ogType: 'website',
@@ -64,7 +64,7 @@ const mainSchema = {
         { '@type': 'Country', name: 'Poland' },
         { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Kraków' },
-        { '@type': 'City', name: 'Wrocław' },
+        { '@type': 'City', name: 'Warszawa' },
         { '@type': 'City', name: 'Gdańsk' },
       ],
       contactPoint: {
@@ -83,7 +83,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/stworz-strone-firmowa#webpage',
       url: 'https://evolatec.pl/stworz-strone-firmowa',
       name: 'Tworzenie stron firmowych — strona dla firmy | EvolaTec',
-      description: 'Tworzenie stron firmowych od 6 300 zł netto, realizacja od 7 dni roboczych. Stała cena zapisana w umowie, indywidualny projekt, Lighthouse 95–100. Wycena bezpłatna.',
+      description: 'Tworzenie stron firmowych od 6 300 zł netto, realizacja od 7 dni roboczych. Stała cena zapisana w umowie, indywidualny projekt, Lighthouse 95–100.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',

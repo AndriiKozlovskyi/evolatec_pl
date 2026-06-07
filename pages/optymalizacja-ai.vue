@@ -160,7 +160,41 @@ useHead({
   script: [{ type: 'application/ld+json', innerHTML: JSON.stringify(mainSchema) }],
 })
 
+// ─── Scroll reveal ─────────────────────────────────────────────────────────
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+  )
+  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
+})
+
 // ─── Page data ─────────────────────────────────────────────────────────────
+
+const geoSignals = [
+  { title: 'Dane strukturalne JSON-LD', desc: 'Schema.org markup w formacie JSON-LD pozwala LLM-om identyfikować typ treści, podmiot i fakty zawarte w odpowiedzi. Service, LocalBusiness, FAQPage i HowTo to typy o najwyższej wartości dla GEO.' },
+  { title: 'Kompletne zdania-cytaty', desc: 'Każda sekcja powinna zawierać przynajmniej jedno zdanie stanowiące pełną odpowiedź bez potrzeby czytania kontekstu. Zdania z liczbami, nazwami własnymi i weryfikowalnymi faktami są cytowane częściej.' },
+  { title: 'FAQ z pełnymi odpowiedziami', desc: 'Pytania i odpowiedzi w formacie FAQPage są bezpośrednio parsowane przez silniki AI. Odpowiedź musi być kompletna w 1–3 zdaniach — LLM nie skraca długich akapitów, pomija je.' },
+  { title: 'Autorytet domeny', desc: 'Wysoki Domain Rating i mocny profil linków zewnętrznych to sygnał wiarygodności czytelny zarówno dla Google, jak i dla LLM-ów korzystających z jego indeksu.' },
+  { title: 'Aktualność treści', desc: 'Modele preferują strony z treściami datowanymi i aktualizowanymi. Data ostatniej modyfikacji w metadanych zwiększa szansę na cytowanie przy pytaniach o stan aktualny.' },
+  { title: 'Speakable markup', desc: 'Znacznik speakable wskazuje LLM-om, które fragmenty strony nadają się do bezpośredniego przytoczenia jako odpowiedź głosowa lub tekstowa.' },
+]
+
+const schemaTypes = [
+  { type: 'Service', desc: 'Opisuje usługę, jej cenę i dostawcę — używany przez LLM-y do odpowiedzi na zapytania komercyjne.' },
+  { type: 'LocalBusiness', desc: 'Identyfikuje firmę jako podmiot działający w konkretnej lokalizacji — Google i LLM-y używają go do zapytań lokalnych.' },
+  { type: 'FAQPage', desc: 'Parsowany bezpośrednio przez silniki AI — pytania i odpowiedzi mogą być cytowane dosłownie w odpowiedziach LLM.' },
+  { type: 'HowTo', desc: 'Strukturyzuje procesy krok po kroku — użyteczny przy zapytaniach instruktażowych i instrukcjach obsługi.' },
+  { type: 'speakable', desc: 'Wskazuje, które fragmenty strony nadają się jako bezpośrednia odpowiedź głosowa lub tekstowa.' },
+]
 
 const heroStats = [
   { value: 'ChatGPT',     label: 'Cytuje Twoją firmę',     icon: 'smart_toy'     },
@@ -293,87 +327,40 @@ const relatedServices = [
 
       <article>
 
-        <!-- ── Czym jest GEO (sekcja split + badge — jak w wersji DE) ──────── -->
-        <section class="py-8 md:py-section-padding bg-surface">
+        <!-- ── Czym jest AI SEO ──────────────────────────────────────────────── -->
+        <section aria-labelledby="section-czym-jest-aiseo" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-8 md:gap-stack-lg items-center">
-              <div>
-                <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
-                  <span class="material-symbols-outlined text-[18px]">auto_awesome</span>
-                  Czym jest GEO?
-                </span>
-                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-black text-on-surface leading-tight mb-6">Czym jest Generative Engine Optimization?</h2>
-                <div class="space-y-4 text-on-surface-variant leading-relaxed">
-                  <p v-for="(p, i) in introParagraphs" :key="i" v-html="p"></p>
-                </div>
-              </div>
-              <div class="relative">
-                <NuxtImg
-                  src="/assets/ai-bg.webp"
-                  alt="GEO optymalizacja pod wyszukiwarki AI — ChatGPT, Gemini i Perplexity"
-                  width="640"
-                  height="427"
-                  sizes="100vw md:50vw lg:640px"
-                  loading="lazy"
-                  class="w-full rounded-2xl object-cover"
-                />
-                <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-xl border border-outline-variant/20">
-                  <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-primary text-2xl">verified</span>
-                    <div>
-                      <p class="font-bold text-on-surface text-sm">GEO w cenie</p>
-                      <p class="text-xs text-on-surface-variant">W każdym projekcie EvolaTec</p>
-                    </div>
-                  </div>
-                </div>
+            <div class="max-w-3xl mx-auto">
+              <h2 id="section-czym-jest-aiseo" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                Czym jest AI SEO i jak zmienia widoczność firmy w internecie
+              </h2>
+              <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                <p v-for="para in introParagraphs" :key="para">{{ para }}</p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- ── SEO vs GEO — tabela (jak w wersji DE) ───────────────────────── -->
-        <section class="py-8 md:py-section-padding bg-surface-container-low">
+        <!-- ── GEO optymalizacja — 6 sygnałów ────────────────────────────────── -->
+        <section aria-labelledby="section-geo-jak" class="py-section-padding bg-surface-container-low">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="text-center mb-8 md:mb-stack-lg">
-              <h2 class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight">SEO vs GEO — czym się różnią?</h2>
-              <p class="text-on-surface-variant mt-3 max-w-2xl mx-auto">Obie strategie się uzupełniają — ale GEO to niezbędne rozszerzenie pod wyszukiwanie sterowane przez AI.</p>
-            </div>
-
-            <!-- Mobile cards -->
-            <div class="md:hidden space-y-3">
-              <div v-for="(row, i) in seoVsGeoRows" :key="i" class="bg-white rounded-xl border border-outline-variant/30 p-4">
-                <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.criterion }}</p>
-                <div class="grid grid-cols-2 gap-2">
-                  <div class="bg-surface-container-low rounded-lg p-3 text-center">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1.5">Klasyczne SEO</p>
-                    <p class="text-xs text-on-surface-variant leading-snug">{{ row.seo }}</p>
-                  </div>
-                  <div class="bg-primary/5 rounded-lg p-3 text-center">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1.5">GEO</p>
-                    <p class="text-xs text-primary font-semibold leading-snug">{{ row.geo }}</p>
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+              <div data-reveal="left">
+                <h2 id="section-geo-jak" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  GEO optymalizacja – jak sprawić, żeby firma pojawiała się w ChatGPT i Gemini
+                </h2>
+                <p class="text-on-surface-variant leading-relaxed mb-6">Modele językowe nie rankingują stron tak jak PageRank. Oceniają, czy strona jest wiarygodnym, autorytywnym źródłem odpowiedzi na konkretne pytanie. Na podstawie analizy publicznych wytycznych i obserwacji zachowań LLM-ów wyróżniamy sześć sygnałów o największym wpływie na cytowanie:</p>
+                <p class="text-sm font-semibold text-primary">GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu realizowanego przez EvolaTec.</p>
+              </div>
+              <div class="space-y-4" data-reveal="right">
+                <div v-for="signal in geoSignals" :key="signal.title" class="bg-white rounded-xl p-5 border border-outline-variant/20 flex items-start gap-4">
+                  <span class="material-symbols-outlined text-primary text-lg flex-shrink-0 mt-0.5" aria-hidden="true">check_circle</span>
+                  <div>
+                    <p class="font-semibold text-on-surface text-sm">{{ signal.title }}</p>
+                    <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">{{ signal.desc }}</p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <!-- Desktop table -->
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30">
-              <table class="w-full text-sm">
-                <thead>
-                  <tr class="bg-surface-container-low">
-                    <th class="text-left p-4 font-bold text-on-surface border-b border-outline-variant/30 w-1/4">Kryterium</th>
-                    <th class="text-center p-4 font-bold text-on-surface-variant border-b border-outline-variant/30">Klasyczne SEO</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5 border-b border-outline-variant/30">GEO (przyszłość)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="(row, i) in seoVsGeoRows" :key="i" :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'">
-                    <td class="p-4 font-semibold text-on-surface">{{ row.criterion }}</td>
-                    <td class="p-4 text-center text-on-surface-variant">{{ row.seo }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.geo }}</td>
-                  </tr>
-                </tbody>
-              </table>
             </div>
           </div>
         </section>
@@ -385,6 +372,64 @@ const relatedServices = [
           image-url="/assets/code-editor.webp"
           image-alt="Dane strukturalne Schema.org i JSON-LD w edytorze kodu — fundament widoczności w AI"
         />
+
+        <!-- ── Tradycyjne SEO vs AI SEO — tabela ────────────────────────────── -->
+        <section aria-labelledby="section-seo-vs-geo" class="py-section-padding bg-surface">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <h2 id="section-seo-vs-geo" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6 text-center">
+              Tradycyjne SEO vs AI SEO — czym się różnią i co wybrać
+            </h2>
+            <p class="text-on-surface-variant text-center max-w-2xl mx-auto mb-10 leading-relaxed">Tradycyjne SEO i AI SEO nie wykluczają się — ale mają różne mechanizmy działania i różne punkty styku z użytkownikiem. Wybór nie istnieje — potrzebujesz obu.</p>
+            <div class="overflow-x-auto rounded-2xl border border-outline-variant/30 shadow-sm mb-6">
+              <table class="w-full text-sm">
+                <caption class="sr-only">Porównanie tradycyjnego SEO z AI SEO i GEO optymalizacją</caption>
+                <thead>
+                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
+                    <th class="text-left p-4 font-bold text-on-surface w-1/4" scope="col">Kryterium</th>
+                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Tradycyjne SEO</th>
+                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">AI SEO / GEO</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(row, i) in seoVsGeoRows" :key="i" :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'">
+                    <td class="p-4 font-semibold text-on-surface">{{ row.criterion }}</td>
+                    <td class="p-4 text-center text-on-surface-variant text-xs">{{ row.seo }}</td>
+                    <td class="p-4 text-center text-primary font-semibold bg-primary/5 text-xs">{{ row.geo }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Schema.org i JSON-LD ───────────────────────────────────────────── -->
+        <section aria-labelledby="section-schema-jsonld" class="py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+              <div data-reveal="left">
+                <h2 id="section-schema-jsonld" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Schema.org i JSON-LD — fundament widoczności w AI wyszukiwarkach
+                </h2>
+                <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                  <p>Każda strona zawiera strukturalne dane JSON-LD czytelne dla crawlerów LLM. Zamiast oczekiwać, że algorytm odczyta sens z ciągłego tekstu, podajesz mu ustrukturyzowane fakty w formacie, który rozumie maszynowo.</p>
+                  <p>JSON-LD to blok kodu osadzony w sekcji <code class="bg-surface-container px-1 rounded text-xs font-mono">&lt;head&gt;</code> strony — zbiór par klucz-wartość zdefiniowanych przez Schema.org: <code class="bg-surface-container px-1 rounded text-xs font-mono">@type: "Service"</code>, <code class="bg-surface-container px-1 rounded text-xs font-mono">price: "1260"</code>, <code class="bg-surface-container px-1 rounded text-xs font-mono">priceCurrency: "PLN"</code>. Crawler LLM-a odczytuje te dane bez analizowania układu strony i może użyć ich w odpowiedzi generowanej dla użytkownika.</p>
+                  <p>SEO techniczne jest wbudowane w kod — nie zależy od wtyczek ani zewnętrznych narzędzi. W przypadku stron na WordPressie markup Schema.org zależy od konfiguracji wtyczki i może być niepełny. W każdej realizacji EvolaTec dane strukturalne są implementowane ręcznie w kodzie strony i weryfikowane przez Google Rich Results Test przed wdrożeniem.</p>
+                </div>
+              </div>
+              <div class="space-y-4" data-reveal="right">
+                <div v-for="schemaType in schemaTypes" :key="schemaType.type" class="bg-white rounded-xl p-5 border border-outline-variant/20 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-lg" aria-hidden="true">schema</span>
+                  </div>
+                  <div>
+                    <p class="font-mono font-bold text-primary text-sm">{{ schemaType.type }}</p>
+                    <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">{{ schemaType.desc }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- ── Kluczowe elementy GEO (ServicesSection — centered) ──────────── -->
         <ServicesSection
