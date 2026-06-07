@@ -184,9 +184,9 @@ const heroStats = [
 ]
 
 const introParagraphs = [
-  'Firmy, które nie są widoczne online, tracą codziennie potencjalnych klientów.',
-  'Profesjonalny marketing internetowy pomaga budować zasięg, zdobywać zaufanie i generować stały strumień zapytań.',
-  'EvolaTec łączy <a href="/seo" class="text-primary font-semibold hover:underline">SEO</a>, tworzenie stron, performance marketing i strategie cyfrowe w mierzalne efekty.',
+  'Firma odpala reklamy, wrzuca posty, płaci co miesiąc — i po kwartale nie potrafi powiedzieć, czy to się opłaca. To najczęstszy scenariusz w marketingu małych firm: aktywność zastąpiła strategię. Pieniądze wychodzą, kliknięcia są, ale nikt nie liczy, ile z nich zamieniło się w zapytanie albo sprzedaż.',
+  'Powód jest zwykle techniczny, nie kreatywny. Brakuje śledzenia konwersji, więc nie wiadomo, która kampania działa. Budżet idzie na kanał dobrany przypadkiem, a nie pod to, jak kupują klienci w danej branży. I nikt nie odpowiada za jedną liczbę — koszt pozyskania klienta — która jako jedyna mówi, czy marketing zarabia, czy pali budżet.',
+  'Prowadzimy marketing online inaczej: zaczynamy od wdrożenia śledzenia konwersji, dobieramy kanał pod sposób, w jaki kupują Twoi klienci, i co miesiąc raportujemy konkretne liczby. Budżet reklamowy rozliczany jest oddzielnie, bezpośrednio z Google lub Meta — fee za obsługę jest stałe, więc wiesz, za co płacisz agencji, a ile idzie na same reklamy.',
 ]
 
 const marketingServices = [
@@ -276,31 +276,31 @@ const marketingBenefits = [
 const processSteps = [
   {
     icon: 'analytics',
-    title: 'Analiza i strategia',
-    description: 'Analizujemy Twoją branżę, grupę docelową i konkurencję — i budujemy strategię pod cel.',
-  },
-  {
-    icon: 'lightbulb',
-    title: 'Koncepcja marketingowa',
-    description: 'Opracowujemy indywidualną strategię wzrostu — dobór kanałów, przekaz i plan działania.',
+    title: 'Audyt i setup',
+    description: 'Na starcie wdrażamy śledzenie konwersji, audytujemy istniejące kampanie i budujemy strategię pod cel. Jednorazowo, na początku współpracy.',
   },
   {
     icon: 'rocket_launch',
-    title: 'Wdrożenie i kampanie',
-    description: 'Wdrażamy SEO, Ads, content i działania konwersyjne zgodnie z planem.',
+    title: 'Prowadzenie kampanii',
+    description: 'Tworzymy reklamy lub treści, uruchamiamy i pilnujemy kampanii w trakcie miesiąca.',
   },
   {
     icon: 'tune',
-    title: 'Optymalizacja i skalowanie',
-    description: 'Co miesiąc korygujemy kampanie na podstawie danych — nie przeczuć.',
+    title: 'Optymalizacja',
+    description: 'Co tydzień korygujemy stawki, grupy odbiorców i przekaz na podstawie danych konwersji, nie przeczuć.',
+  },
+  {
+    icon: 'summarize',
+    title: 'Raport miesięczny',
+    description: 'Dostajesz konkretne liczby: wydatek, efekty, koszt pozyskania klienta i plan na kolejny miesiąc.',
   },
 ]
 
 const marketingChannels = [
-  { title: 'Google SEO',            description: 'Organiczna widoczność przez pozycjonowanie w wyszukiwarce.',         icon: 'search_insights', href: '/seo'          },
-  { title: 'Google Ads',            description: 'Natychmiastowy zasięg przez płatne reklamy w Google.',               icon: 'ads_click',       href: '/google-ads'  },
-  { title: 'Social media marketing', description: 'Zasięg i budowanie marki na Facebooku i Instagramie.',              icon: 'groups',          href: '/social-media' },
-  { title: 'Content marketing',     description: 'Treści SEO, landing page\'i i content konwersyjny.',                 icon: 'article',         href: '/copywriting'  },
+  { title: 'Google Ads', description: 'Reklama trafiająca do ludzi, którzy już szukają Twojej usługi. Zapytanie pojawia się od pierwszego dnia kampanii — sprawdza się, gdy potrzebujesz ruchu natychmiast.', icon: 'ads_click', href: '/google-ads' },
+  { title: 'Social media (Meta)', description: 'Facebook i Instagram — organika i płatne kampanie Meta Ads. Budowanie rozpoznawalności i popytu zanim klient zacznie szukać. Dla marek B2C, lokalnych biznesów i sklepów.', icon: 'groups', href: '/social-media' },
+  { title: 'Landing page konwersyjny', description: 'Jeśli ruch ma trafiać na dopracowaną stronę docelową, dokładamy landing page pod konkretną kampanię — bez niego tracisz część budżetu reklamowego.', icon: 'article', href: '/landing-page' },
+  { title: 'Google SEO', description: 'Organiczna widoczność przez pozycjonowanie w wyszukiwarce. SEO i Google Ads uzupełniają się — Ads łapie popyt istniejący, SEO buduje widoczność długofalową.', icon: 'search_insights', href: '/seo' },
 ]
 
 const whyEvolaTecParagraphs = [
@@ -408,7 +408,7 @@ const relatedServices = [
 
         <!-- ── Intro Section ──────────────────────────────────────────────── -->
         <IntroSection
-          heading="Dlaczego nowoczesny marketing online jest kluczowy"
+          heading="Dlaczego marketing online bez strategii to spalony budżet"
           :paragraphs="introParagraphs"
           image="/assets/marketing-online.webp"
           image-alt="Agencja marketingu online EvolaTec — dashboard kampanii i analityki"
@@ -431,14 +431,14 @@ const relatedServices = [
 
         <!-- ── Process Section ────────────────────────────────────────────── -->
         <ProcessSection
-          title="Nasz proces marketingu online"
+          title="Jak prowadzimy marketing online — miesięczny cykl"
           :steps="processSteps"
           background="bg-surface-container-low"
         />
 
         <!-- ── Marketing Channels ─────────────────────────────────────────── -->
         <DarkCardsSection
-          title="Kanały marketingowe dla wzrostu"
+          title="Kanały, którymi prowadzimy marketing online"
           :cards="marketingChannels"
         />
 
@@ -457,13 +457,13 @@ const relatedServices = [
             <div class="grid md:grid-cols-2 gap-stack-lg items-start">
               <div>
                 <h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">
-                  Doradztwo marketingowe i strategie cyfrowe
+                  Google Ads czy social media — od czego zacząć
                 </h2>
                 <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
-                  Skuteczny marketing online opiera się na klarownych strategiach i mierzalnych celach.
+                  Przy ograniczonym pierwszym budżecie pytanie nie brzmi „który kanał jest lepszy", tylko „gdzie ma trafić pierwsza złotówka". Odpowiedź zależy od tego, czy Twoi klienci już szukają Twojej usługi, czy trzeba dopiero zbudować popyt.
                 </p>
                 <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
-                  EvolaTec wspiera firmy w budowie nowoczesnych koncepcji marketingowych, strategii wzrostu cyfrowego i skalowalnych systemów pozyskiwania klientów.
+                  Jeśli klienci wpisują Twoją usługę w Google — zaczynaj od Google Ads, bo popyt już istnieje i wystarczy go przechwycić. Jeśli sprzedajesz produkt, który ludzie kupują pod wpływem, a nie z potrzeby wyszukanej w Google — zaczynaj od social media. Firmy z większym budżetem prowadzą oba kanały równolegle.
                 </p>
                 <NuxtLink to="/kontakt">
                   <BaseButton variant="primary" size="lg">Zapytaj o doradztwo</BaseButton>
@@ -494,7 +494,7 @@ const relatedServices = [
               Cennik usług marketingu internetowego
             </h2>
             <p class="text-center font-body-lg text-on-surface-variant mb-stack-lg">
-              Przejrzyste ceny za marketing, SEO i kampanie performance. Budżet reklamowy rozliczany oddzielnie z Google lub Meta.
+              Marketing internetowy rozliczamy w modelu miesięcznym: stałe fee za obsługę plus budżet reklamowy płacony osobno, bezpośrednio dostawcy. Kwota, którą podajemy, to fee za pracę agencji — budżet, który realnie trafia do Google lub Meta, ustalasz Ty i płacisz go bezpośrednio platformie.
             </p>
 
             <div class="max-w-2xl mx-auto overflow-x-auto">

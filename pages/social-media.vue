@@ -17,32 +17,24 @@ useSeoMeta({
 
 const faqData = [
   {
-    question: 'Co robi agencja social media?',
-    answer: 'Agencja social media tworzy, uruchamia i optymalizuje kampanie reklamowe na platformach takich jak Instagram, Facebook i LinkedIn. Obejmuje to analizę grupy docelowej, tworzenie kreacji, teksty reklamowe, targetowanie i bieżącą optymalizację. Celem jest wygenerowanie jak największej liczby kwalifikowanych kliknięć, leadów lub sprzedaży z dostępnego budżetu.',
+    question: 'Ile kosztuje prowadzenie social media dla firmy?',
+    answer: 'Prowadzenie social media kosztuje od 1 260 zł netto miesięcznie — to fee za obsługę agencji. Budżet reklamowy Meta jest rozliczany oddzielnie, bezpośrednio z Meta, i ustalasz go samodzielnie. Cena obejmuje kalendarz treści, tworzenie i publikację postów, community management, kampanie Meta Ads oraz miesięczny raport.',
   },
   {
-    question: 'Ile kosztują Facebook lub Instagram Ads?',
-    answer: 'Prowadzenie Meta Ads zaczyna się od 1 260 zł netto miesięcznie za usługi agencji. Budżet reklamowy na Facebooka i Instagrama jest ustalany oddzielnie i płacony bezpośrednio do Meta. Wysokość budżetu zależy od branży i celu — przed startem kampanii podajemy rekomendację.',
+    question: 'Organika czy płatne kampanie Meta — co działa lepiej?',
+    answer: 'Organika buduje wiarygodność i utrzymuje obecnych odbiorców, ale jej zasięg bez budżetu spadł do kilku procent fanów. Płatne kampanie Meta docierają do nowych odbiorców i przynoszą efekty w dni, a nie miesiące. Dla większości firm najlepiej działa połączenie obu: organika dla spójnego wizerunku, płatne kampanie dla zasięgu i zapytań.',
   },
   {
-    question: 'Jak szybko działają Social Media Ads?',
-    answer: 'Pierwsze wyniki mogą być widoczne już po kilku dniach. Pierwsze tygodnie służą głównie testowaniu różnych kreacji i grup docelowych — potem najlepsze kombinacje są dalej optymalizowane i skalowane.',
+    question: 'Jaki budżet na reklamę na Facebooku i Instagramie jest potrzebny?',
+    answer: 'Dla firmy zaczynającej z płatną promocją rozsądny próg to kilkaset złotych miesięcznie budżetu Meta, żeby kampania miała z czego docierać do nowych odbiorców. Budżet ustalasz samodzielnie i płacisz bezpośrednio Meta, niezależnie od fee za obsługę. W bardziej konkurencyjnych branżach próg jest wyższy i ustalamy go przed startem.',
   },
   {
-    question: 'Która platforma social media jest odpowiednia dla mojej firmy?',
-    answer: 'Instagram i Facebook sprawdzają się szczególnie dla B2C, firm lokalnych i ofert wizualnych. TikTok działa dla młodszych grup docelowych. LinkedIn to pierwszy wybór w B2B. Analizujemy Twoją grupę docelową i rekomendujemy odpowiednią platformę.',
+    question: 'Czy budżet reklamowy Meta jest wliczony w cenę obsługi?',
+    answer: 'Nie — fee za obsługę i budżet reklamowy Meta to dwie osobne kwoty. Płacisz nam stałe miesięczne wynagrodzenie za prowadzenie social media, a budżet reklamowy trafia bezpośrednio do Meta. Dzięki temu nie pobieramy prowizji od wydanego budżetu, a nasze wynagrodzenie nie rośnie wraz z kwotą wydaną na reklamy.',
   },
   {
-    question: 'Jaka jest różnica między Social Media Marketing a Google Ads?',
-    answer: 'Google Ads dociera do użytkowników, którzy aktywnie szukają rozwiązania. Reklamy social media są wyświetlane użytkownikom pasującym do docelowej grupy odbiorców, ale niekoniecznie aktywnie szukającym. Social media sprawdza się szczególnie przy budowaniu marki i ofertach wizualnych, Google Ads — przy konkretnej intencji zakupowej.',
-  },
-  {
-    question: 'Czy przejmujecie też tworzenie contentu na social media?',
-    answer: 'Tak, tworzymy na życzenie kreacje, Reels, treści na Stories i teksty reklamowe do kampanii. Kreacje i grafiki zaczynają się od 630 zł, produkcja contentu od 1 260 zł.',
-  },
-  {
-    question: 'Dla jakich firm nadaje się Social Media Marketing?',
-    answer: 'Dla firm lokalnych, usługodawców, e-commerce, startupów i budowania marki. Szczególnie skuteczny, gdy Twoja oferta może być atrakcyjnie wizualnie zaprezentowana lub ma wyraźnie określoną grupę docelową.',
+    question: 'Które social media są najlepsze dla firmy B2C?',
+    answer: 'Dla większości firm B2C w Polsce podstawą są Facebook i Instagram — razem docierają do najszerszej grupy odbiorców i dzielą jeden system reklamowy Meta Ads. Instagram lepiej sprawdza się dla marek wizualnych i młodszej grupy, Facebook dla lokalnych biznesów i szerszej grupy wiekowej. Wybór platformy ustalamy na podstawie tego, gdzie realnie są Twoi klienci, a nie gdzie jest najmodniej.',
   },
 ]
 
@@ -150,9 +142,9 @@ const heroStats = [
 ]
 
 const introParagraphs = [
-  'Facebook, Instagram i inne sieci społecznościowe należą do najważniejszych kanałów marketingowych dla nowoczesnych firm.',
-  'Profesjonalna reklama social media pozwala precyzyjnie dotrzeć do nowych klientów, budować rozpoznawalność marki i zwiększać sprzedaż.',
-  'Jako agencja social media EvolaTec tworzy kampanie, które generują zasięg, zaangażowanie, leady i obroty — uzupełnione o <a href="/seo" class="text-primary font-semibold hover:underline">SEO</a> i <a href="/google-ads" class="text-primary font-semibold hover:underline">Google Ads</a>.',
+  'Firma zakłada profil na Facebooku i Instagramie, publikuje regularnie, zbiera kilka polubień od znajomych — i nic z tego nie wynika. To najczęstszy obraz firmowego social media: aktywność jest, zapytań nie ma. Problem nie leży w tym, że „social media nie działa", tylko w tym, jak jest prowadzone.',
+  'Trzy rzeczy zwykle zawodzą. Posty powstają bez planu i przekazu, więc nie budują żadnej spójnej historii marki. Trafiają wyłącznie do obecnych obserwujących, bo bez płatnego zasięgu organiczny zasięg Facebooka spadł do kilku procent fanów. I nikt nie mierzy, czy te treści w ogóle przekładają się na ruch lub zapytania — publikacja jest celem samym w sobie.',
+  'Prowadzimy social media jako narzędzie sprzedaży, nie kronikę firmy. Zaczynamy od strategii i kalendarza treści, łączymy organikę z płatnymi kampaniami Meta Ads, żeby treść docierała poza grono obecnych fanów, i co miesiąc raportujemy efekty. Budżet reklamowy Meta rozliczany jest oddzielnie, bezpośrednio z Meta — fee za obsługę jest stałe.',
 ]
 
 const socialPlatforms = [
@@ -188,48 +180,48 @@ const socialPlatforms = [
 
 const socialServices = [
   {
-    title: 'Facebook Ads',
-    description: 'Targetowane reklamy na Facebooku dla leadów, sprzedaży i budowania marki.',
+    title: 'Kalendarz treści miesięczny',
+    description: 'Zaplanowane tematy i przekaz na cały miesiąc — nie posty tworzone z dnia na dzień.',
     icon: 'thumb_up',
     iconBg: 'bg-blue-100',
     iconColor: 'text-blue-600',
     borderColor: 'border-blue-500',
   },
   {
-    title: 'Instagram Ads',
-    description: 'Nowoczesne kampanie na Instagramie dla zasięgu i performance.',
+    title: 'Tworzenie i publikacja postów',
+    description: 'Grafika, tekst i harmonogram publikacji — treści gotowe do pojawienia się na profilu.',
     icon: 'photo_camera',
     iconBg: 'bg-pink-100',
     iconColor: 'text-pink-600',
     borderColor: 'border-pink-500',
   },
   {
-    title: 'Kampanie Meta Ads',
-    description: 'Kampanie performance w całej sieci Meta.',
+    title: 'Community management',
+    description: 'Odpowiedzi na komentarze i wiadomości, moderacja profilu na bieżąco.',
     icon: 'hub',
     iconBg: 'bg-indigo-100',
     iconColor: 'text-indigo-600',
     borderColor: 'border-indigo-500',
   },
   {
-    title: 'Content social media',
-    description: 'Tworzenie treści reklamowych, kreacji i materiałów kampanijnych.',
+    title: 'Kampanie Meta Ads',
+    description: 'Płatna promocja na Facebooku i Instagramie poza grono obecnych fanów.',
     icon: 'edit_square',
     iconBg: 'bg-orange-100',
     iconColor: 'text-orange-600',
     borderColor: 'border-orange-500',
   },
   {
-    title: 'Zarządzanie Social Media',
-    description: 'Opieka, planowanie i optymalizacja Twoich kanałów social media.',
+    title: 'Raport miesięczny',
+    description: 'Zasięg, zaangażowanie i efekty kampanii w liczbach — co miesiąc, bez zaskoczeń.',
     icon: 'manage_accounts',
     iconBg: 'bg-emerald-100',
     iconColor: 'text-emerald-600',
     borderColor: 'border-emerald-500',
   },
   {
-    title: 'Performance Marketing',
-    description: 'Skalowalne kampanie skoncentrowane na obrocie i konwersji.',
+    title: 'Strategia i targeting',
+    description: 'Dobór grupy docelowej, przekaz i platforma dopasowane do tego, gdzie są Twoi klienci.',
     icon: 'analytics',
     iconBg: 'bg-purple-100',
     iconColor: 'text-purple-600',
@@ -240,30 +232,30 @@ const socialServices = [
 const socialProcess = [
   {
     icon: 'analytics',
-    title: 'Analiza i strategia',
-    description: 'Analizujemy Twoją grupę docelową, branżę i konkurencję.',
+    title: 'Planowanie',
+    description: 'Ustalamy tematy, przekaz i kalendarz treści na nadchodzący miesiąc pod cel biznesowy.',
   },
   {
     icon: 'brush',
-    title: 'Content i kreacje',
-    description: 'Tworzymy treści reklamowe, grafiki i materiały kampanijne.',
+    title: 'Produkcja treści',
+    description: 'Przygotowujemy grafiki i teksty postów, gotowe do publikacji.',
   },
   {
     icon: 'campaign',
-    title: 'Setup kampanii',
-    description: 'Konfigurujemy profesjonalne kampanie na Facebooku i Instagramie.',
+    title: 'Publikacja i community management',
+    description: 'Publikujemy zgodnie z harmonogramem, odpowiadamy na komentarze i wiadomości, prowadzimy płatne kampanie Meta.',
   },
   {
     icon: 'tune',
-    title: 'Optymalizacja i skalowanie',
-    description: 'Stała analiza i poprawa efektywności kampanii.',
+    title: 'Raport miesięczny',
+    description: 'Podsumowujemy zasięg, zaangażowanie i efekty kampanii oraz ustalamy kierunek na kolejny miesiąc.',
   },
 ]
 
 const whyEvolaTecParagraphs = [
-  'Skuteczny Social Media Marketing to coś więcej niż ładne posty.',
-  'Kluczowe są strategia, analiza grupy docelowej, content i optymalizacja oparta na danych.',
-  'EvolaTec łączy reklamy social media, <a href="/marketing-online" class="text-primary font-semibold hover:underline">performance marketing</a>, web design i <a href="/seo" class="text-primary font-semibold hover:underline">SEO</a> w wydajne systemy marketingowe.',
+  'Organiczne posty i płatne kampanie Meta to nie alternatywy, tylko dwie warstwy tej samej pracy. Organika buduje wiarygodność i utrzymuje obecnych odbiorców; płatne kampanie docierają do nowych. Sama organika dziś rzadko skaluje sprzedaż, bo zasięg bez budżetu jest minimalny.',
+  'Dla większości firm właściwy układ to jedno i drugie: organika utrzymuje spójny wizerunek, a płatne kampanie Meta dowożą zasięg i zapytania. Jeśli budżet jest mały, lepiej zacząć od kilku dobrze wypromowanych treści niż od dużej liczby postów, których nikt nie zobaczy.',
+  'EvolaTec łączy obie warstwy — <a href="/marketing-online" class="text-primary font-semibold hover:underline">performance marketing</a>, content i <a href="/seo" class="text-primary font-semibold hover:underline">SEO</a> — w jeden spójny system, który działa na wszystkich etapach lejka.',
 ]
 
 const whyEvolaTec = [
@@ -332,9 +324,9 @@ const relatedServices = [
 
     <!-- ── Hero ─────────────────────────────────────────────────────────── -->
     <HeroSection
-      badge="Profesjonalna agencja Social Media i Meta Ads"
-      title="Agencja Social Media Ads: reklamy na Facebooku i Instagramie, które sprzedają"
-      description="EvolaTec tworzy skuteczne kampanie Social Media na Facebooku, Instagramie i Meta Ads — strategia, content i performance marketing dla mierzalnych wyników."
+      badge="Prowadzenie social media jako narzędzie sprzedaży"
+      title="Social media jako narzędzie sprzedaży — nie kronika firmy"
+      description="Prowadzimy social media ze strategią, kalendarzem treści i kampaniami Meta Ads. Budżet reklamowy rozliczany oddzielnie — fee za prowadzenie jest stałe."
       primaryCTA="Zapytaj o Social Media"
       secondaryCTA="Zobacz cennik"
       primary-href="/kontakt"
@@ -347,7 +339,7 @@ const relatedServices = [
 
         <!-- ── Intro Section ──────────────────────────────────────────────── -->
         <IntroSection
-          heading="Dlaczego Social Media Marketing jest dziś kluczowy"
+          heading="Dlaczego firmowe profile w social media nie sprzedają"
           :paragraphs="introParagraphs"
           image="/assets/social-media.webp"
           image-alt="Social Media Marketing EvolaTec — kampanie Meta Ads i content"
@@ -358,10 +350,10 @@ const relatedServices = [
           <div class="max-w-container-max mx-auto px-gutter">
             <div class="text-center max-w-2xl mx-auto mb-stack-lg">
               <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
-                Social Media Marketing dla różnych platform
+                Facebook, Instagram i Meta Ads — jedna spójna strategia
               </h2>
               <p class="font-body-lg text-on-surface-variant">
-                Tworzymy kampanie dostosowane do każdego kanału.
+                Łączymy organikę z płatnymi kampaniami, żeby treść docierała poza grono obecnych fanów.
               </p>
             </div>
 
@@ -403,7 +395,7 @@ const relatedServices = [
 
         <!-- ── Services Section ───────────────────────────────────────────── -->
         <ServicesSection
-          title="Nasze usługi Social Media"
+          title="Co zawiera prowadzenie social media"
           variant="centered"
           :services="socialServices"
           learnMoreLabel="Dowiedz się więcej"
@@ -412,14 +404,14 @@ const relatedServices = [
 
         <!-- ── Process Section ────────────────────────────────────────────── -->
         <ProcessSection
-          title="Nasz proces Social Media"
+          title="Jak prowadzimy social media — miesięczny cykl"
           :steps="socialProcess"
           background="bg-surface-container-low"
         />
 
         <!-- ── Why EvolaTec ───────────────────────────────────────────────── -->
         <IntroSection
-          heading="Dlaczego EvolaTec jako agencja Social Media?"
+          heading="Organika czy płatne kampanie Meta — dlaczego potrzebujesz obu"
           :paragraphs="whyEvolaTecParagraphs"
           image="/assets/marketing-online.webp"
           image-alt="Agencja Social Media Marketing EvolaTec"
@@ -430,10 +422,10 @@ const relatedServices = [
         <section id="cennik" class="py-section-padding bg-surface-container-low">
           <div class="max-w-container-max mx-auto px-gutter">
             <h2 class="font-headline-lg text-headline-lg text-primary text-center mb-4">
-              Cennik Social Media Marketing
+              Ile kosztuje prowadzenie social media — fee i budżet Meta
             </h2>
             <p class="text-center font-body-lg text-on-surface-variant mb-stack-lg">
-              Przejrzyste ceny za obsługę social media, Meta Ads i kampanie performance. Budżet reklamowy rozliczany oddzielnie z Meta.
+              Podane kwoty to fee za pracę agencji: strategię, treści, prowadzenie profili i raportowanie. Budżet reklamowy Meta rozliczany jest oddzielnie, bezpośrednio z Meta — nie pobieramy prowizji od wydanego budżetu.
             </p>
 
             <div class="max-w-2xl mx-auto overflow-x-auto">
@@ -467,14 +459,14 @@ const relatedServices = [
 
         <!-- ── FAQ Section ────────────────────────────────────────────────── -->
         <FAQSection
-          title="Najczęściej zadawane pytania o Social Media Marketing"
+          title="Najczęściej zadawane pytania o marketing w social media"
           :faqs="faqData"
         />
 
         <!-- ── Related Services ───────────────────────────────────────────── -->
         <RelatedServicesSection
           eyebrow="Strona internetowa i development"
-          title="Reklama social media działa tylko z właściwą stroną docelową"
+          title="Social media bez dobrej strony docelowej to budżet wyrzucony w błoto"
           cta="Dowiedz się więcej"
           :services="relatedServices"
           background="bg-surface"
@@ -485,8 +477,8 @@ const relatedServices = [
 
     <!-- ── CTA ───────────────────────────────────────────────────────────── -->
     <CTASection
-      title="Więcej zasięgu i klientów dzięki Social Media Marketing"
-      description="EvolaTec tworzy kampanie social media, które zwiększają widoczność, zdobywają klientów i pomagają firmom rosnąć."
+      title="Prowadzenie social media, które działa — nie kronika firmy"
+      description="Współpraca jest miesięczna i bezterminowa. Konta i profile pozostają Twoją własnością — treści i dostępy przekazujemy na bieżąco."
       primary-cta="Uruchom Social Media"
       secondary-cta="Zobacz wszystkie ceny"
       primary-href="/kontakt"

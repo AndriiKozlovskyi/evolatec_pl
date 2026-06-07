@@ -36,14 +36,6 @@ const faqData = [
     question: 'Czym różni się projektowanie stron od UI/UX design?',
     answer: 'Projektowanie stron skupia się na warstwie wizualnej witryny — układzie, grafice i design systemie strony internetowej. UI/UX design to szerszy proces obejmujący badanie ścieżek użytkownika, prototypy i testy użyteczności, stosowany głównie przy aplikacjach i serwisach, gdzie sposób korzystania bezpośrednio wpływa na konwersję. Dla typowej strony firmowej wystarcza projekt graficzny; przy aplikacji warto sięgnąć po pełny proces UI/UX.',
   },
-  {
-    question: 'Jak wygląda proces projektowania strony internetowej?',
-    answer: 'Zaczynamy od briefu i researchu — poznajemy markę, cel i konkurencję. Następnie projektujemy wireframy, czyli układ i hierarchię treści zanim wejdziemy w grafikę. Na zaakceptowanym układzie budujemy pełny projekt graficzny desktop i mobile. Na końcu wprowadzamy poprawki i przekazujemy gotowe pliki do wdrożenia lub wdrażamy stronę sami.',
-  },
-  {
-    question: 'Dlaczego responsywne projektowanie stron jest ważne?',
-    answer: 'Większość użytkowników korzysta dziś ze smartfonów. Responsywny projekt gwarantuje, że układ, obrazy i treści wyglądają optymalnie na wszystkich urządzeniach — smartfonie, tablecie i desktopie. Google również preferuje witryny zoptymalizowane mobilnie w wynikach wyszukiwania.',
-  },
 ]
 
 const mainSchema = {
@@ -170,36 +162,31 @@ const heroStats = [
 ]
 
 const introParagraphs = [
-  'Jako agencja webdesign EvolaTec tworzy nowoczesne, szybkie i konwersyjne strony internetowe dla firm, startupów i lokalnych usługodawców.',
-  'Profesjonalne projektowanie stron poprawia postrzeganie marki, buduje zaufanie i sprawia, że odwiedzający stają się klientami.',
-  'Łączymy nowoczesny design, zoptymalizowaną strukturę SEO i wydajną realizację techniczną — dla trwałej widoczności w sieci.',
+  'Odwiedzający ocenia stronę, zanim ją przeczyta. Pierwsze wrażenie buduje się w ułamku sekundy i opiera się nie na treści, lecz na wyglądzie — układzie, kolorach, typografii. Jeśli strona wygląda jak setki innych, klient podświadomie zakłada, że firma też jest jedną z setek innych, i klika dalej.',
+  'To nie jest kwestia gustu, tylko zaufania. Strona oparta na popularnym szablonie wygląda znajomo, bo te same motywy używane są przez tysiące firm — w tym Twoją konkurencję. Znajomość działa tu przeciwko Tobie: nic nie wyróżnia, nic nie zostaje w pamięci, a podobieństwo do tańszych usługodawców obniża postrzeganą wartość Twojej oferty.',
+  'Projektujemy strony od podstaw, pod konkretną markę i branżę. Każdy projekt powstaje od podstaw, bez gotowych szablonów — od układu, przez kolory, po typografię dobraną do charakteru firmy. Celem nie jest „ładnie", tylko żeby wygląd budował zaufanie i prowadził wzrok dokładnie tam, gdzie ma trafić: do oferty i do kontaktu.',
 ]
 
 const features = [
   {
-    icon: 'palette',
-    title: 'Silna identyfikacja wizualna i siła marki',
-    description: 'Profesjonalny projekt buduje natychmiastowe zaufanie — spójne kolory, typografia i niepowtarzalny charakter wizualny Twojej marki.',
+    icon: 'account_tree',
+    title: 'Wireframy i architektura informacji',
+    description: 'Układ treści i ścieżka użytkownika, zanim powstanie grafika.',
   },
   {
     icon: 'devices',
-    title: 'Responsywność na wszystkich urządzeniach',
-    description: 'Każdy layout działa perfekcyjnie na smartfonach, tabletach i desktopach — Mobile First, pikselowo dopracowany, bez kompromisów.',
+    title: 'Projekt graficzny desktop i mobile',
+    description: 'Pełny design w obu wersjach, nie tylko na dużym ekranie.',
   },
   {
-    icon: 'ads_click',
-    title: 'Design zorientowany na konwersję',
-    description: 'Intuicyjna nawigacja, wyraźne wezwania do działania i struktura ukierunkowana na użytkownika — prowadząca odwiedzających do zakupu lub kontaktu.',
+    icon: 'style',
+    title: 'Design system',
+    description: 'Spójne kolory, typografia i komponenty, z których zbudowana jest cała strona.',
   },
   {
-    icon: 'speed',
-    title: 'Wydajność i techniczna perfekcja',
-    description: 'Lekkie zasoby, zoptymalizowane obrazy i czysty kod dla szybkich czasów ładowania i wysokich wyników Lighthouse.',
-  },
-  {
-    icon: 'search_insights',
-    title: 'SEO-ready od samego początku',
-    description: 'Semantyczny HTML, czysta struktura i zoptymalizowane treści — żeby Twoja strona była znajdowana w Google od pierwszego dnia.',
+    icon: 'handshake',
+    title: 'Przekazanie do developerów',
+    description: 'Gotowe pliki i specyfikacja, jeśli stronę wdraża Twój zespół.',
   },
 ]
 
@@ -403,7 +390,7 @@ const relatedServices = [
 
         <!-- ── Intro ─────────────────────────────────────────────────────── -->
         <IntroSection
-          heading="Nowoczesne strony dla firm, marek i produktów cyfrowych"
+          heading="Dlaczego wygląd strony decyduje w pierwszych sekundach"
           :paragraphs="introParagraphs"
           image="/assets/web-design.webp"
           image-alt="Projektant UX szkicujący interfejs strony internetowej na tablecie — prototyp i projekt graficzny"
@@ -411,7 +398,7 @@ const relatedServices = [
 
         <!-- ── Features ──────────────────────────────────────────────────── -->
         <FeaturesSection
-          title="Co wyróżnia profesjonalne projektowanie stron."
+          title="Co obejmuje projektowanie strony internetowej."
           :features="features"
           image-url="/assets/web-design.webp"
           image-alt="Profesjonalne projektowanie strony internetowej — projekt graficzny desktop i mobile"
@@ -444,7 +431,7 @@ const relatedServices = [
         <PricingSection
           eyebrow="Cennik"
           title="Cennik projektowania stron"
-          subtitle="Przejrzyste ceny za profesjonalny projekt graficzny. Jeśli zamawiasz u nas również wykonanie strony, projekt jest częścią realizacji."
+          subtitle="Projektowanie strony wyceniamy indywidualnie, bo zakres różni się tu bardziej niż przy gotowych pakietach. Wycena jest bezpłatna i ustalana przed startem — podajemy konkretną kwotę, gdy wiemy, co dokładnie ma powstać. Jeśli zamawiasz u nas również wykonanie strony, projekt jest częścią realizacji i nie jest osobno fakturowany."
           :pricing-plans="pricingPlans"
         />
 

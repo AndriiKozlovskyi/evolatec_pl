@@ -142,9 +142,9 @@ const heroStats = [
 ]
 
 const introParagraphs = [
-  'Firma inwestuje w ładny projekt strony, a potem wkleja w niego teksty napisane w pół godziny wieczorem — i dziwi się, że strona nie sprzedaje. Wygląd przyciąga wzrok na sekundę, ale to tekst decyduje, czy odwiedzający zostaje, rozumie ofertę i wysyła zapytanie.',
-  'Trzy błędy powtarzają się najczęściej. Tekst mówi o firmie zamiast o problemie klienta. Jest ogólny, więc nie różni się od konkurencji. I nie jest pisany pod wyszukiwarkę, więc nawet najlepsza treść nie zostaje znaleziona.',
-  'Każdy tekst jest pisany pod konkretne frazy kluczowe oraz pod cytowalność w wyszukiwarkach AI, dzięki czemu może być znaleziony zarówno w Google, jak i w odpowiedziach ChatGPT czy Perplexity.',
+  'Firma inwestuje w ładny projekt strony, a potem wkleja w niego teksty napisane w pół godziny wieczorem — i dziwi się, że strona nie sprzedaje. Wygląd przyciąga wzrok na sekundę, ale to tekst decyduje, czy odwiedzający zostaje, rozumie ofertę i wysyła zapytanie. Najsłabszym ogniwem większości stron nie jest design, tylko treść.',
+  'Trzy błędy powtarzają się najczęściej. Tekst mówi o firmie („jesteśmy zespołem profesjonalistów") zamiast o problemie klienta, który ten klient właśnie próbuje rozwiązać. Jest ogólny, więc nie różni się od tekstu konkurencji i niczego nie obiecuje konkretnie. I nie jest pisany pod wyszukiwarkę, więc nawet najlepsza treść nie zostaje znaleziona.',
+  'Piszemy teksty, które zaczynają od problemu czytelnika, mówią konkretami — ceną, terminem, liczbą — i są zbudowane pod frazy, na które szukają klienci. Każdy tekst jest pisany pod konkretne frazy kluczowe oraz pod cytowalność w wyszukiwarkach AI, dzięki czemu może być znaleziony zarówno w Google, jak i w odpowiedziach ChatGPT czy Perplexity.',
 ]
 
 const textTypeServices = [
@@ -188,7 +188,7 @@ const textTypeServices = [
 const checklistColumns = [
   {
     heading: 'Tekst z generatora AI',
-    paragraphs: ['Natychmiastowe i bezpłatne — ale uśrednione, bez strategii fraz i bez konkretów o Twojej firmie.'],
+    paragraphs: ['Sekundy, za darmo — ale ogólny, bez strategii fraz i bez konkretnych faktów o Twojej firmie. Tekst z AI wystarcza na notatkę albo punkt wyjścia, nie na stronę, która ma sprzedawać.'],
     icon: 'info',
     items: [
       'Gotowe w sekundy, bez kosztów',
@@ -200,7 +200,7 @@ const checklistColumns = [
   },
   {
     heading: 'Copywriting SEO',
-    paragraphs: ['Pisany pod konkretny cel, frazy i markę — na podstawie danych o Twojej firmie, nie z generatora.'],
+    paragraphs: ['Pisany pod konkretny cel, frazy i markę — na podstawie danych Twojej firmy, nie z generatora. To on decyduje o konwersji i widoczności w Google oraz wyszukiwarkach AI.'],
     icon: 'check_circle',
     items: [
       'Kilka dni roboczych, wycena per projekt',
@@ -216,7 +216,7 @@ const processSteps = [
   {
     icon: 'fact_check',
     title: 'Brief i research fraz',
-    description: 'Zbieramy fakty o firmie i ofercie, dobieramy frazy kluczowe pod każdą podstronę na podstawie danych z Google Search Console lub narzędzi SEO.',
+    description: 'Zbieramy fakty o firmie i ofercie oraz dobieramy frazy kluczowe pod każdą podstronę. Im więcej konkretów dostarczysz na starcie, tym mniej rund poprawek potrzeba.',
   },
   {
     icon: 'edit',
@@ -226,12 +226,12 @@ const processSteps = [
   {
     icon: 'rate_review',
     title: 'Poprawki',
-    description: 'Wprowadzamy ustaloną liczbę rund uwag, dopasowując ton i akcenty. Każda zmiana jest uzasadniona — nie poprawiamy dla poprawiania.',
+    description: 'Wprowadzamy ustaloną liczbę rund uwag, dopasowując ton i akcenty. Liczba poprawek jest ustalona z góry, więc proces ma jasny koniec.',
   },
   {
     icon: 'task_alt',
     title: 'Przekazanie',
-    description: 'Dostarczamy gotowe teksty w formacie do wdrożenia, z nagłówkami H1–H4 i strukturą pod SEO. Wystarczy wkleić do CMS.',
+    description: 'Dostarczamy gotowe teksty w formacie do wdrożenia, z nagłówkami i strukturą pod SEO. Wystarczy wkleić do CMS.',
   },
 ]
 
@@ -335,7 +335,7 @@ const relatedServices = [
         <!-- ── Services ──────────────────────────────────────────────── -->
         <ServicesSection
           title="Jakie teksty piszemy"
-          subtitle="Piszemy treści dla całej strony, nie tylko pojedynczej podstrony — od pierwszego ekranu po opisy produktów i bloga. Wszystkie po polsku jako native."
+          subtitle="Piszemy treści dla całej strony, nie tylko pojedynczej podstrony — od pierwszego ekranu po opisy produktów i bloga. Wszystkie teksty piszemy po polsku jako native — z rytmem i frazeologią, które brzmią naturalnie dla polskiego klienta. Można zamówić jako część projektu strony lub jako oddzielną usługę, gdy stronę masz już gotową i brakuje jej tylko treści."
           :services="textTypeServices"
           background="bg-surface-container-low"
         />
@@ -358,7 +358,7 @@ const relatedServices = [
         <PricingSection
           eyebrow="Wycena"
           title="Ile kosztują teksty na stronę"
-          subtitle="Wyceniamy per podstrona lub per projekt. Jeśli zamawiasz u nas również stronę, teksty są wliczone w całość."
+          subtitle="Wyceniamy per podstrona lub per projekt — wycena zależy od liczby podstron. Nie ma jednej ceny, bo strona z pięcioma podstronami i sklep z dwustoma opisami produktów to inny nakład. Jeśli zamawiasz u nas również projekt lub wykonanie strony, teksty wyceniamy łącznie z całością."
           :pricing-plans="pricingPlans"
         />
 
