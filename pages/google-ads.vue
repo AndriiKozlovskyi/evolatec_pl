@@ -17,24 +17,24 @@ useSeoMeta({
 
 const faqData = [
   {
-    question: 'Co robi agencja Google Ads?',
-    answer: 'Agencja Google Ads planuje, uruchamia i optymalizuje kampanie reklamowe w Google — Search, Display, Shopping i YouTube. Obejmuje to badanie słów kluczowych, tworzenie tekstów reklamowych, śledzenie konwersji i bieżącą optymalizację. Celem jest wygenerowanie jak największej liczby kwalifikowanych kliknięć, leadów lub sprzedaży z dostępnego budżetu.',
-  },
-  {
-    question: 'Jak szybko działają Google Ads?',
-    answer: 'Google Ads może przynieść pierwszych odwiedzających i leady już w ciągu kilku dni. W przeciwieństwie do SEO Google Ads daje natychmiastową widoczność. Kampanie są następnie stale optymalizowane na podstawie danych o wynikach.',
-  },
-  {
     question: 'Ile kosztuje prowadzenie kampanii Google Ads?',
-    answer: 'Prowadzenie kampanii Google Ads kosztuje od 1 680 zł netto miesięcznie — to fee za obsługę agencji. Budżet reklamowy płacony Google jest ustalany oddzielnie i zależy od branży, konkurencji i celów. Przed startem kampanii podajemy rekomendację budżetu.',
+    answer: 'Prowadzenie kampanii Google Ads kosztuje od 1 680 zł netto miesięcznie — to fee za obsługę agencji. Budżet reklamowy płacony Google jest rozliczany oddzielnie i ustalasz go samodzielnie. Cena obejmuje strategię, setup, dobór słów kluczowych, teksty reklam, śledzenie konwersji oraz miesięczną optymalizację i raportowanie.',
   },
   {
-    question: 'Jaka jest różnica między Google Ads a SEO?',
-    answer: 'Google Ads to płatne reklamy, które natychmiast pojawiają się ponad organicznymi wynikami wyszukiwania — płacisz za każde kliknięcie. SEO zapewnia organiczne pozycje bez kosztów za kliknięcie, ale efekty pojawiają się po miesiącach. W praktyce oba kanały się uzupełniają: Ads generują szybkie leady, SEO buduje długofalową stabilną widoczność.',
+    question: 'Jaki budżet reklamowy jest potrzebny w Google Ads?',
+    answer: 'Rekomendowany minimalny budżet reklamowy w Google to 1 000 zł miesięcznie, rozliczany bezpośrednio z Google. Poniżej tej kwoty kampania zbiera za mało danych, żeby algorytm nauczył się, kto kupuje. W bardziej konkurencyjnych branżach próg jest wyższy — ustalamy go realnie przed startem, na podstawie stawek za kliknięcie w Twojej niszy.',
   },
   {
-    question: 'Dla jakich firm nadają się Google Ads?',
-    answer: 'Google Ads nadają się dla niemal każdej branży, w której potencjalni klienci aktywnie szukają rozwiązań: lokalni usługodawcy, sklepy internetowe, firmy B2B, startupy i dostawcy usług. Szczególnie skuteczne, gdy Twoja oferta rozwiązuje konkretny problem, a ceny za kliknięcie są adekwatne do wartości zamówienia.',
+    question: 'Czy budżet reklamowy Google jest wliczony w cenę obsługi?',
+    answer: 'Nie — fee za obsługę i budżet reklamowy to dwie osobne kwoty. Płacisz nam stałe miesięczne wynagrodzenie za prowadzenie kampanii, a budżet reklamowy trafia bezpośrednio do Google. Dzięki temu nie pobieramy prowizji od wydanego budżetu, a nasze wynagrodzenie nie rośnie wraz z kwotą, którą wydajesz na kliknięcia.',
+  },
+  {
+    question: 'Jak szybko Google Ads przynosi efekty?',
+    answer: 'Google Ads przynosi pierwsze zapytania od pierwszego dnia kampanii — to jego główna przewaga nad SEO. Pełna optymalizacja stawek, słów kluczowych i odbiorców zajmuje zwykle 4–6 tygodni, zanim kampania osiągnie stabilny koszt pozyskania klienta. Od początku raportujemy konwersje, żeby było widać, kiedy wydatek zaczyna się zwracać.',
+  },
+  {
+    question: 'Czym różni się SEO od Google Ads?',
+    answer: 'Google Ads to reklama płatna — działa natychmiast, ale ruch trwa tylko tak długo, jak długo opłacasz kliknięcia. SEO to pozycjonowanie organiczne — efekty budują się tygodniami i miesiącami, ale ruch zostaje po zaprzestaniu płacenia za kliknięcia. Google Ads daje szybkość, SEO daje trwałość; najczęściej prowadzi się oba równolegle.',
   },
 ]
 
@@ -146,56 +146,56 @@ const heroStats = [
 ]
 
 const introParagraphs = [
-  'Google Ads to jedna z najskuteczniejszych metod, żeby natychmiast zaistnieć i precyzyjnie dotrzeć do nowych klientów.',
-  'Firmy mogą być widoczne dokładnie wtedy, gdy potencjalni klienci aktywnie szukają usług, produktów lub rozwiązań.',
-  'Jako agencja Google Ads EvolaTec tworzy kampanie oparte na danych, które zwiększają zasięg, generują leady i podnoszą sprzedaż. Dowiedz się więcej o naszych <a href="/marketing-online" class="text-primary font-semibold hover:underline">usługach marketingu online</a>.',
+  'Firma uruchamia Google Ads, widzi rosnący wydatek i kilka telefonów, ale nie wie, czy te telefony przyszły z reklamy, czy mimo niej. Tak wygląda większość źle ustawionych kampanii: budżet znika, a związek między wydatkiem a sprzedażą pozostaje zgadywaniem.',
+  'Trzy błędy powtarzają się najczęściej. Pierwszy to zbyt szerokie słowa kluczowe — reklama wyświetla się na zapytania, które nigdy nie kończą się zakupem, a każde kliknięcie kosztuje. Drugi to brak śledzenia konwersji, więc nie wiadomo, którą kampanię wyłączyć, a którą zwiększyć. Trzeci to ruch kierowany na stronę główną zamiast na stronę docelową dopasowaną do reklamy, co obniża konwersję i podnosi koszt kliknięcia przez niski Quality Score.',
+  'Prowadzimy kampanie odwrotnie: zaczynamy od wdrożenia śledzenia konwersji, zawężamy słowa kluczowe do tych, które realnie sprzedają, i kierujemy ruch na dopasowany landing page. Budżet reklamowy rozliczany jest oddzielnie, bezpośrednio z Google — fee za obsługę jest stałe, więc widzisz osobno, ile płacisz za pracę, a ile za same kliknięcia. Dowiedz się więcej o naszych <a href="/marketing-online" class="text-primary font-semibold hover:underline">usługach marketingu online</a>.',
 ]
 
 const adsServices = [
   {
-    title: 'Reklamy w wyszukiwarce Google',
-    description: 'Widoczność przy trafnych zapytaniach dzięki reklamom o wysokiej konwersji.',
+    title: 'Strategia i setup kampanii',
+    description: 'Struktura konta, kampanii i grup reklam dopasowana do Twojego celu.',
     icon: 'ads_click',
     iconBg: 'bg-blue-100',
     iconColor: 'text-blue-600',
     borderColor: 'border-blue-500',
   },
   {
-    title: 'Reklamy Display',
-    description: 'Kampanie banerowe zwiększające rozpoznawalność marki i zasięg.',
-    icon: 'image',
+    title: 'Dobór słów kluczowych',
+    description: 'Z naciskiem na frazy, które kończą się zapytaniem, nie samym kliknięciem.',
+    icon: 'search',
     iconBg: 'bg-emerald-100',
     iconColor: 'text-emerald-600',
     borderColor: 'border-emerald-500',
   },
   {
-    title: 'Google Shopping Ads',
-    description: 'Kampanie performance dla sklepów internetowych i projektów e-commerce.',
-    icon: 'shopping_cart',
+    title: 'Tworzenie tekstów reklamowych',
+    description: 'Tworzenie i testowanie wariantów tekstów — każda reklama mierzona konwersją.',
+    icon: 'edit_note',
     iconBg: 'bg-orange-100',
     iconColor: 'text-orange-600',
     borderColor: 'border-orange-500',
   },
   {
-    title: 'Kampanie remarketingowe',
-    description: 'Odzyskiwanie odwiedzających przez precyzyjnie targetowane reklamy.',
-    icon: 'refresh',
+    title: 'Śledzenie konwersji',
+    description: 'Wdrożenie pomiaru — bez którego optymalizacja jest zgadywaniem.',
+    icon: 'conversion_path',
     iconBg: 'bg-purple-100',
     iconColor: 'text-purple-600',
     borderColor: 'border-purple-500',
   },
   {
-    title: 'Optymalizacja konwersji',
-    description: 'Optymalizacja reklam, landing page\'ów i ścieżki użytkownika.',
-    icon: 'conversion_path',
+    title: 'Miesięczna optymalizacja i raportowanie',
+    description: 'Korekty stawek, odbiorców i przekazu na podstawie danych konwersji, nie przeczuć.',
+    icon: 'tune',
     iconBg: 'bg-rose-100',
     iconColor: 'text-rose-600',
     borderColor: 'border-rose-500',
   },
   {
-    title: 'Doradztwo Google Ads',
-    description: 'Strategiczne doradztwo dla firm i kampanii performance.',
-    icon: 'support_agent',
+    title: 'Audyt istniejących kampanii',
+    description: 'Przy przejęciu konta — mówimy wprost, co działa, a co przepala budżet.',
+    icon: 'manage_search',
     iconBg: 'bg-teal-100',
     iconColor: 'text-teal-600',
     borderColor: 'border-teal-500',
@@ -204,26 +204,26 @@ const adsServices = [
 
 const adsBenefits = [
   {
-    title: 'Natychmiastowa widoczność',
-    description: 'Twoje reklamy pojawiają się od razu przy trafnych zapytaniach.',
+    title: 'Efekt od pierwszego dnia',
+    description: 'Google Ads przynosi pierwsze zapytania od dnia uruchomienia kampanii — w odróżnieniu od SEO nie czekasz miesięcy.',
     icon: 'visibility',
     image: '/assets/google-ads.webp',
   },
   {
-    title: 'Kwalifikowane leady',
-    description: 'Targetowane reklamy docierają do potencjalnych klientów.',
+    title: 'Płacisz za pracę, nie za kliknięcia',
+    description: 'Nasze fee jest stałe — nie pobieramy prowizji od budżetu reklamowego, więc nie mamy interesu w zwiększaniu Twoich wydatków na Google.',
     icon: 'person_add',
     image: '/assets/marketing-online.webp',
   },
   {
-    title: 'Mierzalne wyniki',
-    description: 'Kliknięcia, leady i konwersje są dokładnie analizowane.',
+    title: 'Konwersje mierzone od startu',
+    description: 'Każdą kampanię zaczynamy od wdrożenia śledzenia konwersji — wiesz, ile kosztuje zapytanie, a nie tylko kliknięcie.',
     icon: 'analytics',
     image: '/assets/seo-analytics.webp',
   },
   {
-    title: 'Skalowalny wzrost',
-    description: 'Skuteczne kampanie można stale skalować.',
+    title: 'Konto zostaje Twoje',
+    description: 'Współpraca jest bezterminowa i można ją zakończyć z miesięcznym wyprzedzeniem. Konto Google Ads pozostaje Twoją własnością.',
     icon: 'stacked_line_chart',
     image: '/assets/web-analytics.webp',
   },
@@ -232,23 +232,23 @@ const adsBenefits = [
 const adsProcess = [
   {
     icon: 'analytics',
-    title: 'Analiza i strategia',
-    description: 'Analizujemy Twoją branżę, grupę docelową i konkurencję.',
-  },
-  {
-    icon: 'search',
-    title: 'Dobór słów kluczowych',
-    description: 'Wybieramy trafne frazy wyszukiwania o wysokim potencjale.',
+    title: 'Audyt i setup',
+    description: 'Wdrażamy śledzenie konwersji, budujemy lub porządkujemy strukturę konta i kampanii. Jednorazowo, na początku współpracy.',
   },
   {
     icon: 'campaign',
-    title: 'Tworzenie kampanii',
-    description: 'Tworzymy profesjonalne reklamy, grupy odbiorców i landing page\'e.',
+    title: 'Prowadzenie kampanii',
+    description: 'Uruchamiamy reklamy, pilnujemy wydatku i wykluczamy frazy generujące koszt bez konwersji.',
   },
   {
     icon: 'tune',
-    title: 'Optymalizacja i skalowanie',
-    description: 'Stale poprawiamy kampanię dla lepszej efektywności i niższych kosztów.',
+    title: 'Cotygodniowa optymalizacja',
+    description: 'Korygujemy stawki, grupy odbiorców i teksty na podstawie danych konwersji — nie przeczuć.',
+  },
+  {
+    icon: 'summarize',
+    title: 'Raport miesięczny',
+    description: 'Dostajesz liczby, które mają znaczenie: wydatek, liczba i koszt konwersji oraz plan na kolejny miesiąc.',
   },
 ]
 
@@ -260,31 +260,31 @@ const campaignTypes = [
 ]
 
 const whyEvolaTecParagraphs = [
-  'Skuteczna reklama Google to nie tylko reklamy.',
-  'Kluczowe są strategia, doświadczenie użytkownika, landing page\'e i ciągła optymalizacja.',
-  'EvolaTec łączy Google Ads, <a href="/seo" class="text-primary font-semibold hover:underline">SEO</a>, optymalizację konwersji i nowoczesny web design w wydajne systemy marketingowe.',
+  'Jeśli potrzebujesz zapytań w tym tygodniu — Google Ads daje efekt od pierwszego dnia. Jeśli budujesz pozycję na lata — inwestuj w SEO równolegle. Najzdrowszy układ to jedno i drugie: Google Ads na start i testy, pozycjonowanie jako fundament, który z czasem przejmuje część ruchu płatnego.',
+  'Nie pobieramy prowizji od wydanego budżetu reklamowego. Płacisz stałe fee za pracę — nie za to, że wydałeś więcej na kliknięcia.',
+  'EvolaTec łączy Google Ads, <a href="/seo" class="text-primary font-semibold hover:underline">SEO</a>, optymalizację konwersji i web design w spójne systemy marketingowe — kampania i landing page to jeden projekt, nie dwa oddzielne zlecenia.',
 ]
 
 const whyEvolaTec = [
   {
-    title: 'Fokus na wynikach',
-    description: 'Celowane kampanie skoncentrowane na efektach.',
+    title: 'Stałe fee, bez prowizji',
+    description: 'Nie pobieramy % od budżetu reklamowego — nasze wynagrodzenie nie rośnie, gdy zwiększasz wydatki na kliknięcia.',
     icon: 'ads_click',
     iconBg: 'bg-blue-100',
     iconColor: 'text-blue-600',
     borderColor: 'border-blue-500',
   },
   {
-    title: 'Ekspertyza techniczna',
-    description: 'Połączenie marketingu, SEO i developmentu.',
+    title: 'Ads i landing page razem',
+    description: 'Kampania i strona docelowa to jeden projekt — konwersja nie spada przez niedopasowany landing page.',
     icon: 'code',
     iconBg: 'bg-emerald-100',
     iconColor: 'text-emerald-600',
     borderColor: 'border-emerald-500',
   },
   {
-    title: 'Skalowalne kampanie',
-    description: 'Systemy, które rosną długofalowo.',
+    title: 'Konto zawsze Twoje',
+    description: 'Nie przejmujemy dostępu na wyłączność. Współpraca miesięczna i bezterminowa — można zakończyć z miesięcznym wyprzedzeniem.',
     icon: 'stacked_line_chart',
     iconBg: 'bg-purple-100',
     iconColor: 'text-purple-600',
@@ -346,7 +346,7 @@ const relatedServices = [
 
         <!-- ── Intro Section ──────────────────────────────────────────────── -->
         <IntroSection
-          heading="Dlaczego Google Ads jest ważne dla firm"
+          heading="Dlaczego większość kampanii Google Ads przepala budżet"
           :paragraphs="introParagraphs"
           image="/assets/google-ads.webp"
           image-alt="Kampanie Google Ads EvolaTec — dashboard reklam i konwersji"
@@ -354,7 +354,7 @@ const relatedServices = [
 
         <!-- ── Services Section ───────────────────────────────────────────── -->
         <ServicesSection
-          title="Nasze usługi Google Ads"
+          title="Co zawiera prowadzenie kampanii Google Ads"
           variant="centered"
           :services="adsServices"
           learnMoreLabel="Dowiedz się więcej"
@@ -369,7 +369,7 @@ const relatedServices = [
 
         <!-- ── Process Section ────────────────────────────────────────────── -->
         <ProcessSection
-          title="Nasz proces Google Ads"
+          title="Jak prowadzimy kampanie Google Ads — miesięczny cykl"
           :steps="adsProcess"
           background="bg-surface-container-low"
         />
@@ -382,7 +382,7 @@ const relatedServices = [
 
         <!-- ── Why EvolaTec ───────────────────────────────────────────────── -->
         <IntroSection
-          heading="Dlaczego EvolaTec jako agencja Google Ads?"
+          heading="Google Ads czy SEO — co wybrać i dlaczego warto oba"
           :paragraphs="whyEvolaTecParagraphs"
           image="/assets/marketing-online.webp"
           image-alt="Performance marketing Google Ads EvolaTec"
@@ -396,7 +396,7 @@ const relatedServices = [
               Cennik obsługi Google Ads
             </h2>
             <p class="text-center font-body-lg text-on-surface-variant mb-stack-lg">
-              Przejrzyste ceny za Google Ads, SEA i performance marketing. Budżet reklamowy rozliczany oddzielnie z Google.
+              Podana kwota to fee za pracę agencji — budżet reklamowy rozliczasz oddzielnie, bezpośrednio z Google. Nie pobieramy prowizji od kwoty, którą wydajesz na kliknięcia.
             </p>
 
             <div class="max-w-2xl mx-auto overflow-x-auto">
@@ -448,8 +448,8 @@ const relatedServices = [
 
     <!-- ── CTA ───────────────────────────────────────────────────────────── -->
     <CTASection
-      title="Więcej klientów dzięki profesjonalnej reklamie Google"
-      description="EvolaTec tworzy kampanie Google Ads, które zwiększają widoczność, generują leady i pomagają firmom rosnąć."
+      title="Kampania Google Ads, która wiesz, że działa"
+      description="Zaczynamy od śledzenia konwersji — żebyś od pierwszego dnia wiedział, ile kosztuje Cię jedno zapytanie, nie tylko kliknięcie."
       primary-cta="Uruchom Google Ads"
       secondary-cta="Zobacz wszystkie ceny"
       primary-href="/kontakt"

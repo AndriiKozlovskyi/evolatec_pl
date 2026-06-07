@@ -142,43 +142,43 @@ const heroStats = [
 ]
 
 const introParagraphs = [
-  'Klient wyrabia sobie zdanie o firmie, zanim przeczyta ofertę — na podstawie logo, kolorów i tego, czy wszystko do siebie pasuje. Marka, która na wizytówce wygląda inaczej niż na stronie, a na Facebooku jeszcze inaczej, wysyła jeden sygnał: tu się nie przykłada do szczegółów.',
+  'Klient wyrabia sobie zdanie o firmie, zanim przeczyta ofertę — na podstawie logo, kolorów i tego, czy wszystko do siebie pasuje. Marka, która na wizytówce wygląda inaczej niż na stronie, a na Facebooku jeszcze inaczej, wysyła jeden sygnał: tu się nie przykłada do szczegółów. A jeśli nie do szczegółów wizualnych, to do jakich.',
   'Najczęstszy problem małych firm to nie brak logo, tylko brak systemu. Logo powstało kiedyś w generatorze albo u znajomego, kolory dobierane są za każdym razem na nowo, a typografia zależy od tego, w czym akurat ktoś robił grafikę. Efekt jest niespójny i wygląda taniej, niż firma realnie jest.',
-  '<strong>Identyfikacja wizualna obejmuje logo, paletę kolorów, typografię i system znaku</strong> — komplet, dzięki któremu firma wygląda tak samo profesjonalnie na stronie, w mediach społecznościowych i na dokumentach. Projekt logo dostarczamy w 3 koncepcjach, z księgą znaku i plikami w formatach AI, SVG, PNG i PDF.',
+  'Identyfikacja wizualna porządkuje to raz: jedno logo, jedna paleta, jedna typografia i zasady ich użycia. <strong>Identyfikacja wizualna obejmuje logo, paletę kolorów, typografię i system znaku</strong> — komplet, dzięki któremu firma wygląda tak samo profesjonalnie na stronie, w mediach społecznościowych i na dokumentach.',
 ]
 
 const deliverables = [
   {
     icon: 'brush',
-    title: 'Logo w 3 koncepcjach',
-    description: 'Trzy różne kierunki wizualne do wyboru — nie jedna propozycja do przyjęcia lub odrzucenia. Wybierasz kierunek, my rozwijamy go w pełny system.',
+    title: 'Projekt logo w 3 koncepcjach',
+    description: 'Różne kierunki do wyboru, nie jedna propozycja do przyjęcia lub odrzucenia.',
   },
   {
     icon: 'style',
     title: 'System identyfikacji wizualnej',
-    description: 'Logo, kolory, typografia i zasady użycia — komplet, dzięki któremu marka wygląda spójnie wszędzie.',
+    description: 'Zasady użycia znaku w różnych kontekstach — komplet, dzięki któremu marka wygląda spójnie wszędzie.',
   },
   {
     icon: 'format_color_fill',
     title: 'Paleta kolorów i typografia',
-    description: 'Kolory z wartościami HEX, RGB i CMYK gotowe do druku i ekranu. Typografia z dobranymi krojami i hierarchią nagłówków.',
+    description: 'Spójny zestaw barw i krojów dla całej marki.',
   },
   {
     icon: 'menu_book',
     title: 'Księga znaku',
-    description: 'Zasady stosowania marki: dozwolone i zakazane użycia logo, wersje kolorystyczne, marginesy bezpieczne i przykłady zastosowań.',
+    description: 'Dokument z zasadami stosowania logo, kolorów i typografii.',
   },
   {
     icon: 'folder',
-    title: 'Pliki AI, SVG, PNG, PDF',
-    description: 'Pliki wektorowe do skalowania bez utraty jakości — od wizytówki po billboard. Pliki rastrowe i PDF gotowe do natychmiastowego użycia.',
+    title: 'Pliki w formatach do druku i web',
+    description: 'AI, SVG, PNG i PDF, gotowe do każdego użycia.',
   },
 ]
 
 const checklistColumns = [
   {
     heading: 'Logo z generatora',
-    paragraphs: ['Realna opcja na sam start — pod warunkiem, że rozumiesz, czego w niej nie ma.'],
+    paragraphs: ['Logo z generatora albo z taniego serwisu kosztuje kilkadziesiąt złotych i jest w godzinę. To realna opcja na sam start — pod warunkiem, że rozumiesz, czego w niej nie ma.'],
     icon: 'close',
     items: [
       'Często wzór współdzielony z innymi firmami',
@@ -190,7 +190,7 @@ const checklistColumns = [
   },
   {
     heading: 'Pełna identyfikacja wizualna',
-    paragraphs: ['System, dzięki któremu marka wygląda spójnie na stronie, dokumentach i materiałach drukowanych.'],
+    paragraphs: ['Pełna identyfikacja opłaca się, gdy firma ma budować wiarygodność i pojawiać się w wielu miejscach naraz — bo wtedy spójność i pliki wektorowe przestają być luksusem, a stają się warunkiem profesjonalnego wyglądu.'],
     icon: 'check_circle',
     items: [
       'Projektowane od podstaw — unikalne dla firmy',
@@ -206,24 +206,26 @@ const processSteps = [
   {
     icon: 'lightbulb',
     title: 'Brief i research',
-    description: 'Poznajemy firmę, branżę i konkurencję, ustalamy charakter, jaki marka ma komunikować i jakich skojarzeń unikać.',
+    description: 'Poznajemy firmę, branżę i konkurencję, ustalamy charakter, jaki marka ma komunikować.',
   },
   {
     icon: 'brush',
     title: 'Koncepcje logo',
-    description: 'Przedstawiamy 3 różne kierunki wizualne. Każdy to odrębna koncepcja — nie warianty jednego pomysłu.',
+    description: 'Przedstawiamy 3 różne kierunki, z których wybierasz ten najbliższy.',
   },
   {
     icon: 'tune',
     title: 'Dopracowanie i system',
-    description: 'Rozwijamy wybrany kierunek w pełny system: kolory z wartościami, typografia, zasady użycia i wersje logo.',
+    description: 'Rozwijamy wybraną koncepcję w pełny system: kolory, typografia, zasady użycia.',
   },
   {
     icon: 'menu_book',
     title: 'Księga znaku i przekazanie',
-    description: 'Dostarczamy księgę znaku i komplet plików w formatach AI, SVG, PNG i PDF. Prawa do znaku przechodzą na Ciebie.',
+    description: 'Dostarczamy księgę znaku i komplet plików w formatach AI, SVG, PNG i PDF.',
   },
 ]
+
+const pricingSubtitle = 'Branding wyceniamy indywidualnie w zależności od zakresu — od samego logo po pełną księgę identyfikacji. Nie ma jednej ceny, bo „logo dla firmy” i „kompletna identyfikacja z księgą znaku” to dwa różne projekty pod względem nakładu pracy. Jeśli zamawiasz też stronę, identyfikację i projekt wyceniamy łącznie.'
 
 const pricingPlans = [
   {
@@ -372,7 +374,7 @@ const relatedServices = [
         <PricingSection
           eyebrow="Wycena"
           title="Ile kosztuje branding — model wyceny"
-          subtitle="Branding wyceniamy indywidualnie w zależności od zakresu — od samego logo po pełną księgę identyfikacji. Jeśli zamawiasz też stronę, wyceniamy łącznie."
+          :subtitle="pricingSubtitle"
           :pricing-plans="pricingPlans"
         />
 

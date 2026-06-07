@@ -370,7 +370,7 @@ const processSteps = [
                     Projekt UI/UX to proces oparty na badaniu i testowaniu, z konkretnymi artefaktami na każdym etapie — nie zestaw ładnych ekranów.
                   </p>
                   <p>
-                    Projekt UI/UX obejmuje audyt UX, wireframy, interaktywny prototyp w Figmie i specyfikację dla developerów. Dla
+                    Projekt UI/UX obejmuje audyt UX, wireframy, interaktywny prototyp w Figmie i specyfikację dla developerów — komplet, który pozwala przetestować produkt, zanim powstanie, i wdrożyć go bez zgadywania. Dla
                     <NuxtLink to="/sklep-internetowy" class="text-primary font-semibold hover:underline">sklepów</NuxtLink>
                     i serwisów z dużym ruchem to różnica, która bezpośrednio przekłada się na konwersję.
                   </p>
@@ -398,7 +398,7 @@ const processSteps = [
         <PricingSection
           eyebrow="Cennik"
           title="Ile kosztuje projekt UI/UX — model wyceny"
-          subtitle="Od pojedynczego audytu UX po pełny projekt aplikacji. Ceny zaczynają się od audytu — najtańszego pierwszego kroku, który pokazuje, gdzie produkt traci użytkowników."
+          subtitle="Projekt UX wyceniamy indywidualnie w zależności od liczby ekranów i złożoności aplikacji. Audyt UX istniejącej strony to inny nakład niż zaprojektowanie aplikacji od zera z prototypem i testami, dlatego nie ma jednej ceny."
           :pricing-plans="pricingPlans"
         />
 
