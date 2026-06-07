@@ -365,10 +365,10 @@ const pricingPlans = [
         <!-- ══ Profesjonalny audyt SEO vs automatyczne narzędzia ══════════════ -->
         <section aria-labelledby="section-porownanie-audyt" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <h2 id="section-porownanie-audyt" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6 text-center">
+            <h2 id="section-porownanie-audyt" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
               Profesjonalny audyt SEO vs automatyczne narzędzia online
             </h2>
-            <p class="text-on-surface-variant mx-auto mb-10 leading-relaxed">Narzędzia takie jak Semrush, Ahrefs czy darmowe skanery generują listy błędów bez priorytetyzacji pod konkretną domenę. Błąd krytyczny dla portalu z milionem podstron może nie mieć znaczenia dla pięciostronicowej witryny firmowej.</p>
+            <p class="text-on-surface-variant mb-10 leading-relaxed">Narzędzia takie jak Semrush, Ahrefs czy darmowe skanery generują listy błędów bez priorytetyzacji pod konkretną domenę. Błąd krytyczny dla portalu z milionem podstron może nie mieć znaczenia dla pięciostronicowej witryny firmowej.</p>
             <div class="overflow-x-auto rounded-2xl border border-outline-variant/30 shadow-sm">
               <table class="w-full text-sm">
                 <caption class="sr-only">Porównanie profesjonalnego audytu SEO z automatycznymi narzędziami online</caption>

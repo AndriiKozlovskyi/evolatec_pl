@@ -396,7 +396,7 @@ const processSteps = [
         >
           <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+            <div class="mb-stack-lg">
               <h2
                 id="section-compare"
                 class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
@@ -455,12 +455,10 @@ const processSteps = [
               </div>
             </div>
 
-            <div class="max-w-3xl mx-auto">
-              <p class="text-on-surface-variant">
-                W praktyce wiele firm robi jedno i drugie: stronę firmową pod ruch organiczny i osobny landing page pod każdą większą kampanię. Jeśli dopiero zaczynasz i budżet jest ograniczony, landing page pod konkretną usługę jest tańszym i szybszym pierwszym krokiem — szczególnie w parze z
-                <NuxtLink to="/google-ads" class="text-primary font-semibold hover:underline">kampanią Google Ads</NuxtLink>.
-              </p>
-            </div>
+            <p class="text-on-surface-variant">
+              W praktyce wiele firm robi jedno i drugie: stronę firmową pod ruch organiczny i osobny landing page pod każdą większą kampanię. Jeśli dopiero zaczynasz i budżet jest ograniczony, landing page pod konkretną usługę jest tańszym i szybszym pierwszym krokiem — szczególnie w parze z
+              <NuxtLink to="/google-ads" class="text-primary font-semibold hover:underline">kampanią Google Ads</NuxtLink>.
+            </p>
 
           </div>
         </section>

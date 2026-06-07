@@ -360,7 +360,7 @@ const processSteps = [
         >
           <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+            <div class="text-left mx-auto mb-stack-lg">
               <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Cennik</span>
               <h2
                 id="section-prices"
@@ -426,7 +426,7 @@ const processSteps = [
               </p>
             </div>
 
-            <div class="text-center mt-10">
+            <div class="text-left mt-10">
               <NuxtLink to="/kalkulator-kosztow">
                 <BaseButton variant="outline" size="md">Oblicz koszt swojej strony</BaseButton>
               </NuxtLink>
@@ -442,7 +442,7 @@ const processSteps = [
         >
           <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+            <div class="mb-stack-lg">
               <h2
                 id="section-compare"
                 class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
@@ -501,13 +501,11 @@ const processSteps = [
               </div>
             </div>
 
-            <div class="max-w-3xl mx-auto">
-              <p class="text-on-surface-variant">
-                Strona na zamówienie ma sens wtedy, gdy ma realnie przynosić klientów, a nie tylko istnieć. Jeśli potrzebujesz wyłącznie adresu w sieci na wizytówkę, szablon wystarczy — i uczciwie to powiemy. Granica przebiega tam, gdzie szybkość, pozycja w Google i wygląd zaczynają wpływać na to, ile zapytań spływa w miesiącu. Alternatywą pośrednią bywa
-                <NuxtLink to="/landing-page" class="text-primary font-semibold hover:underline">landing page</NuxtLink>
-                — jedna dopracowana strona pod konkretną kampanię.
-              </p>
-            </div>
+            <p class="text-on-surface-variant">
+              Strona na zamówienie ma sens wtedy, gdy ma realnie przynosić klientów, a nie tylko istnieć. Jeśli potrzebujesz wyłącznie adresu w sieci na wizytówkę, szablon wystarczy — i uczciwie to powiemy. Granica przebiega tam, gdzie szybkość, pozycja w Google i wygląd zaczynają wpływać na to, ile zapytań spływa w miesiącu. Alternatywą pośrednią bywa
+              <NuxtLink to="/landing-page" class="text-primary font-semibold hover:underline">landing page</NuxtLink>
+              — jedna dopracowana strona pod konkretną kampanię.
+            </p>
 
           </div>
         </section>

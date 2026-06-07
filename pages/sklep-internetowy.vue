@@ -313,7 +313,7 @@ const processSteps = [
         >
           <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+            <div class="mb-stack-lg">
               <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Cennik</span>
               <h2
                 id="section-prices"
@@ -396,7 +396,7 @@ const processSteps = [
         >
           <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+            <div class="mb-stack-lg">
               <h2
                 id="section-compare"
                 class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
@@ -455,11 +455,9 @@ const processSteps = [
               </div>
             </div>
 
-            <div class="max-w-3xl mx-auto">
-              <p class="text-on-surface-variant">
-                Najczęstszy scenariusz: firma startuje na Shopify, sprawdza rynek, a do własnego rozwiązania przechodzi dopiero, gdy abonamenty i ograniczenia platformy zaczynają przeszkadzać. Doradzamy tańszy wariant, jeśli wystarcza — przepłacanie za sklep własny „na zapas" nie ma sensu.
-              </p>
-            </div>
+            <p class="text-on-surface-variant">
+              Najczęstszy scenariusz: firma startuje na Shopify, sprawdza rynek, a do własnego rozwiązania przechodzi dopiero, gdy abonamenty i ograniczenia platformy zaczynają przeszkadzać. Doradzamy tańszy wariant, jeśli wystarcza — przepłacanie za sklep własny „na zapas" nie ma sensu.
+            </p>
 
           </div>
         </section>

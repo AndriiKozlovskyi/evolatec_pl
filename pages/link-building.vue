@@ -384,10 +384,10 @@ const relatedServices = [
         <!-- ── Agencja link building vs samodzielne pozyskiwanie linków ──────── -->
         <section aria-labelledby="section-agencja-vs-sam" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <h2 id="section-agencja-vs-sam" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6 text-center">
+            <h2 id="section-agencja-vs-sam" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
               Agencja link building vs samodzielne pozyskiwanie linków — co się opłaca
             </h2>
-            <p class="text-on-surface-variant text-center max-w-2xl mx-auto mb-10 leading-relaxed">Samodzielne pozyskiwanie linków nie jest niemożliwe — ale ma realny koszt: outreach do redakcji, negocjacje, weryfikacja jakości i pisanie artykułów to kilkanaście godzin miesięcznie pracy.</p>
+            <p class="text-on-surface-variant mb-10 leading-relaxed">Samodzielne pozyskiwanie linków nie jest niemożliwe — ale ma realny koszt: outreach do redakcji, negocjacje, weryfikacja jakości i pisanie artykułów to kilkanaście godzin miesięcznie pracy.</p>
             <div class="overflow-x-auto rounded-2xl border border-outline-variant/30 shadow-sm mb-6">
               <table class="w-full text-sm">
                 <caption class="sr-only">Porównanie agencji link building z samodzielnym pozyskiwaniem linków</caption>

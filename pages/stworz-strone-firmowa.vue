@@ -382,7 +382,7 @@ const processSteps = [
         >
           <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+            <div class="mb-stack-lg">
               <h2
                 id="section-compare"
                 class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
@@ -441,11 +441,9 @@ const processSteps = [
               </div>
             </div>
 
-            <div class="max-w-3xl mx-auto">
-              <p class="text-on-surface-variant">
-                Przeniesienie treści odbywa się w obu wariantach — to nie jest argument za zostaniem na WordPressie. W praktyce nowa strona od zera kosztuje podobnie jak gruntowna przebudowa starej, a wynik jest trwalszy. Wyjątkiem są rozbudowane serwisy z setkami podstron, gdzie migracja bywa rozsądniejsza — wtedy mówimy to wprost.
-              </p>
-            </div>
+            <p class="text-on-surface-variant">
+              Przeniesienie treści odbywa się w obu wariantach — to nie jest argument za zostaniem na WordPressie. W praktyce nowa strona od zera kosztuje podobnie jak gruntowna przebudowa starej, a wynik jest trwalszy. Wyjątkiem są rozbudowane serwisy z setkami podstron, gdzie migracja bywa rozsądniejsza — wtedy mówimy to wprost.
+            </p>
 
           </div>
         </section>

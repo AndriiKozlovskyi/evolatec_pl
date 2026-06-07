@@ -328,10 +328,10 @@ const relatedServices = [
         <!-- ── Optymalizacja on-page vs techniczne SEO (tabela porównawcza) ── -->
         <section aria-labelledby="section-onpage-vs-tech" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <h2 id="section-onpage-vs-tech" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6 text-center">
+            <h2 id="section-onpage-vs-tech" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
               Optymalizacja on-page vs techniczne SEO — czym się różnią
             </h2>
-            <p class="text-on-surface-variant text-center max-w-2xl mx-auto mb-10 leading-relaxed">Wielu właścicieli stron nie wie, czy problem leży w treści, czy w kodzie. To ważne pytanie — odpowiedź zmienia zakres i koszt pracy oraz decyduje, od czego zacząć.</p>
+            <p class="text-on-surface-variant mb-10 leading-relaxed">Wielu właścicieli stron nie wie, czy problem leży w treści, czy w kodzie. To ważne pytanie — odpowiedź zmienia zakres i koszt pracy oraz decyduje, od czego zacząć.</p>
             <div class="overflow-x-auto rounded-2xl border border-outline-variant/30 shadow-sm mb-8">
               <table class="w-full text-sm">
                 <caption class="sr-only">Porównanie optymalizacji on-page z technicznym SEO</caption>

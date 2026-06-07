@@ -414,10 +414,10 @@ const relatedServices = [
         <!-- ── Lokalne SEO vs ogólnopolskie SEO ──────────────────────────────── -->
         <section aria-labelledby="section-lokalne-vs-ogolnopolskie" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <h2 id="section-lokalne-vs-ogolnopolskie" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6 text-center">
+            <h2 id="section-lokalne-vs-ogolnopolskie" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
               Lokalne SEO vs ogólnopolskie SEO — co wybrać dla swojej firmy
             </h2>
-            <p class="text-on-surface-variant mx-auto mb-10 leading-relaxed">Wybór między lokalnym a ogólnopolskim SEO nie jest kwestią budżetu — jest kwestią zasięgu działalności. Firma obsługująca jedno województwo marnuje zasoby, walcząc o widoczność na frazach ogólnopolskich z domenami z wieloletnią historią.</p>
+            <p class="text-on-surface-variant mb-10 leading-relaxed">Wybór między lokalnym a ogólnopolskim SEO nie jest kwestią budżetu — jest kwestią zasięgu działalności. Firma obsługująca jedno województwo marnuje zasoby, walcząc o widoczność na frazach ogólnopolskich z domenami z wieloletnią historią.</p>
             <div class="overflow-x-auto rounded-2xl border border-outline-variant/30 shadow-sm mb-6">
               <table class="w-full text-sm">
                 <caption class="sr-only">Porównanie lokalnego SEO z ogólnopolskim pozycjonowaniem</caption>

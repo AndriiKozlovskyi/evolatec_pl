@@ -376,10 +376,10 @@ const relatedServices = [
         <!-- ── Tradycyjne SEO vs AI SEO — tabela ────────────────────────────── -->
         <section aria-labelledby="section-seo-vs-geo" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <h2 id="section-seo-vs-geo" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6 text-center">
+            <h2 id="section-seo-vs-geo" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
               Tradycyjne SEO vs AI SEO — czym się różnią i co wybrać
             </h2>
-            <p class="text-on-surface-variant text-center max-w-2xl mx-auto mb-10 leading-relaxed">Tradycyjne SEO i AI SEO nie wykluczają się — ale mają różne mechanizmy działania i różne punkty styku z użytkownikiem. Wybór nie istnieje — potrzebujesz obu.</p>
+            <p class="text-on-surface-variant mb-10 leading-relaxed">Tradycyjne SEO i AI SEO nie wykluczają się — ale mają różne mechanizmy działania i różne punkty styku z użytkownikiem. Wybór nie istnieje — potrzebujesz obu.</p>
             <div class="overflow-x-auto rounded-2xl border border-outline-variant/30 shadow-sm mb-6">
               <table class="w-full text-sm">
                 <caption class="sr-only">Porównanie tradycyjnego SEO z AI SEO i GEO optymalizacją</caption>
