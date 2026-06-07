@@ -1,4 +1,4 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
@@ -36,6 +36,14 @@ const faqData = [
     question: 'Czym różni się projektowanie stron od UI/UX design?',
     answer: 'Projektowanie stron skupia się na warstwie wizualnej witryny — układzie, grafice i design systemie strony internetowej. UI/UX design to szerszy proces obejmujący badanie ścieżek użytkownika, prototypy i testy użyteczności, stosowany głównie przy aplikacjach i serwisach, gdzie sposób korzystania bezpośrednio wpływa na konwersję. Dla typowej strony firmowej wystarcza projekt graficzny; przy aplikacji warto sięgnąć po pełny proces UI/UX.',
   },
+  {
+    question: 'Jak wygląda proces projektowania strony internetowej?',
+    answer: 'Zaczynamy od briefu i researchu — poznajemy markę, cel i konkurencję. Następnie projektujemy wireframy, czyli układ i hierarchię treści zanim wejdziemy w grafikę. Na zaakceptowanym układzie budujemy pełny projekt graficzny desktop i mobile. Na końcu wprowadzamy poprawki i przekazujemy gotowe pliki do wdrożenia lub wdrażamy stronę sami.',
+  },
+  {
+    question: 'Dlaczego responsywne projektowanie stron jest ważne?',
+    answer: 'Większość użytkowników korzysta dziś ze smartfonów. Responsywny projekt gwarantuje, że układ, obrazy i treści wyglądają optymalnie na wszystkich urządzeniach — smartfonie, tablecie i desktopie. Google również preferuje witryny zoptymalizowane mobilnie w wynikach wyszukiwania.',
+  },
 ]
 
 const mainSchema = {
@@ -64,7 +72,6 @@ const mainSchema = {
         { '@type': 'Country', name: 'Poland' },
         { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Kraków' },
-        { '@type': 'City', name: 'Wrocław' },
         { '@type': 'City', name: 'Gdańsk' },
       ],
       contactPoint: {
@@ -79,6 +86,14 @@ const mainSchema = {
       priceRange: '2100 zł – 25200 zł',
     },
     {
+      '@type': 'WebSite',
+      '@id': 'https://evolatec.pl/#website',
+      url: 'https://evolatec.pl',
+      name: 'EvolaTec',
+      publisher: { '@id': 'https://evolatec.pl/#organization' },
+      inLanguage: 'pl-PL',
+    },
+    {
       '@type': 'WebPage',
       '@id': 'https://evolatec.pl/projektowanie-stron#webpage',
       url: 'https://evolatec.pl/projektowanie-stron',
@@ -89,7 +104,7 @@ const mainSchema = {
       inLanguage: 'pl-PL',
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['h1', '.speakable-intro'],
+        cssSelector: ['h1'],
       },
       breadcrumb: { '@id': 'https://evolatec.pl/projektowanie-stron#breadcrumb' },
     },
@@ -145,44 +160,125 @@ useHead({
   ],
 })
 
-// ─── Scroll reveal ─────────────────────────────────────────────────────────
-
-onMounted(() => {
-  const observer = new IntersectionObserver(
-    (entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-revealed'); observer.unobserve(entry.target) } }) },
-    { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
-  )
-  document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el))
-})
-
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
-  { value: 'Od zera', label: 'Projekt bez szablonów',  icon: 'draw'          },
-  { value: '2 wersje',  label: 'Desktop i mobile',       icon: 'devices'       },
-  { value: 'System',    label: 'Spójny design system',   icon: 'style'         },
-  { value: 'Bezpłatna', label: 'Wycena indywidualna',    icon: 'request_quote' },
+  { value: 'Od zera',    label: 'Projekt bez szablonów',  icon: 'draw'          },
+  { value: '2 wersje',   label: 'Desktop i mobile',        icon: 'devices'       },
+  { value: 'System',     label: 'Spójny design system',    icon: 'style'         },
+  { value: 'Bezpłatna',  label: 'Wycena indywidualna',     icon: 'request_quote' },
 ]
 
-const includedItems = [
-  { icon: 'account_tree', label: 'Wireframy i architektura informacji' },
-  { icon: 'devices',      label: 'Projekt graficzny desktop i mobile'  },
-  { icon: 'style',        label: 'Design system — kolory, typografia'  },
-  { icon: 'code',         label: 'Przekazanie plików developerom'      },
+const introParagraphs = [
+  'Jako agencja webdesign EvolaTec tworzy nowoczesne, szybkie i konwersyjne strony internetowe dla firm, startupów i lokalnych usługodawców.',
+  'Profesjonalne projektowanie stron poprawia postrzeganie marki, buduje zaufanie i sprawia, że odwiedzający stają się klientami.',
+  'Łączymy nowoczesny design, zoptymalizowaną strukturę SEO i wydajną realizację techniczną — dla trwałej widoczności w sieci.',
 ]
 
-const compareRows = [
-  { label: 'Unikalność',            tpl: 'Wspólny dla tysięcy firm',  custom: 'Tworzony tylko dla Ciebie'      },
-  { label: 'Dopasowanie do marki',  tpl: 'Ograniczone do opcji motywu', custom: 'Pełne — kolory, typografia, ton' },
-  { label: 'Prowadzenie wzroku',    tpl: 'Układ uniwersalny',         custom: 'Zaprojektowany pod Twój cel'    },
-  { label: 'Postrzegana wartość',   tpl: 'Jak u tańszej konkurencji', custom: 'Buduje pozycję premium'         },
-  { label: 'Wyróżnienie w pamięci', tpl: 'Niskie',                    custom: 'Wysokie'                        },
+const features = [
+  {
+    icon: 'palette',
+    title: 'Silna identyfikacja wizualna i siła marki',
+    description: 'Profesjonalny projekt buduje natychmiastowe zaufanie — spójne kolory, typografia i niepowtarzalny charakter wizualny Twojej marki.',
+  },
+  {
+    icon: 'devices',
+    title: 'Responsywność na wszystkich urządzeniach',
+    description: 'Każdy layout działa perfekcyjnie na smartfonach, tabletach i desktopach — Mobile First, pikselowo dopracowany, bez kompromisów.',
+  },
+  {
+    icon: 'ads_click',
+    title: 'Design zorientowany na konwersję',
+    description: 'Intuicyjna nawigacja, wyraźne wezwania do działania i struktura ukierunkowana na użytkownika — prowadząca odwiedzających do zakupu lub kontaktu.',
+  },
+  {
+    icon: 'speed',
+    title: 'Wydajność i techniczna perfekcja',
+    description: 'Lekkie zasoby, zoptymalizowane obrazy i czysty kod dla szybkich czasów ładowania i wysokich wyników Lighthouse.',
+  },
+  {
+    icon: 'search_insights',
+    title: 'SEO-ready od samego początku',
+    description: 'Semantyczny HTML, czysta struktura i zoptymalizowane treści — żeby Twoja strona była znajdowana w Google od pierwszego dnia.',
+  },
 ]
 
-const relatedServices = [
-  { icon: 'palette', title: 'UI/UX Design', description: 'Projekt interfejsu oparty na badaniach użytkownika — wireframe i gotowy design.', price: 'Wycena indywidualna', href: '/ui-ux-design' },
-  { icon: 'web', title: 'Strona internetowa dla firmy', description: 'Wdrożenie projektu w Nuxt.js — od projektu do gotowej strony z Lighthouse 95–100.', price: 'od 6 300 zł netto', href: '/strona-internetowa' },
-  { icon: 'brush', title: 'Branding', description: 'Logo i identyfikacja wizualna — system spójny z projektem strony.', price: 'Wycena indywidualna', href: '/branding' },
+const designServices = [
+  {
+    title: 'Copywriting na stronę',
+    description: 'Profesjonalne treści, ustrukturyzowane teksty i skuteczna strategia contentowa dla Twojej strony.',
+    icon: 'edit_square',
+    iconBg: 'bg-blue-100',
+    iconColor: 'text-blue-600',
+    href: '/copywriting',
+  },
+  {
+    title: 'UI/UX Design',
+    description: 'Intuicyjne interfejsy i nowoczesne doświadczenia użytkownika dla produktów cyfrowych.',
+    icon: 'design_services',
+    iconBg: 'bg-purple-100',
+    iconColor: 'text-purple-600',
+    href: '/ui-ux-design',
+  },
+  {
+    title: 'Branding i identyfikacja wizualna',
+    description: 'Profesjonalne identyfikacje wizualne i systemy Corporate Design dla firm.',
+    icon: 'brand_awareness',
+    iconBg: 'bg-orange-100',
+    iconColor: 'text-orange-600',
+    href: '/branding',
+  },
+  {
+    title: 'Strona internetowa dla firmy',
+    description: 'Nowoczesne strony z silnym wizerunkiem marki i wysoką konwersją — realizacja od 7 dni.',
+    icon: 'language',
+    iconBg: 'bg-emerald-100',
+    iconColor: 'text-emerald-600',
+    href: '/strona-internetowa',
+  },
+  {
+    title: 'Sklep internetowy',
+    description: 'Projekty e-commerce, które budują zaufanie i zamieniają odwiedzających w kupujących.',
+    icon: 'shopping_bag',
+    iconBg: 'bg-rose-100',
+    iconColor: 'text-rose-600',
+    href: '/sklep-internetowy',
+  },
+  {
+    title: 'Optymalizacja SEO',
+    description: 'Technicznie zoptymalizowane strony z szybkim czasem ładowania i widocznością w Google.',
+    icon: 'search',
+    iconBg: 'bg-cyan-100',
+    iconColor: 'text-cyan-600',
+    href: '/optymalizacja-seo',
+  },
+]
+
+const benefits = [
+  {
+    icon: 'verified',
+    title: 'Większe zaufanie',
+    description: 'Profesjonalny projekt strony wzmacnia markę i buduje wiarygodność w oczach klientów.',
+    image: '/assets/web-design.webp',
+  },
+  {
+    icon: 'trending_up',
+    title: 'Wyższa konwersja',
+    description: 'Nowoczesne strony z przemyślanym designem generują więcej zapytań i sprzedaży.',
+    image: '/assets/business-website.webp',
+  },
+  {
+    icon: 'devices',
+    title: 'Pełna responsywność',
+    description: 'Perfekcyjne wyświetlanie na wszystkich urządzeniach — smartfon, tablet, desktop.',
+    image: '/assets/ui-ux-design.webp',
+  },
+  {
+    icon: 'auto_awesome',
+    title: 'Silna siła marki',
+    description: 'Indywidualny projekt zostaje w pamięci i wyróżnia firmę na tle konkurencji.',
+    image: '/assets/branding-design.webp',
+  },
 ]
 
 const processSteps = [
@@ -207,12 +303,90 @@ const processSteps = [
     description: 'Wprowadzamy ustaloną liczbę rund poprawek, po czym przekazujemy gotowe pliki do wdrożenia lub wdrażamy stronę sami.',
   },
 ]
+
+const pricingPlans = [
+  {
+    name: 'Projekt landing page',
+    price: 'od 2 100 zł netto',
+    delivery: 'od 5 dni roboczych',
+    highlight: false,
+    features: [
+      'Projekt jednej strony (landing)',
+      'Responsywny — desktop i mobile',
+      'Mobile First',
+      '2 rundy poprawek',
+      'Przekazanie plików do wdrożenia',
+    ],
+    cta: 'Zapytaj o wycenę',
+    ctaLink: '/kontakt',
+  },
+  {
+    name: 'Projekt strony firmowej',
+    price: 'od 4 200 zł netto',
+    delivery: 'od 10 dni roboczych',
+    badge: 'Najczęściej wybierany',
+    highlight: true,
+    features: [
+      'Wszystko z projektu landing page',
+      'Strona firmowa do 10 podstron',
+      'Wireframy i architektura informacji',
+      'Design system — kolory, typografia',
+      '3 rundy poprawek',
+    ],
+    cta: 'Zapytaj o wycenę',
+    ctaLink: '/kontakt',
+  },
+  {
+    name: 'Projekt serwisu',
+    price: 'Wycena indywidualna',
+    delivery: 'termin ustalany',
+    highlight: false,
+    features: [
+      'Wszystko z projektu firmowego',
+      'Rozbudowany serwis lub e-commerce',
+      'Pełny design system z komponentami',
+      'Spójność z identyfikacją wizualną',
+      'Bez limitu rund poprawek',
+    ],
+    cta: 'Omów projekt',
+    ctaLink: '/kontakt',
+  },
+]
+
+const expertiseBlocks = [
+  {
+    icon: 'business',
+    title: 'Projektowanie stron dla nowoczesnych firm',
+    paragraphs: [
+      'EvolaTec to Twoja agencja webdesign — tworzymy profesjonalne strony firmowe i projekty graficzne dla marek z różnych branż.',
+      'Jako agencja projektująca strony responsywne rozwijamy witryny działające perfekcyjnie na smartfonach, tabletach i desktopach.',
+      'Nasze podejście łączy design, wydajność, przyjazność dla użytkownika i SEO, co przekłada się na trwałe wyniki.',
+    ],
+    tags: ['Webdesign', 'Responsive', 'SEO Ready', 'Mobile First'],
+  },
+  {
+    icon: 'workspace_premium',
+    title: 'Indywidualny projekt graficzny i nowoczesna agencja',
+    paragraphs: [
+      'Niezależnie od tego, czy potrzebujesz strony firmowej, landing page czy rozbudowanego serwisu — projektujemy nowoczesne rozwiązania dla różnych branż.',
+      'Profesjonalny projekt strony zwiększa zaufanie, rozpoznawalność marki i współczynnik konwersji.',
+      'Jako nowoczesna agencja webowa EvolaTec wspiera firmy w cyfrowym wzroście.',
+    ],
+    tags: ['Landing Page', 'Branding', 'Konwersja', 'Agencja webowa'],
+  },
+]
+
+const relatedServices = [
+  { icon: 'palette', title: 'UI/UX Design', description: 'Projekt interfejsu oparty na badaniach użytkownika — wireframe i gotowy design.', price: 'Wycena indywidualna', href: '/ui-ux-design' },
+  { icon: 'web', title: 'Strona internetowa dla firmy', description: 'Wdrożenie projektu w Nuxt.js — od projektu do gotowej strony z Lighthouse 95–100.', price: 'od 6 300 zł netto', href: '/strona-internetowa' },
+  { icon: 'brush', title: 'Branding', description: 'Logo i identyfikacja wizualna — system spójny z projektem strony.', price: 'Wycena indywidualna', href: '/branding' },
+]
 </script>
 
 <template>
   <div>
 
-    <!-- ── Hero ─────────────────────────────────────────────────────────── -->
+    <!-- ── Hero ──────────────────────────────────────────────────────────── -->
     <HeroSection
       badge="Projektowanie stron internetowych"
       title="Projektowanie stron internetowych, które robią pierwsze wrażenie"
@@ -225,223 +399,40 @@ const processSteps = [
     />
 
     <main id="main-content">
-
-      <!-- Breadcrumb -->
-
       <article>
 
-        <!-- ── Section 1: Pierwsze wrażenie ──────────────────────────────── -->
-        <section
-          aria-labelledby="section-impression"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
+        <!-- ── Intro ─────────────────────────────────────────────────────── -->
+        <IntroSection
+          heading="Nowoczesne strony dla firm, marek i produktów cyfrowych"
+          :paragraphs="introParagraphs"
+          image="/assets/web-design.webp"
+          image-alt="Projektant UX szkicujący interfejs strony internetowej na tablecie — prototyp i projekt graficzny"
+        />
 
-              <div data-reveal="left">
-                <h2
-                  id="section-impression"
-                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-                >
-                  Dlaczego wygląd strony decyduje w pierwszych sekundach
-                </h2>
+        <!-- ── Features ──────────────────────────────────────────────────── -->
+        <FeaturesSection
+          title="Co wyróżnia profesjonalne projektowanie stron."
+          :features="features"
+          image-url="/assets/web-design.webp"
+          image-alt="Profesjonalne projektowanie strony internetowej — projekt graficzny desktop i mobile"
+        />
 
-                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-                  <p>
-                    Odwiedzający ocenia stronę, zanim ją przeczyta. Pierwsze wrażenie buduje się w ułamku sekundy i opiera się nie na treści, lecz na wyglądzie — układzie, kolorach, typografii. Jeśli strona wygląda jak setki innych, klient podświadomie zakłada, że firma też jest jedną z setek innych, i klika dalej.
-                  </p>
-                  <p>
-                    To nie jest kwestia gustu, tylko zaufania. Strona oparta na popularnym szablonie wygląda znajomo, bo te same motywy używane są przez tysiące firm — w tym Twoją konkurencję. Znajomość działa tu przeciwko Tobie: nic nie wyróżnia, nic nie zostaje w pamięci, a podobieństwo do tańszych usługodawców obniża postrzeganą wartość Twojej oferty.
-                  </p>
-                  <p>
-                    Projektujemy strony od podstaw, pod konkretną markę i branżę. <strong class="text-on-surface">Każdy projekt powstaje od podstaw, bez gotowych szablonów</strong> — od układu, przez kolory, po typografię dobraną do charakteru firmy. Projekt graficzny obejmuje wersję desktop i mobile oraz spójny design system. Celem nie jest „ładnie", tylko żeby wygląd budował zaufanie i prowadził wzrok dokładnie tam, gdzie ma trafić: do oferty i do kontaktu.
-                  </p>
-                </div>
-              </div>
+        <!-- ── Services ──────────────────────────────────────────────────── -->
+        <ServicesSection
+          title="Nasze usługi projektowania"
+          variant="centered"
+          :services="designServices"
+          learn-more-label="Dowiedz się więcej"
+          background="bg-surface-container-low"
+        />
 
-              <div data-reveal="right" class="rounded-2xl overflow-hidden">
-                <NuxtImg
-                  src="/assets/web-design.webp"
-                  alt="Projektant UX szkicujący interfejs strony internetowej na tablecie — prototyp i projekt graficzny"
-                  width="640"
-                  height="420"
-                  class="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
+        <!-- ── Benefits ──────────────────────────────────────────────────── -->
+        <BenefitsSection
+          title="Dlaczego profesjonalny projekt strony się opłaca"
+          :benefits="benefits"
+        />
 
-            </div>
-          </div>
-        </section>
-
-        <!-- ── Section 2: Co obejmuje ────────────────────────────────────── -->
-        <section
-          aria-labelledby="section-included"
-          class="py-section-padding bg-surface-container-low"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-start">
-
-              <div>
-                <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
-                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">design_services</span>
-                  Projekt od podstaw
-                </span>
-
-                <h2
-                  id="section-included"
-                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-                >
-                  Co obejmuje projektowanie strony internetowej
-                </h2>
-
-                <div class="space-y-4 text-on-surface-variant leading-relaxed">
-                  <p>
-                    Projektowanie strony to proces z konkretnymi etapami i plikami na wyjściu, nie pojedyncza grafika. Obejmuje wszystko od struktury po gotowy do wdrożenia design.
-                  </p>
-                  <p>
-                    Projekt można zamówić jako część realizacji strony lub jako oddzielną usługę z przekazaniem plików developerom — wtedy projektujemy, a Twój zespół koduje. Sam layout to jeszcze nie gotowa strona — potrzebne są też
-                    <NuxtLink to="/copywriting" class="text-primary font-semibold hover:underline">teksty na stronę</NuxtLink>.
-                    Dla aplikacji i serwisów z dużym ruchem warto rozszerzyć projekt o pełny
-                    <NuxtLink to="/ui-ux-design" class="text-primary font-semibold hover:underline">proces UI/UX</NuxtLink>.
-                  </p>
-                </div>
-              </div>
-
-              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <li
-                  v-for="item in includedItems"
-                  :key="item.label"
-                  class="flex items-center gap-3 bg-white rounded-xl border border-outline-variant/30 px-5 py-4 ambient-shadow"
-                >
-                  <div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">{{ item.icon }}</span>
-                  </div>
-                  <span class="text-sm font-semibold text-on-surface leading-snug">{{ item.label }}</span>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-        </section>
-
-        <!-- ── Section 3: Cena (wycena indywidualna) ─────────────────────── -->
-        <section
-          aria-labelledby="section-price"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Wycena</span>
-            <h2
-              id="section-price"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Ile kosztuje projektowanie strony — i co wpływa na wycenę
-            </h2>
-
-            <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 sm:p-8 mb-8">
-              <p class="text-on-surface-variant mb-1">Projektowanie strony</p>
-              <p class="font-display text-3xl sm:text-4xl font-black text-primary mb-1">Wycena indywidualna</p>
-              <p class="text-sm text-on-surface-variant">bezpłatna konsultacja · cena ustalana przed startem</p>
-            </div>
-
-            <div class="space-y-4 text-on-surface-variant leading-relaxed">
-              <p>
-                Projektowanie strony wyceniamy indywidualnie, bo zakres różni się tu bardziej niż przy gotowych pakietach. Wycena jest bezpłatna i ustalana przed startem — podajemy konkretną kwotę, gdy wiemy, co dokładnie ma powstać.
-              </p>
-              <p>
-                Na wycenę wpływają trzy rzeczy: liczba unikalnych ekranów do zaprojektowania (strona główna i podstrona usługi to inny nakład niż dziesięć różnych layoutów), zakres design systemu oraz to, czy projekt obejmuje samą grafikę, czy też wireframy i architekturę informacji od zera.
-              </p>
-              <p>
-                Jeśli zamawiasz u nas również wykonanie strony, projekt jest częścią realizacji i nie jest osobno fakturowany. Jako oddzielną usługę — gdy stronę wdraża Twój zespół — wyceniamy projekt per zakres po krótkiej rozmowie o tym, co ma powstać.
-              </p>
-            </div>
-
-            <div class="mt-10">
-              <NuxtLink to="/kontakt">
-                <BaseButton variant="outline" size="md">Omów projekt i poznaj wycenę</BaseButton>
-              </NuxtLink>
-            </div>
-          </div>
-        </section>
-
-        <!-- ── Section 4: Szablon vs projekt ─────────────────────────────── -->
-        <section
-          aria-labelledby="section-compare"
-          class="py-section-padding bg-surface-container-low"
-        >
-          <div class="max-w-container-max mx-auto px-gutter">
-
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
-              <h2
-                id="section-compare"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
-              >
-                Gotowy szablon czy indywidualny projekt — co widzi klient
-              </h2>
-              <p class="text-on-surface-variant">
-                Szablon kosztuje mniej i rusza szybciej — to jego jedyne dwie realne przewagi. Reszta różnicy jest po stronie tego, co widzi i czuje Twój klient, a tego nie widać w cenie na starcie.
-              </p>
-            </div>
-
-            <!-- Desktop table -->
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8">
-              <table class="w-full text-sm">
-                <caption class="sr-only">Porównanie gotowego szablonu z indywidualnym projektem graficznym</caption>
-                <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
-                    <th class="text-left p-4 font-bold text-on-surface w-1/3" scope="col">Kryterium</th>
-                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Gotowy szablon</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Indywidualny projekt</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="(row, i) in compareRows"
-                    :key="row.label"
-                    class="border-b border-outline-variant/20"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'"
-                  >
-                    <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
-                    <td class="p-4 text-center text-on-surface-variant">{{ row.tpl }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.custom }}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <!-- Mobile cards -->
-            <div class="md:hidden space-y-3 mb-8">
-              <div
-                v-for="row in compareRows"
-                :key="row.label"
-                class="bg-white rounded-xl border border-outline-variant/30 p-4"
-              >
-                <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.label }}</p>
-                <div class="grid grid-cols-2 gap-2">
-                  <div class="bg-surface-container-low rounded-lg p-3 text-center">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1">Szablon</p>
-                    <p class="text-xs text-on-surface-variant leading-snug">{{ row.tpl }}</p>
-                  </div>
-                  <div class="bg-primary/5 rounded-lg p-3 text-center border border-primary/15">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1">Projekt</p>
-                    <p class="text-xs text-primary font-semibold leading-snug">{{ row.custom }}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="max-w-3xl mx-auto">
-              <p class="text-on-surface-variant">
-                Szablon ma sens, gdy liczy się wyłącznie najniższy koszt i czas, a wygląd jest drugorzędny. Indywidualny projekt opłaca się wtedy, gdy strona ma budować wizerunek i konkurować o klienta, dla którego liczy się wrażenie. Spójny wygląd najlepiej działa w parze z dopracowaną
-                <NuxtLink to="/branding" class="text-primary font-semibold hover:underline">identyfikacją wizualną</NuxtLink>.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- ── Section 5: Proces ─────────────────────────────────────────── -->
+        <!-- ── Process ───────────────────────────────────────────────────── -->
         <ProcessSection
           eyebrow="Jak projektujemy"
           title="Jak projektujemy stronę — od wireframe do gotowego designu"
@@ -449,12 +440,29 @@ const processSteps = [
           background="bg-surface"
         />
 
-        <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
+        <!-- ── Pricing ───────────────────────────────────────────────────── -->
+        <PricingSection
+          eyebrow="Cennik"
+          title="Cennik projektowania stron"
+          subtitle="Przejrzyste ceny za profesjonalny projekt graficzny. Jeśli zamawiasz u nas również wykonanie strony, projekt jest częścią realizacji."
+          :pricing-plans="pricingPlans"
+        />
+
+        <!-- ── Expertise blocks ──────────────────────────────────────────── -->
+        <ExpertiseCardsSection
+          eyebrow="Projektowanie z EvolaTec"
+          eyebrow-icon="verified"
+          title="Kompleksowe projekty graficzne dla Twojej marki"
+          :blocks="expertiseBlocks"
+        />
+
+        <!-- ── FAQ ───────────────────────────────────────────────────────── -->
         <FAQSection
           title="Najczęściej zadawane pytania o projektowanie stron internetowych"
           :faqs="faqData"
         />
 
+        <!-- ── Related services ──────────────────────────────────────────── -->
         <RelatedServicesSection
           eyebrow="Powiązane usługi"
           title="Od projektu do gotowej strony"

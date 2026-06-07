@@ -182,6 +182,73 @@ const compareRows = [
   { label: 'Najlepsze dla',      ui: 'Prostych ekranów',          ux: 'Aplikacji, SaaS, sklepów'       },
 ]
 
+const pricingPlans = [
+  {
+    name: 'Audyt UX',
+    price: 'od 840 zł netto',
+    highlight: false,
+    features: [
+      'Analiza istniejącej strony lub aplikacji',
+      'Lista problemów z priorytetami',
+      'Rekomendacje konkretnych zmian',
+      'Prezentacja wyników',
+    ],
+    cta: 'Zapytaj o audyt',
+    ctaLink: '/kontakt',
+  },
+  {
+    name: 'Projekt UI/UX',
+    price: 'od 4 200 zł netto',
+    badge: 'Najczęściej wybierany',
+    highlight: true,
+    features: [
+      'Wszystko z audytu UX',
+      'Mapa ścieżek użytkownika',
+      'Wireframy lo-fi i hi-fi',
+      'Interaktywny prototyp w Figmie',
+      'Projekt graficzny interfejsu',
+      'Specyfikacja dla developerów',
+    ],
+    cta: 'Zapytaj o wycenę',
+    ctaLink: '/kontakt',
+  },
+  {
+    name: 'Aplikacja / SaaS',
+    price: 'od 12 600 zł netto',
+    highlight: false,
+    features: [
+      'Wszystko z projektu UI/UX',
+      'Wiele ról i złożonych ścieżek',
+      'Testy użyteczności z użytkownikami',
+      'Design system na miarę produktu',
+      'Wycena finalna po briefie',
+    ],
+    cta: 'Omów projekt',
+    ctaLink: '/kontakt',
+  },
+]
+
+const expertiseBlocks = [
+  {
+    icon: 'route',
+    title: 'UX Design oparty na procesie, nie na intuicji',
+    paragraphs: [
+      'Każdy projekt zaczynamy od audytu i zrozumienia, co użytkownik ma osiągnąć — nie od rysowania ekranów. Najpierw ścieżki i struktura, potem prototyp, który można przeklikać i przetestować, a dopiero na końcu warstwa graficzna.',
+      'Dzięki temu błędy w sposobie korzystania wychodzą na jaw w Figmie, a nie po wdrożeniu — kiedy poprawka jest ułamkiem kosztu przeróbki gotowego kodu.',
+    ],
+    tags: ['UX Research', 'User Flows', 'Prototyping', 'Figma'],
+  },
+  {
+    icon: 'code',
+    title: 'Projekt interfejsu gotowy do wdrożenia',
+    paragraphs: [
+      'Przekazanie projektu do developmentu to etap, na którym wiele agencji zostawia developerów z plikami Figmy bez kontekstu. U nas projekt zawsze kończy się specyfikacją — opisem zachowań, stanów i komponentów potrzebnych do wiernego wdrożenia.',
+      'Jeśli zamawiasz też realizację strony, projekt UI/UX jest częścią procesu i nie trzeba go tłumaczyć od nowa.',
+    ],
+    tags: ['UI Design', 'Design System', 'Specyfikacja', 'Handoff'],
+  },
+]
+
 const relatedServices = [
   { icon: 'corporate_fare', title: 'Strona firmowa', description: 'Wdrożenie zaprojektowanego interfejsu w Nuxt.js — Lighthouse 95–100.', price: 'od 6 300 zł netto', href: '/stworz-strone-firmowa' },
   { icon: 'brush', title: 'Branding', description: 'Identyfikacja wizualna spójna z projektem UI — logo, kolory, typografia.', price: 'Wycena indywidualna', href: '/branding' },
@@ -327,45 +394,13 @@ const processSteps = [
           </div>
         </section>
 
-        <!-- ── Section 3: Cena (wycena indywidualna) ─────────────────────── -->
-        <section
-          aria-labelledby="section-price"
-          class="py-section-padding bg-surface"
-        >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Wycena</span>
-            <h2
-              id="section-price"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Ile kosztuje projekt UI/UX — model wyceny
-            </h2>
-
-            <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 sm:p-8 mb-8">
-              <p class="text-on-surface-variant mb-1">Projekt UI/UX</p>
-              <p class="font-display text-3xl sm:text-4xl font-black text-primary mb-1">Wycena indywidualna</p>
-              <p class="text-sm text-on-surface-variant">bezpłatna konsultacja · od audytu UX po pełny projekt</p>
-            </div>
-
-            <div class="space-y-4 text-on-surface-variant leading-relaxed">
-              <p>
-                Projekt UX wyceniamy indywidualnie w zależności od liczby ekranów i złożoności aplikacji. Audyt UX istniejącej strony to inny nakład niż zaprojektowanie aplikacji od zera z prototypem i testami, dlatego nie ma jednej ceny.
-              </p>
-              <p>
-                Na wycenę wpływają trzy rzeczy: liczba unikalnych ekranów i ścieżek do zaprojektowania, poziom dopracowania (sam audyt i wireframy czy pełny prototyp z warstwą graficzną) oraz czy projekt obejmuje testy użyteczności z udziałem użytkowników.
-              </p>
-              <p>
-                Wycena jest bezpłatna i ustalana przed startem. Często najtańszym pierwszym krokiem jest sam audyt UX, który pokazuje, gdzie istniejący produkt traci użytkowników, zanim zdecydujesz o pełnym przeprojektowaniu.
-              </p>
-            </div>
-
-            <div class="mt-10">
-              <NuxtLink to="/kontakt">
-                <BaseButton variant="outline" size="md">Omów projekt i poznaj wycenę</BaseButton>
-              </NuxtLink>
-            </div>
-          </div>
-        </section>
+        <!-- ── Section 3: Pricing ────────────────────────────────────────── -->
+        <PricingSection
+          eyebrow="Cennik"
+          title="Ile kosztuje projekt UI/UX — model wyceny"
+          subtitle="Od pojedynczego audytu UX po pełny projekt aplikacji. Ceny zaczynają się od audytu — najtańszego pierwszego kroku, który pokazuje, gdzie produkt traci użytkowników."
+          :pricing-plans="pricingPlans"
+        />
 
         <!-- ── Section 4: Samo UI vs pełny UX ────────────────────────────── -->
         <section
@@ -450,7 +485,15 @@ const processSteps = [
           background="bg-surface"
         />
 
-        <!-- ── Section 6: FAQ ────────────────────────────────────────────── -->
+        <!-- ── Section 6: Expertise blocks ─────────────────────────────── -->
+        <ExpertiseCardsSection
+          eyebrow="UI/UX Design z EvolaTec"
+          eyebrow-icon="verified"
+          title="Projektujemy interfejsy, które działają — nie tylko wyglądają"
+          :blocks="expertiseBlocks"
+        />
+
+        <!-- ── Section 7: FAQ ────────────────────────────────────────────── -->
         <FAQSection
           title="Najczęściej zadawane pytania o UI/UX Design"
           :faqs="faqData"
