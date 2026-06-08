@@ -596,7 +596,7 @@ const geoBenefits = [
         <!-- ══ 4. GEO ══════════════════════════════════════════════════════════ -->
         <section aria-labelledby="section-geo" class="py-8 md:py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-stack-lg items-start">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-stack-lg items-center">
               <div data-reveal="left">
                 <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
                   <span class="material-symbols-outlined text-[18px]" aria-hidden="true">auto_awesome</span>
@@ -934,10 +934,11 @@ const geoBenefits = [
           </div>
         </section>
 
-        <!-- ══ 8. PROCES — gray ═══════════════════════════════════════════════ -->
+        <!-- ══ 8. PROCES — white ══════════════════════════════════════════════ -->
         <ProcessSection
           title="Jak wygląda tworzenie strony internetowej — 4 etapy"
           :steps="processSteps"
+          background="bg-surface"
         />
 
         <!-- ══ 9. CENY — gray ═════════════════════════════════════════════════ -->
@@ -1007,26 +1008,18 @@ const geoBenefits = [
         >
           <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div class="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-center">
 
-              <!-- Left: image + copy -->
+              <!-- Left: copy -->
               <div data-reveal="left">
-                <NuxtImg
-                  src="/assets/code-editor.webp"
-                  alt="Ekran z kodem źródłowym Vue.js i Nuxt.js — technologia używana przez EvolaTec zamiast WordPressa"
-                  width="640"
-                  height="340"
-                  class="w-full rounded-2xl border border-outline-variant/30 shadow-sm object-cover mb-8"
-                  loading="lazy"
-                />
                 <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Technologia</span>
                 <h2
                   id="section-nuxt"
-                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
+                  class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
                 >
                   Dlaczego Nuxt.js — nie WordPress
                 </h2>
-                <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                <div class="space-y-3 text-on-surface-variant leading-relaxed">
                   <p>
                     Gdy zapytasz dziesięć polskich agencji o ofertę na stronę firmową, osiem wróci z wyceną na WordPress. To wybór z uzasadnieniem — WordPress jest wszędzie, każdy go zna. Problem w tym, że te zalety są jednocześnie jego największymi wadami.
                   </p>
@@ -1040,7 +1033,7 @@ const geoBenefits = [
                 </div>
 
                 <!-- Tech stack pills -->
-                <div class="flex flex-wrap gap-2 mt-6">
+                <div class="flex flex-wrap gap-2 mt-5">
                   <span v-for="tech in ['Vue.js', 'Nuxt.js', 'TypeScript', 'Tailwind CSS', 'Storyblok CMS']" :key="tech"
                     class="inline-flex items-center px-3 py-1.5 rounded-full bg-primary/8 border border-primary/15 text-xs font-semibold text-primary">
                     {{ tech }}
@@ -1050,26 +1043,27 @@ const geoBenefits = [
 
               <!-- Right: comparison table -->
               <div data-reveal="right">
-                <div class="hidden md:block overflow-hidden rounded-2xl border border-outline-variant/30 shadow-sm">
-                  <table class="w-full text-sm">
+
+                <!-- Desktop table -->
+                <div class="hidden md:block rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50">
+                  <table class="w-full border-collapse">
                     <caption class="sr-only">Porównanie WordPress z EvolaTec Nuxt.js</caption>
                     <thead>
-                      <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
-                        <th class="text-left p-4 font-bold text-on-surface" scope="col">Kryterium</th>
-                        <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">WordPress</th>
-                        <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">EvolaTec</th>
+                      <tr class="bg-surface-container-low">
+                        <th class="px-6 py-4 text-left text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-r border-outline-variant/40" scope="col">Kryterium</th>
+                        <th class="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-r border-outline-variant/40" scope="col">WordPress</th>
+                        <th class="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-widest text-primary border-b-2 border-outline-variant/40" scope="col">EvolaTec</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr
-                        v-for="(row, i) in wpRows"
+                        v-for="row in wpRows"
                         :key="row.label"
-                        class="border-b border-outline-variant/20"
-                        :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'"
+                        class="border-b border-outline-variant/30 last:border-0 hover:bg-surface-container-low/60 transition-colors duration-150"
                       >
-                        <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
-                        <td class="p-4 text-center text-on-surface-variant text-xs">{{ row.wp }}</td>
-                        <td class="p-4 text-center text-primary font-semibold bg-primary/5 text-xs">{{ row.nuxt }}</td>
+                        <td class="px-6 py-4 text-sm font-medium text-on-surface border-r border-outline-variant/30">{{ row.label }}</td>
+                        <td class="px-5 py-4 text-center text-sm text-on-surface-variant border-r border-outline-variant/30">{{ row.wp }}</td>
+                        <td class="px-5 py-4 text-center text-sm font-bold text-primary bg-primary-fixed">{{ row.nuxt }}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -1078,21 +1072,21 @@ const geoBenefits = [
                 <!-- Mobile cards -->
                 <div class="md:hidden space-y-3">
                   <div v-for="row in wpRows" :key="row.label" class="bg-white rounded-xl border border-outline-variant/30 p-4">
-                    <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.label }}</p>
+                    <p class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.label }}</p>
                     <div class="grid grid-cols-2 gap-2">
-                      <div class="bg-surface-container-low rounded-lg p-3 text-center">
-                        <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1">WordPress</p>
+                      <div class="bg-surface-container-low rounded-lg px-3 py-2.5 text-center">
+                        <p class="text-[10px] font-bold uppercase tracking-wide text-on-surface-variant mb-1">WordPress</p>
                         <p class="text-xs text-on-surface-variant leading-snug">{{ row.wp }}</p>
                       </div>
-                      <div class="bg-primary/5 rounded-lg p-3 text-center border border-primary/15">
-                        <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1">EvolaTec</p>
+                      <div class="bg-primary-fixed rounded-lg px-3 py-2.5 text-center border border-primary/20">
+                        <p class="text-[10px] font-bold uppercase tracking-wide text-primary mb-1">EvolaTec</p>
                         <p class="text-xs text-primary font-semibold leading-snug">{{ row.nuxt }}</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <p class="text-xs text-on-surface-variant mt-4 text-center">
+                <p class="text-xs text-on-surface-variant mt-3 text-center">
                   Dane oparte na pomiarach Google PageSpeed Insights i Lighthouse.
                 </p>
               </div>

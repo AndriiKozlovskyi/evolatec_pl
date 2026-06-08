@@ -188,10 +188,6 @@ const includedItems = [
   { icon: 'local_shipping',  label: 'Integracje płatności i wysyłki'     },
 ]
 
-const pricingRows = [
-  { service: 'Sklep internetowy (Shopify)',  price: 'od 12 600 zł netto', delivery: 'od 14 dni roboczych' },
-  { service: 'Premium e-commerce (Nuxt)',    price: 'od 25 200 zł netto', delivery: 'od 30 dni roboczych' },
-]
 
 const compareRows = [
   { label: 'Cena od',         shopify: '12 600 zł netto',        custom: '25 200 zł netto'             },
@@ -313,74 +309,119 @@ const processSteps = [
         >
           <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="mb-stack-lg">
+            <!-- Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12" data-reveal="fade">
               <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Cennik</span>
               <h2
                 id="section-prices"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
+                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight"
               >
                 Tworzenie sklepów internetowych — cena i czas realizacji
               </h2>
-              <p class="text-on-surface-variant">
-                Dwa warianty, dwie ceny stałe ustalane przed startem. Budżet reklamowy i prowizje bramki płatniczej są rozliczane oddzielnie, bezpośrednio z dostawcami.
-              </p>
             </div>
 
-            <!-- Mobile cards -->
-            <div class="md:hidden space-y-3 mb-8">
-              <div
-                v-for="row in pricingRows"
-                :key="row.service"
-                class="bg-white rounded-xl border border-outline-variant/30 p-4 flex items-center justify-between gap-3"
-              >
+            <!-- Price banner -->
+            <div class="relative mb-12 rounded-2xl overflow-hidden" data-reveal="fade">
+              <NuxtImg
+                src="/assets/website.webp"
+                alt=""
+                aria-hidden="true"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gray-950/70"></div>
+              <div class="relative px-8 sm:px-12 py-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
                 <div>
-                  <p class="font-bold text-on-surface text-sm">{{ row.service }}</p>
-                  <p class="text-xs text-on-surface-variant mt-0.5 flex items-center gap-1">
-                    <span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span>
-                    {{ row.delivery }}
-                  </p>
+                  <p class="text-white/50 text-xs font-semibold uppercase tracking-[0.2em] mb-3">Sklep internetowy</p>
+                  <p class="font-display text-5xl sm:text-6xl font-black text-white leading-none">od 12 600 zł <span class="text-2xl font-semibold text-white/50">netto</span></p>
                 </div>
-                <p class="text-primary font-black text-base whitespace-nowrap">{{ row.price }}</p>
+                <div class="flex flex-col xs:flex-row gap-8 sm:gap-12">
+                  <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-400/20 flex items-center justify-center flex-shrink-0">
+                      <span class="material-symbols-outlined text-cyan-300 text-[28px]" aria-hidden="true">flash_on</span>
+                    </div>
+                    <div>
+                      <p class="font-black text-white text-xl leading-tight">od 14 dni</p>
+                      <p class="text-sm text-cyan-300/80 font-medium">realizacja</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-400/20 flex items-center justify-center flex-shrink-0">
+                      <span class="material-symbols-outlined text-cyan-300 text-[28px]" aria-hidden="true">gavel</span>
+                    </div>
+                    <div>
+                      <p class="font-black text-white text-xl leading-tight">Cena i termin</p>
+                      <p class="text-sm text-cyan-300/80 font-medium">zapisane w umowie</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- Desktop table -->
-            <div class="hidden md:block mb-stack-lg rounded-xl overflow-hidden border border-outline-variant/30">
-              <table class="w-full text-base">
-                <caption class="sr-only">Ceny i czas realizacji sklepów internetowych</caption>
-                <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-primary/20">
-                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Wariant</th>
-                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Cena od</th>
-                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Czas realizacji</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="(row, i) in pricingRows"
-                    :key="row.service"
-                    class="border-b border-outline-variant/20 hover:bg-surface-container-low/50 transition-colors"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/30'"
-                  >
-                    <td class="p-4 font-medium text-on-surface">{{ row.service }}</td>
-                    <td class="p-4 font-bold text-primary text-lg">{{ row.price }}</td>
-                    <td class="p-4 text-on-surface-variant">{{ row.delivery }}</td>
-                  </tr>
-                </tbody>
-              </table>
+            <!-- Three info cards -->
+            <div class="grid md:grid-cols-3 gap-5 mb-10">
+
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="left">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">gavel</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-3">Stała wycena, bez niespodzianek</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Dwa warianty, dwie ceny stałe ustalane przed startem. Budżet reklamowy i prowizje bramki płatniczej są rozliczane oddzielnie, bezpośrednio z dostawcami.
+                </p>
+              </div>
+
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="fade">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">tune</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-3">Co wpływa na wycenę</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  <strong class="text-on-surface">Sklep internetowy kosztuje od 12 600 zł netto, realizacja od 14 dni roboczych</strong> — to wariant na Shopify. Premium e-commerce kosztuje od 25 200 zł netto, realizacja od 30 dni roboczych. Strony osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights.
+                </p>
+              </div>
+
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="right">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">search_insights</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-3">Sklep bez ruchu zostaje pusty</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Na wycenę wpływają liczba produktów na starcie, potrzebne integracje (magazyn, fakturowanie, kurierzy) oraz to, czy treści i zdjęcia dostarczasz, czy mamy je przygotować. Sklep bez ruchu zostaje pusty — dlatego warto od początku zaplanować
+                  <NuxtLink to="/seo" class="text-primary font-semibold hover:underline">pozycjonowanie sklepu</NuxtLink>.
+                </p>
+              </div>
+
             </div>
 
-            <div class="max-w-2xl mx-auto space-y-4 text-on-surface-variant">
-              <p>
-                <strong class="text-on-surface">Sklep internetowy kosztuje od 12 600 zł netto, realizacja od 14 dni roboczych</strong> — to wariant na Shopify. Premium e-commerce kosztuje od 25 200 zł netto, realizacja od 30 dni roboczych. Strony osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights.
-              </p>
-              <p>
-                Na wycenę wpływają liczba produktów na starcie, potrzebne integracje (magazyn, fakturowanie, kurierzy) oraz to, czy treści i zdjęcia dostarczasz, czy mamy je przygotować. Sklep bez ruchu zostaje pusty — dlatego warto od początku zaplanować
-                <NuxtLink to="/seo" class="text-primary font-semibold hover:underline">pozycjonowanie sklepu</NuxtLink>.
-              </p>
+            <!-- Variant cards -->
+            <div class="grid md:grid-cols-2 gap-5 mb-10">
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="left">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">shopping_bag</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-1">Sklep internetowy (Shopify)</h3>
+                <p class="font-display text-3xl font-black text-primary mb-1">od 12 600 zł <span class="text-base font-semibold text-on-surface-variant">netto</span></p>
+                <p class="text-xs text-on-surface-variant flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span>
+                  od 14 dni roboczych
+                </p>
+              </div>
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="right">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">storefront</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-1">Premium e-commerce (Nuxt)</h3>
+                <p class="font-display text-3xl font-black text-primary mb-1">od 25 200 zł <span class="text-base font-semibold text-on-surface-variant">netto</span></p>
+                <p class="text-xs text-on-surface-variant flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span>
+                  od 30 dni roboczych
+                </p>
+              </div>
             </div>
 
-            <div class="text-center mt-10">
+            <!-- CTA -->
+            <div class="text-center">
               <NuxtLink to="/kalkulator-kosztow">
                 <BaseButton variant="outline" size="md">Oblicz koszt swojego sklepu</BaseButton>
               </NuxtLink>
@@ -404,7 +445,7 @@ const processSteps = [
                 Shopify czy sklep własny — co wybrać dla firmy
               </h2>
               <p class="text-on-surface-variant">
-                Shopify i sklep własny to nie „lepsze kontra gorsze", tylko „szybciej i taniej na start" kontra „pełna kontrola i skala". Dla większości firm wchodzących w e-commerce Shopify jest właściwą odpowiedzią.
+                Shopify i sklep własny to nie „lepsze kontra gorsze", tylko „szybciej i taniej na start" kontra „pełna kontrola i skala". Dla większości firm wchodzących w e-commerce Shopify jest właściwą odpowiedzią. Najczęstszy scenariusz: firma startuje na Shopify, sprawdza rynek, a do własnego rozwiązania przechodzi dopiero, gdy abonamenty i ograniczenia platformy zaczynają przeszkadzać. Doradzamy tańszy wariant, jeśli wystarcza — przepłacanie za sklep własny „na zapas" nie ma sensu.
               </p>
             </div>
 
@@ -415,8 +456,8 @@ const processSteps = [
                 <thead>
                   <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
                     <th class="text-left p-4 font-bold text-on-surface w-1/4" scope="col">Kryterium</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Shopify</th>
-                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Sklep własny (Nuxt)</th>
+                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Shopify</th>
+                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Sklep własny (Nuxt)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -427,8 +468,8 @@ const processSteps = [
                     :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'"
                   >
                     <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.shopify }}</td>
-                    <td class="p-4 text-center text-on-surface-variant">{{ row.custom }}</td>
+                    <td class="p-4 text-center text-on-surface-variant">{{ row.shopify }}</td>
+                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.custom }}</td>
                   </tr>
                 </tbody>
               </table>
@@ -443,21 +484,17 @@ const processSteps = [
               >
                 <p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">{{ row.label }}</p>
                 <div class="grid grid-cols-2 gap-2">
-                  <div class="bg-primary/5 rounded-lg p-3 text-center border border-primary/15">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1">Shopify</p>
-                    <p class="text-xs text-primary font-semibold leading-snug">{{ row.shopify }}</p>
-                  </div>
                   <div class="bg-surface-container-low rounded-lg p-3 text-center">
-                    <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1">Sklep własny</p>
-                    <p class="text-xs text-on-surface-variant leading-snug">{{ row.custom }}</p>
+                    <p class="text-[10px] font-semibold uppercase tracking-wide text-on-surface-variant mb-1">Shopify</p>
+                    <p class="text-xs text-on-surface-variant leading-snug">{{ row.shopify }}</p>
+                  </div>
+                  <div class="bg-primary/5 rounded-lg p-3 text-center border border-primary/15">
+                    <p class="text-[10px] font-semibold uppercase tracking-wide text-primary mb-1">Sklep własny (Nuxt)</p>
+                    <p class="text-xs text-primary font-semibold leading-snug">{{ row.custom }}</p>
                   </div>
                 </div>
               </div>
             </div>
-
-            <p class="text-on-surface-variant">
-              Najczęstszy scenariusz: firma startuje na Shopify, sprawdza rynek, a do własnego rozwiązania przechodzi dopiero, gdy abonamenty i ograniczenia platformy zaczynają przeszkadzać. Doradzamy tańszy wariant, jeśli wystarcza — przepłacanie za sklep własny „na zapas" nie ma sensu.
-            </p>
 
           </div>
         </section>

@@ -313,9 +313,9 @@ const processSteps = [
           </div>
           <div class="relative max-w-container-max mx-auto px-gutter">
 
-            <div class="grid lg:grid-cols-2 gap-stack-lg items-center">
+            <div class="grid lg:grid-cols-2 gap-stack-lg">
 
-              <div data-reveal="left">
+              <div data-reveal="left" class="flex flex-col justify-center">
                 <span class="inline-block text-xs font-bold uppercase tracking-[0.3em] text-on-primary/60 mb-3">Co dostajesz</span>
                 <h2 id="section-included" class="font-display text-3xl sm:text-4xl font-black text-on-primary leading-tight mb-6">
                   Co zawiera landing page od 2 100 zł
@@ -357,35 +357,100 @@ const processSteps = [
           aria-labelledby="section-price"
           class="py-section-padding bg-surface"
         >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Cennik</span>
-            <h2
-              id="section-price"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Ile kosztuje landing page i od czego zależy termin
-            </h2>
+          <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 sm:p-8 mb-8">
-              <p class="text-on-surface-variant mb-1">Landing page</p>
-              <p class="font-display text-4xl font-black text-primary mb-1">od 2 100 zł netto</p>
-              <p class="text-sm text-on-surface-variant">realizacja od 3 dni roboczych · cena stała przed startem</p>
+            <!-- Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12" data-reveal="fade">
+              <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Cennik</span>
+              <h2
+                id="section-price"
+                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight"
+              >
+                Ile kosztuje landing page i od czego zależy termin
+              </h2>
             </div>
 
-            <div class="space-y-4 text-on-surface-variant leading-relaxed">
-              <p>
-                <strong class="text-on-surface">Landing page kosztuje od 2 100 zł netto i jest gotowy w 3 dni robocze.</strong> To cena stała, ustalana przed startem — bez osobnych pozycji za wersję mobilną, SSL czy podstawowe SEO.
-              </p>
-              <p>
-                Termin zależy głównie od tego, czy masz gotowe treści i materiały. Jeśli dostarczasz tekst, logo i zdjęcia, trzy dni robocze są realne. Jeśli treści mamy napisać od zera albo potrzebne są nietypowe integracje — system płatności, zewnętrzny kalendarz, test A/B dwóch wersji — termin i cena rosną o z góry podaną wartość, ustaloną przed rozpoczęciem pracy.
-              </p>
+            <!-- Price banner -->
+            <div class="relative mb-12 rounded-2xl overflow-hidden" data-reveal="fade">
+              <NuxtImg
+                src="/assets/code-editor.webp"
+                alt=""
+                aria-hidden="true"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gray-950/70"></div>
+              <div class="relative px-8 sm:px-12 py-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
+                <div>
+                  <p class="text-white/50 text-xs font-semibold uppercase tracking-[0.2em] mb-3">Landing page</p>
+                  <p class="font-display text-5xl sm:text-6xl font-black text-white leading-none">od 2 100 zł <span class="text-2xl font-semibold text-white/50">netto</span></p>
+                </div>
+                <div class="flex flex-col xs:flex-row gap-8 sm:gap-12">
+                  <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-400/20 flex items-center justify-center flex-shrink-0">
+                      <span class="material-symbols-outlined text-cyan-300 text-[28px]" aria-hidden="true">flash_on</span>
+                    </div>
+                    <div>
+                      <p class="font-black text-white text-xl leading-tight">od 3 dni</p>
+                      <p class="text-sm text-cyan-300/80 font-medium">realizacja</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-400/20 flex items-center justify-center flex-shrink-0">
+                      <span class="material-symbols-outlined text-cyan-300 text-[28px]" aria-hidden="true">gavel</span>
+                    </div>
+                    <div>
+                      <p class="font-black text-white text-xl leading-tight">Cena i termin</p>
+                      <p class="text-sm text-cyan-300/80 font-medium">zapisane w umowie</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="mt-10">
+            <!-- Three info cards -->
+            <div class="grid md:grid-cols-3 gap-5 mb-10">
+
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="left">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">gavel</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-3">Stała wycena, bez niespodzianek</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  <strong class="text-on-surface">Landing page kosztuje od 2 100 zł netto i jest gotowy w 3 dni robocze.</strong> To cena stała, ustalana przed startem — bez osobnych pozycji za wersję mobilną, SSL czy podstawowe SEO.
+                </p>
+              </div>
+
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="fade">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">schedule</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-3">Termin — 3 dni od dostarczenia treści</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Termin zależy głównie od tego, czy masz gotowe treści i materiały. Jeśli dostarczasz tekst, logo i zdjęcia, trzy dni robocze są realne. Jeśli treści mamy napisać od zera albo potrzebne są nietypowe integracje — system płatności, zewnętrzny kalendarz, test A/B dwóch wersji — termin i cena rosną o z góry podaną wartość, ustaloną przed rozpoczęciem pracy.
+                </p>
+              </div>
+
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="right">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">store</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-3">Szukasz rozbudowanego serwisu?</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Jeśli zależy Ci na wielostronicowym serwisie budującym widoczność organiczną w Google, lepszym rozwiązaniem jest
+                  <NuxtLink to="/stworz-strone-firmowa" class="text-primary font-semibold hover:underline">strona firmowa od 6 300 zł netto</NuxtLink>.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center">
               <NuxtLink to="/kalkulator-kosztow">
                 <BaseButton variant="outline" size="md">Oblicz koszt swojej strony</BaseButton>
               </NuxtLink>
             </div>
+
           </div>
         </section>
 
@@ -404,7 +469,8 @@ const processSteps = [
                 Landing page czy strona firmowa — co lepiej konwertuje
               </h2>
               <p class="text-on-surface-variant">
-                Dla ruchu z reklamy landing page niemal zawsze konwertuje lepiej niż strona główna — bo nie daje odwiedzającemu dokąd uciec. Strona firmowa wygrywa tam, gdzie celem jest długofalowa widoczność w Google.
+                Dla ruchu z reklamy landing page niemal zawsze konwertuje lepiej niż strona główna — bo nie daje odwiedzającemu dokąd uciec. Strona firmowa wygrywa tam, gdzie celem jest długofalowa widoczność w Google. W praktyce wiele firm robi jedno i drugie: stronę firmową pod ruch organiczny i osobny landing page pod każdą większą kampanię. Jeśli dopiero zaczynasz i budżet jest ograniczony, landing page pod konkretną usługę jest tańszym i szybszym pierwszym krokiem — szczególnie w parze z
+                <NuxtLink to="/google-ads" class="text-primary font-semibold hover:underline">kampanią Google Ads</NuxtLink>.
               </p>
             </div>
 
@@ -435,7 +501,7 @@ const processSteps = [
             </div>
 
             <!-- Mobile cards -->
-            <div class="md:hidden space-y-3 mb-8">
+            <div class="md:hidden space-y-3">
               <div
                 v-for="row in compareRows"
                 :key="row.label"
@@ -454,11 +520,6 @@ const processSteps = [
                 </div>
               </div>
             </div>
-
-            <p class="text-on-surface-variant">
-              W praktyce wiele firm robi jedno i drugie: stronę firmową pod ruch organiczny i osobny landing page pod każdą większą kampanię. Jeśli dopiero zaczynasz i budżet jest ograniczony, landing page pod konkretną usługę jest tańszym i szybszym pierwszym krokiem — szczególnie w parze z
-              <NuxtLink to="/google-ads" class="text-primary font-semibold hover:underline">kampanią Google Ads</NuxtLink>.
-            </p>
 
           </div>
         </section>

@@ -339,39 +339,100 @@ const processSteps = [
           aria-labelledby="section-price"
           class="py-section-padding bg-surface"
         >
-          <div class="max-w-3xl mx-auto px-gutter">
-            <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Cennik</span>
-            <h2
-              id="section-price"
-              class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6"
-            >
-              Tworzenie stron firmowych — cena i co wpływa na wycenę
-            </h2>
+          <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="rounded-2xl border border-primary/20 bg-primary/5 p-6 sm:p-8 mb-8">
-              <p class="text-on-surface-variant mb-1">Strona firmowa</p>
-              <p class="font-display text-4xl font-black text-primary mb-1">od 6 300 zł netto</p>
-              <p class="text-sm text-on-surface-variant">realizacja od 7 dni roboczych · cena stała w umowie</p>
+            <!-- Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12" data-reveal="fade">
+              <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Cennik</span>
+              <h2
+                id="section-price"
+                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight"
+              >
+                Tworzenie stron firmowych — cena i co wpływa na wycenę
+              </h2>
             </div>
 
-            <div class="space-y-4 text-on-surface-variant leading-relaxed">
-              <p>
-                To cena stała, a nie „od" otwierające drogę do dopłat — wycena jest ustalana przed podpisaniem umowy i nie zmienia się w trakcie projektu. Na ostateczną wycenę wpływają trzy rzeczy: liczba podstron, potrzeba nietypowych funkcji oraz to, czy dostarczasz gotowe treści i zdjęcia, czy mamy je przygotować.
-              </p>
-              <p>
-                Standardowa strona firmowa do kilkunastu podstron mieści się w cenie bazowej. Integracja z systemem rezerwacji, kalkulatorem czy zewnętrznym CRM to osobna, z góry podana kwota — wyceniana, zanim cokolwiek zaczniemy kodować.
-              </p>
-              <p>
-                Jeśli zależy Ci na prostszym, jednostronicowym rozwiązaniu pod kampanię reklamową, tańszą drogą jest
-                <NuxtLink to="/landing-page" class="text-primary font-semibold hover:underline">landing page od 2 100 zł netto</NuxtLink>.
-              </p>
+            <!-- Price banner -->
+            <div class="relative mb-12 rounded-2xl overflow-hidden" data-reveal="fade">
+              <NuxtImg
+                src="/assets/web-design.webp"
+                alt=""
+                aria-hidden="true"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gray-950/70"></div>
+              <div class="relative px-8 sm:px-12 py-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
+                <div>
+                  <p class="text-white/50 text-xs font-semibold uppercase tracking-[0.2em] mb-3">Strona firmowa</p>
+                  <p class="font-display text-5xl sm:text-6xl font-black text-white leading-none">od 6 300 zł <span class="text-2xl font-semibold text-white/50">netto</span></p>
+                </div>
+                <div class="flex flex-col xs:flex-row gap-8 sm:gap-12">
+                  <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-400/20 flex items-center justify-center flex-shrink-0">
+                      <span class="material-symbols-outlined text-cyan-300 text-[28px]" aria-hidden="true">flash_on</span>
+                    </div>
+                    <div>
+                      <p class="font-black text-white text-xl leading-tight">od 7 dni</p>
+                      <p class="text-sm text-cyan-300/80 font-medium">realizacja</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-400/20 flex items-center justify-center flex-shrink-0">
+                      <span class="material-symbols-outlined text-cyan-300 text-[28px]" aria-hidden="true">gavel</span>
+                    </div>
+                    <div>
+                      <p class="font-black text-white text-xl leading-tight">Cena i termin</p>
+                      <p class="text-sm text-cyan-300/80 font-medium">zapisane w umowie</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="mt-10">
+            <!-- Three info cards -->
+            <div class="grid md:grid-cols-3 gap-5 mb-10">
+
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="left">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">gavel</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-3">Stała wycena, bez niespodzianek</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  To cena stała, a nie „od" otwierające drogę do dopłat — wycena jest ustalana przed podpisaniem umowy i nie zmienia się w trakcie projektu. Na ostateczną wycenę wpływają trzy rzeczy: liczba podstron, potrzeba nietypowych funkcji oraz to, czy dostarczasz gotowe treści i zdjęcia, czy mamy je przygotować.
+                </p>
+              </div>
+
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="fade">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">tune</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-3">Standard i funkcje dodatkowe</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Standardowa strona firmowa do kilkunastu podstron mieści się w cenie bazowej. Integracja z systemem rezerwacji, kalkulatorem czy zewnętrznym CRM to osobna, z góry podana kwota — wyceniana, zanim cokolwiek zaczniemy kodować.
+                </p>
+              </div>
+
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="right">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">ads_click</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-3">Szukasz prostszego rozwiązania?</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Jeśli zależy Ci na prostszym, jednostronicowym rozwiązaniu pod kampanię reklamową, tańszą drogą jest
+                  <NuxtLink to="/landing-page" class="text-primary font-semibold hover:underline">landing page od 2 100 zł netto</NuxtLink>.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center">
               <NuxtLink to="/kalkulator-kosztow">
                 <BaseButton variant="outline" size="md">Oblicz koszt swojej strony</BaseButton>
               </NuxtLink>
             </div>
+
           </div>
         </section>
 
