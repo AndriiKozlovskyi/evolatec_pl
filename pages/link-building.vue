@@ -388,21 +388,21 @@ const relatedServices = [
               Agencja link building vs samodzielne pozyskiwanie linków — co się opłaca
             </h2>
             <p class="text-on-surface-variant mb-10 leading-relaxed">Samodzielne pozyskiwanie linków nie jest niemożliwe — ale ma realny koszt: outreach do redakcji, negocjacje, weryfikacja jakości i pisanie artykułów to kilkanaście godzin miesięcznie pracy.</p>
-            <div class="overflow-x-auto rounded-2xl border border-outline-variant/30 shadow-sm mb-6">
-              <table class="w-full text-sm">
+            <div class="rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50 mb-6">
+              <table class="w-full border-collapse">
                 <caption class="sr-only">Porównanie agencji link building z samodzielnym pozyskiwaniem linków</caption>
                 <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
-                    <th class="text-left p-4 font-bold text-on-surface w-1/3" scope="col">Kryterium</th>
-                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Samodzielny link building</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Agencja link building</th>
+                  <tr class="bg-surface-container-low">
+                    <th class="px-6 py-4 text-left text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-r border-outline-variant/40" scope="col">Kryterium</th>
+                    <th class="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-r border-outline-variant/40" scope="col">Samodzielny link building</th>
+                    <th class="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-widest text-primary border-b-2 border-outline-variant/40" scope="col">Agencja link building</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="(row, i) in lbCompareRows" :key="i" :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'">
-                    <td class="p-4 font-semibold text-on-surface">{{ row.criterion }}</td>
-                    <td class="p-4 text-center text-on-surface-variant text-xs">{{ row.self }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5 text-xs">{{ row.agency }}</td>
+                  <tr v-for="(row, i) in lbCompareRows" :key="i" class="border-b border-outline-variant/30 last:border-0 hover:bg-surface-container-low/60 transition-colors duration-150">
+                    <td class="px-6 py-4 text-sm font-medium text-on-surface border-r border-outline-variant/30">{{ row.criterion }}</td>
+                    <td class="px-5 py-4 text-center text-sm text-on-surface-variant border-r border-outline-variant/30">{{ row.self }}</td>
+                    <td class="px-5 py-4 text-center text-sm font-bold text-primary bg-primary-fixed">{{ row.agency }}</td>
                   </tr>
                 </tbody>
               </table>

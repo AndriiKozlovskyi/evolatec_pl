@@ -456,26 +456,25 @@ const processSteps = [
             </div>
 
             <!-- Desktop table -->
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8">
-              <table class="w-full text-sm">
+            <div class="hidden md:block rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50 mb-8">
+              <table class="w-full border-collapse">
                 <caption class="sr-only">Porównanie nowej strony od zera z naprawą starego WordPressa</caption>
                 <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
-                    <th class="text-left p-4 font-bold text-on-surface w-1/3" scope="col">Kryterium</th>
-                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Naprawa starego WordPressa</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Nowa strona od zera (EvolaTec)</th>
+                  <tr class="bg-surface-container-low">
+                    <th class="px-6 py-4 text-left text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-r border-outline-variant/40" scope="col">Kryterium</th>
+                    <th class="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-r border-outline-variant/40" scope="col">Naprawa starego WordPressa</th>
+                    <th class="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-widest text-primary border-b-2 border-outline-variant/40" scope="col">Nowa strona od zera (EvolaTec)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr
                     v-for="(row, i) in compareRows"
                     :key="row.label"
-                    class="border-b border-outline-variant/20"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'"
+                    class="border-b border-outline-variant/30 last:border-0 hover:bg-surface-container-low/60 transition-colors duration-150"
                   >
-                    <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
-                    <td class="p-4 text-center text-on-surface-variant">{{ row.tpl }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.custom }}</td>
+                    <td class="px-6 py-4 text-sm font-medium text-on-surface border-r border-outline-variant/30">{{ row.label }}</td>
+                    <td class="px-5 py-4 text-center text-sm text-on-surface-variant border-r border-outline-variant/30">{{ row.tpl }}</td>
+                    <td class="px-5 py-4 text-center text-sm font-bold text-primary bg-primary-fixed">{{ row.custom }}</td>
                   </tr>
                 </tbody>
               </table>

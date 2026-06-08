@@ -360,73 +360,130 @@ const processSteps = [
         >
           <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="text-left mx-auto mb-stack-lg">
+            <!-- Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12" data-reveal="fade">
               <span class="text-xs font-bold uppercase tracking-[0.25em] text-primary mb-3 block">Cennik</span>
               <h2
                 id="section-prices"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
+                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight"
               >
                 Strona internetowa dla firmy — cena i czas realizacji
               </h2>
-              <p class="text-on-surface-variant">
-                Brak widocznych cen na stronie agencji to sygnał ostrzegawczy — zwykle oznacza, że cena pojawia się dopiero po rozmowie. U nas jest odwrotnie: ceny są stałe, publiczne i ustalane przed podpisaniem umowy.
-              </p>
             </div>
 
-            <!-- Mobile cards -->
-            <div class="md:hidden space-y-3 mb-8">
-              <div
-                v-for="row in pricingRows"
-                :key="row.service"
-                class="bg-white rounded-xl border border-outline-variant/30 p-4 flex items-center justify-between gap-3"
-              >
+            <!-- Price banner -->
+            <div class="relative mb-12 rounded-2xl overflow-hidden" data-reveal="fade">
+              <NuxtImg
+                src="/assets/website.webp"
+                alt=""
+                aria-hidden="true"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gray-950/70"></div>
+              <div class="relative px-8 sm:px-12 py-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
                 <div>
-                  <p class="font-bold text-on-surface">{{ row.service }}</p>
-                  <p class="text-xs text-on-surface-variant mt-0.5 flex items-center gap-1">
-                    <span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span>
-                    {{ row.delivery }}
-                  </p>
+                  <p class="text-white/50 text-xs font-semibold uppercase tracking-[0.2em] mb-3">Strona firmowa</p>
+                  <p class="font-display text-5xl sm:text-6xl font-black text-white leading-none">od 6 300 zł <span class="text-2xl font-semibold text-white/50">netto</span></p>
                 </div>
-                <p class="text-primary font-black text-lg whitespace-nowrap">{{ row.price }}</p>
+                <div class="flex flex-col xs:flex-row gap-8 sm:gap-12">
+                  <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-400/20 flex items-center justify-center flex-shrink-0">
+                      <span class="material-symbols-outlined text-cyan-300 text-[28px]" aria-hidden="true">flash_on</span>
+                    </div>
+                    <div>
+                      <p class="font-black text-white text-xl leading-tight">od 7 dni</p>
+                      <p class="text-sm text-cyan-300/80 font-medium">realizacja</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-cyan-400/20 flex items-center justify-center flex-shrink-0">
+                      <span class="material-symbols-outlined text-cyan-300 text-[28px]" aria-hidden="true">gavel</span>
+                    </div>
+                    <div>
+                      <p class="font-black text-white text-xl leading-tight">Cena i termin</p>
+                      <p class="text-sm text-cyan-300/80 font-medium">zapisane w umowie</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- Desktop table -->
-            <div class="hidden md:block mb-stack-lg rounded-xl overflow-hidden border border-outline-variant/30">
-              <table class="w-full text-base">
-                <caption class="sr-only">Ceny i czas realizacji stron internetowych dla firm</caption>
-                <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-primary/20">
-                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Usługa</th>
-                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Cena od</th>
-                    <th class="text-left p-4 font-bold text-on-surface" scope="col">Czas realizacji</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="(row, i) in pricingRows"
-                    :key="row.service"
-                    class="border-b border-outline-variant/20 hover:bg-surface-container-low/50 transition-colors"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/30'"
-                  >
-                    <td class="p-4 font-medium text-on-surface">{{ row.service }}</td>
-                    <td class="p-4 font-bold text-primary text-lg">{{ row.price }}</td>
-                    <td class="p-4 text-on-surface-variant">{{ row.delivery }}</td>
-                  </tr>
-                </tbody>
-              </table>
+            <!-- Three info cards -->
+            <div class="grid md:grid-cols-3 gap-5 mb-10">
+
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="left">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">gavel</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-3">Stała wycena, bez niespodzianek</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Brak widocznych cen na stronie agencji to sygnał ostrzegawczy — zwykle oznacza, że cena pojawia się dopiero po rozmowie. U nas ceny są stałe, publiczne i ustalane przed podpisaniem umowy.
+                </p>
+              </div>
+
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="fade">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">tune</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-3">Co wpływa na wycenę</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Na cenę wpływają liczba podstron, potrzeba CMS-a do samodzielnej edycji treści oraz to, czy teksty i materiały dostarczasz, czy mamy je przygotować. Dla projektów niestandardowych — wielojęzyczność, integracje z systemami — wycenę przygotowujemy bezpłatnie po krótkiej rozmowie.
+                </p>
+              </div>
+
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="right">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">search_insights</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-3">Strona bez ruchu nie przynosi zapytań</h3>
+                <p class="text-sm text-on-surface-variant leading-relaxed">
+                  Każda strona ma wbudowane SEO i dane strukturalne Schema.org — bo strona bez widoczności organicznej to jednorazowy koszt bez zwrotu. Warto od początku zaplanować
+                  <NuxtLink to="/seo" class="text-primary font-semibold hover:underline">pozycjonowanie strony</NuxtLink>.
+                </p>
+              </div>
+
             </div>
 
-            <div class="max-w-2xl mx-auto space-y-4 text-on-surface-variant">
-              <p>
-                <strong class="text-on-surface">Strona firmowa kosztuje od 6 300 zł netto, realizacja trwa od 7 dni roboczych</strong> od dostarczenia treści i materiałów. Prostsza strona jednostronicowa — landing page — kosztuje od 2 100 zł netto i jest gotowa od 3 dni roboczych. Sklep internetowy z katalogiem i płatnościami zaczyna się od 12 600 zł netto.
-              </p>
-              <p>
-                Każda z tych kwot to cena stała — wycena jest ustalana przed startem i nie zmienia się w trakcie projektu. Dla projektów wykraczających poza standard — integracja z systemem rezerwacji, niestandardowy formularz, wielojęzyczność — wycenę przygotowujemy bezpłatnie po krótkiej rozmowie technicznej.
-              </p>
+            <!-- Variant cards -->
+            <div class="grid md:grid-cols-3 gap-5 mb-10">
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="left">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">crop_portrait</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-1">Landing page</h3>
+                <p class="font-display text-3xl font-black text-primary mb-1">od 2 100 zł <span class="text-base font-semibold text-on-surface-variant">netto</span></p>
+                <p class="text-xs text-on-surface-variant flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span>
+                  od 3 dni roboczych
+                </p>
+              </div>
+              <div class="bg-white rounded-2xl border-2 border-primary/30 p-6 shadow-sm" data-reveal="fade">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">web</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-1">Strona firmowa</h3>
+                <p class="font-display text-3xl font-black text-primary mb-1">od 6 300 zł <span class="text-base font-semibold text-on-surface-variant">netto</span></p>
+                <p class="text-xs text-on-surface-variant flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span>
+                  od 7 dni roboczych
+                </p>
+              </div>
+              <div class="bg-white rounded-2xl border border-outline-variant/25 p-6" data-reveal="right">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">storefront</span>
+                </div>
+                <h3 class="font-bold text-on-surface text-sm mb-1">Sklep internetowy</h3>
+                <p class="font-display text-3xl font-black text-primary mb-1">od 12 600 zł <span class="text-base font-semibold text-on-surface-variant">netto</span></p>
+                <p class="text-xs text-on-surface-variant flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span>
+                  od 14 dni roboczych
+                </p>
+              </div>
             </div>
 
-            <div class="text-left mt-10">
+            <!-- CTA -->
+            <div class="text-center">
               <NuxtLink to="/kalkulator-kosztow">
                 <BaseButton variant="outline" size="md">Oblicz koszt swojej strony</BaseButton>
               </NuxtLink>
@@ -450,31 +507,32 @@ const processSteps = [
                 Strona na zamówienie czy gotowy szablon — co wybrać dla firmy
               </h2>
               <p class="text-on-surface-variant">
-                Gotowy szablon kusi niską ceną na starcie. Problem w tym, że cena startowa i koszt całkowity to dwie różne liczby — szablon trzeba co miesiąc aktualizować, jest wolniejszy, a jego struktura jest wspólna dla tysięcy innych firm.
+                Gotowy szablon kusi niską ceną na starcie. Problem w tym, że cena startowa i koszt całkowity to dwie różne liczby — szablon trzeba co miesiąc aktualizować, jest wolniejszy, a jego struktura jest wspólna dla tysięcy innych firm. Strona na zamówienie ma sens wtedy, gdy ma realnie przynosić klientów, a nie tylko istnieć. Jeśli potrzebujesz wyłącznie adresu w sieci na wizytówkę, szablon wystarczy — i uczciwie to powiemy. Granica przebiega tam, gdzie szybkość, pozycja w Google i wygląd zaczynają wpływać na to, ile zapytań spływa w miesiącu. Alternatywą pośrednią bywa
+                <NuxtLink to="/landing-page" class="text-primary font-semibold hover:underline">landing page</NuxtLink>
+                — jedna dopracowana strona pod konkretną kampanię.
               </p>
             </div>
 
             <!-- Desktop table -->
-            <div class="hidden md:block overflow-x-auto rounded-2xl border border-outline-variant/30 mb-8">
-              <table class="w-full text-sm">
+            <div class="hidden md:block rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50 mb-8">
+              <table class="w-full border-collapse">
                 <caption class="sr-only">Porównanie strony na zamówienie z gotowym szablonem</caption>
                 <thead>
-                  <tr class="bg-surface-container-low border-b-2 border-outline-variant/40">
-                    <th class="text-left p-4 font-bold text-on-surface w-1/3" scope="col">Kryterium</th>
-                    <th class="text-center p-4 font-bold text-on-surface-variant" scope="col">Gotowy szablon (Wix / WordPress)</th>
-                    <th class="text-center p-4 font-bold text-primary bg-primary/5" scope="col">Strona na zamówienie (EvolaTec)</th>
+                  <tr class="bg-surface-container-low">
+                    <th class="px-6 py-4 text-left text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-r border-outline-variant/40" scope="col">Kryterium</th>
+                    <th class="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-r border-outline-variant/40" scope="col">Gotowy szablon (Wix / WordPress)</th>
+                    <th class="px-5 py-4 text-center text-[11px] font-bold uppercase tracking-widest text-primary border-b-2 border-outline-variant/40" scope="col">Strona na zamówienie (EvolaTec)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr
-                    v-for="(row, i) in compareRows"
+                    v-for="row in compareRows"
                     :key="row.label"
-                    class="border-b border-outline-variant/20"
-                    :class="i % 2 === 0 ? 'bg-white' : 'bg-surface-container-low/40'"
+                    class="border-b border-outline-variant/30 last:border-0 hover:bg-surface-container-low/60 transition-colors duration-150"
                   >
-                    <td class="p-4 font-semibold text-on-surface">{{ row.label }}</td>
-                    <td class="p-4 text-center text-on-surface-variant">{{ row.tpl }}</td>
-                    <td class="p-4 text-center text-primary font-semibold bg-primary/5">{{ row.custom }}</td>
+                    <td class="px-6 py-4 text-sm font-medium text-on-surface border-r border-outline-variant/30">{{ row.label }}</td>
+                    <td class="px-5 py-4 text-center text-sm text-on-surface-variant border-r border-outline-variant/30">{{ row.tpl }}</td>
+                    <td class="px-5 py-4 text-center text-sm font-bold text-primary bg-primary-fixed">{{ row.custom }}</td>
                   </tr>
                 </tbody>
               </table>
@@ -500,12 +558,6 @@ const processSteps = [
                 </div>
               </div>
             </div>
-
-            <p class="text-on-surface-variant">
-              Strona na zamówienie ma sens wtedy, gdy ma realnie przynosić klientów, a nie tylko istnieć. Jeśli potrzebujesz wyłącznie adresu w sieci na wizytówkę, szablon wystarczy — i uczciwie to powiemy. Granica przebiega tam, gdzie szybkość, pozycja w Google i wygląd zaczynają wpływać na to, ile zapytań spływa w miesiącu. Alternatywą pośrednią bywa
-              <NuxtLink to="/landing-page" class="text-primary font-semibold hover:underline">landing page</NuxtLink>
-              — jedna dopracowana strona pod konkretną kampanię.
-            </p>
 
           </div>
         </section>

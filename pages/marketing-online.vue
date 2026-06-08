@@ -497,22 +497,22 @@ const relatedServices = [
               Marketing internetowy rozliczamy w modelu miesięcznym: stałe fee za obsługę plus budżet reklamowy płacony osobno, bezpośrednio dostawcy. Kwota, którą podajemy, to fee za pracę agencji — budżet, który realnie trafia do Google lub Meta, ustalasz Ty i płacisz go bezpośrednio platformie.
             </p>
 
-            <div class="max-w-2xl mx-auto overflow-x-auto">
-              <table class="w-full">
+            <div class="max-w-2xl mx-auto rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50">
+              <table class="w-full border-collapse">
                 <thead>
-                  <tr class="border-b-2 border-primary">
-                    <th class="text-left py-4 px-6 font-headline-md text-primary">Usługa</th>
-                    <th class="text-right py-4 px-6 font-headline-md text-primary">Cena</th>
+                  <tr class="bg-surface-container-low">
+                    <th class="px-6 py-4 text-left text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-r border-outline-variant/40">Usługa</th>
+                    <th class="px-6 py-4 text-right text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-outline-variant/40">Cena</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr
                     v-for="item in pricingItems"
                     :key="item.name"
-                    class="border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors"
+                    class="border-b border-outline-variant/30 last:border-0 hover:bg-surface-container-low/60 transition-colors duration-150"
                   >
-                    <td class="py-4 px-6 font-body-md text-on-surface">{{ item.name }}</td>
-                    <td class="py-4 px-6 font-body-md text-primary font-bold text-right">{{ item.price }}</td>
+                    <td class="px-6 py-4 text-sm text-on-surface border-r border-outline-variant/30">{{ item.name }}</td>
+                    <td class="px-6 py-4 text-sm text-primary font-bold text-right">{{ item.price }}</td>
                   </tr>
                 </tbody>
               </table>
