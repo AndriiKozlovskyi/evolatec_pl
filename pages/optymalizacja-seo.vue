@@ -331,7 +331,7 @@ const relatedServices = [
             <h2 id="section-onpage-vs-tech" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
               Optymalizacja on-page vs techniczne SEO — czym się różnią
             </h2>
-            <p class="text-on-surface-variant mb-10 leading-relaxed">Wielu właścicieli stron nie wie, czy problem leży w treści, czy w kodzie. To ważne pytanie — odpowiedź zmienia zakres i koszt pracy oraz decyduje, od czego zacząć.</p>
+            <p class="text-on-surface-variant mb-10 leading-relaxed">Wielu właścicieli stron nie wie, czy problem leży w treści, czy w kodzie. To ważne pytanie — odpowiedź zmienia zakres i koszt pracy oraz decyduje, od czego zacząć. Większość stron potrzebuje obu warstw jednocześnie — techniczne błędy blokują efekty on-page. Dlatego każdy projekt optymalizacji zaczynamy od krótkiego audytu wskazującego główny problem.</p>
             <div class="rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50 mb-8">
               <table class="w-full border-collapse">
                 <caption class="sr-only">Porównanie optymalizacji on-page z technicznym SEO</caption>
@@ -351,7 +351,6 @@ const relatedServices = [
                 </tbody>
               </table>
             </div>
-            <p class="text-sm text-on-surface-variant text-center">Większość stron potrzebuje obu warstw jednocześnie — techniczne błędy blokują efekty on-page. Dlatego każdy projekt optymalizacji zaczynamy od krótkiego audytu wskazującego główny problem.</p>
           </div>
         </section>
 
@@ -364,16 +363,30 @@ const relatedServices = [
         />
 
         <!-- ── Optymalizacja SEO — cena i zakres ─────────────────────────── -->
-        <section aria-labelledby="section-cena-seo" class="py-section-padding bg-surface-container-low">
+        <section aria-labelledby="section-cena-seo" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="max-w-3xl mx-auto">
-              <h2 id="section-cena-seo" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
-                Optymalizacja SEO — cena i zakres
-              </h2>
-              <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-                <p>Optymalizacja SEO kosztuje od 1 260 zł netto miesięcznie — bez stałej umowy na start. Minimalne zaangażowanie to 3 miesiące, bo Google potrzebuje czasu na ponowne zaindeksowanie zmian i ocenę zaktualizowanej strony. Agencja, która obiecuje widoczne efekty w ciągu 30 dni, myli optymalizację z reklamą.</p>
-                <p>W ramach miesięcznej obsługi wykonujemy optymalizację meta tagów i nagłówków priorytetowych podstron, poprawę struktury URL jeśli tego wymaga, techniczne SEO (szybkość ładowania, mobile, crawl budget), optymalizację Core Web Vitals, wdrożenie lub aktualizację danych strukturalnych Schema.org oraz optymalizację treści pod wybrane frazy kluczowe. Każdy miesiąc kończy się raportem z rankingami monitorowanych fraz i listą wykonanych działań.</p>
-                <p>Jeśli nie wiesz, od czego zacząć — przed podpisaniem czegokolwiek możesz zamówić jednorazowy <NuxtLink to="/audyt-seo" class="text-primary font-semibold hover:underline">audyt SEO</NuxtLink> za 840 zł netto. Raport wskazuje dokładnie, które poprawki mają największy wpływ na pozycje Twojej strony.</p>
+            <div class="grid md:grid-cols-2 gap-stack-lg items-center">
+              <div>
+                <h2 id="section-cena-seo" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Optymalizacja SEO — cena i zakres
+                </h2>
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                  <p>Optymalizacja SEO kosztuje od 1 260 zł netto miesięcznie — bez stałej umowy na start. Minimalne zaangażowanie to 3 miesiące, bo Google potrzebuje czasu na ponowne zaindeksowanie zmian i ocenę zaktualizowanej strony. Agencja, która obiecuje widoczne efekty w ciągu 30 dni, myli optymalizację z reklamą.</p>
+                  <p>W ramach miesięcznej obsługi wykonujemy optymalizację meta tagów i nagłówków priorytetowych podstron, poprawę struktury URL jeśli tego wymaga, techniczne SEO (szybkość ładowania, mobile, crawl budget), optymalizację Core Web Vitals, wdrożenie lub aktualizację danych strukturalnych Schema.org oraz optymalizację treści pod wybrane frazy kluczowe. Każdy miesiąc kończy się raportem z rankingami monitorowanych fraz i listą wykonanych działań.</p>
+                  <p>Jeśli nie wiesz, od czego zacząć — przed podpisaniem czegokolwiek możesz zamówić jednorazowy <NuxtLink to="/audyt-seo" class="text-primary font-semibold hover:underline">audyt SEO</NuxtLink> za 840 zł netto. Raport wskazuje dokładnie, które poprawki mają największy wpływ na pozycje Twojej strony.</p>
+                </div>
+              </div>
+              <div class="relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-auto md:h-96 shadow-2xl">
+                <NuxtImg
+                  src="/assets/web-analytics.webp"
+                  alt="Dashboard analityczny z wykresami ruchu organicznego — monitoring pozycji i efektów SEO"
+                  class="w-full h-full object-cover"
+                  width="840"
+                  height="640"
+                  sizes="100vw md:576px"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
               </div>
             </div>
           </div>

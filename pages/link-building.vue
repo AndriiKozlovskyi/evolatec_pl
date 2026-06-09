@@ -325,7 +325,7 @@ const relatedServices = [
         <!-- ── Czym jest link building i dlaczego Google wciąż go ceni ──────── -->
         <section aria-labelledby="section-czym-jest-lb" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
               <div data-reveal="left">
                 <h2 id="section-czym-jest-lb" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
                   Czym jest link building i dlaczego Google wciąż go ceni
@@ -343,7 +343,7 @@ const relatedServices = [
                   </div>
                   <div>
                     <p class="font-semibold text-on-surface text-sm">{{ benefit.title }}</p>
-                    <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">{{ benefit.desc }}</p>
+                    <p class="text-xs text-on-surface-variant mt-1 leading-relaxed line-clamp-2">{{ benefit.desc }}</p>
                   </div>
                 </div>
               </div>
@@ -387,7 +387,7 @@ const relatedServices = [
             <h2 id="section-agencja-vs-sam" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
               Agencja link building vs samodzielne pozyskiwanie linków — co się opłaca
             </h2>
-            <p class="text-on-surface-variant mb-10 leading-relaxed">Samodzielne pozyskiwanie linków nie jest niemożliwe — ale ma realny koszt: outreach do redakcji, negocjacje, weryfikacja jakości i pisanie artykułów to kilkanaście godzin miesięcznie pracy.</p>
+            <p class="text-on-surface-variant mb-10 leading-relaxed">Samodzielne pozyskiwanie linków nie jest niemożliwe — ale ma realny koszt: outreach do redakcji, negocjacje, weryfikacja jakości i pisanie artykułów to kilkanaście godzin miesięcznie pracy. Agencja wychodzi taniej wtedy, gdy alternatywą jest własny czas właściciela firmy — bo godzina właściciela na outreach to godzina niezainwestowana w sprzedaż lub obsługę klienta.</p>
             <div class="rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50 mb-6">
               <table class="w-full border-collapse">
                 <caption class="sr-only">Porównanie agencji link building z samodzielnym pozyskiwaniem linków</caption>
@@ -407,21 +407,30 @@ const relatedServices = [
                 </tbody>
               </table>
             </div>
-            <p class="text-sm text-on-surface-variant text-center">Agencja wychodzi taniej wtedy, gdy alternatywą jest własny czas właściciela firmy — bo godzina właściciela na outreach to godzina niezainwestowana w sprzedaż lub obsługę klienta.</p>
           </div>
         </section>
 
         <!-- ── Ile kosztuje link building (prose) ─────────────────────────── -->
         <section aria-labelledby="section-cena-lb" class="py-section-padding bg-surface-container-low">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="max-w-3xl mx-auto">
-              <h2 id="section-cena-lb" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
-                Ile kosztuje link building — cennik i co zawiera abonament
-              </h2>
-              <div class="space-y-4 text-on-surface-variant leading-relaxed">
-                <p>SEO z link buildingiem kosztuje od 2 100 zł netto miesięcznie. W tej kwocie zawarte jest pozyskiwanie linków zewnętrznych, bieżąca optymalizacja on-page i miesięczny raport z wynikami. Budżet link buildingowy nie jest rozliczany oddzielnie — cena jest stała i ustalana przed startem kampanii.</p>
-                <p>W każdym miesiącu pozyskujemy od 3 do 8 linków zewnętrznych, w zależności od branży i konkurencyjności fraz docelowych. Koncentrujemy się na domenach z Domain Rating powyżej 30 i tematyczną spójnością z Twoją działalnością — nie na wolumenie. Dziesięć słabych linków wyrządza więcej szkody niż trzy mocne.</p>
-                <p>Kampania link buildingowa wymaga minimum 3 miesięcy, żeby efekty były mierzalne w Google Search Console. Pierwsze zmiany w widoczności fraz zazwyczaj pojawiają się po 6–8 tygodniach od pierwszych pozyskanych linków.</p>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+              <div data-reveal="left">
+                <h2 id="section-cena-lb" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Ile kosztuje link building — cennik i co zawiera abonament
+                </h2>
+                <div class="space-y-4 text-on-surface-variant leading-relaxed">
+                  <p>SEO z link buildingiem kosztuje od 2 100 zł netto miesięcznie. W tej kwocie zawarte jest pozyskiwanie linków zewnętrznych, bieżąca optymalizacja on-page i miesięczny raport z wynikami. Budżet link buildingowy nie jest rozliczany oddzielnie — cena jest stała i ustalana przed startem kampanii.</p>
+                  <p>W każdym miesiącu pozyskujemy od 3 do 8 linków zewnętrznych, w zależności od branży i konkurencyjności fraz docelowych. Koncentrujemy się na domenach z Domain Rating powyżej 30 i tematyczną spójnością z Twoją działalnością — nie na wolumenie. Dziesięć słabych linków wyrządza więcej szkody niż trzy mocne.</p>
+                  <p>Kampania link buildingowa wymaga minimum 3 miesięcy, żeby efekty były mierzalne w Google Search Console. Pierwsze zmiany w widoczności fraz zazwyczaj pojawiają się po 6–8 tygodniach od pierwszych pozyskanych linków.</p>
+                </div>
+              </div>
+              <div data-reveal="right" class="rounded-2xl overflow-hidden shadow-lg">
+                <img
+                  src="/assets/seo-analytics.webp"
+                  alt="Analityka link buildingu — wzrost autorytetu domeny i pozycji w Google Search Console"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
@@ -431,6 +440,7 @@ const relatedServices = [
         <ProcessSection
           title="Jak działa nasz link building"
           :steps="processSteps"
+          background="bg-surface"
         />
 
         <!-- ── Nasze usługi link buildingu (FeaturesSection — primary) ────── -->
@@ -441,15 +451,40 @@ const relatedServices = [
           image-alt="Sieć połączeń między domenami symbolizująca profil linków zewnętrznych SEO"
         />
 
-        <!-- ── Jakie linki budujemy (SEOSection — primary) ────────────────── -->
-        <SEOSection
-          title="Jakie linki budujemy"
-          subtitle="Stawiamy na wysokiej jakości, tematycznie spójne backlinki — bez PBN-ów i masowych linków, które szkodzą domenie."
-          :features="backlinksTypes"
-          cta-text="Dowiedz się więcej o link buildingu"
-          image="/assets/link-building-bg.webp"
-          image-alt="Wartościowe linki zewnętrzne budujące autorytet domeny w Google"
-        />
+        <!-- ── Jakie linki budujemy ───────────────────────────────────────── -->
+        <section class="py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+              <div data-reveal="left">
+                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-4">Jakie linki budujemy</h2>
+                <p class="text-body-lg text-on-surface-variant leading-relaxed mb-8">Stawiamy na wysokiej jakości, tematycznie spójne backlinki — bez PBN-ów i masowych linków, które szkodzą domenie.</p>
+                <div class="grid grid-cols-2 gap-3">
+                  <div
+                    v-for="type in backlinksTypes"
+                    :key="type"
+                    class="flex items-center gap-3 bg-white border border-outline-variant/30 rounded-xl px-4 py-3 shadow-sm"
+                  >
+                    <span class="material-symbols-outlined text-primary text-[1.2rem] flex-shrink-0" aria-hidden="true">check_circle</span>
+                    <span class="text-sm font-medium text-on-surface leading-tight">{{ type }}</span>
+                  </div>
+                </div>
+                <NuxtLink to="/kontakt" class="inline-block mt-8">
+                  <BaseButton variant="primary" size="md">Dowiedz się więcej o link buildingu</BaseButton>
+                </NuxtLink>
+              </div>
+              <div class="hidden md:flex justify-center items-center" data-reveal="right">
+                <NuxtImg
+                  src="/assets/link-building-bg.webp"
+                  alt="Wartościowe linki zewnętrzne budujące autorytet domeny w Google"
+                  class="w-full rounded-2xl object-cover shadow-lg"
+                  width="640"
+                  height="427"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- ── Cennik (PricingSection — gradient) ─────────────────────────── -->
         <PricingSection
@@ -457,12 +492,14 @@ const relatedServices = [
           title="Cennik link buildingu"
           subtitle="Stała cena miesięczna, ustalana przed startem. Budżet link buildingowy nie jest rozliczany oddzielnie."
           :pricing-plans="pricingPlans"
+          background="bg-surface"
         />
 
         <!-- ── FAQ (container-low) ────────────────────────────────────────── -->
         <FAQSection
           title="Najczęściej zadawane pytania o link building"
           :faqs="faqData"
+          background="bg-surface-container-low"
         />
 
         <!-- ── Powiązane usługi (surface) ─────────────────────────────────── -->

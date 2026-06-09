@@ -1,5 +1,5 @@
 <template>
-  <section data-nav-label="Cennik" data-nav-icon="sell" class="py-section-padding bg-gradient-to-b from-surface to-surface-container-low relative overflow-hidden" :class="background">
+  <section data-nav-label="Cennik" data-nav-icon="sell" class="py-section-padding relative overflow-hidden" :class="background">
     <!-- Background decoration -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
@@ -56,6 +56,7 @@ withDefaults(
   }>(),
   {
     eyebrow: 'Cennik',
+    background: 'bg-gradient-to-b from-surface to-surface-container-low',
   }
 )
 </script>

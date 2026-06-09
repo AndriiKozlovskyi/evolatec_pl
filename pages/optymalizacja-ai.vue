@@ -180,12 +180,12 @@ onMounted(() => {
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const geoSignals = [
-  { title: 'Dane strukturalne JSON-LD', desc: 'Schema.org markup w formacie JSON-LD pozwala LLM-om identyfikować typ treści, podmiot i fakty zawarte w odpowiedzi. Service, LocalBusiness, FAQPage i HowTo to typy o najwyższej wartości dla GEO.' },
-  { title: 'Kompletne zdania-cytaty', desc: 'Każda sekcja powinna zawierać przynajmniej jedno zdanie stanowiące pełną odpowiedź bez potrzeby czytania kontekstu. Zdania z liczbami, nazwami własnymi i weryfikowalnymi faktami są cytowane częściej.' },
-  { title: 'FAQ z pełnymi odpowiedziami', desc: 'Pytania i odpowiedzi w formacie FAQPage są bezpośrednio parsowane przez silniki AI. Odpowiedź musi być kompletna w 1–3 zdaniach — LLM nie skraca długich akapitów, pomija je.' },
-  { title: 'Autorytet domeny', desc: 'Wysoki Domain Rating i mocny profil linków zewnętrznych to sygnał wiarygodności czytelny zarówno dla Google, jak i dla LLM-ów korzystających z jego indeksu.' },
-  { title: 'Aktualność treści', desc: 'Modele preferują strony z treściami datowanymi i aktualizowanymi. Data ostatniej modyfikacji w metadanych zwiększa szansę na cytowanie przy pytaniach o stan aktualny.' },
-  { title: 'Speakable markup', desc: 'Znacznik speakable wskazuje LLM-om, które fragmenty strony nadają się do bezpośredniego przytoczenia jako odpowiedź głosowa lub tekstowa.' },
+  { icon: 'data_object',       title: 'Dane strukturalne JSON-LD', desc: 'Schema.org markup w formacie JSON-LD pozwala LLM-om identyfikować typ treści, podmiot i fakty zawarte w odpowiedzi. Service, LocalBusiness, FAQPage i HowTo to typy o najwyższej wartości dla GEO.' },
+  { icon: 'format_quote',      title: 'Kompletne zdania-cytaty', desc: 'Każda sekcja powinna zawierać przynajmniej jedno zdanie stanowiące pełną odpowiedź bez potrzeby czytania kontekstu. Zdania z liczbami, nazwami własnymi i weryfikowalnymi faktami są cytowane częściej.' },
+  { icon: 'help',              title: 'FAQ z pełnymi odpowiedziami', desc: 'Pytania i odpowiedzi w formacie FAQPage są bezpośrednio parsowane przez silniki AI. Odpowiedź musi być kompletna w 1–3 zdaniach — LLM nie skraca długich akapitów, pomija je.' },
+  { icon: 'verified',          title: 'Autorytet domeny', desc: 'Wysoki Domain Rating i mocny profil linków zewnętrznych to sygnał wiarygodności czytelny zarówno dla Google, jak i dla LLM-ów korzystających z jego indeksu.' },
+  { icon: 'update',            title: 'Aktualność treści', desc: 'Modele preferują strony z treściami datowanymi i aktualizowanymi. Data ostatniej modyfikacji w metadanych zwiększa szansę na cytowanie przy pytaniach o stan aktualny.' },
+  { icon: 'record_voice_over', title: 'Speakable markup', desc: 'Znacznik speakable wskazuje LLM-om, które fragmenty strony nadają się do bezpośredniego przytoczenia jako odpowiedź głosowa lub tekstowa.' },
 ]
 
 const schemaTypes = [
@@ -330,12 +330,22 @@ const relatedServices = [
         <!-- ── Czym jest AI SEO ──────────────────────────────────────────────── -->
         <section aria-labelledby="section-czym-jest-aiseo" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="max-w-3xl mx-auto">
-              <h2 id="section-czym-jest-aiseo" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
-                Czym jest AI SEO i jak zmienia widoczność firmy w internecie
-              </h2>
-              <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
-                <p v-for="para in introParagraphs" :key="para">{{ para }}</p>
+            <div class="grid lg:grid-cols-[3fr_2fr] gap-16 items-stretch">
+              <div data-reveal="left">
+                <h2 id="section-czym-jest-aiseo" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                  Czym jest AI SEO i jak zmienia widoczność firmy w internecie
+                </h2>
+                <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
+                  <p v-for="para in introParagraphs" :key="para">{{ para }}</p>
+                </div>
+              </div>
+              <div data-reveal="right" class="rounded-2xl overflow-hidden shadow-lg relative">
+                <img
+                  src="/assets/ai-robot.webp"
+                  alt="Sztuczna inteligencja — ChatGPT, Gemini i Perplexity cytujące strony internetowe w odpowiedziach AI"
+                  class="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
@@ -344,21 +354,21 @@ const relatedServices = [
         <!-- ── GEO optymalizacja — 6 sygnałów ────────────────────────────────── -->
         <section aria-labelledby="section-geo-jak" class="py-section-padding bg-surface-container-low">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
-              <div data-reveal="left">
-                <h2 id="section-geo-jak" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
-                  GEO optymalizacja – jak sprawić, żeby firma pojawiała się w ChatGPT i Gemini
-                </h2>
-                <p class="text-on-surface-variant leading-relaxed mb-6">Modele językowe nie rankingują stron tak jak PageRank. Oceniają, czy strona jest wiarygodnym, autorytywnym źródłem odpowiedzi na konkretne pytanie. Na podstawie analizy publicznych wytycznych i obserwacji zachowań LLM-ów wyróżniamy sześć sygnałów o największym wpływie na cytowanie:</p>
-                <p class="text-sm font-semibold text-primary">GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu realizowanego przez EvolaTec.</p>
-              </div>
-              <div class="space-y-4" data-reveal="right">
-                <div v-for="signal in geoSignals" :key="signal.title" class="bg-white rounded-xl p-5 border border-outline-variant/20 flex items-start gap-4">
-                  <span class="material-symbols-outlined text-primary text-lg flex-shrink-0 mt-0.5" aria-hidden="true">check_circle</span>
-                  <div>
-                    <p class="font-semibold text-on-surface text-sm">{{ signal.title }}</p>
-                    <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">{{ signal.desc }}</p>
-                  </div>
+            <div data-reveal="left" class="mb-10">
+              <h2 id="section-geo-jak" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
+                GEO optymalizacja – jak sprawić, żeby firma pojawiała się w ChatGPT i Gemini
+              </h2>
+              <p class="text-on-surface-variant leading-relaxed mb-3">Modele językowe nie rankingują stron tak jak PageRank. Oceniają, czy strona jest wiarygodnym, autorytywnym źródłem odpowiedzi na konkretne pytanie. Na podstawie analizy publicznych wytycznych i obserwacji zachowań LLM-ów wyróżniamy sześć sygnałów o największym wpływie na cytowanie:</p>
+              <p class="text-sm font-semibold text-primary">GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu realizowanego przez EvolaTec.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" data-reveal="right">
+              <div v-for="signal in geoSignals" :key="signal.title" class="bg-white rounded-2xl p-5 border border-outline-variant/20 shadow-sm flex flex-col gap-3">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">{{ signal.icon }}</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-on-surface text-sm leading-snug">{{ signal.title }}</p>
+                  <p class="text-xs text-on-surface-variant mt-1 leading-relaxed line-clamp-3">{{ signal.desc }}</p>
                 </div>
               </div>
             </div>
@@ -405,7 +415,7 @@ const relatedServices = [
         <!-- ── Schema.org i JSON-LD ───────────────────────────────────────────── -->
         <section aria-labelledby="section-schema-jsonld" class="py-section-padding bg-surface-container-low">
           <div class="max-w-container-max mx-auto px-gutter">
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
               <div data-reveal="left">
                 <h2 id="section-schema-jsonld" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
                   Schema.org i JSON-LD — fundament widoczności w AI wyszukiwarkach
@@ -423,7 +433,7 @@ const relatedServices = [
                   </div>
                   <div>
                     <p class="font-mono font-bold text-primary text-sm">{{ schemaType.type }}</p>
-                    <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">{{ schemaType.desc }}</p>
+                    <p class="text-xs text-on-surface-variant mt-1 leading-relaxed line-clamp-2">{{ schemaType.desc }}</p>
                   </div>
                 </div>
               </div>
