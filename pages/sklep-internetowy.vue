@@ -183,7 +183,7 @@ const includedItems = [
   { icon: 'credit_card',     label: 'Bezpieczne płatności online'        },
   { icon: 'dashboard',       label: 'Panel produktów i zamówień'         },
   { icon: 'search_insights', label: 'SEO pod kategorie i produkty'       },
-  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Perplexity'  },
+  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Claude'  },
   { icon: 'lock',            label: 'Certyfikat SSL + hosting'           },
   { icon: 'local_shipping',  label: 'Integracje płatności i wysyłki'     },
 ]
@@ -266,7 +266,7 @@ const processSteps = [
                 <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
                   <p>Większość sklepów, które nie sprzedają, ma wystarczający ruch — gubi go dopiero między wejściem a płatnością. Klient otwiera kartę produktu, która ładuje się cztery sekundy, przechodzi przez koszyk z trzema krokami i na ekranie płatności rezygnuje. Problem leży w tym, jak szybko i gładko sklep prowadzi od produktu do „kupuję".</p>
                   <p>Sklepy budujemy tak, żeby ładowały się poniżej 1 sekundy i osiągały <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> — bo każda sekunda opóźnienia na mobile to mierzalny spadek konwersji.</p>
-                  <p>Każdy sklep dostaje SEO pod kategorie i produkty oraz Schema.org, dzięki któremu oferta może pojawiać się w <strong class="text-on-surface">ChatGPT, Gemini i Perplexity</strong>.</p>
+                  <p>Każdy sklep dostaje SEO pod kategorie i produkty oraz Schema.org, dzięki któremu oferta może pojawiać się w <strong class="text-on-surface">ChatGPT, Gemini i Claude</strong>.</p>
                 </div>
               </div>
               <div data-reveal="right">

@@ -26,11 +26,11 @@ const faqData = [
   },
   {
     question: 'Jak sprawić żeby firma pojawiała się w ChatGPT i Gemini?',
-    answer: 'GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu. Konkretnie oznacza to: dane strukturalne JSON-LD LocalBusiness, kompletne odpowiedzi na pytania lokalne w treści strony i cytowalne zdania zawierające nazwę firmy, miasto i usługę. LLM-y indeksują te dane niezależnie od wyników Map Pack.',
+    answer: 'GEO optymalizacja — widoczność w ChatGPT, Gemini i Claude — jest w cenie każdego projektu. Konkretnie oznacza to: dane strukturalne JSON-LD LocalBusiness, kompletne odpowiedzi na pytania lokalne w treści strony i cytowalne zdania zawierające nazwę firmy, miasto i usługę. LLM-y indeksują te dane niezależnie od wyników Map Pack.',
   },
   {
     question: 'Co to jest GEO optymalizacja?',
-    answer: 'GEO optymalizacja (Generative Engine Optimization) to dostosowanie treści i struktury strony do wymagań AI wyszukiwarek — ChatGPT Search, Google Gemini, Perplexity i Microsoft Copilot. Zamiast rankingów w niebieskich linkach chodzi o cytowanie Twojej firmy w odpowiedziach generowanych przez modele językowe. Kluczowe są: Schema.org markup, pełne zdania z weryfikowalnymi faktami i wysoki autorytet domeny. W każdej realizacji EvolaTec te elementy są wdrożone standardowo.',
+    answer: 'GEO optymalizacja (Generative Engine Optimization) to dostosowanie treści i struktury strony do wymagań AI wyszukiwarek — ChatGPT Search, Google Gemini, Claude i Microsoft Copilot. Zamiast rankingów w niebieskich linkach chodzi o cytowanie Twojej firmy w odpowiedziach generowanych przez modele językowe. Kluczowe są: Schema.org markup, pełne zdania z weryfikowalnymi faktami i wysoki autorytet domeny. W każdej realizacji EvolaTec te elementy są wdrożone standardowo.',
   },
 ]
 
@@ -265,7 +265,7 @@ const pricingPlans = [
       'Wszystko z optymalizacji wizytówki',
       'Lokalne cytowania i katalogi branżowe',
       'Dane strukturalne LocalBusiness Schema.org',
-      'GEO — widoczność w ChatGPT, Gemini, Perplexity',
+      'GEO — widoczność w ChatGPT, Gemini, Claude',
       'Miesięczny raport z pozycjami',
     ],
     cta: 'Wybieram Local SEO',
@@ -542,7 +542,7 @@ const relatedServices = [
     <!-- ── CTA ───────────────────────────────────────────────────────────── -->
     <CTASection
       title="Zacznij pojawiać się tam, gdzie szukają Twoi klienci"
-      description="Od 1 680 zł netto miesięcznie. Optymalizacja Google Business Profile, Map Pack i GEO widoczność w ChatGPT, Gemini i Perplexity — stała cena, bez niespodzianek."
+      description="Od 1 680 zł netto miesięcznie. Optymalizacja Google Business Profile, Map Pack i GEO widoczność w ChatGPT, Gemini i Claude — stała cena, bez niespodzianek."
       primary-cta="Rozpocznij pozycjonowanie lokalne"
       secondary-cta="Sprawdź pozycjonowanie ogólne"
       primary-href="/kontakt"

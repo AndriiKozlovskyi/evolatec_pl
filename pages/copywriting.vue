@@ -144,7 +144,7 @@ const heroStats = [
 const introParagraphs = [
   'Firma inwestuje w ładny projekt strony, a potem wkleja w niego teksty napisane w pół godziny wieczorem — i dziwi się, że strona nie sprzedaje. Wygląd przyciąga wzrok na sekundę, ale to tekst decyduje, czy odwiedzający zostaje, rozumie ofertę i wysyła zapytanie. Najsłabszym ogniwem większości stron nie jest design, tylko treść.',
   'Trzy błędy powtarzają się najczęściej. Tekst mówi o firmie („jesteśmy zespołem profesjonalistów") zamiast o problemie klienta, który ten klient właśnie próbuje rozwiązać. Jest ogólny, więc nie różni się od tekstu konkurencji i niczego nie obiecuje konkretnie. I nie jest pisany pod wyszukiwarkę, więc nawet najlepsza treść nie zostaje znaleziona.',
-  'Piszemy teksty, które zaczynają od problemu czytelnika, mówią konkretami — ceną, terminem, liczbą — i są zbudowane pod frazy, na które szukają klienci. Każdy tekst jest pisany pod konkretne frazy kluczowe oraz pod cytowalność w wyszukiwarkach AI, dzięki czemu może być znaleziony zarówno w Google, jak i w odpowiedziach ChatGPT czy Perplexity.',
+  'Piszemy teksty, które zaczynają od problemu czytelnika, mówią konkretami — ceną, terminem, liczbą — i są zbudowane pod frazy, na które szukają klienci. Każdy tekst jest pisany pod konkretne frazy kluczowe oraz pod cytowalność w wyszukiwarkach AI, dzięki czemu może być znaleziony zarówno w Google, jak i w odpowiedziach ChatGPT czy Claude.',
 ]
 
 const textTypeServices = [

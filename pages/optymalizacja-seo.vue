@@ -30,7 +30,7 @@ const faqData = [
   },
   {
     question: 'Co to jest GEO optymalizacja?',
-    answer: 'GEO (Generative Engine Optimization) to optymalizacja strony pod asystentów AI — ChatGPT, Google Gemini, Perplexity i Copilot. Gdy użytkownik pyta „dobra agencja SEO w Warszawie" bezpośrednio w ChatGPT, GEO sprawia, że Twoja firma może być cytowana jako odpowiedź. Kluczowe elementy GEO to dane strukturalne Schema.org JSON-LD, kompletne i cytowalne odpowiedzi na konkretne pytania oraz treści z liczbami i faktami weryfikowalnymi przez modele językowe.',
+    answer: 'GEO (Generative Engine Optimization) to optymalizacja strony pod asystentów AI — ChatGPT, Google Gemini, Claude i Copilot. Gdy użytkownik pyta „dobra agencja SEO w Warszawie" bezpośrednio w ChatGPT, GEO sprawia, że Twoja firma może być cytowana jako odpowiedź. Kluczowe elementy GEO to dane strukturalne Schema.org JSON-LD, kompletne i cytowalne odpowiedzi na konkretne pytania oraz treści z liczbami i faktami weryfikowalnymi przez modele językowe.',
   },
   {
     question: 'Jak szybkość ładowania strony wpływa na pozycję w Google?',

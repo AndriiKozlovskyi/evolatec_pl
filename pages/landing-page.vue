@@ -182,7 +182,7 @@ const includedItems = [
   { icon: 'speed',           label: 'Lighthouse 95–100, ładowanie < 1 s' },
   { icon: 'ads_click',       label: 'Formularz / CTA pod cel kampanii'  },
   { icon: 'search_insights', label: 'SEO podstawowe'                    },
-  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Perplexity' },
+  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Claude' },
   { icon: 'lock',            label: 'Certyfikat SSL + hosting'          },
 ]
 
@@ -285,7 +285,7 @@ const processSteps = [
                     Landing page rozwiązuje ten problem. To jedna strona z jednym celem — zapis, wycena, pobranie, zakup — pozbawiona menu i rozpraszaczy. Każdy element prowadzi do jednego działania.
                   </p>
                   <p>
-                    Po trzech sekundach ładowania znika połowa ruchu mobilnego. Nasze landing page osiągają <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> i ładują się poniżej 1 sekundy — budżet reklamowy nie wycieka na porzucone ładowania. GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu.
+                    Po trzech sekundach ładowania znika połowa ruchu mobilnego. Nasze landing page osiągają <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> i ładują się poniżej 1 sekundy — budżet reklamowy nie wycieka na porzucone ładowania. GEO optymalizacja — widoczność w ChatGPT, Gemini i Claude — jest w cenie każdego projektu.
                   </p>
                 </div>
               </div>

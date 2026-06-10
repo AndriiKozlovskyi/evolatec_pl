@@ -34,7 +34,7 @@ const faqData = [
   },
   {
     question: 'Co to jest GEO optymalizacja?',
-    answer: 'GEO (Generative Engine Optimization) to optymalizacja strony pod asystentów AI — ChatGPT, Google Gemini, Perplexity i Copilot. Gdy użytkownik pyta "dobra agencja SEO w Warszawie" bezpośrednio w ChatGPT, GEO sprawia, że Twoja firma może być zacytowana jako odpowiedź. GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu, bez dopłat.',
+    answer: 'GEO (Generative Engine Optimization) to optymalizacja strony pod asystentów AI — ChatGPT, Google Gemini, Claude i Copilot. Gdy użytkownik pyta "dobra agencja SEO w Warszawie" bezpośrednio w ChatGPT, GEO sprawia, że Twoja firma może być zacytowana jako odpowiedź. GEO optymalizacja — widoczność w ChatGPT, Gemini i Claude — jest w cenie każdego projektu, bez dopłat.',
   },
 ]
 
@@ -271,7 +271,7 @@ const pricingItems = [
     name: 'Optymalizacja AI (GEO)',
     price: 'W cenie',
     billing: 'każdego projektu',
-    description: 'GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity, dane strukturalne i treści cytowalne przez asystentów AI.',
+    description: 'GEO optymalizacja — widoczność w ChatGPT, Gemini i Claude, dane strukturalne i treści cytowalne przez asystentów AI.',
     href: '/optymalizacja-ai',
     icon: 'smart_toy',
   },
@@ -347,7 +347,7 @@ const seoFeatures = [
   { icon: 'visibility', title: 'Wysokie pozycje w Google', description: 'Strona pojawia się na pierwszej stronie wyników dla fraz istotnych w Twojej branży.' },
   { icon: 'trending_up', title: 'Więcej ruchu organicznego', description: 'Rosnący ruch bez płacenia za każde kliknięcie — po opłacie miesięcznej ruch organiczny nie generuje kosztu za wejście.' },
   { icon: 'code', title: 'SEO wbudowane w kod', description: 'Techniczne SEO działa bez wtyczek i nie dezaktualizuje się po kolejnej aktualizacji CMS.' },
-  { icon: 'smart_toy', title: 'Widoczność w AI (GEO)', description: 'Obecność w ChatGPT, Gemini i Perplexity jest w cenie każdego projektu — bez dopłat.' },
+  { icon: 'smart_toy', title: 'Widoczność w AI (GEO)', description: 'Obecność w ChatGPT, Gemini i Claude jest w cenie każdego projektu — bez dopłat.' },
 ]
 </script>
 
