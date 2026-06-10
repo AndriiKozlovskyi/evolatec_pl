@@ -301,7 +301,7 @@ const relatedServices = [
     icon: 'search_check',
     title: 'Audyt SEO',
     description: 'Sprawdź, czy Twoja strona spełnia wymagania GEO — jednorazowy raport PDF z priorytetami.',
-    price: '840 zł netto',
+    price: '420 zł netto',
     href: '/audyt-seo',
   },
 ]

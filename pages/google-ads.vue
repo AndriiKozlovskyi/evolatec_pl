@@ -313,14 +313,14 @@ const relatedServices = [
     icon: 'language',
     title: 'Strona firmowa',
     description: 'Twoje Ads generują ruch — profesjonalna strona firmowa zamienia go w klientów. Performance-first, gotowa na SEO.',
-    price: 'od 2 100 zł netto',
+    price: 'od 6 300 zł netto',
     href: '/strona-internetowa',
   },
   {
     icon: 'shopping_bag',
     title: 'Sklep internetowy',
     description: 'Google Shopping i Performance Max osiągają pełny potencjał dopiero z szybkim, dobrze zbudowanym sklepem.',
-    price: 'od 4 200 zł netto',
+    price: 'od 12 600 zł netto',
     href: '/sklep-internetowy',
   },
 ]

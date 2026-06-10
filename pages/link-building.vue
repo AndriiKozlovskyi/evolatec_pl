@@ -4,9 +4,9 @@
 
 useSeoMeta({
   title: 'Link Building SEO – Pozyskiwanie Linków | EvolaTec',
-  description: 'White hat link building dla firm: wartościowe linki zewnętrzne, które trwale podnoszą pozycję w Google. Od 2 100 zł netto/mies., raport co miesiąc.',
+  description: 'White hat link building dla firm: wartościowe linki zewnętrzne, które trwale podnoszą pozycję w Google. Od 420 zł netto/mies., raport co miesiąc.',
   ogTitle: 'Link Building SEO – Pozyskiwanie Linków | EvolaTec',
-  ogDescription: 'White hat link building dla firm: wartościowe linki zewnętrzne, które trwale podnoszą pozycję w Google. Od 2 100 zł netto/mies., raport co miesiąc.',
+  ogDescription: 'White hat link building dla firm: wartościowe linki zewnętrzne, które trwale podnoszą pozycję w Google. Od 420 zł netto/mies., raport co miesiąc.',
   ogType: 'website',
   ogUrl: 'https://evolatec.pl/link-building',
   ogImage: 'https://evolatec.pl/og-image.webp',
@@ -22,7 +22,7 @@ const faqData = [
   },
   {
     question: 'Ile kosztuje pozycjonowanie SEO miesięcznie?',
-    answer: 'Pozycjonowanie SEO kosztuje od 1 260 zł netto miesięcznie za Local SEO. SEO z link buildingiem kosztuje od 2 100 zł netto miesięcznie — w tej kwocie zawarte są pozyskiwanie linków zewnętrznych, optymalizacja on-page i raportowanie. Cena jest stała i ustalana przed startem, bez zmian w trakcie kampanii.',
+    answer: 'Pozycjonowanie SEO kosztuje od 1 680 zł netto miesięcznie za Local SEO. SEO z link buildingiem kosztuje od 420 zł netto miesięcznie — w tej kwocie zawarte są pozyskiwanie linków zewnętrznych, optymalizacja on-page i raportowanie. Cena jest stała i ustalana przed startem, bez zmian w trakcie kampanii.',
   },
   {
     question: 'Jak sprawić żeby firma pojawiała się w ChatGPT i Gemini?',
@@ -71,7 +71,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/link-building#webpage',
       url: 'https://evolatec.pl/link-building',
       name: 'Link Building SEO – Pozyskiwanie Linków | EvolaTec',
-      description: 'White hat link building dla firm: wartościowe linki zewnętrzne, które trwale podnoszą pozycję w Google. Od 2 100 zł netto/mies., raport co miesiąc.',
+      description: 'White hat link building dla firm: wartościowe linki zewnętrzne, które trwale podnoszą pozycję w Google. Od 420 zł netto/mies., raport co miesiąc.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
@@ -103,7 +103,7 @@ const mainSchema = {
         '@type': 'Offer',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          price: '2100',
+          price: '420',
           priceCurrency: 'PLN',
           valueAddedTaxIncluded: false,
           billingIncrement: 'P1M',
@@ -148,7 +148,7 @@ onMounted(() => {
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
-  { value: 'od 2 100 zł', label: 'netto miesięcznie',    icon: 'sell'          },
+  { value: 'od 420 zł', label: 'netto miesięcznie',    icon: 'sell'          },
   { value: '3–8',         label: 'linków miesięcznie',   icon: 'link'          },
   { value: 'DR 30+',      label: 'minimalne kryterium',  icon: 'verified'      },
   { value: 'White hat',   label: 'bez ryzyka kary',      icon: 'security'      },
@@ -176,7 +176,7 @@ const lbCompareRows = [
   { criterion: 'Weryfikacja jakości domen', self: 'Manualna, bez benchmarku', agency: 'Systematyczna — DR, historia, tematyka' },
   { criterion: 'Ryzyko kary Google', self: 'Wysokie przy błędnych wyborach', agency: 'Niskie — white hat metodologia' },
   { criterion: 'Raportowanie', self: 'Brak standardu', agency: 'Miesięczny raport z metrykami' },
-  { criterion: 'Koszt wejścia', self: 'Niski (czas własny)', agency: 'Od 2 100 zł netto/mies.' },
+  { criterion: 'Koszt wejścia', self: 'Niski (czas własny)', agency: 'Od 420 zł netto/mies.' },
 ]
 
 // ── Dlaczego link building (BenefitsSection — karty ze zdjęciem) ─────────────
@@ -249,7 +249,7 @@ const pricingPlans = [
   },
   {
     name: 'Link Building',
-    price: 'od 2 100 zł netto',
+    price: 'od 420 zł netto',
     delivery: 'miesięcznie',
     highlight: true,
     features: [
@@ -289,7 +289,7 @@ const relatedServices = [
     icon: 'search_check',
     title: 'Audyt SEO',
     description: 'Jednorazowy audyt techniczny i treściowy z priorytetyzowaną listą poprawek, bez abonamentu.',
-    price: '840 zł netto',
+    price: '420 zł netto',
     href: '/audyt-seo',
   },
   {
@@ -310,7 +310,7 @@ const relatedServices = [
       background-image="/assets/link-building-bg.webp"
       badge="Link Building — white hat"
       title="Link building – budujemy wartościowe linki, które podnoszą pozycję w Google"
-      description="Pozyskiwanie linków zewnętrznych z tematycznie powiązanych, wysokoautorytatywnych domen — bez PBN-ów, bez ryzyka kary Google. Od 2 100 zł netto miesięcznie, miesięczny raport z każdym pozyskanym linkiem."
+      description="Pozyskiwanie linków zewnętrznych z tematycznie powiązanych, wysokoautorytatywnych domen — bez PBN-ów, bez ryzyka kary Google. Od 420 zł netto miesięcznie, miesięczny raport z każdym pozyskanym linkiem."
       primaryCTA="Rozpocznij kampanię"
       secondaryCTA="Zobacz cennik"
       primary-href="/kontakt"
@@ -419,7 +419,7 @@ const relatedServices = [
                   Ile kosztuje link building — cennik i co zawiera abonament
                 </h2>
                 <div class="space-y-4 text-on-surface-variant leading-relaxed">
-                  <p>SEO z link buildingiem kosztuje od 2 100 zł netto miesięcznie. W tej kwocie zawarte jest pozyskiwanie linków zewnętrznych, bieżąca optymalizacja on-page i miesięczny raport z wynikami. Budżet link buildingowy nie jest rozliczany oddzielnie — cena jest stała i ustalana przed startem kampanii.</p>
+                  <p>SEO z link buildingiem kosztuje od 420 zł netto miesięcznie. W tej kwocie zawarte jest pozyskiwanie linków zewnętrznych, bieżąca optymalizacja on-page i miesięczny raport z wynikami. Budżet link buildingowy nie jest rozliczany oddzielnie — cena jest stała i ustalana przed startem kampanii.</p>
                   <p>W każdym miesiącu pozyskujemy od 3 do 8 linków zewnętrznych, w zależności od branży i konkurencyjności fraz docelowych. Koncentrujemy się na domenach z Domain Rating powyżej 30 i tematyczną spójnością z Twoją działalnością — nie na wolumenie. Dziesięć słabych linków wyrządza więcej szkody niż trzy mocne.</p>
                   <p>Kampania link buildingowa wymaga minimum 3 miesięcy, żeby efekty były mierzalne w Google Search Console. Pierwsze zmiany w widoczności fraz zazwyczaj pojawiają się po 6–8 tygodniach od pierwszych pozyskanych linków.</p>
                 </div>
@@ -516,7 +516,7 @@ const relatedServices = [
     <!-- ── CTA ───────────────────────────────────────────────────────────── -->
     <CTASection
       title="Buduj autorytet domeny — linki, które Google nagradza"
-      description="Od 2 100 zł netto miesięcznie. White hat metodologia, miesięczny raport z każdym pozyskanym linkiem i stała cena bez niespodzianek."
+      description="Od 420 zł netto miesięcznie. White hat metodologia, miesięczny raport z każdym pozyskanym linkiem i stała cena bez niespodzianek."
       primary-cta="Rozpocznij kampanię"
       secondary-cta="Sprawdź pozycjonowanie"
       primary-href="/kontakt"

@@ -408,10 +408,10 @@ const calcCategories: CalcCat[] = [
   {
     id: 'seo', icon: 'trending_up', name: 'SEO', desc: 'Optymalizacja dla wyszukiwarek',
     types: [
-      { id: 'audit', icon: 'zoom_in',      name: 'Audyt SEO',        desc: 'Jednorazowa analiza',    price: 840,  note: 'jednorazowo, netto' },
+      { id: 'audit', icon: 'zoom_in',      name: 'Audyt SEO',        desc: 'Jednorazowa analiza',    price: 420,  note: 'jednorazowo, netto' },
       { id: 'opt',   icon: 'tune',         name: 'Optymalizacja SEO', desc: 'On-page i techniczne',  price: 1260, note: 'miesięcznie, netto' },
-      { id: 'local', icon: 'location_on',  name: 'Lokalne SEO',      desc: 'Google Maps i lokalnie', price: 1260, note: 'miesięcznie, netto' },
-      { id: 'link',  icon: 'link',         name: 'Link building',    desc: 'Budowanie linków',       price: 2100, note: 'miesięcznie, netto' },
+      { id: 'local', icon: 'location_on',  name: 'Lokalne SEO',      desc: 'Google Maps i lokalnie', price: 1680, note: 'miesięcznie, netto' },
+      { id: 'link',  icon: 'link',         name: 'Link building',    desc: 'Budowanie linków',       price: 420,  note: 'miesięcznie, netto' },
     ],
     extras: [
       { id: 'report',  icon: 'bar_chart',  name: 'Raport miesięczny',          price: 420 },
@@ -485,6 +485,7 @@ const singlePrices = [
       { name: 'Landing Page',        price: 'od 2 100 zł'  },
       { name: 'Strona firmowa',      price: 'od 6 300 zł'  },
       { name: 'Sklep internetowy',   price: 'od 12 600 zł' },
+      { name: 'Aplikacja mobilna',   price: 'od 21 000 zł' },
       { name: 'Premium e-commerce',  price: 'od 25 200 zł' },
     ],
   },
@@ -493,10 +494,10 @@ const singlePrices = [
     icon: 'trending_up',
     note: null,
     rows: [
-      { name: 'Audyt SEO',                price: 'od 840 zł'        },
+      { name: 'Audyt SEO',                price: 'od 420 zł'        },
       { name: 'Optymalizacja SEO',        price: 'od 1 260 zł / mies' },
-      { name: 'Lokalne SEO',              price: 'od 1 260 zł / mies' },
-      { name: 'Link building',            price: 'od 2 100 zł / mies' },
+      { name: 'Lokalne SEO',              price: 'od 1 680 zł / mies' },
+      { name: 'Link building',            price: 'od 420 zł / mies' },
       { name: 'Opieka SEO',               price: 'od 1 260 zł / mies' },
       { name: 'Pakiet z linkbuildingiem', price: 'od 2 100 zł / mies' },
     ],

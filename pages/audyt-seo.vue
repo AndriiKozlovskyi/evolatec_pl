@@ -3,10 +3,10 @@
 // ─── SEO Meta ──────────────────────────────────────────────────────────────
 
 useSeoMeta({
-  title: 'Audyt SEO Strony Internetowej — 840 zł | EvolaTec',
-  description: 'Audyt SEO: Core Web Vitals, błędy crawlowania, on-page SEO i Schema.org. Raport PDF z priorytetami — 840 zł netto, jednorazowo, bez abonamentu.',
-  ogTitle: 'Audyt SEO Strony Internetowej — 840 zł | EvolaTec',
-  ogDescription: 'Audyt SEO: Core Web Vitals, błędy crawlowania, on-page SEO i Schema.org. Raport PDF z priorytetami — 840 zł netto, jednorazowo, bez abonamentu.',
+  title: 'Audyt SEO Strony Internetowej — 420 zł | EvolaTec',
+  description: 'Audyt SEO: Core Web Vitals, błędy crawlowania, on-page SEO i Schema.org. Raport PDF z priorytetami — 420 zł netto, jednorazowo, bez abonamentu.',
+  ogTitle: 'Audyt SEO Strony Internetowej — 420 zł | EvolaTec',
+  ogDescription: 'Audyt SEO: Core Web Vitals, błędy crawlowania, on-page SEO i Schema.org. Raport PDF z priorytetami — 420 zł netto, jednorazowo, bez abonamentu.',
   ogType: 'website',
   ogUrl: 'https://evolatec.pl/audyt-seo',
   ogImage: 'https://evolatec.pl/og-image.webp',
@@ -22,7 +22,7 @@ const faqData = [
   },
   {
     question: 'Ile kosztuje pozycjonowanie SEO miesięcznie?',
-    answer: 'Pozycjonowanie SEO kosztuje od 1 260 zł netto miesięcznie za Local SEO dla jednej lokalizacji, a od 2 100 zł netto miesięcznie za pełną obsługę z linkbuildingiem. Audyt SEO to osobna, jednorazowa usługa za 840 zł netto — nie wymaga podpisania umowy miesięcznej.',
+    answer: 'Pozycjonowanie SEO kosztuje od 1 680 zł netto miesięcznie za Local SEO dla jednej lokalizacji, a od 2 100 zł netto miesięcznie za pełną obsługę z linkbuildingiem. Audyt SEO to osobna, jednorazowa usługa za 420 zł netto — nie wymaga podpisania umowy miesięcznej.',
   },
   {
     question: 'Jak sprawić żeby firma pojawiała się w ChatGPT i Gemini?',
@@ -67,8 +67,8 @@ const mainSchema = {
       '@type': 'WebPage',
       '@id': 'https://evolatec.pl/audyt-seo#webpage',
       url: 'https://evolatec.pl/audyt-seo',
-      name: 'Audyt SEO Strony Internetowej — 840 zł | EvolaTec',
-      description: 'Audyt SEO: Core Web Vitals, błędy crawlowania, on-page SEO i Schema.org. Raport PDF z priorytetami — 840 zł netto, jednorazowo, bez abonamentu.',
+      name: 'Audyt SEO Strony Internetowej — 420 zł | EvolaTec',
+      description: 'Audyt SEO: Core Web Vitals, błędy crawlowania, on-page SEO i Schema.org. Raport PDF z priorytetami — 420 zł netto, jednorazowo, bez abonamentu.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
@@ -95,7 +95,7 @@ const mainSchema = {
       areaServed: { '@type': 'Country', name: 'Poland' },
       offers: {
         '@type': 'Offer',
-        priceSpecification: { '@type': 'PriceSpecification', price: '840', priceCurrency: 'PLN', valueAddedTaxIncluded: false },
+        priceSpecification: { '@type': 'PriceSpecification', price: '420', priceCurrency: 'PLN', valueAddedTaxIncluded: false },
       },
     },
     {
@@ -136,7 +136,7 @@ onMounted(() => {
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
-  { value: '840 zł',    label: 'Netto, jednorazowo',     icon: 'sell'        },
+  { value: '420 zł',    label: 'Netto, jednorazowo',     icon: 'sell'        },
   { value: '5–7 dni',   label: 'Czas realizacji',        icon: 'schedule'    },
   { value: 'PDF',       label: 'Raport z priorytetami',  icon: 'description' },
   { value: 'Bez umowy', label: 'Brak abonamentu',        icon: 'verified'    },
@@ -209,7 +209,7 @@ const relatedServices = [
     icon: 'location_on',
     title: 'Lokalne SEO',
     description: 'Miesięczna obsługa SEO dla firm lokalnych — Google Business Profile i frazy lokalne.',
-    price: 'od 1 260 zł netto',
+    price: 'od 1 680 zł netto',
     href: '/lokalne-seo',
   },
   {
@@ -233,7 +233,7 @@ const auditAreas = [
 ]
 
 const auditCompareRows = [
-  { criterion: 'Koszt', auto: '0–300 zł/mies. (abonament narzędzia)', pro: '840 zł netto, jednorazowo' },
+  { criterion: 'Koszt', auto: '0–300 zł/mies. (abonament narzędzia)', pro: '420 zł netto, jednorazowo' },
   { criterion: 'Priorytetyzacja', auto: 'Brak — lista błędów bez oceny wpływu', pro: 'Każdy problem oceniany wg wpływu i trudności' },
   { criterion: 'Interpretacja', auto: 'Algorytmiczna, bez kontekstu biznesowego', pro: 'Ręczna, z uwzględnieniem typu strony i branży' },
   { criterion: 'Analiza GSC', auto: 'Podstawowa lub niedostępna', pro: 'Pełna — błędy, ostrzeżenia, wyłączenia' },
@@ -251,7 +251,7 @@ const auditStepsDetailed = [
 const pricingPlans = [
   {
     name: 'Podstawowy audyt SEO',
-    price: 'od 840 zł netto',
+    price: 'od 420 zł netto',
     delivery: 'jednorazowo',
     highlight: false,
     features: [
@@ -301,7 +301,7 @@ const pricingPlans = [
     <HeroSection
       badge="Audyt SEO — jednorazowy"
       title="Profesjonalny audyt SEO – sprawdź, dlaczego Twoja strona nie jest widoczna w Google"
-      description="Kompletny raport techniczny: Core Web Vitals, błędy crawlowania, on-page SEO, dane strukturalne Schema.org i priorytetyzowana lista poprawek. Gotowy w 5–7 dni roboczych — 840 zł netto, bez abonamentu."
+      description="Kompletny raport techniczny: Core Web Vitals, błędy crawlowania, on-page SEO, dane strukturalne Schema.org i priorytetyzowana lista poprawek. Gotowy w 5–7 dni roboczych — 420 zł netto, bez abonamentu."
       primaryCTA="Zamów audyt SEO"
       secondaryCTA="Zobacz cennik"
       primary-href="/kontakt"
@@ -339,16 +339,16 @@ const pricingPlans = [
           </div>
         </section>
 
-        <!-- ══ Audyt SEO — 840 zł netto ════════════════════════════════════════ -->
+        <!-- ══ Audyt SEO — 420 zł netto ════════════════════════════════════════ -->
         <section aria-labelledby="section-cena-audytu" class="py-section-padding bg-surface-container-low">
           <div class="max-w-container-max mx-auto px-gutter">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
               <div data-reveal="left">
                 <h2 id="section-cena-audytu" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-6">
-                  Audyt SEO — 840 zł netto, jednorazowo, bez abonamentu
+                  Audyt SEO — 420 zł netto, jednorazowo, bez abonamentu
                 </h2>
                 <div class="space-y-4 text-on-surface-variant leading-relaxed">
-                  <p>Audyt SEO kosztuje 840 zł netto — jest to jednorazowa, stała cena, bez abonamentu i bez zobowiązania do kontynuacji współpracy. Nie ma ukrytych pozycji za dostęp do narzędzi ani opłat za dodatkowe konsultacje.</p>
+                  <p>Audyt SEO kosztuje 420 zł netto — jest to jednorazowa, stała cena, bez abonamentu i bez zobowiązania do kontynuacji współpracy. Nie ma ukrytych pozycji za dostęp do narzędzi ani opłat za dodatkowe konsultacje.</p>
                   <p>Po dostarczeniu dostępu do Google Search Console i Google Analytics 4 (wystarczy rola „Widok" — tylko do odczytu) raport jest gotowy w 5–7 dni roboczych. Po oddaniu raportu organizujemy krótkie omówienie wyników, w którym wyjaśniamy priorytety i odpowiadamy na pytania.</p>
                   <p>Audyt można zamówić bez podpisywania umowy na pozycjonowanie. Część klientów decyduje się na wdrożenie poprawek samodzielnie lub z własnym developerem — i to jest w pełni uzasadnione podejście. Jeśli po raporcie zdecydujesz się na miesięczną obsługę SEO, koszt audytu jest zaliczany na poczet pierwszego miesiąca.</p>
                 </div>
@@ -485,7 +485,7 @@ const pricingPlans = [
     <!-- ══ CTA ═══════════════════════════════════════════════════════════════ -->
     <CTASection
       title="Zamów audyt SEO swojej strony"
-      description="840 zł netto, jednorazowo. Raport PDF w 5–7 dni roboczych z priorytetyzowaną listą poprawek technicznych i on-page."
+      description="420 zł netto, jednorazowo. Raport PDF w 5–7 dni roboczych z priorytetyzowaną listą poprawek technicznych i on-page."
       primary-cta="Zamów audyt SEO"
       secondary-cta="Sprawdź pozycjonowanie"
       primary-href="/kontakt"

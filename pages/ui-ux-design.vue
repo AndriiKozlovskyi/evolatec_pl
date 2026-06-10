@@ -198,7 +198,7 @@ const pricingPlans = [
   },
   {
     name: 'Projekt UI/UX',
-    price: 'od 4 200 zł netto',
+    price: 'od 2 100 zł netto',
     badge: 'Najczęściej wybierany',
     highlight: true,
     features: [

@@ -375,14 +375,14 @@ const relatedServices = [
     icon: 'language',
     title: 'Strona firmowa',
     description: 'Twoje kanały marketingowe generują ruch — profesjonalna strona zamienia go w zapytania.',
-    price: 'od 2 100 zł netto',
+    price: 'od 6 300 zł netto',
     href: '/strona-internetowa',
   },
   {
     icon: 'shopping_bag',
     title: 'Sklep internetowy',
     description: 'Prowadź reklamy na sklep, który naprawdę sprzedaje — szybki, bezpieczny i zoptymalizowany.',
-    price: 'od 4 200 zł netto',
+    price: 'od 12 600 zł netto',
     href: '/sklep-internetowy',
   },
 ]

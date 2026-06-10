@@ -4,9 +4,9 @@
 
 useSeoMeta({
   title: 'Tworzenie sklepów internetowych dla firm | EvolaTec',
-  description: 'Tworzenie sklepów internetowych od 12 600 zł netto, realizacja od 14 dni. Shopify lub sklep własny w Nuxt, płatności online, SEO i GEO w cenie.',
+  description: 'Tworzenie sklepów internetowych od 12 600 zł netto, realizacja od 14 dni. sklep własny w Nuxt.js, płatności online, SEO i GEO w cenie.',
   ogTitle: 'Tworzenie sklepów internetowych dla firm | EvolaTec',
-  ogDescription: 'Sklep internetowy od 12 600 zł netto, realizacja od 14 dni. Shopify lub sklep własny w Nuxt, płatności online, SEO i GEO w cenie.',
+  ogDescription: 'Sklep internetowy od 12 600 zł netto, realizacja od 14 dni. sklep własny w Nuxt.js, płatności online, SEO i GEO w cenie.',
   ogType: 'website',
   ogUrl: 'https://evolatec.pl/sklep-internetowy',
   ogImage: 'https://evolatec.pl/og-image.webp',
@@ -18,11 +18,11 @@ useSeoMeta({
 const faqData = [
   {
     question: 'Ile kosztuje sklep internetowy?',
-    answer: 'Sklep internetowy kosztuje od 12 600 zł netto, realizacja od 14 dni roboczych — to wariant na Shopify. Sklep budowany od podstaw w Nuxt.js, z niestandardowymi integracjami, to premium e-commerce od 25 200 zł netto, realizacja od 30 dni roboczych. Obie ceny są stałe i ustalane przed startem.',
+    answer: 'Sklep internetowy kosztuje od 12 600 zł netto, realizacja od 14 dni roboczych — to standardowy sklep w Nuxt.js z katalogiem, płatnościami i panelem zamówień. Sklep z niestandardowymi integracjami i większą skalą to premium e-commerce od 25 200 zł netto, realizacja od 30 dni roboczych. Obie ceny są stałe i ustalane przed startem.',
   },
   {
-    question: 'Czym różni się sklep na Shopify od własnego sklepu internetowego?',
-    answer: 'Shopify to gotowa platforma — rusza szybciej (od 14 dni) i taniej (od 12 600 zł), ale wiąże się z miesięcznym abonamentem i ograniczeniami platformy. Sklep własny w Nuxt.js (od 25 200 zł, od 30 dni) daje pełną kontrolę, dowolne integracje i tylko koszt hostingu, ale wymaga większego budżetu na start. Shopify wystarcza większości firm; sklep własny opłaca się przy nietypowych procesach i dużej skali.',
+    question: 'Czym różni się sklep własny w Nuxt.js od gotowej platformy Shopify?',
+    answer: 'Shopify to gotowa platforma SaaS z miesięcznym abonamentem i ograniczeniami narzucanymi przez platformę. My budujemy sklepy od podstaw w Nuxt.js — masz pełną kontrolę, dowolne integracje i tylko koszt hostingu, bez abonamentu platformy. Standardowy sklep w Nuxt.js startuje od 12 600 zł netto (od 14 dni), a wariant premium z niestandardowymi integracjami od 25 200 zł netto (od 30 dni). Szczegółowe porównanie obu podejść znajdziesz w tabeli poniżej.',
   },
   {
     question: 'Czy można prowadzić sklep internetowy bez rejestracji działalności?',
@@ -30,7 +30,7 @@ const faqData = [
   },
   {
     question: 'Jak wygląda proces tworzenia strony internetowej?',
-    answer: 'Sklep powstaje w 4 etapach: konsultacja i wybór platformy, projekt sklepu, wdrożenie z integracjami, testy i launch. Sklep na Shopify jest gotowy od 14 dni roboczych, licząc od dostarczenia listy produktów, zdjęć, logo i danych do płatności. Po wdrożeniu zaczyna się 30 dni wsparcia technicznego.',
+    answer: 'Sklep powstaje w 4 etapach: konsultacja i wycena, projekt sklepu, wdrożenie z integracjami, testy i launch. Standardowy sklep jest gotowy od 14 dni roboczych, licząc od dostarczenia listy produktów, zdjęć, logo i danych do płatności. Po wdrożeniu zaczyna się 30 dni wsparcia technicznego.',
   },
   {
     question: 'Jak szybkość ładowania strony wpływa na pozycję w Google?',
@@ -83,7 +83,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/sklep-internetowy#webpage',
       url: 'https://evolatec.pl/sklep-internetowy',
       name: 'Tworzenie sklepów internetowych dla firm | EvolaTec',
-      description: 'Tworzenie sklepów internetowych od 12 600 zł netto, realizacja od 14 dni. Shopify lub sklep własny w Nuxt, płatności online, SEO i GEO w cenie.',
+      description: 'Tworzenie sklepów internetowych od 12 600 zł netto, realizacja od 14 dni. sklep własny w Nuxt.js, płatności online, SEO i GEO w cenie.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
@@ -106,19 +106,19 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/sklep-internetowy#service',
       name: 'Tworzenie sklepów internetowych',
       serviceType: 'Tworzenie sklepów internetowych e-commerce',
-      description: 'Sklep internetowy na Shopify lub budowany od podstaw w Nuxt.js — z katalogiem, płatnościami i panelem zamówień. Od 12 600 zł netto, realizacja od 14 dni roboczych.',
+      description: 'Sklep internetowy budowany od podstaw w Nuxt.js — z katalogiem, płatnościami i panelem zamówień. Od 12 600 zł netto, realizacja od 14 dni roboczych.',
       url: 'https://evolatec.pl/sklep-internetowy',
       provider: { '@id': 'https://evolatec.pl/#organization' },
       areaServed: { '@type': 'Country', name: 'Poland' },
       offers: [
         {
           '@type': 'Offer',
-          name: 'Sklep internetowy (Shopify)',
+          name: 'Sklep internetowy',
           priceSpecification: { '@type': 'PriceSpecification', minPrice: '12600', priceCurrency: 'PLN', valueAddedTaxIncluded: false },
         },
         {
           '@type': 'Offer',
-          name: 'Premium e-commerce (Nuxt)',
+          name: 'Premium e-commerce',
           priceSpecification: { '@type': 'PriceSpecification', minPrice: '25200', priceCurrency: 'PLN', valueAddedTaxIncluded: false },
         },
       ],
@@ -142,7 +142,7 @@ const howToSchema = {
   description: 'Proces tworzenia sklepu internetowego w EvolaTec: od wyboru platformy do uruchomienia.',
   totalTime: 'P14D',
   step: [
-    { '@type': 'HowToStep', position: 1, name: 'Konsultacja i wybór platformy', text: 'Ustalamy asortyment, skalę i wybieramy Shopify lub rozwiązanie własne. Wynik: stała wycena i termin na piśmie.' },
+    { '@type': 'HowToStep', position: 1, name: 'Konsultacja i wycena', text: 'Ustalamy asortyment, skalę i zakres integracji. Wynik: stała wycena i termin na piśmie.' },
     { '@type': 'HowToStep', position: 2, name: 'Projekt sklepu', text: 'Projektujemy układ katalogu, karty produktu i ścieżkę zakupu pod konwersję na mobile.' },
     { '@type': 'HowToStep', position: 3, name: 'Wdrożenie i integracje', text: 'Budujemy sklep, wdrażamy katalog, podpinamy płatności i potrzebne integracje, konfigurujemy panel.' },
     { '@type': 'HowToStep', position: 4, name: 'Testy i launch', text: 'Sprawdzamy proces zakupu od produktu do płatności, weryfikujemy szybkość i wygląd na urządzeniach, wdrażamy. Zaczyna się 30 dni wsparcia.' },
@@ -174,7 +174,7 @@ const heroStats = [
   { value: 'od 12 600 zł', label: 'Sklep netto',        icon: 'shopping_cart' },
   { value: 'od 14 dni',    label: 'Czas realizacji',    icon: 'flash_on'      },
   { value: '95–100',       label: 'Lighthouse score',   icon: 'speed'         },
-  { value: 'Shopify / Nuxt', label: 'Dwa warianty',     icon: 'tune'          },
+  { value: 'Standard / Premium', label: 'Dwa warianty',  icon: 'tune'          },
 ]
 
 const includedItems = [
@@ -190,13 +190,14 @@ const includedItems = [
 
 
 const compareRows = [
-  { label: 'Cena od',         shopify: '12 600 zł netto',        custom: '25 200 zł netto'             },
-  { label: 'Czas realizacji', shopify: 'od 14 dni roboczych',    custom: 'od 30 dni roboczych'         },
-  { label: 'Koszt miesięczny', shopify: 'Abonament Shopify',     custom: 'Tylko hosting'               },
-  { label: 'Customizacja',    shopify: 'W ramach platformy',     custom: 'Pełna, bez ograniczeń'       },
-  { label: 'Integracje',      shopify: 'Aplikacje z marketplace', custom: 'Dowolne, na zamówienie'     },
-  { label: 'Skala',           shopify: 'Bardzo dobra',           custom: 'Nieograniczona'              },
-  { label: 'Najlepsze dla',   shopify: 'Szybki start',           custom: 'Nietypowe procesy, wolumen'  },
+  { label: 'Opłaty transakcyjne',  shopify: '0,5–2% od każdej sprzedaży',       custom: 'Brak opłat transakcyjnych'     },
+  { label: 'Koszt miesięczny',     shopify: 'Abonament + płatne aplikacje',      custom: 'Tylko hosting (~50 zł/mies)'   },
+  { label: 'Własność kodu',        shopify: 'Platforma SaaS — brak własności',   custom: 'Pełna własność kodu i danych'  },
+  { label: 'Customizacja',         shopify: 'Szablony Liquid — ograniczona',     custom: 'Pełna, bez ograniczeń'         },
+  { label: 'Integracje (BLIK itp.)', shopify: 'Tylko płatne aplikacje',          custom: 'Dowolne, na zamówienie'        },
+  { label: 'Wydajność i SEO',      shopify: 'Wolny przez aplikacje, słabe URL',  custom: '95–100 Lighthouse, pełny SEO'  },
+  { label: 'Checkout',             shopify: 'Ograniczony na niższych planach',   custom: 'Dowolna konfiguracja'          },
+  { label: 'Skala',                shopify: 'Wyższy plan = wyższy koszt',        custom: 'Nieograniczona, stały koszt'   },
 ]
 
 const relatedServices = [
@@ -208,8 +209,8 @@ const relatedServices = [
 const processSteps = [
   {
     icon: 'storefront',
-    title: 'Konsultacja i wybór platformy',
-    description: 'Ustalamy asortyment, skalę i wybieramy Shopify lub rozwiązanie własne. Wynik: stała wycena i termin na piśmie.',
+    title: 'Konsultacja i wycena',
+    description: 'Ustalamy asortyment, skalę i zakres integracji. Wynik: stała wycena i termin na piśmie.',
   },
   {
     icon: 'design_services',
@@ -236,7 +237,7 @@ const processSteps = [
     <HeroSection
       badge="Tworzenie sklepów internetowych"
       title="Tworzenie sklepów internetowych, które sprzedają"
-      description="Sklep na Shopify od 12 600 zł netto lub budowany od podstaw w Nuxt.js od 25 200 zł — z katalogiem, płatnościami i panelem zamówień. Ładowanie poniżej 1 sekundy, SEO i GEO w cenie."
+      description="Sklep internetowy w Nuxt.js od 12 600 zł netto, wariant premium od 25 200 zł — z katalogiem, płatnościami i panelem zamówień. Ładowanie poniżej 1 sekundy, SEO i GEO w cenie."
       primaryCTA="Uzyskaj bezpłatną wycenę"
       secondaryCTA="Zobacz ceny"
       primary-href="/kontakt"
@@ -288,7 +289,7 @@ const processSteps = [
                 <h2 id="section-included" class="font-display text-3xl sm:text-4xl font-black text-on-primary leading-tight mb-6">Co zawiera sklep internetowy od 12 600 zł</h2>
                 <div class="space-y-4 text-on-primary/80 leading-relaxed">
                   <p>Sklep internetowy kosztuje od 12 600 zł netto i jest kompletnym, działającym sklepem — z katalogiem, płatnościami i panelem do zarządzania zamówieniami.</p>
-                  <p>Wersja podstawowa powstaje na Shopify. Sklep o niestandardowych wymaganiach budujemy od podstaw w Nuxt.js od 25 200 zł netto.</p>
+                  <p>Wersja standardowa powstaje w Nuxt.js. Sklep o niestandardowych wymaganiach i większej skali budujemy jako premium e-commerce od 25 200 zł netto.</p>
                 </div>
                 <NuxtLink to="/kontakt" class="inline-block mt-8"><BaseButton variant="outline" size="lg">Uzyskaj bezpłatną wycenę</BaseButton></NuxtLink>
               </div>
@@ -377,7 +378,7 @@ const processSteps = [
                 </div>
                 <h3 class="font-bold text-on-surface text-sm mb-3">Co wpływa na wycenę</h3>
                 <p class="text-sm text-on-surface-variant leading-relaxed">
-                  <strong class="text-on-surface">Sklep internetowy kosztuje od 12 600 zł netto, realizacja od 14 dni roboczych</strong> — to wariant na Shopify. Premium e-commerce kosztuje od 25 200 zł netto, realizacja od 30 dni roboczych. Strony osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights.
+                  <strong class="text-on-surface">Sklep internetowy kosztuje od 12 600 zł netto, realizacja od 14 dni roboczych</strong> — to standardowy sklep w Nuxt.js. Premium e-commerce kosztuje od 25 200 zł netto, realizacja od 30 dni roboczych. Strony osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights.
                 </p>
               </div>
 
@@ -400,7 +401,7 @@ const processSteps = [
                 <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">shopping_bag</span>
                 </div>
-                <h3 class="font-bold text-on-surface text-sm mb-1">Sklep internetowy (Shopify)</h3>
+                <h3 class="font-bold text-on-surface text-sm mb-1">Sklep internetowy</h3>
                 <p class="font-display text-3xl font-black text-primary mb-1">od 12 600 zł <span class="text-base font-semibold text-on-surface-variant">netto</span></p>
                 <p class="text-xs text-on-surface-variant flex items-center gap-1">
                   <span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span>
@@ -411,7 +412,7 @@ const processSteps = [
                 <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">storefront</span>
                 </div>
-                <h3 class="font-bold text-on-surface text-sm mb-1">Premium e-commerce (Nuxt)</h3>
+                <h3 class="font-bold text-on-surface text-sm mb-1">Premium e-commerce</h3>
                 <p class="font-display text-3xl font-black text-primary mb-1">od 25 200 zł <span class="text-base font-semibold text-on-surface-variant">netto</span></p>
                 <p class="text-xs text-on-surface-variant flex items-center gap-1">
                   <span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span>
@@ -445,7 +446,7 @@ const processSteps = [
                 Shopify czy sklep własny — co wybrać dla firmy
               </h2>
               <p class="text-on-surface-variant">
-                Shopify i sklep własny to nie „lepsze kontra gorsze", tylko „szybciej i taniej na start" kontra „pełna kontrola i skala". Dla większości firm wchodzących w e-commerce Shopify jest właściwą odpowiedzią. Najczęstszy scenariusz: firma startuje na Shopify, sprawdza rynek, a do własnego rozwiązania przechodzi dopiero, gdy abonamenty i ograniczenia platformy zaczynają przeszkadzać. Doradzamy tańszy wariant, jeśli wystarcza — przepłacanie za sklep własny „na zapas" nie ma sensu.
+                Shopify to popularna platforma SaaS, ale my budujemy sklepy od podstaw w Nuxt.js — bez miesięcznego abonamentu platformy, z pełną kontrolą i dowolnymi integracjami. Poniższe porównanie pokazuje, czym sklep własny w Nuxt różni się od gotowej platformy Shopify i dlaczego przy nietypowych procesach oraz większej skali wypada korzystniej.
               </p>
             </div>
 
@@ -526,7 +527,7 @@ const processSteps = [
     <!-- ── CTA ───────────────────────────────────────────────────────────── -->
     <CTASection
       title="Zbuduj sklep, który sprzedaje"
-      description="Opisz asortyment i skalę — doradzimy Shopify albo sklep własny i wrócimy ze stałą ceną oraz terminem przed startem."
+      description="Opisz asortyment i skalę — zaprojektujemy sklep w Nuxt.js i wrócimy ze stałą ceną oraz terminem przed startem."
       primary-cta="Uzyskaj bezpłatną wycenę"
       secondary-cta="Omów projekt"
       primary-href="/kontakt"

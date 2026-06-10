@@ -272,7 +272,7 @@ const allServices = [
     iconBg: 'bg-rose-50',
     iconColor: 'text-rose-600',
     title: 'Lokalne SEO',
-    description: 'Google Business Profile, Map Pack i widoczność lokalna dla firm działających regionalnie. Od 1 260 zł netto/mies.',
+    description: 'Google Business Profile, Map Pack i widoczność lokalna dla firm działających regionalnie. Od 1 680 zł netto/mies.',
     href: '/lokalne-seo',
   },
   {
@@ -281,7 +281,7 @@ const allServices = [
     iconColor: 'text-indigo-600',
     title: 'Aplikacja mobilna',
     description: 'React Native — jedna baza kodu na iOS i Android. MVP gotowy w 45 dni roboczych, od 21 000 zł netto.',
-    href: '/aplikacja-mobilna',
+    href: '/kontakt',
   },
 ]
 
@@ -349,9 +349,9 @@ const serviceTypes = [
 
 const seoServices = [
   { icon: 'manage_search',  title: 'Pozycjonowanie SEO',   desc: 'Od 1 260 zł netto/mies.', href: '/seo'              },
-  { icon: 'location_on',    title: 'Lokalne SEO',           desc: 'Od 1 260 zł netto/mies.', href: '/lokalne-seo'     },
-  { icon: 'link',           title: 'Link Building',         desc: 'Od 2 100 zł netto/mies.', href: '/link-building'   },
-  { icon: 'search_check',   title: 'Audyt SEO',             desc: '840 zł netto, jednorazowo', href: '/audyt-seo'    },
+  { icon: 'location_on',    title: 'Lokalne SEO',           desc: 'Od 1 680 zł netto/mies.', href: '/lokalne-seo'     },
+  { icon: 'link',           title: 'Link Building',         desc: 'Od 420 zł netto/mies.', href: '/link-building'   },
+  { icon: 'search_check',   title: 'Audyt SEO',             desc: '420 zł netto, jednorazowo', href: '/audyt-seo'    },
   { icon: 'tune',           title: 'Optymalizacja SEO',     desc: 'Wycena indywidualna',      href: '/optymalizacja-seo' },
   { icon: 'smart_toy',      title: 'AI SEO / GEO',          desc: 'W cenie każdego projektu', href: '/optymalizacja-ai' },
 ]

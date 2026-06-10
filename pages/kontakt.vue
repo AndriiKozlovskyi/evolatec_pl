@@ -174,7 +174,7 @@ const faqs = [
   },
   {
     question: 'Czy można zacząć z małym budżetem?',
-    answer: 'Tak, landing page już od 840 zł, strony firmowe od 2 100 zł, a audyty SEO od 840 zł. Skorzystaj z naszego kalkulatora kosztów, aby uzyskać szybką wycenę swojego projektu.',
+    answer: 'Tak, landing page już od 2 100 zł, strony firmowe od 6 300 zł, a audyty SEO od 420 zł. Skorzystaj z naszego kalkulatora kosztów, aby uzyskać szybką wycenę swojego projektu.',
   },
   {
     question: 'Jak szybko EvolaTec odpowiada na zapytania?',

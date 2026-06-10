@@ -306,14 +306,14 @@ const relatedServices = [
     icon: 'language',
     title: 'Strona firmowa',
     description: 'Profesjonalna strona firmowa jako cyfrowa baza, na którą kierujesz ruch z social media.',
-    price: 'od 2 100 zł netto',
+    price: 'od 6 300 zł netto',
     href: '/strona-internetowa',
   },
   {
     icon: 'shopping_bag',
     title: 'Sklep internetowy',
     description: 'E-commerce ze Social Commerce Integration — sprzedaż bezpośrednio z Instagrama i Facebooka.',
-    price: 'od 4 200 zł netto',
+    price: 'od 12 600 zł netto',
     href: '/sklep-internetowy',
   },
 ]

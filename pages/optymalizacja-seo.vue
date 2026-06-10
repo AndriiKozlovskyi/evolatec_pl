@@ -278,22 +278,22 @@ const relatedServices = [
   {
     icon: 'search_check',
     title: 'Audyt SEO',
-    description: 'Jednorazowy raport techniczny z priorytetyzowaną listą poprawek — 840 zł netto, bez abonamentu.',
-    price: '840 zł netto',
+    description: 'Jednorazowy raport techniczny z priorytetyzowaną listą poprawek — 420 zł netto, bez abonamentu.',
+    price: '420 zł netto',
     href: '/audyt-seo',
   },
   {
     icon: 'location_on',
     title: 'Lokalne SEO',
     description: 'Miesięczna obsługa SEO dla firm lokalnych — Google Business Profile i frazy lokalne.',
-    price: 'od 1 260 zł netto',
+    price: 'od 1 680 zł netto',
     href: '/lokalne-seo',
   },
   {
     icon: 'hub',
     title: 'SEO + Linkbuilding',
     description: 'Pełna obsługa on-page, content SEO i regularne pozyskiwanie linków z tematycznych domen.',
-    price: 'od 2 100 zł netto',
+    price: 'od 420 zł netto',
     href: '/link-building',
   },
 ]
@@ -373,7 +373,7 @@ const relatedServices = [
                 <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
                   <p>Optymalizacja SEO kosztuje od 1 260 zł netto miesięcznie — bez stałej umowy na start. Minimalne zaangażowanie to 3 miesiące, bo Google potrzebuje czasu na ponowne zaindeksowanie zmian i ocenę zaktualizowanej strony. Agencja, która obiecuje widoczne efekty w ciągu 30 dni, myli optymalizację z reklamą.</p>
                   <p>W ramach miesięcznej obsługi wykonujemy optymalizację meta tagów i nagłówków priorytetowych podstron, poprawę struktury URL jeśli tego wymaga, techniczne SEO (szybkość ładowania, mobile, crawl budget), optymalizację Core Web Vitals, wdrożenie lub aktualizację danych strukturalnych Schema.org oraz optymalizację treści pod wybrane frazy kluczowe. Każdy miesiąc kończy się raportem z rankingami monitorowanych fraz i listą wykonanych działań.</p>
-                  <p>Jeśli nie wiesz, od czego zacząć — przed podpisaniem czegokolwiek możesz zamówić jednorazowy <NuxtLink to="/audyt-seo" class="text-primary font-semibold hover:underline">audyt SEO</NuxtLink> za 840 zł netto. Raport wskazuje dokładnie, które poprawki mają największy wpływ na pozycje Twojej strony.</p>
+                  <p>Jeśli nie wiesz, od czego zacząć — przed podpisaniem czegokolwiek możesz zamówić jednorazowy <NuxtLink to="/audyt-seo" class="text-primary font-semibold hover:underline">audyt SEO</NuxtLink> za 420 zł netto. Raport wskazuje dokładnie, które poprawki mają największy wpływ na pozycje Twojej strony.</p>
                 </div>
               </div>
               <div class="relative rounded-2xl overflow-hidden aspect-[3/2] md:aspect-auto md:h-96 shadow-2xl">

@@ -4,9 +4,9 @@
 
 useSeoMeta({
   title: 'Pozycjonowanie Stron Internetowych w Google | EvolaTec',
-  description: 'Pozycjonowanie stron w Google od 1 260 zł netto/mies. SEO Audit jednorazowo 840 zł. Obejmuje audyt techniczny, on-page SEO i linkbuilding.',
+  description: 'Pozycjonowanie stron w Google od 1 260 zł netto/mies. SEO Audit jednorazowo 420 zł. Obejmuje audyt techniczny, on-page SEO i linkbuilding.',
   ogTitle: 'Pozycjonowanie Stron Internetowych w Google | EvolaTec',
-  ogDescription: 'Pozycjonowanie stron w Google od 1 260 zł netto/mies. SEO Audit jednorazowo 840 zł. Obejmuje audyt techniczny, on-page SEO i linkbuilding.',
+  ogDescription: 'Pozycjonowanie stron w Google od 1 260 zł netto/mies. SEO Audit jednorazowo 420 zł. Obejmuje audyt techniczny, on-page SEO i linkbuilding.',
   ogType: 'website',
   ogUrl: 'https://evolatec.pl/seo',
   ogImage: 'https://evolatec.pl/og-image.webp',
@@ -26,7 +26,7 @@ const faqData = [
   },
   {
     question: 'Ile kosztuje pozycjonowanie SEO miesięcznie?',
-    answer: 'Pozycjonowanie SEO kosztuje od 1 260 zł netto miesięcznie za pakiet Local SEO dla jednej lokalizacji. Pełna obsługa SEO z linkbuildingiem kosztuje od 2 100 zł netto miesięcznie. Jednorazowy audyt SEO kosztuje 840 zł netto i jest dostępny bez podpisywania umowy miesięcznej.',
+    answer: 'Pozycjonowanie SEO kosztuje od 1 680 zł netto miesięcznie za pakiet Local SEO dla jednej lokalizacji. Pełna obsługa SEO z linkbuildingiem kosztuje od 420 zł netto miesięcznie. Jednorazowy audyt SEO kosztuje 420 zł netto i jest dostępny bez podpisywania umowy miesięcznej.',
   },
   {
     question: 'Czym różni się SEO od Google Ads?',
@@ -75,7 +75,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/seo#webpage',
       url: 'https://evolatec.pl/seo',
       name: 'Pozycjonowanie Stron Internetowych w Google | EvolaTec',
-      description: 'Pozycjonowanie stron w Google od 1 260 zł netto/mies. SEO Audit jednorazowo 840 zł. Obejmuje audyt techniczny, on-page SEO i linkbuilding.',
+      description: 'Pozycjonowanie stron w Google od 1 260 zł netto/mies. SEO Audit jednorazowo 420 zł. Obejmuje audyt techniczny, on-page SEO i linkbuilding.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
@@ -123,7 +123,7 @@ const mainSchema = {
             name: 'SEO Audit',
             description: 'Jednorazowy audyt techniczny SEO z priorytetyzowaną listą poprawek.',
             url: 'https://evolatec.pl/audyt-seo',
-            offers: { '@type': 'Offer', priceSpecification: { '@type': 'PriceSpecification', price: '840', priceCurrency: 'PLN' } },
+            offers: { '@type': 'Offer', priceSpecification: { '@type': 'PriceSpecification', price: '420', priceCurrency: 'PLN' } },
           },
         },
         {
@@ -133,7 +133,7 @@ const mainSchema = {
             name: 'Local SEO',
             description: 'Miesięczna obsługa SEO dla firm działających lokalnie — Google Business Profile, lokalne frazy, autorytet lokalny.',
             url: 'https://evolatec.pl/lokalne-seo',
-            offers: { '@type': 'Offer', priceSpecification: { '@type': 'PriceSpecification', minPrice: '1260', priceCurrency: 'PLN', unitText: 'miesięcznie' } },
+            offers: { '@type': 'Offer', priceSpecification: { '@type': 'PriceSpecification', minPrice: '1680', priceCurrency: 'PLN', unitText: 'miesięcznie' } },
           },
         },
         {
@@ -143,7 +143,7 @@ const mainSchema = {
             name: 'SEO + Linkbuilding',
             description: 'Pełna obsługa SEO on-page i content z regularnym pozyskiwaniem linków zewnętrznych.',
             url: 'https://evolatec.pl/link-building',
-            offers: { '@type': 'Offer', priceSpecification: { '@type': 'PriceSpecification', minPrice: '2100', priceCurrency: 'PLN', unitText: 'miesięcznie' } },
+            offers: { '@type': 'Offer', priceSpecification: { '@type': 'PriceSpecification', minPrice: '420', priceCurrency: 'PLN', unitText: 'miesięcznie' } },
           },
         },
       ],
@@ -213,7 +213,7 @@ onMounted(() => {
 
 const heroStats = [
   { value: 'od 3 mies.',  label: 'Pierwsze efekty',   icon: 'trending_up'   },
-  { value: '840 zł',      label: 'Audyt jednorazowo',  icon: 'search_check'  },
+  { value: '420 zł',      label: 'Audyt jednorazowo',  icon: 'search_check'  },
   { value: 'od 1 260 zł', label: 'Miesięcznie netto',  icon: 'sell'          },
   { value: 'GEO gratis',  label: 'ChatGPT, Gemini',    icon: 'smart_toy'     },
 ]
@@ -237,7 +237,7 @@ const comparisonColumns = [
 const pricingItems = [
   {
     name: 'Audyt SEO',
-    price: '840 zł netto',
+    price: '420 zł netto',
     billing: 'jednorazowo',
     description: 'Pełny raport techniczny z priorytetyzowaną listą poprawek — Core Web Vitals, błędy crawlowania, on-page i dane strukturalne.',
     href: '/audyt-seo',
@@ -253,7 +253,7 @@ const pricingItems = [
   },
   {
     name: 'Lokalne SEO',
-    price: 'od 1 260 zł netto',
+    price: 'od 1 680 zł netto',
     billing: 'miesięcznie',
     description: 'Google Business Profile, lokalne frazy i autorytet lokalny — dla firm działających w jednym mieście lub regionie.',
     href: '/lokalne-seo',
@@ -261,7 +261,7 @@ const pricingItems = [
   },
   {
     name: 'Link Building',
-    price: 'od 2 100 zł netto',
+    price: 'od 420 zł netto',
     billing: 'miesięcznie',
     description: 'Pełna obsługa on-page i content SEO z regularnym pozyskiwaniem linków z tematycznych domen zewnętrznych.',
     href: '/link-building',
@@ -300,7 +300,7 @@ const relatedServices = [
     icon: 'search_check',
     title: 'Audyt SEO',
     description: 'Jednorazowy raport techniczny z priorytetyzowaną listą poprawek.',
-    price: '840 zł netto',
+    price: '420 zł netto',
     href: '/audyt-seo',
   },
   {
@@ -323,7 +323,7 @@ const relatedServices = [
 const introParagraphs = [
   'Większość firm płaci agencji SEO od 3 do 12 miesięcy, zanim zorientuje się, że nie dostaje nic poza comiesięcznym raportem z wykresem. Praca, która faktycznie podnosi pozycję, to kilka konkretnych czynności — i warto wiedzieć, czego wymagać.',
   'W każdym projekcie zaczynamy od audytu technicznego: Core Web Vitals, dane strukturalne Schema.org, canonicale i błędy crawlowania. <strong class="text-on-surface">SEO techniczne jest wbudowane w kod strony — nie zależy od wtyczek ani zewnętrznych narzędzi.</strong>',
-  'Linkbuilding — pozyskiwanie linków z zewnętrznych domen — jest dostępny w pakiecie SEO + Linkbuilding od <strong class="text-on-surface">2 100 zł netto miesięcznie</strong>. Każdy miesiąc kończy się raportem z rankingami konkretnych fraz i listą wykonanych działań.',
+  'Linkbuilding — pozyskiwanie linków z zewnętrznych domen — jest dostępny w pakiecie SEO + Linkbuilding od <strong class="text-on-surface">420 zł netto miesięcznie</strong>. Każdy miesiąc kończy się raportem z rankingami konkretnych fraz i listą wykonanych działań.',
 ]
 
 const introUsps = [

@@ -4,9 +4,9 @@
 
 useSeoMeta({
   title: 'Lokalne SEO – Pozycjonowanie Lokalne dla Firmy | EvolaTec',
-  description: 'Lokalne SEO i optymalizacja wizytówki Google Maps. Bądź widoczny w wynikach lokalnych dla klientów z Twojego miasta. Od 1 260 zł netto/mies.',
+  description: 'Lokalne SEO i optymalizacja wizytówki Google Maps. Bądź widoczny w wynikach lokalnych dla klientów z Twojego miasta. Od 1 680 zł netto/mies.',
   ogTitle: 'Lokalne SEO – Pozycjonowanie Lokalne dla Firmy | EvolaTec',
-  ogDescription: 'Lokalne SEO i optymalizacja wizytówki Google Maps. Bądź widoczny w wynikach lokalnych dla klientów z Twojego miasta. Od 1 260 zł netto/mies.',
+  ogDescription: 'Lokalne SEO i optymalizacja wizytówki Google Maps. Bądź widoczny w wynikach lokalnych dla klientów z Twojego miasta. Od 1 680 zł netto/mies.',
   ogType: 'website',
   ogUrl: 'https://evolatec.pl/lokalne-seo',
   ogImage: 'https://evolatec.pl/og-image.webp',
@@ -22,7 +22,7 @@ const faqData = [
   },
   {
     question: 'Ile kosztuje pozycjonowanie SEO miesięcznie?',
-    answer: 'Pozycjonowanie SEO kosztuje od 1 260 zł netto miesięcznie za Local SEO dla jednej lokalizacji. W tej kwocie zawarte są optymalizacja wizytówki Google Business Profile, optymalizacja on-page, lokalne cytowania i raport miesięczny. Cena jest stała i ustalana przed podpisaniem umowy.',
+    answer: 'Pozycjonowanie SEO kosztuje od 1 680 zł netto miesięcznie za Local SEO dla jednej lokalizacji. W tej kwocie zawarte są optymalizacja wizytówki Google Business Profile, optymalizacja on-page, lokalne cytowania i raport miesięczny. Cena jest stała i ustalana przed podpisaniem umowy.',
   },
   {
     question: 'Jak sprawić żeby firma pojawiała się w ChatGPT i Gemini?',
@@ -77,7 +77,7 @@ const mainSchema = {
       '@id': 'https://evolatec.pl/lokalne-seo#webpage',
       url: 'https://evolatec.pl/lokalne-seo',
       name: 'Lokalne SEO – Pozycjonowanie Lokalne dla Firmy | EvolaTec',
-      description: 'Lokalne SEO i optymalizacja wizytówki Google Maps. Bądź widoczny w wynikach lokalnych dla klientów z Twojego miasta. Od 1 260 zł netto/mies.',
+      description: 'Lokalne SEO i optymalizacja wizytówki Google Maps. Bądź widoczny w wynikach lokalnych dla klientów z Twojego miasta. Od 1 680 zł netto/mies.',
       isPartOf: { '@id': 'https://evolatec.pl/#website' },
       about: { '@id': 'https://evolatec.pl/#organization' },
       inLanguage: 'pl-PL',
@@ -109,7 +109,7 @@ const mainSchema = {
         '@type': 'Offer',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          price: '1260',
+          price: '1680',
           priceCurrency: 'PLN',
           valueAddedTaxIncluded: false,
           billingIncrement: 'P1M',
@@ -154,7 +154,7 @@ onMounted(() => {
 // ─── Page data ─────────────────────────────────────────────────────────────
 
 const heroStats = [
-  { value: 'od 1 260 zł', label: 'netto miesięcznie',      icon: 'sell'          },
+  { value: 'od 1 680 zł', label: 'netto miesięcznie',      icon: 'sell'          },
   { value: '2–4 mies.',   label: 'do pierwszych efektów',  icon: 'schedule'      },
   { value: 'Map Pack',    label: 'Top 3 Google Maps',       icon: 'location_on'   },
   { value: 'GEO',         label: 'Widoczność w AI — gratis', icon: 'smart_toy'   },
@@ -183,7 +183,7 @@ const localVsNationalRows = [
   { criterion: 'Czas do pierwszych efektów', local: '2–4 miesiące', national: '6–12 miesięcy' },
   { criterion: 'Konkurencja fraz', local: 'Niższa — frazy z geolokalizacją', national: 'Wysoka — domeny ogólnopolskie' },
   { criterion: 'Kluczowe narzędzie', local: 'Google Business Profile + Map Pack', national: 'Profil linków zewnętrznych' },
-  { criterion: 'Cena miesięczna', local: 'Od 1 260 zł netto', national: 'Od 2 100 zł netto' },
+  { criterion: 'Cena miesięczna', local: 'Od 1 680 zł netto', national: 'Od 2 100 zł netto' },
   { criterion: 'Kiedy wybrać', local: 'Usługi lokalne, jeden lub kilka oddziałów', national: 'E-commerce, produkty ogólnopolskie' },
 ]
 
@@ -258,7 +258,7 @@ const pricingPlans = [
   },
   {
     name: 'Local SEO',
-    price: 'od 1 260 zł netto',
+    price: 'od 1 680 zł netto',
     delivery: 'miesięcznie',
     highlight: true,
     features: [
@@ -299,7 +299,7 @@ const relatedServices = [
     icon: 'search_check',
     title: 'Audyt SEO',
     description: 'Sprawdź, dlaczego strona nie pojawia się w lokalnych wynikach. Jednorazowy raport PDF, bez abonamentu.',
-    price: '840 zł netto',
+    price: '420 zł netto',
     href: '/audyt-seo',
   },
   {
@@ -320,7 +320,7 @@ const relatedServices = [
       background-image="/assets/city-map.webp"
       badge="Lokalne SEO — pozycjonowanie regionalne"
       title="Lokalne SEO – bądź widoczny tam, gdzie szukają Twoi klienci"
-      description="Widoczność w Google Maps, Map Pack i AI wyszukiwarkach dla firm działających lokalnie. Optymalizacja Google Business Profile, lokalne cytowania i Schema.org LocalBusiness — od 1 260 zł netto miesięcznie."
+      description="Widoczność w Google Maps, Map Pack i AI wyszukiwarkach dla firm działających lokalnie. Optymalizacja Google Business Profile, lokalne cytowania i Schema.org LocalBusiness — od 1 680 zł netto miesięcznie."
       primaryCTA="Rozpocznij pozycjonowanie lokalne"
       secondaryCTA="Zobacz cennik"
       primary-href="/kontakt"
@@ -447,7 +447,7 @@ const relatedServices = [
                   Ile kosztuje pozycjonowanie lokalne
                 </h2>
                 <div class="space-y-4 text-on-surface-variant leading-relaxed">
-                  <p>Pozycjonowanie lokalne SEO kosztuje od 1 260 zł netto miesięcznie. W tej kwocie zawarte są: optymalizacja Google Business Profile, bieżąca optymalizacja on-page, budowanie lokalnych cytowań, implementacja danych strukturalnych Schema.org i raport miesięczny z pozycjami fraz i statystykami wizytówki.</p>
+                  <p>Pozycjonowanie lokalne SEO kosztuje od 1 680 zł netto miesięcznie. W tej kwocie zawarte są: optymalizacja Google Business Profile, bieżąca optymalizacja on-page, budowanie lokalnych cytowań, implementacja danych strukturalnych Schema.org i raport miesięczny z pozycjami fraz i statystykami wizytówki.</p>
                   <p>Cena jest stała i ustalana przed startem — bez zmian w trakcie trwania kampanii. Nie ma osobnych opłat za dostęp do narzędzi, raportowanie ani konsultacje. Jeśli zakres kampanii zmienia się — na przykład rozszerzasz działalność na nowe miasto — nowy zakres jest wyceniany osobno i zatwierdzany przed wdrożeniem.</p>
                   <p>Pierwsze efekty w Map Pack pojawiają się zazwyczaj po 6–10 tygodniach od startu kampanii. Organiczne wyniki wyszukiwania dla fraz lokalnych — po 3–4 miesiącach. Czas zależy od konkurencyjności branży i aktualnego stanu domeny przed startem.</p>
                 </div>
@@ -542,7 +542,7 @@ const relatedServices = [
     <!-- ── CTA ───────────────────────────────────────────────────────────── -->
     <CTASection
       title="Zacznij pojawiać się tam, gdzie szukają Twoi klienci"
-      description="Od 1 260 zł netto miesięcznie. Optymalizacja Google Business Profile, Map Pack i GEO widoczność w ChatGPT, Gemini i Perplexity — stała cena, bez niespodzianek."
+      description="Od 1 680 zł netto miesięcznie. Optymalizacja Google Business Profile, Map Pack i GEO widoczność w ChatGPT, Gemini i Perplexity — stała cena, bez niespodzianek."
       primary-cta="Rozpocznij pozycjonowanie lokalne"
       secondary-cta="Sprawdź pozycjonowanie ogólne"
       primary-href="/kontakt"
