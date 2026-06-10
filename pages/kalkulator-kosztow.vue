@@ -21,7 +21,7 @@
 
     <!-- Content -->
     <section class="bg-surface py-8 md:py-section-padding">
-      <div class="max-w-4xl mx-auto px-gutter">
+      <div class="max-w-6xl mx-auto px-gutter">
 
         <!-- Tabs -->
         <div class="flex bg-surface-container-low rounded-full p-1 mb-8 max-w-xl mx-auto shadow-inner">
