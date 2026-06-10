@@ -392,8 +392,10 @@ const relatedServices = [
         <IntroSection
           heading="Dlaczego wygląd strony decyduje w pierwszych sekundach"
           :paragraphs="introParagraphs"
-          image="/assets/web-design.webp"
-          image-alt="Projektant UX szkicujący interfejs strony internetowej na tablecie — prototyp i projekt graficzny"
+          image="/assets/ui-ux-design.webp"
+          image-alt="Projekt interfejsu strony internetowej — układ, kolory i typografia dobrane do marki"
+          reverse
+          :badge="{ icon: 'draw', title: 'Projekt bez szablonów', subtitle: 'Desktop i mobile od podstaw' }"
         />
 
         <!-- ── Features ──────────────────────────────────────────────────── -->
@@ -433,6 +435,7 @@ const relatedServices = [
           title="Cennik projektowania stron"
           subtitle="Projektowanie strony wyceniamy indywidualnie, bo zakres różni się tu bardziej niż przy gotowych pakietach. Wycena jest bezpłatna i ustalana przed startem — podajemy konkretną kwotę, gdy wiemy, co dokładnie ma powstać. Jeśli zamawiasz u nas również wykonanie strony, projekt jest częścią realizacji i nie jest osobno fakturowany."
           :pricing-plans="pricingPlans"
+          background="bg-surface"
         />
 
         <!-- ── Expertise blocks ──────────────────────────────────────────── -->
@@ -441,12 +444,14 @@ const relatedServices = [
           eyebrow-icon="verified"
           title="Kompleksowe projekty graficzne dla Twojej marki"
           :blocks="expertiseBlocks"
+          background="bg-surface-container-low"
         />
 
         <!-- ── FAQ ───────────────────────────────────────────────────────── -->
         <FAQSection
           title="Najczęściej zadawane pytania o projektowanie stron internetowych"
           :faqs="faqData"
+          background="bg-surface"
         />
 
         <!-- ── Related services ──────────────────────────────────────────── -->
@@ -455,7 +460,7 @@ const relatedServices = [
           title="Od projektu do gotowej strony"
           cta="Dowiedz się więcej"
           :services="relatedServices"
-          background="bg-surface"
+          background="bg-surface-container-low"
         />
 
       </article>

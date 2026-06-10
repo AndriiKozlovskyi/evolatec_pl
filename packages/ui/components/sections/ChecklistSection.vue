@@ -11,28 +11,30 @@
       <!-- Two-column heading blocks (each with optional per-column item list) -->
       <div
         v-if="columns?.length"
-        :class="['grid md:grid-cols-2 gap-6 md:gap-8', items?.length ? 'mb-12' : '']"
+        :class="['grid md:grid-cols-2 gap-6 md:gap-8 md:[grid-template-rows:auto_auto]', items?.length ? 'mb-12' : '']"
       >
         <div
           v-for="col in columns"
           :key="col.heading"
-          class="bg-white rounded-2xl p-6 md:p-8 border border-black/[0.05] shadow-sm flex flex-col"
+          class="bg-white rounded-2xl border border-black/[0.05] shadow-sm flex flex-col md:grid md:[grid-row:span_2] md:[grid-template-rows:subgrid]"
         >
-          <component
-            :is="title ? 'h3' : 'h2'"
-            class="font-display text-2xl sm:text-3xl font-black text-primary mb-4 leading-tight"
-          >{{ col.heading }}</component>
+          <div class="p-6 md:p-8 md:pb-4">
+            <component
+              :is="title ? 'h3' : 'h2'"
+              class="font-display text-2xl sm:text-3xl font-black text-primary mb-4 leading-tight"
+            >{{ col.heading }}</component>
 
-          <p
-            v-for="(para, i) in col.paragraphs"
-            :key="i"
-            :class="[
-              'text-on-surface-variant leading-relaxed',
-              i < (col.paragraphs?.length ?? 0) - 1 ? 'mb-3' : col.items?.length ? 'mb-6' : '',
-            ]"
-          >{{ para }}</p>
+            <p
+              v-for="(para, i) in col.paragraphs"
+              :key="i"
+              :class="[
+                'text-on-surface-variant leading-relaxed',
+                i < (col.paragraphs?.length ?? 0) - 1 ? 'mb-3' : '',
+              ]"
+            >{{ para }}</p>
+          </div>
 
-          <div v-if="col.items?.length" class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-auto">
+          <div v-if="col.items?.length" class="px-6 md:px-8 pb-6 md:pb-8 pt-2 grid grid-cols-1 gap-2 content-start">
             <div
               v-for="item in col.items"
               :key="item"

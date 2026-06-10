@@ -377,7 +377,7 @@ const processSteps = [
                 </div>
               </div>
 
-              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 self-center">
                 <li
                   v-for="item in includedItems"
                   :key="item.label"
@@ -409,15 +409,15 @@ const processSteps = [
         >
           <div class="max-w-container-max mx-auto px-gutter">
 
-            <div class="text-center max-w-2xl mx-auto mb-stack-lg">
+            <div class="mb-stack-lg">
               <h2
                 id="section-compare"
-                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4"
+                class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4 text-center"
               >
                 Samo UI czy pełny proces UX — co wybrać
               </h2>
               <p class="text-on-surface-variant">
-                Najczęstsza pokusa to zamówić „ładne ekrany" i przejść od razu do kodu, pomijając UX jako zbędny etap. Czasem to ma sens — przy prostym produkcie. Przy każdym, w którym użytkownik ma coś osiągnąć w kilku krokach, pominięcie UX wychodzi drożej, tylko później.
+                Najczęstsza pokusa to zamówić „ładne ekrany" i przejść od razu do kodu, pomijając UX jako zbędny etap. Czasem to ma sens — przy prostym produkcie. Przy każdym, w którym użytkownik ma coś osiągnąć w kilku krokach, pominięcie UX wychodzi drożej, tylko później. Sam projekt UI wystarcza, gdy struktura jest oczywista, a chodzi tylko o spójny wygląd. Pełny proces UX opłaca się tam, gdzie użytkownik wykonuje wieloetapowe zadania — rejestrację, zakup, konfigurację — bo koszt poprawienia ścieżki w prototypie jest ułamkiem kosztu przerabiania jej w gotowym kodzie. Im bardziej złożony produkt, tym wcześniej prototyp zwraca swój koszt.
               </p>
             </div>
 
@@ -467,12 +467,6 @@ const processSteps = [
               </div>
             </div>
 
-            <div class="max-w-3xl mx-auto">
-              <p class="text-on-surface-variant">
-                Sam projekt UI wystarcza, gdy struktura jest oczywista, a chodzi tylko o spójny wygląd. Pełny proces UX opłaca się tam, gdzie użytkownik wykonuje wieloetapowe zadania — rejestrację, zakup, konfigurację — bo koszt poprawienia ścieżki w prototypie jest ułamkiem kosztu przerabiania jej w gotowym kodzie. Im bardziej złożony produkt, tym wcześniej prototyp zwraca swój koszt.
-              </p>
-            </div>
-
           </div>
         </section>
 
@@ -496,6 +490,7 @@ const processSteps = [
         <FAQSection
           title="Najczęściej zadawane pytania o UI/UX Design"
           :faqs="faqData"
+          background="bg-surface"
         />
 
         <RelatedServicesSection
@@ -503,7 +498,6 @@ const processSteps = [
           title="Od projektu UX do wdrożonej strony"
           cta="Dowiedz się więcej"
           :services="relatedServices"
-          background="bg-surface"
         />
 
       </article>

@@ -2,7 +2,7 @@
   <section data-nav-icon="info" class="py-section-padding bg-surface">
     <div class="max-w-container-max mx-auto px-gutter">
       <div class="grid md:grid-cols-2 gap-stack-lg items-center" :class="usps?.length ? 'mb-stack-lg' : ''">
-        <div class="relative rounded-3xl overflow-hidden h-80 md:h-96">
+        <div class="relative rounded-3xl overflow-hidden h-80 md:h-96" :class="reverse ? 'md:order-2' : ''">
           <NuxtPicture
             :src="image" :alt="imageAlt"
             format="avif,webp"
@@ -21,7 +21,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <div :class="reverse ? 'md:order-1' : ''">
           <h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">{{ heading }}</h2>
           <p v-for="(p, i) in paragraphs" :key="i" v-html="p" class="font-body-lg text-body-lg text-on-surface-variant" :class="i < paragraphs.length - 1 ? 'mb-6' : ''" />
         </div>
@@ -45,6 +45,7 @@ defineProps<{
   paragraphs: string[]
   image: string
   imageAlt?: string
+  reverse?: boolean
   badge?: { icon: string; title: string; subtitle: string; iconBg?: string }
   usps?: Array<{ title: string; description: string; icon: string; iconBg: string; iconColor: string; borderColor: string }>
 }>()

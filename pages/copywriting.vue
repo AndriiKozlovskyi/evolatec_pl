@@ -330,6 +330,7 @@ const relatedServices = [
           :paragraphs="introParagraphs"
           image="/assets/copywriting.webp"
           image-alt="Osoba pisząca profesjonalne teksty na stronę internetową na laptopie przy biurku"
+          reverse
         />
 
         <!-- ── Services ──────────────────────────────────────────────── -->

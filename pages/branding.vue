@@ -343,6 +343,7 @@ const relatedServices = [
           image="/assets/branding-design.webp"
           image-alt="Projekt identyfikacji wizualnej marki — logo, paleta kolorów i typografia na białym tle"
           :badge="{ icon: 'palette', title: 'Marka to pierwsze wrażenie', subtitle: 'Identyfikacja wizualna' }"
+          :reverse="true"
         />
 
         <!-- ── Services — what's included ───────────────────────────────── -->
@@ -376,6 +377,7 @@ const relatedServices = [
           title="Ile kosztuje branding — model wyceny"
           :subtitle="pricingSubtitle"
           :pricing-plans="pricingPlans"
+          background="bg-surface"
         />
 
         <!-- ── Expertise blocks ──────────────────────────────────────────── -->
@@ -390,6 +392,7 @@ const relatedServices = [
         <FAQSection
           title="Najczęściej zadawane pytania o branding i identyfikację wizualną"
           :faqs="faqData"
+          background="bg-surface"
         />
 
         <!-- ── Related services ──────────────────────────────────────────── -->
