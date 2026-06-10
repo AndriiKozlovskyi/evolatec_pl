@@ -355,12 +355,12 @@ const consultingColors = [
 ]
 
 const pricingItems = [
-  { name: 'Doradztwo marketingowe',          price: 'wycena indywidualna'        },
-  { name: 'Prowadzenie Google Ads',          price: 'od 1 680 zł netto/mies.'   },
-  { name: 'Prowadzenie Social Media (Meta)', price: 'od 1 260 zł netto/mies.'   },
-  { name: 'Pozycjonowanie SEO',              price: 'od 1 260 zł netto/mies.'   },
-  { name: 'Copywriting SEO',                price: 'wycena indywidualna'        },
-  { name: 'Landing page konwersyjny',        price: 'od 2 100 zł netto'         },
+  { name: 'Prowadzenie Google Ads',          price: 'od 1 680 zł netto/mies.', icon: 'ads_click',       highlight: true,  href: '/google-ads'    },
+  { name: 'Prowadzenie Social Media (Meta)', price: 'od 1 260 zł netto/mies.', icon: 'groups',          highlight: true,  href: '/social-media'  },
+  { name: 'Pozycjonowanie SEO',              price: 'od 1 260 zł netto/mies.', icon: 'search_insights', highlight: true,  href: '/seo'           },
+  { name: 'Landing page konwersyjny',        price: 'od 2 100 zł netto',       icon: 'article',         highlight: false, href: '/landing-page'  },
+  { name: 'Copywriting SEO',                price: 'wycena indywidualna',      icon: 'edit_note',       highlight: false, href: '/copywriting'   },
+  { name: 'Doradztwo marketingowe',          price: 'wycena indywidualna',     icon: 'support_agent',   highlight: false, href: '/kontakt'       },
 ]
 
 const relatedServices = [
@@ -412,6 +412,7 @@ const relatedServices = [
           :paragraphs="introParagraphs"
           image="/assets/marketing-online.webp"
           image-alt="Agencja marketingu online EvolaTec — dashboard kampanii i analityki"
+          :reverse="true"
         />
 
         <!-- ── Services Section ───────────────────────────────────────────── -->
@@ -474,10 +475,10 @@ const relatedServices = [
                 <div
                   v-for="(item, index) in consultingItems"
                   :key="item.label"
-                  class="flex items-center gap-3 bg-surface rounded-xl p-4 border border-outline-variant/20"
+                  class="flex flex-col items-center justify-center gap-2 text-center bg-surface rounded-xl p-4 border border-outline-variant/20"
                 >
                   <span
-                    class="material-symbols-outlined text-xl flex-shrink-0"
+                    class="material-symbols-outlined text-xl"
                     :class="consultingColors[index % consultingColors.length]"
                   >{{ item.icon }}</span>
                   <span class="font-body-md text-on-surface text-sm font-medium">{{ item.label }}</span>
@@ -487,42 +488,60 @@ const relatedServices = [
           </div>
         </section>
 
-        <!-- ── Pricing Section (1:1 German) ──────────────────────────────── -->
+        <!-- ── Pricing Section ───────────────────────────────────────────── -->
         <section id="cennik" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <h2 class="font-headline-lg text-headline-lg text-primary text-center mb-stack-lg">
-              Cennik usług marketingu internetowego
-            </h2>
-            <p class="text-center font-body-lg text-on-surface-variant mb-stack-lg">
-              Marketing internetowy rozliczamy w modelu miesięcznym: stałe fee za obsługę plus budżet reklamowy płacony osobno, bezpośrednio dostawcy. Kwota, którą podajemy, to fee za pracę agencji — budżet, który realnie trafia do Google lub Meta, ustalasz Ty i płacisz go bezpośrednio platformie.
-            </p>
 
-            <div class="max-w-2xl mx-auto rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50">
-              <table class="w-full border-collapse">
-                <thead>
-                  <tr class="bg-surface-container-low">
-                    <th class="px-6 py-4 text-left text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-r border-outline-variant/40">Usługa</th>
-                    <th class="px-6 py-4 text-right text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-outline-variant/40">Cena</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="item in pricingItems"
-                    :key="item.name"
-                    class="border-b border-outline-variant/30 last:border-0 hover:bg-surface-container-low/60 transition-colors duration-150"
-                  >
-                    <td class="px-6 py-4 text-sm text-on-surface border-r border-outline-variant/30">{{ item.name }}</td>
-                    <td class="px-6 py-4 text-sm text-primary font-bold text-right">{{ item.price }}</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="text-center mb-stack-lg">
+              <span class="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">Cennik</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+                Cennik usług marketingu internetowego
+              </h2>
+              <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Stałe miesięczne fee za obsługę agencji — budżet reklamowy płacisz osobno, bezpośrednio do Google lub Meta.
+              </p>
             </div>
 
-            <div class="text-center mt-10">
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+              <NuxtLink
+                v-for="item in pricingItems.filter(i => i.highlight)"
+                :key="item.name"
+                :to="item.href"
+                class="relative bg-white rounded-2xl p-6 border-2 border-primary/20 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-primary/50 transition-all duration-200 group"
+              >
+                <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-xl">{{ item.icon }}</span>
+                </div>
+                <p class="font-semibold text-on-surface text-sm mb-2">{{ item.name }}</p>
+                <p class="font-bold text-primary text-lg">{{ item.price }}</p>
+                <span class="material-symbols-outlined text-primary/40 group-hover:text-primary text-base absolute top-5 right-5 transition-colors duration-200">arrow_forward</span>
+              </NuxtLink>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-4 mb-10">
+              <NuxtLink
+                v-for="item in pricingItems.filter(i => !i.highlight)"
+                :key="item.name"
+                :to="item.href"
+                class="flex items-center gap-4 bg-surface-container-low rounded-2xl p-5 border border-outline-variant/30 hover:border-primary/30 hover:bg-white transition-all duration-200 group"
+              >
+                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-outline-variant/20">
+                  <span class="material-symbols-outlined text-on-surface-variant text-lg">{{ item.icon }}</span>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-semibold text-on-surface">{{ item.name }}</p>
+                  <p class="text-sm text-primary font-bold">{{ item.price }}</p>
+                </div>
+                <span class="material-symbols-outlined text-primary/30 group-hover:text-primary text-base transition-colors duration-200">arrow_forward</span>
+              </NuxtLink>
+            </div>
+
+            <div class="text-center">
               <NuxtLink to="/kalkulator-kosztow">
                 <BaseButton variant="outline" size="md">Oblicz koszt usług</BaseButton>
               </NuxtLink>
             </div>
+
           </div>
         </section>
 

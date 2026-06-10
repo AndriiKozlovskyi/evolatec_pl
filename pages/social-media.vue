@@ -286,12 +286,12 @@ const whyEvolaTec = [
 ]
 
 const pricingItems = [
-  { name: 'Doradztwo Social Media',   price: 'od 380 zł/h'        },
-  { name: 'Prowadzenie Meta Ads',     price: 'od 1 260 zł/mies.'  },
-  { name: 'Kreacje i grafiki',        price: 'od 630 zł'           },
-  { name: 'Raport miesięczny',        price: 'od 420 zł/mies.'    },
-  { name: 'Szablony Social Media',    price: 'od 630 zł'           },
-  { name: 'Produkcja contentu',       price: 'od 1 260 zł'         },
+  { name: 'Prowadzenie Meta Ads',     price: 'od 1 260 zł netto/mies.', icon: 'groups',         highlight: true,  href: '/kontakt'             },
+  { name: 'Kreacje i grafiki',        price: 'od 630 zł netto',          icon: 'brush',          highlight: true,  href: '/projektowanie-stron' },
+  { name: 'Produkcja contentu',       price: 'od 1 260 zł netto',        icon: 'photo_camera',   highlight: true,  href: '/copywriting'         },
+  { name: 'Doradztwo Social Media',   price: 'od 380 zł/h',              icon: 'support_agent',  highlight: false, href: '/marketing-online'    },
+  { name: 'Raport miesięczny',        price: 'od 420 zł netto/mies.',    icon: 'analytics',      highlight: false, href: '/kontakt'             },
+  { name: 'Szablony Social Media',    price: 'od 630 zł netto',          icon: 'palette',        highlight: false, href: '/branding'            },
 ]
 
 const relatedServices = [
@@ -343,6 +343,7 @@ const relatedServices = [
           :paragraphs="introParagraphs"
           image="/assets/social-media.webp"
           image-alt="Social Media Marketing EvolaTec — kampanie Meta Ads i content"
+          :reverse="true"
         />
 
         <!-- ── Platforms Section ──────────────────────────────────────────── -->
@@ -416,44 +417,63 @@ const relatedServices = [
           image="/assets/marketing-online.webp"
           image-alt="Agencja Social Media Marketing EvolaTec"
           :usps="whyEvolaTec"
+          :reverse="true"
         />
 
-        <!-- ── Pricing Table ──────────────────────────────────────────────── -->
-        <section id="cennik" class="py-section-padding bg-surface-container-low">
+        <!-- ── Pricing Section ───────────────────────────────────────────── -->
+        <section id="cennik" class="py-section-padding bg-surface">
           <div class="max-w-container-max mx-auto px-gutter">
-            <h2 class="font-headline-lg text-headline-lg text-primary text-center mb-4">
-              Ile kosztuje prowadzenie social media — fee i budżet Meta
-            </h2>
-            <p class="text-center font-body-lg text-on-surface-variant mb-stack-lg">
-              Podane kwoty to fee za pracę agencji: strategię, treści, prowadzenie profili i raportowanie. Budżet reklamowy Meta rozliczany jest oddzielnie, bezpośrednio z Meta — nie pobieramy prowizji od wydanego budżetu.
-            </p>
 
-            <div class="max-w-2xl mx-auto rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50">
-              <table class="w-full border-collapse">
-                <thead>
-                  <tr class="bg-surface-container-low">
-                    <th class="px-6 py-4 text-left text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-r border-outline-variant/40">Usługa</th>
-                    <th class="px-6 py-4 text-right text-[11px] font-bold uppercase tracking-widest text-on-surface-variant border-b-2 border-outline-variant/40">Cena</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    v-for="item in pricingItems"
-                    :key="item.name"
-                    class="border-b border-outline-variant/30 last:border-0 hover:bg-surface-container-low/60 transition-colors duration-150"
-                  >
-                    <td class="px-6 py-4 text-sm text-on-surface border-r border-outline-variant/30">{{ item.name }}</td>
-                    <td class="px-6 py-4 text-sm text-primary font-bold text-right">{{ item.price }}</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="text-center mb-stack-lg">
+              <span class="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-4 py-1.5 rounded-full mb-4">Cennik</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+                Ile kosztuje prowadzenie social media — fee i budżet Meta
+              </h2>
+              <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Podane kwoty to fee za pracę agencji: strategię, treści, prowadzenie profili i raportowanie. Budżet reklamowy Meta rozliczany jest oddzielnie, bezpośrednio z Meta — nie pobieramy prowizji od wydanego budżetu.
+              </p>
             </div>
 
-            <div class="text-center mt-10">
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+              <NuxtLink
+                v-for="item in pricingItems.filter(i => i.highlight)"
+                :key="item.name"
+                :to="item.href"
+                class="relative bg-white rounded-2xl p-6 border-2 border-primary/20 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-primary/50 transition-all duration-200 group"
+              >
+                <div class="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span class="material-symbols-outlined text-primary text-xl">{{ item.icon }}</span>
+                </div>
+                <p class="font-semibold text-on-surface text-sm mb-2">{{ item.name }}</p>
+                <p class="font-bold text-primary text-lg">{{ item.price }}</p>
+                <span class="material-symbols-outlined text-primary/40 group-hover:text-primary text-base absolute top-5 right-5 transition-colors duration-200">arrow_forward</span>
+              </NuxtLink>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-4 mb-10">
+              <NuxtLink
+                v-for="item in pricingItems.filter(i => !i.highlight)"
+                :key="item.name"
+                :to="item.href"
+                class="flex items-center gap-4 bg-surface-container-low rounded-2xl p-5 border border-outline-variant/30 hover:border-primary/30 hover:bg-white transition-all duration-200 group"
+              >
+                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center flex-shrink-0 border border-outline-variant/20">
+                  <span class="material-symbols-outlined text-on-surface-variant text-lg">{{ item.icon }}</span>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-semibold text-on-surface">{{ item.name }}</p>
+                  <p class="text-sm text-primary font-bold">{{ item.price }}</p>
+                </div>
+                <span class="material-symbols-outlined text-primary/30 group-hover:text-primary text-base transition-colors duration-200">arrow_forward</span>
+              </NuxtLink>
+            </div>
+
+            <div class="text-center">
               <NuxtLink to="/kalkulator-kosztow">
                 <BaseButton variant="outline" size="md">Oblicz koszt usług</BaseButton>
               </NuxtLink>
             </div>
+
           </div>
         </section>
 
