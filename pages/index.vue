@@ -229,7 +229,7 @@ const includedItems = [
   { icon: 'speed',           label: 'Lighthouse 95–100/100'              },
   { icon: 'phone_iphone',    label: 'Responsive mobile-first'            },
   { icon: 'search_insights', label: 'SEO on-page wbudowane w kod'        },
-  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Perplexity'  },
+  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Claude'  },
   { icon: 'lock',            label: 'Certyfikat SSL'                     },
   { icon: 'support_agent',   label: '30 dni wsparcia po wdrożeniu'       },
 ]
@@ -299,7 +299,7 @@ const usps = [
   {
     icon: 'smart_toy',
     title: 'GEO optymalizacja w cenie każdego projektu',
-    description: 'Schema.org JSON-LD, FAQPage i LocalBusiness markup — Twoja firma jest widoczna w ChatGPT, Gemini i Perplexity bez dodatkowej opłaty. To był osobny pakiet rok temu.',
+    description: 'Schema.org JSON-LD, FAQPage i LocalBusiness markup — Twoja firma jest widoczna w ChatGPT, Gemini i Claude bez dodatkowej opłaty. To był osobny pakiet rok temu.',
   },
   {
     icon: 'shield',
@@ -424,13 +424,13 @@ const pricingTableData = [
 const aboutFeatures = [
   { icon: 'code_blocks',    title: 'Nowoczesne technologie',    description: 'Vue.js, Nuxt.js, Tailwind CSS i TypeScript — bez WordPressa, bez wtyczek.' },
   { icon: 'bolt',           title: 'Wydajność i szybkość',      description: 'Czas ładowania poniżej 2 sekund i Lighthouse 95–100/100 — sprawdzalny samodzielnie po wdrożeniu.' },
-  { icon: 'search_insights',title: 'SEO i GEO w kodzie',        description: 'Schema.org JSON-LD, FAQPage i speakable markup — widoczność w Google i ChatGPT, Gemini, Perplexity.' },
+  { icon: 'search_insights',title: 'SEO i GEO w kodzie',        description: 'Schema.org JSON-LD, FAQPage i speakable markup — widoczność w Google i ChatGPT, Gemini, Claude.' },
   { icon: 'verified',       title: 'Stała cena przed startem',  description: 'Wycena na piśmie przed podpisaniem umowy. Cena nie zmienia się w trakcie projektu.' },
 ]
 
 const whyUsPoints = [
   { icon: 'bolt',           title: 'Szybkie i wydajne strony',         description: 'Vue.js i Nuxt.js z SSR dają czas ładowania poniżej 2 sekund i Lighthouse 95–100/100 — wielokrotnie szybciej niż typowy WordPress.' },
-  { icon: 'search_insights',title: 'SEO i GEO optymalizacja',          description: 'Techniczne SEO, SSR rendering i Schema.org JSON-LD zapewniają widoczność w Google oraz cytowania w ChatGPT, Gemini i Perplexity.' },
+  { icon: 'search_insights',title: 'SEO i GEO optymalizacja',          description: 'Techniczne SEO, SSR rendering i Schema.org JSON-LD zapewniają widoczność w Google oraz cytowania w ChatGPT, Gemini i Claude.' },
   { icon: 'design_services',title: 'Premium design bez szablonów',     description: 'Żadnych motywów WordPress ani gotowych szablonów. Każdy projekt jest projektowany i kodowany indywidualnie.' },
   { icon: 'rocket_launch',  title: 'Skalowalne rozwiązania',           description: 'Architektura JAMstack nadaje się zarówno na landing page, jak i rozbudowany sklep z tysiącami produktów.' },
   { icon: 'security',       title: 'Zero wtyczek — zero podatności',   description: 'Brak CMS opartego na wtyczkach oznacza brak powierzchni ataku. Nie potrzebujesz comiesięcznych aktualizacji bezpieczeństwa.' },
@@ -445,10 +445,10 @@ const geoPoints = [
   'Server-Side Rendering — treść widoczna bez bariery JavaScript',
 ]
 
-const aiEngines = ['ChatGPT', 'Google Gemini', 'Perplexity', 'Claude', 'Copilot']
+const aiEngines = ['ChatGPT', 'Google Gemini', 'Claude', 'Copilot']
 
 const geoBenefits = [
-  { icon: 'smart_toy', title: 'Widoczność w AI',           desc: 'Twoja firma jest cytowana przez ChatGPT, Gemini i Perplexity jako wiarygodne źródło.' },
+  { icon: 'smart_toy', title: 'Widoczność w AI',           desc: 'Twoja firma jest cytowana przez ChatGPT, Gemini i Claude jako wiarygodne źródło.' },
   { icon: 'schema',    title: 'Dane strukturalne',         desc: 'Schema.org JSON-LD dla FAQ, HowTo i Service — czytelne maszynowo dla LLM.' },
   { icon: 'verified',  title: 'W cenie każdego projektu',  desc: 'GEO to nie osobna pozycja — jest wbudowane w każdą realizację EvolaTec.' },
 ]
@@ -603,10 +603,10 @@ const geoBenefits = [
                   Generative Engine Optimization
                 </span>
                 <h2 id="section-geo" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4">
-                  GEO: Widoczność w ChatGPT, Gemini i Perplexity
+                  GEO: Widoczność w ChatGPT, Gemini i Claude
                 </h2>
                 <p class="text-on-surface-variant leading-relaxed mb-4">
-                  Klasyczne SEO optymalizuje pod Google. <strong class="text-on-surface">GEO — Generative Engine Optimization</strong> — optymalizuje Twoją stronę pod nową generację wyszukiwarek AI jak ChatGPT, Google Gemini, Perplexity i Claude.
+                  Klasyczne SEO optymalizuje pod Google. <strong class="text-on-surface">GEO — Generative Engine Optimization</strong> — optymalizuje Twoją stronę pod nową generację wyszukiwarek AI jak ChatGPT, Google Gemini i Claude.
                 </p>
                 <p class="text-on-surface-variant leading-relaxed mb-8">
                   Coraz więcej osób zadaje pytania zakupowe bezpośrednio asystentom AI. Jeśli Twoja firma tam nie trafia, tracisz zapytania na rzecz konkurencji, która już ma GEO optymalizację.
@@ -678,7 +678,7 @@ const geoBenefits = [
                     W każdym projekcie wychodzi strona z wynikiem <strong class="text-on-surface">Lighthouse 95–100/100</strong> — sprawdzalnym samodzielnie w 30 sekund po wdrożeniu. Do tego: responsywny projekt mobile-first, certyfikat SSL, formularz kontaktowy i SEO wbudowane w kod.
                   </p>
                   <p>
-                    <strong class="text-on-surface">GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu.</strong> JSON-LD dla FAQ, usług i firmy lokalnej sprawiają, że asystent AI może zacytować Twoją firmę jako odpowiedź na zapytanie zakupowe.
+                    <strong class="text-on-surface">GEO optymalizacja — widoczność w ChatGPT, Gemini i Claude — jest w cenie każdego projektu.</strong> JSON-LD dla FAQ, usług i firmy lokalnej sprawiają, że asystent AI może zacytować Twoją firmę jako odpowiedź na zapytanie zakupowe.
                   </p>
                   <p>
                     Po wdrożeniu każdy projekt obejmuje <strong class="text-on-surface">30 dni wsparcia technicznego</strong> — termin zapisany w umowie, nie obietnica.
@@ -879,7 +879,7 @@ const geoBenefits = [
 
             <div class="grid lg:grid-cols-2 gap-16 items-center">
 
-              <!-- Left copy -->
+              <!-- Left copy + services -->
               <div data-reveal="left">
                 <span class="inline-flex items-center gap-2 rounded-full bg-white/15 border border-white/25 px-4 py-2 text-sm font-medium text-on-primary mb-6">
                   <span class="material-symbols-outlined text-[16px]" aria-hidden="true">trending_up</span>
@@ -896,38 +896,43 @@ const geoBenefits = [
                     Pozycjonowanie SEO kosztuje od 1 260 zł netto miesięcznie. Obejmuje audyt techniczny, optymalizację on-page, budowanie profilu linków i miesięczny raport z pozycjami fraz.
                   </p>
                   <p>
-                    GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu strony. Dla istniejących stron wdrażamy ją w ramach pakietu SEO.
+                    GEO optymalizacja — widoczność w ChatGPT, Gemini i Claude — jest w cenie każdego projektu strony. Dla istniejących stron wdrażamy ją w ramach pakietu SEO.
                   </p>
                 </div>
-                <NuxtImg
-                  src="/assets/web-analytics.webp"
-                  alt="Laptop z wykresem wzrostu ruchu organicznego i pozycji w wyszukiwarce Google"
-                  width="560"
-                  height="260"
-                  class="w-full rounded-xl border border-white/10 mb-8 object-cover"
-                  loading="lazy"
-                />
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+                  <NuxtLink
+                    v-for="svc in seoServices"
+                    :key="svc.title"
+                    :to="svc.href"
+                    class="group flex flex-col gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/40 rounded-xl p-4 transition-all duration-200 hover:-translate-y-0.5"
+                  >
+                    <div class="w-9 h-9 rounded-lg bg-dark-inverse group-hover:bg-primary/35 flex items-center justify-center transition-colors duration-200">
+                      <span class="material-symbols-outlined text-white text-[18px]" aria-hidden="true">{{ svc.icon }}</span>
+                    </div>
+                    <div>
+                      <p class="text-sm font-bold text-white leading-snug mb-1">{{ svc.title }}</p>
+                      <p class="text-xs text-white/50 leading-snug">{{ svc.desc }}</p>
+                    </div>
+                  </NuxtLink>
+                </div>
                 <NuxtLink to="/seo">
                   <BaseButton variant="secondary" size="lg">Sprawdź pozycjonowanie SEO</BaseButton>
                 </NuxtLink>
               </div>
 
-              <!-- Right: SEO services grid -->
-              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3" data-reveal="right">
-                <NuxtLink
-                  v-for="svc in seoServices"
-                  :key="svc.title"
-                  :to="svc.href"
-                  class="group flex flex-col gap-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/40 rounded-xl p-4 transition-all duration-200 hover:-translate-y-0.5"
-                >
-                  <div class="w-9 h-9 rounded-lg bg-dark-inverse group-hover:bg-primary/35 flex items-center justify-center transition-colors duration-200">
-                    <span class="material-symbols-outlined text-white text-[18px]" aria-hidden="true">{{ svc.icon }}</span>
-                  </div>
-                  <div>
-                    <p class="text-sm font-bold text-white leading-snug mb-1">{{ svc.title }}</p>
-                    <p class="text-xs text-white/50 leading-snug">{{ svc.desc }}</p>
-                  </div>
-                </NuxtLink>
+              <!-- Right: image -->
+              <div class="relative flex items-center justify-center" data-reveal="right">
+                <div class="relative w-full">
+                  <div class="absolute -inset-4 rounded-3xl bg-white/5 blur-2xl"></div>
+                  <NuxtImg
+                    src="/assets/web-analytics.webp"
+                    alt="Laptop z wykresem wzrostu ruchu organicznego i pozycji w wyszukiwarce Google"
+                    width="640"
+                    height="420"
+                    class="relative w-full rounded-2xl object-cover shadow-2xl border border-white/15"
+                    loading="lazy"
+                  />
+                </div>
               </div>
 
             </div>

@@ -26,11 +26,11 @@ const faqData = [
   },
   {
     question: 'Jak sprawić żeby firma pojawiała się w ChatGPT i Gemini?',
-    answer: 'Widoczność w ChatGPT, Gemini i Perplexity zależy od obecności w indeksie Google oraz od struktury treści strony — kompletne odpowiedzi na konkretne pytania, dane strukturalne Schema.org JSON-LD i cytowalne zdania z liczbami i faktami. W audycie SEO sprawdzamy, czy Twoja strona spełnia te warunki, i wskazujemy konkretne braki.',
+    answer: 'Widoczność w ChatGPT, Gemini i Claude zależy od obecności w indeksie Google oraz od struktury treści strony — kompletne odpowiedzi na konkretne pytania, dane strukturalne Schema.org JSON-LD i cytowalne zdania z liczbami i faktami. W audycie SEO sprawdzamy, czy Twoja strona spełnia te warunki, i wskazujemy konkretne braki.',
   },
   {
     question: 'Co to jest Schema.org i do czego służy?',
-    answer: 'Schema.org to format danych strukturalnych wbudowanych w kod strony w postaci JSON-LD. Google używa ich do tworzenia rozszerzonych wyników wyszukiwania (rich snippets), takich jak FAQ, gwiazdki ocen czy karty produktów. AI wyszukiwarki — ChatGPT, Gemini i Perplexity — używają Schema.org do identyfikowania wiarygodnych źródeł, z których cytują odpowiedzi.',
+    answer: 'Schema.org to format danych strukturalnych wbudowanych w kod strony w postaci JSON-LD. Google używa ich do tworzenia rozszerzonych wyników wyszukiwania (rich snippets), takich jak FAQ, gwiazdki ocen czy karty produktów. AI wyszukiwarki — ChatGPT, Gemini i Claude — używają Schema.org do identyfikowania wiarygodnych źródeł, z których cytują odpowiedzi.',
   },
 ]
 

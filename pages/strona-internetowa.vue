@@ -186,7 +186,7 @@ const includedItems = [
   { icon: 'web',             label: 'Wiele podstron + blog'             },
   { icon: 'edit_note',       label: 'Storyblok CMS na życzenie'         },
   { icon: 'search_insights', label: 'SEO wbudowane w kod'               },
-  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Perplexity' },
+  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Claude' },
   { icon: 'lock',            label: 'Certyfikat SSL + hosting'          },
   { icon: 'mail',            label: 'Formularz kontaktowy'              },
   { icon: 'support_agent',   label: '30 dni wsparcia po wdrożeniu'      },
@@ -283,7 +283,7 @@ const processSteps = [
                     Strona, która przynosi zapytania, musi robić trzy rzeczy naraz: ładować się poniżej 2 sekund, być zrozumiała dla Google od strony kodu i prowadzić odwiedzającego do jednego jasnego działania — kontaktu lub wyceny. To nie jest kwestia ładniejszego szablonu, tylko architektury. Strona zbudowana w Nuxt.js osiąga <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> mierzony w Google PageSpeed Insights, podczas gdy typowa witryna na gotowym szablonie zatrzymuje się na 40–70/100.
                   </p>
                   <p>
-                    Druga połowa problemu to widoczność. Budujemy każdą stronę z wbudowanym SEO i danymi strukturalnymi Schema.org, dzięki czemu firma może pojawiać się nie tylko w klasycznych wynikach Google, ale też jako cytowane źródło w <strong class="text-on-surface">ChatGPT, Gemini i Perplexity</strong>. Coraz więcej klientów zaczyna poszukiwania właśnie od asystenta AI — strona bez tej warstwy jest dla nich niewidoczna.
+                    Druga połowa problemu to widoczność. Budujemy każdą stronę z wbudowanym SEO i danymi strukturalnymi Schema.org, dzięki czemu firma może pojawiać się nie tylko w klasycznych wynikach Google, ale też jako cytowane źródło w <strong class="text-on-surface">ChatGPT, Gemini i Claude</strong>. Coraz więcej klientów zaczyna poszukiwania właśnie od asystenta AI — strona bez tej warstwy jest dla nich niewidoczna.
                   </p>
                 </div>
               </div>

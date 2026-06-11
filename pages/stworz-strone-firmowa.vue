@@ -175,7 +175,7 @@ const includedItems = [
   { icon: 'web',             label: 'Wiele podstron + blog'             },
   { icon: 'edit_note',       label: 'Storyblok CMS — edycja bez kodu'   },
   { icon: 'search_insights', label: 'SEO podstawowe w cenie'            },
-  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Perplexity' },
+  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Claude' },
   { icon: 'lock',            label: 'Certyfikat SSL'                    },
   { icon: 'mail',            label: 'Formularz kontaktowy'              },
   { icon: 'support_agent',   label: '30 dni wsparcia po wdrożeniu'      },

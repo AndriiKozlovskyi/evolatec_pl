@@ -26,7 +26,7 @@ const faqData = [
   },
   {
     question: 'Jak sprawić żeby firma pojawiała się w ChatGPT i Gemini?',
-    answer: 'Widoczność w ChatGPT, Gemini i Perplexity zależy od autorytetu domeny, struktury treści i danych strukturalnych Schema.org JSON-LD. Mocny profil linków zewnętrznych zwiększa wiarygodność domeny w oczach LLM-ów — bo te silniki korzystają z sygnałów podobnych do tych, których używa Google. Każda strona, którą budujemy, zawiera strukturalne dane JSON-LD czytelne dla crawlerów LLM.',
+    answer: 'Widoczność w ChatGPT, Gemini i Claude zależy od autorytetu domeny, struktury treści i danych strukturalnych Schema.org JSON-LD. Mocny profil linków zewnętrznych zwiększa wiarygodność domeny w oczach LLM-ów — bo te silniki korzystają z sygnałów podobnych do tych, których używa Google. Każda strona, którą budujemy, zawiera strukturalne dane JSON-LD czytelne dla crawlerów LLM.',
   },
   {
     question: 'Czy agencja webowa może zagwarantować wyniki SEO?',

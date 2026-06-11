@@ -183,7 +183,7 @@ const includedItems = [
   { icon: 'credit_card',     label: 'Bezpieczne płatności online'        },
   { icon: 'dashboard',       label: 'Panel produktów i zamówień'         },
   { icon: 'search_insights', label: 'SEO pod kategorie i produkty'       },
-  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Perplexity'  },
+  { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Claude'  },
   { icon: 'lock',            label: 'Certyfikat SSL + hosting'           },
   { icon: 'local_shipping',  label: 'Integracje płatności i wysyłki'     },
 ]
