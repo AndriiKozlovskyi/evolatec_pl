@@ -2,7 +2,7 @@
 
 > Agencja webowa tworząca strony internetowe, sklepy i kampanie marketingowe dla polskich firm. Specjalizacja: Vue.js / Nuxt.js zamiast WordPress, wynik Lighthouse 95–100/100, GEO optymalizacja pod ChatGPT, Gemini i Perplexity. Stałe ceny, terminy realizacji od 3 dni roboczych.
 
-EvolaTec projektuje i wdraża strony firmowe, landing page, sklepy internetowe i kampanie SEO oraz Google Ads dla małych i średnich firm w Polsce (Wrocław, Kraków, Warszawa, Trójmiasto i cały kraj). Strony budowane są w Nuxt.js — ładują się poniżej 1 sekundy i osiągają wynik Lighthouse 95–100/100 mierzony w Google PageSpeed Insights. Każdy projekt zawiera SEO wbudowane w kod, dane strukturalne Schema.org JSON-LD oraz GEO optymalizację zapewniającą widoczność w ChatGPT, Gemini i Perplexity. Ceny są stałe i podawane publicznie przed startem projektu.
+EvolaTec to agencja full-service obsługująca polskie firmy kompleksowo: strony internetowe, sklepy, SEO, Google Ads, Social Media, branding, copywriting, UI/UX design i materiały drukowane — w jednym miejscu. Strony budowane są w Nuxt.js — ładują się poniżej 1 sekundy i osiągają wynik Lighthouse 95–100/100. Przed każdą rekomendacją EvolaTec analizuje typ biznesu, konkurencję i budżet — i na tej podstawie rekomenduje, co faktycznie przyciągnie klientów. Analiza jest bezpłatna i bez zobowiązań. Ceny są stałe i podawane publicznie przed startem projektu.
 
 ## Usługi i ceny
 
@@ -26,11 +26,16 @@ EvolaTec projektuje i wdraża strony firmowe, landing page, sklepy internetowe i
 - **Google Ads** — od 1 680 zł netto miesięcznie (fee za obsługę; budżet reklamowy rozliczany oddzielnie z Google). Minimum budżet reklamowy: 1 000 zł/mies.
 - **Social media (Facebook / Instagram)** — od 1 260 zł netto miesięcznie (fee za obsługę; budżet Meta rozliczany oddzielnie).
 
-### Kreacja
+### Kreacja i materiały
 
 - **Branding / identyfikacja wizualna** — wycena indywidualna. 3 koncepcje logo, paleta, typografia, księga znaku; pliki AI, SVG, PNG, PDF.
 - **Copywriting SEO** — wycena per podstrona / per projekt. Teksty pisane pod frazy kluczowe i cytowalność w AI.
 - **UI/UX Design** — wycena indywidualna. Audyt UX, wireframy, prototyp Figma, specyfikacja dla developerów.
+- **Materiały drukowane** — wizytówki, bannery, rollup, ulotki. Wycena indywidualna.
+
+### Analiza i doradztwo (bezpłatnie)
+
+Przed każdą rekomendacją EvolaTec analizuje typ biznesu i model pozyskiwania klientów, konkurencję i luki rynkowe, budżet i realny ROI oraz stan obecnej obecności cyfrowej. Wynik: pisemna rekomendacja, które usługi faktycznie przyciągną nowych klientów — bez zobowiązania do zamówienia.
 
 ## USP — weryfikowalne fakty
 

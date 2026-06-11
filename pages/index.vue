@@ -452,6 +452,54 @@ const geoBenefits = [
   { icon: 'schema',    title: 'Dane strukturalne',         desc: 'Schema.org JSON-LD dla FAQ, HowTo i Service — czytelne maszynowo dla LLM.' },
   { icon: 'verified',  title: 'W cenie każdego projektu',  desc: 'GEO to nie osobna pozycja — jest wbudowane w każdą realizację EvolaTec.' },
 ]
+
+const analysisSteps = [
+  { icon: 'business_center', title: 'Typ biznesu i model pozyskiwania klientów', desc: 'Czy Twoi klienci szukają Cię w Google, widzą Cię w social mediach, czy przychodzą z polecenia? To decyduje, czy Google Ads ma sens i czy SEO zwróci się w 6 miesięcy.' },
+  { icon: 'search',          title: 'Konkurencja i luki rynkowe',                desc: 'Sprawdzamy, co robią firmy w Twojej branży i lokalizacji — gdzie jest przestrzeń, żeby się wyróżnić, lub gdzie warto dogonić lidera.' },
+  { icon: 'calculate',       title: 'Budżet i realny ROI',                       desc: 'Landing page za 2 100 zł pod kampanię Google Ads to inne działanie niż strona firmowa z SEO za 1 260 zł miesięcznie. Dobieramy pakiet do oczekiwanego zwrotu.' },
+  { icon: 'web',             title: 'Stan obecnej obecności cyfrowej',           desc: 'Jeśli masz stronę, która działa, może wystarczy SEO. Jeśli ładuje się 8 sekund na mobile — zaczniemy od przebudowy, nie od reklam.' },
+]
+
+const fullServiceCategories = [
+  {
+    icon: 'web',
+    label: 'Strony i sklepy',
+    items: [
+      { name: 'Landing page',        price: 'od 2 100 zł',       href: '/landing-page' },
+      { name: 'Strona firmowa',      price: 'od 6 300 zł',       href: '/stworz-strone-firmowa' },
+      { name: 'Sklep internetowy',   price: 'od 12 600 zł',      href: '/sklep-internetowy' },
+      { name: 'Aplikacja mobilna',   price: 'od 21 000 zł',      href: '/aplikacja-mobilna' },
+    ],
+  },
+  {
+    icon: 'manage_search',
+    label: 'SEO i widoczność',
+    items: [
+      { name: 'Pozycjonowanie SEO',  price: 'od 1 260 zł/mies.', href: '/seo' },
+      { name: 'Audyt SEO',           price: '840 zł jednorazowo', href: '/audyt-seo' },
+      { name: 'Link building',       price: 'od 420 zł/mies.',   href: '/link-building' },
+      { name: 'GEO / AI SEO',        price: 'w cenie projektu',  href: '/optymalizacja-ai' },
+    ],
+  },
+  {
+    icon: 'campaign',
+    label: 'Marketing i reklama',
+    items: [
+      { name: 'Google Ads',          price: 'od 1 680 zł/mies.', href: '/google-ads' },
+      { name: 'Social Media',        price: 'od 1 260 zł/mies.', href: '/social-media' },
+    ],
+  },
+  {
+    icon: 'palette',
+    label: 'Design i materiały',
+    items: [
+      { name: 'Branding i logo',           price: 'wycena indywidualna', href: '/branding' },
+      { name: 'UI/UX Design',              price: 'wycena indywidualna', href: '/ui-ux-design' },
+      { name: 'Copywriting SEO',           price: 'wycena indywidualna', href: '/copywriting' },
+      { name: 'Wizytówki, bannery, rollup', price: 'wycena indywidualna', href: '/branding' },
+    ],
+  },
+]
 </script>
 
 <template>
@@ -648,6 +696,92 @@ const geoBenefits = [
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <!-- ══ 4b. FULL SERVICE ══════════════════════════════════════════════ -->
+        <section aria-labelledby="section-fullservice" class="py-section-padding bg-surface-container-low">
+          <div class="max-w-container-max mx-auto px-gutter">
+
+            <!-- Intro -->
+            <div class="max-w-3xl mb-12" data-reveal="fade">
+              <span class="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-2 text-sm font-medium text-primary mb-6">
+                <span class="material-symbols-outlined text-[18px]" aria-hidden="true">hub</span>
+                Kompleksowa obsługa
+              </span>
+              <h2 id="section-fullservice" class="font-display text-3xl sm:text-4xl font-black text-on-surface leading-tight mb-4">
+                Nie tylko strona — kompleksowe wsparcie Twojego biznesu online
+              </h2>
+              <p class="text-on-surface-variant leading-relaxed mb-4">
+                Większość firm trafia do nas z pytaniem: "potrzebuję stronę internetową". W połowie przypadków strona to właściwa odpowiedź. W pozostałych — potrzeba Google Ads bez strony, albo SEO bez którego nowa strona i tak będzie niewidoczna, albo branding, bo bez spójnego logo żadna strona nie wygląda wiarygodnie.
+              </p>
+              <p class="text-on-surface-variant leading-relaxed">
+                EvolaTec realizuje pełne wsparcie cyfrowe: strona internetowa, SEO, Google Ads, Social Media, branding i materiały drukowane — w jednym miejscu. Jeśli wiesz czego potrzebujesz — zrobimy to sprawnie. Jeśli nie masz pewności — zaczynamy od analizy.
+              </p>
+            </div>
+
+            <!-- Analysis steps -->
+            <div class="mb-14">
+              <h3 class="font-display text-xl font-bold text-on-surface mb-6" data-reveal="fade">
+                Zaczynamy od analizy — dopiero potem rekomendujemy
+              </h3>
+              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div
+                  v-for="(step, i) in analysisSteps"
+                  :key="step.title"
+                  :data-reveal="'fade'"
+                  :data-delay="String(i + 1)"
+                  class="bg-white rounded-2xl p-5 border border-outline-variant/25 flex flex-col gap-3"
+                >
+                  <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-[20px]" aria-hidden="true">{{ step.icon }}</span>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-on-surface text-sm leading-snug mb-1">{{ step.title }}</p>
+                    <p class="text-xs text-on-surface-variant leading-relaxed">{{ step.desc }}</p>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-6 text-sm text-on-surface-variant" data-reveal="fade">
+                <span class="font-semibold text-on-surface">Wynik analizy jest bezpłatny i bez zobowiązań</span> — piszemy na piśmie, co rekomendujemy i dlaczego, zanim wystawisz złotówkę.
+              </p>
+            </div>
+
+            <!-- Service categories -->
+            <div>
+              <h3 class="font-display text-xl font-bold text-on-surface mb-6" data-reveal="fade">
+                Pełna lista usług — od strony po wizytówkę
+              </h3>
+              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div
+                  v-for="(cat, ci) in fullServiceCategories"
+                  :key="cat.label"
+                  :data-reveal="'fade'"
+                  :data-delay="String(ci + 1)"
+                  class="bg-white rounded-2xl p-5 border border-outline-variant/25"
+                >
+                  <div class="flex items-center gap-3 mb-4">
+                    <div class="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">{{ cat.icon }}</span>
+                    </div>
+                    <p class="font-bold text-on-surface text-sm">{{ cat.label }}</p>
+                  </div>
+                  <ul class="space-y-2.5">
+                    <li
+                      v-for="item in cat.items"
+                      :key="item.name"
+                      class="flex items-start justify-between gap-2"
+                    >
+                      <NuxtLink :to="item.href" class="text-xs font-medium text-on-surface hover:text-primary transition-colors leading-snug">
+                        {{ item.name }}
+                      </NuxtLink>
+                      <span class="text-[11px] text-on-surface-variant whitespace-nowrap leading-snug">{{ item.price }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 

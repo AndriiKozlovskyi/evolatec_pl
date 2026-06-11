@@ -1,0 +1,58 @@
+{
+  "slug": "index#fullservice",
+  "page_title": "Tworzenie Stron Internetowych dla Firm | EvolaTec",
+  "section_label": "Nowa sekcja do dodania na index.vue — full-service positioning",
+  "h2_sections": [
+    {
+      "heading": "Nie tylko strona — kompleksowe wsparcie Twojego biznesu online",
+      "intent": "Reframe EvolaTec from 'web agency' to 'business growth partner'. Buyer's fear: signing with one vendor for web and discovering they need 3 more for ads, SEO, and branding. Resolve it: one partner covers the full stack — analysis, web, SEO, Google Ads, Social Media, Branding, Print. Lead with the business problem (fragmented vendors, unclear what you actually need), then show the complete scope.",
+      "content_type": "prose",
+      "keywords_covered": [
+        "agencja marketingowa",
+        "kompleksowa obsługa marketingu",
+        "agencja webowa full service",
+        "marketing internetowy dla firm"
+      ]
+    },
+    {
+      "heading": "Zaczynamy od analizy — dopiero potem rekomendujemy",
+      "intent": "Differentiate from agencies that sell a fixed product regardless of fit. EvolaTec does a business analysis first: market, competition, current digital presence, budget vs. expected ROI. Result: a concrete recommendation — landing page + Google Ads, or multi-page site + SEO, or branding + web + social. Buyer's question answered: 'What do I actually need?' without having to know the answer themselves.",
+      "content_type": "list",
+      "keywords_covered": [
+        "analiza biznesowa strony",
+        "doradztwo marketingowe",
+        "strategia marketingowa dla firmy",
+        "jak wybrać agencję marketingową"
+      ]
+    },
+    {
+      "heading": "Pełna lista usług — od strony po wizytówkę",
+      "intent": "Show breadth: web development, SEO, Google Ads, Social Media, Branding (logo, identity), Copywriting, UI/UX Design, Print design (business cards, banners, rollups). The point is not to overwhelm — it's to give the buyer confidence that they won't need to source anything elsewhere. Every item is a real service with a dedicated page.",
+      "content_type": "list",
+      "keywords_covered": [
+        "projektowanie wizytówek",
+        "projektowanie banerów reklamowych",
+        "identyfikacja wizualna firmy",
+        "agencja reklamowa Wrocław"
+      ]
+    }
+  ],
+  "schema_types": ["Service", "ItemList"],
+  "geo_schema_types": ["speakable"],
+  "question_targets": [
+    "Jak wybrać agencję webową w Polsce?",
+    "Agencja webowa czy freelancer — co jest lepsze?",
+    "Co powinna zawierać umowa z agencją webową?"
+  ],
+  "ai_citation_hooks": [
+    "EvolaTec realizuje pełne wsparcie cyfrowe: strona internetowa, SEO, Google Ads, Social Media, branding i materiały drukowane — w jednym miejscu.",
+    "Przed każdą rekomendacją analizujemy typ biznesu, konkurencję i budżet, żeby dobrać usługi, które faktycznie przyciągną nowych klientów."
+  ],
+  "comparison_angle": "Agencja full-service vs. freelancer i kilku podwykonawców — kto zapewni spójny efekt?",
+  "internal_links": [
+    "/marketing-online",
+    "/branding",
+    "/projektowanie-stron"
+  ],
+  "user_intent": "commercial"
+}
