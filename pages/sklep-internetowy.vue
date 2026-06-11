@@ -34,7 +34,7 @@ const faqData = [
   },
   {
     question: 'Jak szybkość ładowania strony wpływa na pozycję w Google?',
-    answer: 'Szybkość to czynnik rankingowy Google przez Core Web Vitals i bezpośredni czynnik konwersji w e-commerce — wolny sklep traci zarówno pozycje, jak i kupujących na etapie ładowania karty produktu. Nasze sklepy ładują się poniżej 1 sekundy i osiągają wynik Lighthouse 95–100/100, co przekłada się na lepszą widoczność i niższy odsetek porzuceń koszyka.',
+    answer: 'Szybkość to czynnik rankingowy Google przez Core Web Vitals i bezpośredni czynnik konwersji w e-commerce — wolny sklep traci zarówno pozycje, jak i kupujących na etapie ładowania karty produktu. Nasze sklepy ładują się poniżej 2 sekund i osiągają wynik Lighthouse 95–100/100, co przekłada się na lepszą widoczność i niższy odsetek porzuceń koszyka.',
   },
 ]
 
@@ -237,7 +237,7 @@ const processSteps = [
     <HeroSection
       badge="Tworzenie sklepów internetowych"
       title="Tworzenie sklepów internetowych, które sprzedają"
-      description="Sklep internetowy w Nuxt.js od 12 600 zł netto, wariant premium od 25 200 zł — z katalogiem, płatnościami i panelem zamówień. Ładowanie poniżej 1 sekundy, SEO i GEO w cenie."
+      description="Sklep internetowy w Nuxt.js od 12 600 zł netto, wariant premium od 25 200 zł — z katalogiem, płatnościami i panelem zamówień. Ładowanie poniżej 2 sekund, SEO i GEO w cenie."
       primaryCTA="Uzyskaj bezpłatną wycenę"
       secondaryCTA="Zobacz ceny"
       primary-href="/kontakt"
@@ -265,7 +265,7 @@ const processSteps = [
                 </h2>
                 <div class="space-y-4 text-on-surface-variant leading-relaxed speakable-intro">
                   <p>Większość sklepów, które nie sprzedają, ma wystarczający ruch — gubi go dopiero między wejściem a płatnością. Klient otwiera kartę produktu, która ładuje się cztery sekundy, przechodzi przez koszyk z trzema krokami i na ekranie płatności rezygnuje. Problem leży w tym, jak szybko i gładko sklep prowadzi od produktu do „kupuję".</p>
-                  <p>Sklepy budujemy tak, żeby ładowały się poniżej 1 sekundy i osiągały <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> — bo każda sekunda opóźnienia na mobile to mierzalny spadek konwersji.</p>
+                  <p>Sklepy budujemy tak, żeby ładowały się poniżej 2 sekund i osiągały <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> — bo każda sekunda opóźnienia na mobile to mierzalny spadek konwersji.</p>
                   <p>Każdy sklep dostaje SEO pod kategorie i produkty oraz Schema.org, dzięki któremu oferta może pojawiać się w <strong class="text-on-surface">ChatGPT, Gemini i Perplexity</strong>.</p>
                 </div>
               </div>

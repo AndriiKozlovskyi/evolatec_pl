@@ -277,7 +277,7 @@ const geoChecklist = [
   'Semantyczna architektura treści dla crawlerów LLM',
   'Tabele porównawcze pod zapytania zakupowe',
   'Autorytatywne odpowiedzi na częste pytania użytkowników',
-  'Wydajność techniczna (Core Web Vitals, ładowanie < 1s)',
+  'Wydajność techniczna (Core Web Vitals, ładowanie < 2s)',
   'Schema Organization i Website dla autorytetu marki',
   'Czytelna hierarchia informacji w strukturze H1–H3',
 ]
@@ -368,7 +368,7 @@ const relatedServices = [
                 </div>
                 <div>
                   <p class="font-semibold text-on-surface text-sm leading-snug">{{ signal.title }}</p>
-                  <p class="text-xs text-on-surface-variant mt-1 leading-relaxed line-clamp-3">{{ signal.desc }}</p>
+                  <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">{{ signal.desc }}</p>
                 </div>
               </div>
             </div>
@@ -433,7 +433,7 @@ const relatedServices = [
                   </div>
                   <div>
                     <p class="font-mono font-bold text-primary text-sm">{{ schemaType.type }}</p>
-                    <p class="text-xs text-on-surface-variant mt-1 leading-relaxed line-clamp-2">{{ schemaType.desc }}</p>
+                    <p class="text-xs text-on-surface-variant mt-1 leading-relaxed">{{ schemaType.desc }}</p>
                   </div>
                 </div>
               </div>

@@ -30,7 +30,7 @@ const faqData = [
   },
   {
     question: 'Jak szybkość ładowania strony wpływa na pozycję w Google?',
-    answer: 'Szybkość ładowania jest jednym z czynników rankingowych Google poprzez Core Web Vitals i bezpośrednio wpływa na konwersję — po trzech sekundach ładowania znika połowa ruchu mobilnego. Nasze landing page ładują się poniżej 1 sekundy i osiągają wynik Lighthouse 95–100/100, co poprawia zarówno pozycję, jak i Quality Score w Google Ads.',
+    answer: 'Szybkość ładowania jest jednym z czynników rankingowych Google poprzez Core Web Vitals i bezpośrednio wpływa na konwersję — po trzech sekundach ładowania znika połowa ruchu mobilnego. Nasze landing page ładują się poniżej 2 sekund i osiągają wynik Lighthouse 95–100/100, co poprawia zarówno pozycję, jak i Quality Score w Google Ads.',
   },
   {
     question: 'Jak wygląda proces tworzenia strony internetowej?',
@@ -173,13 +173,13 @@ onMounted(() => {
 const heroStats = [
   { value: 'od 2 100 zł', label: 'Landing page netto',  icon: 'payments'  },
   { value: 'od 3 dni',    label: 'Czas realizacji',     icon: 'flash_on'  },
-  { value: '< 1 s',       label: 'Czas ładowania',      icon: 'bolt'      },
+  { value: '< 2 s',       label: 'Czas ładowania',      icon: 'bolt'      },
   { value: '95–100',      label: 'Lighthouse score',    icon: 'speed'     },
 ]
 
 const includedItems = [
   { icon: 'phone_iphone',    label: 'Responsywny projekt mobile-first'  },
-  { icon: 'speed',           label: 'Lighthouse 95–100, ładowanie < 1 s' },
+  { icon: 'speed',           label: 'Lighthouse 95–100, ładowanie < 2 s' },
   { icon: 'ads_click',       label: 'Formularz / CTA pod cel kampanii'  },
   { icon: 'search_insights', label: 'SEO podstawowe'                    },
   { icon: 'smart_toy',       label: 'GEO — ChatGPT, Gemini, Perplexity' },
@@ -192,7 +192,7 @@ const compareRows = [
   { label: 'Liczba podstron', lp: '1',                        biz: '5–20'                          },
   { label: 'Główny cel',      lp: 'Jedno działanie',          biz: 'Widoczność organiczna'         },
   { label: 'Najlepsze dla',   lp: 'Kampanii Google i Meta Ads', biz: 'Budowania marki w Google'    },
-  { label: 'CMS i blog',      lp: '—',                        biz: 'tak'                           },
+  { label: 'CMS (Storyblok)', lp: '+ 840 zł netto',           biz: 'w cenie'                       },
 ]
 
 const relatedServices = [
@@ -250,7 +250,7 @@ const processSteps = [
     <HeroSection
       badge="Tworzenie landing page"
       title="Tworzenie landing page, który zamienia reklamę w zapytania"
-      description="Jednostronicowa strona konwersyjna pod kampanie Google i Meta Ads — od 2 100 zł netto, realizacja od 3 dni roboczych. Lighthouse 95–100 i ładowanie poniżej 1 sekundy."
+      description="Jednostronicowa strona konwersyjna pod kampanie Google i Meta Ads — od 2 100 zł netto, realizacja od 3 dni roboczych. Lighthouse 95–100 i ładowanie poniżej 2 sekund."
       primaryCTA="Uzyskaj bezpłatną wycenę"
       secondaryCTA="Zobacz ceny"
       primary-href="/kontakt"
@@ -285,7 +285,7 @@ const processSteps = [
                     Landing page rozwiązuje ten problem. To jedna strona z jednym celem — zapis, wycena, pobranie, zakup — pozbawiona menu i rozpraszaczy. Każdy element prowadzi do jednego działania.
                   </p>
                   <p>
-                    Po trzech sekundach ładowania znika połowa ruchu mobilnego. Nasze landing page osiągają <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> i ładują się poniżej 1 sekundy — budżet reklamowy nie wycieka na porzucone ładowania. GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu.
+                    Po trzech sekundach ładowania znika połowa ruchu mobilnego. Nasze landing page osiągają <strong class="text-on-surface">wynik Lighthouse 95–100/100</strong> i ładują się poniżej 2 sekund — budżet reklamowy nie wycieka na porzucone ładowania. GEO optymalizacja — widoczność w ChatGPT, Gemini i Perplexity — jest w cenie każdego projektu.
                   </p>
                 </div>
               </div>
@@ -325,7 +325,7 @@ const processSteps = [
                     Landing page jest celowo jedną stroną — jego siła bierze się z koncentracji, nie z liczby podstron. Za 2 100 zł netto dostajesz komplet potrzebny, żeby strona przyjęła ruch z kampanii i zamieniła go w zapytania.
                   </p>
                   <p>
-                    Świadomie nie zawiera CMS, bloga ani wielu podstron — to elementy strony firmowej, które tutaj rozpraszałyby uwagę i opóźniały start.
+                    Domyślnie nie zawiera bloga ani wielu podstron — to elementy strony firmowej. Jeśli chcesz samodzielnie edytować treści, możemy dodać <strong class="text-on-primary">Storyblok CMS za 840 zł netto</strong> — edycja przez przeglądarkę, bez programisty.
                   </p>
                 </div>
                 <NuxtLink to="/kontakt" class="inline-block mt-8">
@@ -487,7 +487,7 @@ const processSteps = [
                 </thead>
                 <tbody>
                   <tr
-                    v-for="(row, i) in compareRows"
+                    v-for="row in compareRows"
                     :key="row.label"
                     class="border-b border-outline-variant/30 last:border-0 hover:bg-surface-container-low/60 transition-colors duration-150"
                   >

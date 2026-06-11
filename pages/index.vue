@@ -26,7 +26,7 @@ const faqData = [
   },
   {
     question: 'WordPress czy własne rozwiązanie — co wybrać dla firmy?',
-    answer: 'WordPress ma wynik Lighthouse na poziomie 40–70/100 i czas ładowania 3–8 sekund przy typowej konfiguracji z wtyczkami. Nasze strony budowane w Nuxt.js osiągają 95–100/100 i ładują się poniżej 1 sekundy. WordPress wymaga stałej obsługi wtyczek, aktualizacji i jest częstym celem ataków przez podatności w rozszerzeniach — strona bez WordPressa nie ma tej powierzchni ataku.',
+    answer: 'WordPress ma wynik Lighthouse na poziomie 40–70/100 i czas ładowania 3–8 sekund przy typowej konfiguracji z wtyczkami. Nasze strony budowane w Nuxt.js osiągają 95–100/100 i ładują się poniżej 2 sekund. WordPress wymaga stałej obsługi wtyczek, aktualizacji i jest częstym celem ataków przez podatności w rozszerzeniach — strona bez WordPressa nie ma tej powierzchni ataku.',
   },
   {
     question: 'Jak wygląda proces tworzenia strony internetowej?',
@@ -90,7 +90,7 @@ const mainSchema = {
       '@type': 'Service',
       '@id': 'https://evolatec.pl/#service',
       name: 'Tworzenie stron internetowych dla firm',
-      description: 'Strony firmowe, landing page i sklepy internetowe budowane w Nuxt.js. Lighthouse 95–100/100, ładowanie poniżej 1 sekundy, GEO optymalizacja w cenie każdego projektu.',
+      description: 'Strony firmowe, landing page i sklepy internetowe budowane w Nuxt.js. Lighthouse 95–100/100, ładowanie poniżej 2 sekund, GEO optymalizacja w cenie każdego projektu.',
       url: 'https://evolatec.pl',
       serviceType: 'Web Development',
       provider: { '@id': 'https://evolatec.pl/#organization' },
@@ -214,7 +214,7 @@ onMounted(() => {
 const heroStats = [
   { value: 'od 3 dni', label: 'Czas realizacji',    icon: 'flash_on' },
   { value: '95–100',   label: 'Lighthouse score',   icon: 'speed'    },
-  { value: '< 1 s',    label: 'Czas ładowania',     icon: 'bolt'     },
+  { value: '< 2 s',    label: 'Czas ładowania',     icon: 'bolt'     },
   { value: 'Stała',    label: 'Cena przed startem', icon: 'verified' },
 ]
 
@@ -422,14 +422,14 @@ const pricingTableData = [
 ]
 
 const aboutFeatures = [
-  { icon: 'code_blocks',    title: 'Nowoczesne technologie',    description: 'Vue.js, Nuxt.js, Tailwind CSS i TypeScript — bez WordPressa, bez wtyczek, bez kompromisów.' },
-  { icon: 'bolt',           title: 'Wydajność i szybkość',      description: 'Czas ładowania poniżej 1 sekundy i Lighthouse 95–100/100 — sprawdzalny samodzielnie po wdrożeniu.' },
+  { icon: 'code_blocks',    title: 'Nowoczesne technologie',    description: 'Vue.js, Nuxt.js, Tailwind CSS i TypeScript — bez WordPressa, bez wtyczek.' },
+  { icon: 'bolt',           title: 'Wydajność i szybkość',      description: 'Czas ładowania poniżej 2 sekund i Lighthouse 95–100/100 — sprawdzalny samodzielnie po wdrożeniu.' },
   { icon: 'search_insights',title: 'SEO i GEO w kodzie',        description: 'Schema.org JSON-LD, FAQPage i speakable markup — widoczność w Google i ChatGPT, Gemini, Perplexity.' },
   { icon: 'verified',       title: 'Stała cena przed startem',  description: 'Wycena na piśmie przed podpisaniem umowy. Cena nie zmienia się w trakcie projektu.' },
 ]
 
 const whyUsPoints = [
-  { icon: 'bolt',           title: 'Szybkie i wydajne strony',         description: 'Vue.js i Nuxt.js z SSR dają czas ładowania poniżej 1 sekundy i Lighthouse 95–100/100 — wielokrotnie szybciej niż typowy WordPress.' },
+  { icon: 'bolt',           title: 'Szybkie i wydajne strony',         description: 'Vue.js i Nuxt.js z SSR dają czas ładowania poniżej 2 sekund i Lighthouse 95–100/100 — wielokrotnie szybciej niż typowy WordPress.' },
   { icon: 'search_insights',title: 'SEO i GEO optymalizacja',          description: 'Techniczne SEO, SSR rendering i Schema.org JSON-LD zapewniają widoczność w Google oraz cytowania w ChatGPT, Gemini i Perplexity.' },
   { icon: 'design_services',title: 'Premium design bez szablonów',     description: 'Żadnych motywów WordPress ani gotowych szablonów. Każdy projekt jest projektowany i kodowany indywidualnie.' },
   { icon: 'rocket_launch',  title: 'Skalowalne rozwiązania',           description: 'Architektura JAMstack nadaje się zarówno na landing page, jak i rozbudowany sklep z tysiącami produktów.' },
