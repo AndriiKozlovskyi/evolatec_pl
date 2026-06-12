@@ -111,7 +111,12 @@
             <!-- Main Link -->
             <div
               v-if="link.submenu"
-              class="flex items-center rounded-lg text-on-surface hover:bg-primary/10 hover:text-primary transition-all duration-200 font-semibold"
+              :class="[
+                'flex items-center rounded-lg transition-all duration-200 font-semibold',
+                isLinkActive(link)
+                  ? 'bg-primary/8 text-primary'
+                  : 'text-on-surface hover:bg-primary/10 hover:text-primary',
+              ]"
             >
               <a
                 :href="link.href"
@@ -138,7 +143,12 @@
               v-else
               :href="link.href"
               @click="mobileMenuOpen = false"
-              class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface hover:bg-primary/10 hover:text-primary transition-all duration-200 font-semibold touch-target"
+              :class="[
+                'flex items-center gap-4 px-4 py-3 rounded-lg transition-all duration-200 font-semibold touch-target',
+                isLinkActive(link)
+                  ? 'bg-primary/8 text-primary'
+                  : 'text-on-surface hover:bg-primary/10 hover:text-primary',
+              ]"
             >
               <span class="material-symbols-outlined text-xl flex-shrink-0">{{ link.icon }}</span>
               <span>{{ link.label }}</span>
@@ -155,7 +165,12 @@
                   :key="sublink.id"
                   :href="sublink.href"
                   @click="mobileMenuOpen = false"
-                  class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm text-on-surface-variant hover:bg-primary/10 hover:text-primary transition-all duration-200 touch-target"
+                  :class="[
+                    'flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm transition-all duration-200 touch-target',
+                    route.path === sublink.href || route.path === sublink.href + '/'
+                      ? 'bg-primary/10 text-primary font-semibold'
+                      : 'text-on-surface-variant hover:bg-primary/10 hover:text-primary',
+                  ]"
                 >
                   <span>{{ sublink.label }}</span>
                 </a>
@@ -192,7 +207,12 @@ watch(mobileMenuOpen, (open) => {
   if (import.meta.client) {
     document.body.style.overflow = open ? 'hidden' : '';
   }
-  if (!open) expandedMenus.value = [];
+  if (open) {
+    const activeParent = navLinks.value.find(link => isLinkActive(link) && link.submenu)
+    expandedMenus.value = activeParent ? [activeParent.id] : []
+  } else {
+    expandedMenus.value = []
+  }
 });
 
 watch(() => route.path, () => {
