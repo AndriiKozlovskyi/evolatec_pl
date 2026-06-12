@@ -332,7 +332,8 @@ const relatedServices = [
               Optymalizacja on-page vs techniczne SEO — czym się różnią
             </h2>
             <p class="text-on-surface-variant mb-10 leading-relaxed">Wielu właścicieli stron nie wie, czy problem leży w treści, czy w kodzie. To ważne pytanie — odpowiedź zmienia zakres i koszt pracy oraz decyduje, od czego zacząć. Większość stron potrzebuje obu warstw jednocześnie — techniczne błędy blokują efekty on-page. Dlatego każdy projekt optymalizacji zaczynamy od krótkiego audytu wskazującego główny problem.</p>
-            <div class="rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50 mb-8">
+            <!-- Desktop table -->
+            <div class="hidden md:block rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50 mb-8">
               <table class="w-full border-collapse">
                 <caption class="sr-only">Porównanie optymalizacji on-page z technicznym SEO</caption>
                 <thead>
@@ -350,6 +351,32 @@ const relatedServices = [
                   </tr>
                 </tbody>
               </table>
+            </div>
+
+            <!-- Mobile cards -->
+            <div class="md:hidden space-y-3 mb-8">
+              <!-- Column headers -->
+              <div class="grid grid-cols-2 gap-2 px-1">
+                <div class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant text-center">On-page</div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-primary text-center">Techniczne SEO</div>
+              </div>
+              <div
+                v-for="(row, i) in seoCompareRows"
+                :key="i"
+                class="rounded-xl bg-white border border-outline-variant/30 overflow-hidden shadow-sm"
+              >
+                <div class="px-4 py-2.5 bg-surface-container-low border-b border-outline-variant/20">
+                  <p class="text-xs font-semibold text-on-surface">{{ row.criterion }}</p>
+                </div>
+                <div class="grid grid-cols-2 divide-x divide-outline-variant/20">
+                  <div class="px-3 py-3 text-center">
+                    <p class="text-sm text-on-surface-variant leading-snug">{{ row.onpage }}</p>
+                  </div>
+                  <div class="px-3 py-3 text-center bg-primary/5">
+                    <p class="text-sm font-bold text-primary leading-snug">{{ row.tech }}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

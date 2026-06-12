@@ -378,7 +378,8 @@ const pricingPlans = [
               Profesjonalny audyt SEO vs automatyczne narzędzia online
             </h2>
             <p class="text-on-surface-variant mb-10 leading-relaxed">Narzędzia takie jak Semrush, Ahrefs czy darmowe skanery generują listy błędów bez priorytetyzacji pod konkretną domenę. Błąd krytyczny dla portalu z milionem podstron może nie mieć znaczenia dla pięciostronicowej witryny firmowej. Automatyczne narzędzia są użyteczne jako monitoring — audyt ekspercki odpowiada, które błędy faktycznie blokują widoczność i w jakiej kolejności je naprawić.</p>
-            <div class="rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50">
+            <!-- Desktop table -->
+            <div class="hidden md:block rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50">
               <table class="w-full border-collapse">
                 <caption class="sr-only">Porównanie profesjonalnego audytu SEO z automatycznymi narzędziami online</caption>
                 <thead>
@@ -396,6 +397,31 @@ const pricingPlans = [
                   </tr>
                 </tbody>
               </table>
+            </div>
+
+            <!-- Mobile cards -->
+            <div class="md:hidden space-y-3">
+              <div class="grid grid-cols-2 gap-2 px-1">
+                <div class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant text-center">Automatyczny</div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-primary text-center">Profesjonalny</div>
+              </div>
+              <div
+                v-for="(row, i) in auditCompareRows"
+                :key="i"
+                class="rounded-xl bg-white border border-outline-variant/30 overflow-hidden shadow-sm"
+              >
+                <div class="px-4 py-2.5 bg-surface-container-low border-b border-outline-variant/20">
+                  <p class="text-xs font-semibold text-on-surface">{{ row.criterion }}</p>
+                </div>
+                <div class="grid grid-cols-2 divide-x divide-outline-variant/20">
+                  <div class="px-3 py-3 text-center">
+                    <p class="text-sm text-on-surface-variant leading-snug">{{ row.auto }}</p>
+                  </div>
+                  <div class="px-3 py-3 text-center bg-primary/5">
+                    <p class="text-sm font-bold text-primary leading-snug">{{ row.pro }}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

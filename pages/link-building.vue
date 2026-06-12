@@ -388,7 +388,8 @@ const relatedServices = [
               Agencja link building vs samodzielne pozyskiwanie linków — co się opłaca
             </h2>
             <p class="text-on-surface-variant mb-10 leading-relaxed">Samodzielne pozyskiwanie linków nie jest niemożliwe — ale ma realny koszt: outreach do redakcji, negocjacje, weryfikacja jakości i pisanie artykułów to kilkanaście godzin miesięcznie pracy. Agencja wychodzi taniej wtedy, gdy alternatywą jest własny czas właściciela firmy — bo godzina właściciela na outreach to godzina niezainwestowana w sprzedaż lub obsługę klienta.</p>
-            <div class="rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50 mb-6">
+            <!-- Desktop table -->
+            <div class="hidden md:block rounded-2xl bg-white shadow-md overflow-hidden border-2 border-outline-variant/50 mb-6">
               <table class="w-full border-collapse">
                 <caption class="sr-only">Porównanie agencji link building z samodzielnym pozyskiwaniem linków</caption>
                 <thead>
@@ -406,6 +407,31 @@ const relatedServices = [
                   </tr>
                 </tbody>
               </table>
+            </div>
+
+            <!-- Mobile cards -->
+            <div class="md:hidden space-y-3 mb-6">
+              <div class="grid grid-cols-2 gap-2 px-1">
+                <div class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant text-center">Samodzielnie</div>
+                <div class="text-[10px] font-bold uppercase tracking-widest text-primary text-center">Agencja</div>
+              </div>
+              <div
+                v-for="(row, i) in lbCompareRows"
+                :key="i"
+                class="rounded-xl bg-white border border-outline-variant/30 overflow-hidden shadow-sm"
+              >
+                <div class="px-4 py-2.5 bg-surface-container-low border-b border-outline-variant/20">
+                  <p class="text-xs font-semibold text-on-surface">{{ row.criterion }}</p>
+                </div>
+                <div class="grid grid-cols-2 divide-x divide-outline-variant/20">
+                  <div class="px-3 py-3 text-center">
+                    <p class="text-sm text-on-surface-variant leading-snug">{{ row.self }}</p>
+                  </div>
+                  <div class="px-3 py-3 text-center bg-primary/5">
+                    <p class="text-sm font-bold text-primary leading-snug">{{ row.agency }}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
