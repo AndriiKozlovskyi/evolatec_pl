@@ -33,17 +33,19 @@ export default defineNuxtConfig({
       Inter: [400, 500, 600, 700, 800],
     },
 
+    subsets: ['latin', 'latin-ext'],
+
     display: 'swap',
 
     preload: true,
 
-    prefetch: true,
+    prefetch: false,
 
     preconnect: false,
 
     download: true,
 
-    inject: false,
+    inject: true,
   },
 
   tailwindcss: {
@@ -86,46 +88,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [
-        {
-          rel: 'preload',
-          href: '/fonts/Inter-normal-400-latin.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          crossorigin: 'anonymous',
-        },
-
-        {
-          rel: 'preload',
-          href: '/fonts/Inter-normal-500-latin.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          crossorigin: 'anonymous',
-        },
-
-        {
-          rel: 'preload',
-          href: '/fonts/Inter-normal-600-latin.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          crossorigin: 'anonymous',
-        },
-
-        {
-          rel: 'preload',
-          href: '/fonts/Inter-normal-700-latin.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          crossorigin: 'anonymous',
-        },
-
-        {
-          rel: 'preload',
-          href: '/fonts/Inter-normal-800-latin.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          crossorigin: 'anonymous',
-        },
-
         {
           rel: 'preload',
           href: '/fonts/material-symbols-outlined.woff2',
